@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/xml/XSLT/panelfile-2-9-6.xsl" type="text/xsl"?>
+<layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-2-9-6.xsd">
+  <jmriversion>
+    <major>4</major>
+    <minor>11</minor>
+    <test>2</test>
+    <modifier />
+  </jmriversion>
+  <sensors class="jmri.jmrix.internal.configurexml.InternalSensorManagerXml">
+    <defaultInitialState>unknown</defaultInitialState>
+    <sensor inverted="false">
+      <systemName>ISCLOCKRUNNING</systemName>
+    </sensor>
+  </sensors>
+  <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
+    <memory value="Excelsior Springs">
+      <systemName>IM:DEST:1</systemName>
+      <userName>Destination:1</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:DEST:10</systemName>
+      <userName>Destination:10</userName>
+    </memory>
+    <memory value="Foggy Hollow">
+      <systemName>IM:DEST:2</systemName>
+      <userName>Destination:2</userName>
+    </memory>
+    <memory value="Excelsior Springs">
+      <systemName>IM:DEST:3</systemName>
+      <userName>Destination:3</userName>
+    </memory>
+    <memory value="Mystic Springs">
+      <systemName>IM:DEST:4</systemName>
+      <userName>Destination:4</userName>
+    </memory>
+    <memory value="Satyr's Glade">
+      <systemName>IM:DEST:5</systemName>
+      <userName>Destination:5</userName>
+    </memory>
+    <memory value="Foggy Hollow">
+      <systemName>IM:DEST:6</systemName>
+      <userName>Destination:6</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:DEST:7</systemName>
+      <userName>Destination:7</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:DEST:8</systemName>
+      <userName>Destination:8</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:DEST:9</systemName>
+      <userName>Destination:9</userName>
+    </memory>
+    <memory value="West">
+      <systemName>IM:DIR:1</systemName>
+      <userName>Direction:1</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:DIR:10</systemName>
+      <userName>Direction:10</userName>
+    </memory>
+    <memory value="East">
+      <systemName>IM:DIR:2</systemName>
+      <userName>Direction:2</userName>
+    </memory>
+    <memory value="West">
+      <systemName>IM:DIR:3</systemName>
+      <userName>Direction:3</userName>
+    </memory>
+    <memory value="West">
+      <systemName>IM:DIR:4</systemName>
+      <userName>Direction:4</userName>
+    </memory>
+    <memory value="West">
+      <systemName>IM:DIR:5</systemName>
+      <userName>Direction:5</userName>
+    </memory>
+    <memory value="East">
+      <systemName>IM:DIR:6</systemName>
+      <userName>Direction:6</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:DIR:7</systemName>
+      <userName>Direction:7</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:DIR:8</systemName>
+      <userName>Direction:8</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:DIR:9</systemName>
+      <userName>Direction:9</userName>
+    </memory>
+    <memory value="Devil's Gulch">
+      <systemName>IM:STA</systemName>
+      <userName>Current Station</userName>
+    </memory>
+    <memory value="02:33 AM">
+      <systemName>IM:TIME:1</systemName>
+      <userName>Time:1</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TIME:10</systemName>
+      <userName>Time:10</userName>
+    </memory>
+    <memory value="06:38 AM">
+      <systemName>IM:TIME:2</systemName>
+      <userName>Time:2</userName>
+    </memory>
+    <memory value="10:57 AM">
+      <systemName>IM:TIME:3</systemName>
+      <userName>Time:3</userName>
+    </memory>
+    <memory value="11:15 AM">
+      <systemName>IM:TIME:4</systemName>
+      <userName>Time:4</userName>
+    </memory>
+    <memory value="03:15 PM">
+      <systemName>IM:TIME:5</systemName>
+      <userName>Time:5</userName>
+    </memory>
+    <memory value="03:53 PM">
+      <systemName>IM:TIME:6</systemName>
+      <userName>Time:6</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TIME:7</systemName>
+      <userName>Time:7</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TIME:8</systemName>
+      <userName>Time:8</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TIME:9</systemName>
+      <userName>Time:9</userName>
+    </memory>
+    <memory value="River Valley Flyer">
+      <systemName>IM:TN</systemName>
+      <userName>Train Number.0</userName>
+    </memory>
+    <memory value="11">
+      <systemName>IM:TN:1</systemName>
+      <userName>Train Number:1</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TN:10</systemName>
+      <userName>Train Number:10</userName>
+    </memory>
+    <memory value="12">
+      <systemName>IM:TN:2</systemName>
+      <userName>Train Number:2</userName>
+    </memory>
+    <memory value="3">
+      <systemName>IM:TN:3</systemName>
+      <userName>Train Number:3</userName>
+    </memory>
+    <memory value="7">
+      <systemName>IM:TN:4</systemName>
+      <userName>Train Number:4</userName>
+    </memory>
+    <memory value="17">
+      <systemName>IM:TN:5</systemName>
+      <userName>Train Number:5</userName>
+    </memory>
+    <memory value="4">
+      <systemName>IM:TN:6</systemName>
+      <userName>Train Number:6</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TN:7</systemName>
+      <userName>Train Number:7</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TN:8</systemName>
+      <userName>Train Number:8</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TN:9</systemName>
+      <userName>Train Number:9</userName>
+    </memory>
+    <memory value="Midnight Express ">
+      <systemName>IM:TNM:1</systemName>
+      <userName>Train Name:1</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TNM:10</systemName>
+      <userName>Train Name:10</userName>
+    </memory>
+    <memory value="Midnight Express">
+      <systemName>IM:TNM:2</systemName>
+      <userName>Train Name:2</userName>
+    </memory>
+    <memory value="Mountaineer">
+      <systemName>IM:TNM:3</systemName>
+      <userName>Train Name:3</userName>
+    </memory>
+    <memory value="Weekend Escape">
+      <systemName>IM:TNM:4</systemName>
+      <userName>Train Name:4</userName>
+    </memory>
+    <memory value="Mountain Excursion">
+      <systemName>IM:TNM:5</systemName>
+      <userName>Train Name:5</userName>
+    </memory>
+    <memory value="Mountaineer">
+      <systemName>IM:TNM:6</systemName>
+      <userName>Train Name:6</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TNM:7</systemName>
+      <userName>Train Name:7</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TNM:8</systemName>
+      <userName>Train Name:8</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:TNM:9</systemName>
+      <userName>Train Name:9</userName>
+    </memory>
+    <memory value="7:32 PM">
+      <systemName>IMCURRENTTIME</systemName>
+    </memory>
+    <memory value="1.0">
+      <systemName>IMRATEFACTOR</systemName>
+    </memory>
+  </memories>
+  <signalmasts class="jmri.managers.configurexml.DefaultSignalMastManagerXml" />
+  <signalgroups class="jmri.managers.configurexml.DefaultSignalGroupManagerXml" />
+  <oblocks class="jmri.jmrit.logix.configurexml.OBlockManagerXml" />
+  <warrants class="jmri.jmrit.logix.configurexml.WarrantManagerXml" />
+  <signalmastlogics class="jmri.managers.configurexml.DefaultSignalMastLogicManagerXml">
+    <logicDelay>500</logicDelay>
+  </signalmastlogics>
+  <timebase class="jmri.jmrit.simpleclock.configurexml.SimpleTimebaseXml" time="Sun Feb 11 11:03:49 CST 2018" rate="1.0" run="yes" master="yes" sync="no" correct="no" display="no" startstopped="no" startsettime="no" startclockoption="0" showbutton="no" />
+  <paneleditor class="jmri.jmrit.display.controlPanelEditor.configurexml.ControlPanelEditorXml" name="Multi Station Departures" x="1200" y="70" height="662" width="529" editable="no" positionable="yes" showtooltips="yes" controlling="yes" hide="no" panelmenu="yes" scrollable="none" redBackground="68" greenBackground="85" blueBackground="37" state="0" shapeSelect="yes">
+    <icons>
+      <visible>
+        <url>program:resources/icons/throttles/RoundRedCircle20.png</url>
+      </visible>
+      <path_edit>
+        <url>program:resources/icons/greenSquare.gif</url>
+      </path_edit>
+      <hidden>
+        <url>program:resources/icons/Invisible.gif</url>
+      </hidden>
+      <to_arrow>
+        <url>program:resources/icons/track/toArrow.gif</url>
+      </to_arrow>
+      <from_arrow>
+        <url>program:resources/icons/track/fromArrow.gif</url>
+      </from_arrow>
+    </icons>
+    <positionablelabel x="0" y="0" level="1" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" icon="yes" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <icon url="preference:panels/MultiStationDepartureBoard.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </icon>
+    </positionablelabel>
+    <memoryComboIcon memory="Current Station" x="190" y="545" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Dialog.bold" size="12" style="1" red="100" green="100" blue="100" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.MemoryComboIconXml">
+      <itemList>
+        <item index="0">Beaver Bend</item>
+        <item index="1">Colorado City</item>
+        <item index="2">Devil's Gulch</item>
+        <item index="3">Empire</item>
+        <item index="4">Excelsior Springs</item>
+        <item index="5">Fall River</item>
+        <item index="6">Faun Glen</item>
+        <item index="7">Foggy Hollow</item>
+        <item index="8">Fort Eureka</item>
+        <item index="9">Lost Creek</item>
+        <item index="10">Mystic Springs</item>
+        <item index="11">Silver City</item>
+      </itemList>
+      <tooltip>Current Station</tooltip>
+    </memoryComboIcon>
+    <memoryicon memory="Train Number:1" x="37" y="156" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Number:1 (IM:TN:1)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Number:2" x="36" y="195" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Number:2 (IM:TN:2)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Number:3" x="40" y="230" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Number:3 (IM:TN:3)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Number:4" x="40" y="266" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Number:4 (IM:TN:4)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Number:5" x="37" y="305" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Number:5 (IM:TN:5)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Direction:1" x="92" y="156" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Direction:1 (IM:DIR:1)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Direction:2" x="94" y="195" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Direction:2 (IM:DIR:2)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Direction:3" x="92" y="230" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Direction:3 (IM:DIR:3)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Direction:4" x="92" y="266" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Direction:4 (IM:DIR:4)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Direction:5" x="92" y="305" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Direction:5 (IM:DIR:5)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Name:1" x="159" y="156" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Name:1 (IM:TNM:1)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Name:2" x="161" y="195" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Name:2 (IM:TNM:2)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Name:3" x="173" y="230" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Name:3 (IM:TNM:3)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Name:4" x="164" y="266" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Name:4 (IM:TNM:4)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Name:5" x="151" y="305" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Name:5 (IM:TNM:5)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Time:1" x="419" y="156" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Time:1 (IM:TIME:1)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Time:2" x="419" y="195" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Time:2 (IM:TIME:2)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Time:3" x="420" y="230" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Time:3 (IM:TIME:3)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Time:4" x="422" y="266" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Time:4 (IM:TIME:4)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Time:5" x="421" y="305" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Time:5 (IM:TIME:5)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Destination:1" x="302" y="156" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Destination:1 (IM:DEST:1)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Destination:2" x="310" y="195" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Destination:2 (IM:DEST:2)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Destination:3" x="302" y="230" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Destination:3 (IM:DEST:3)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Destination:4" x="309" y="266" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Destination:4 (IM:DEST:4)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Destination:5" x="314" y="305" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Destination:5 (IM:DEST:5)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Number:6" x="41" y="343" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Number:6 (IM:TN:6)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Direction:6" x="97" y="343" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Direction:6 (IM:DIR:6)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Name:6" x="173" y="343" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Name:6 (IM:TNM:6)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Destination:6" x="310" y="343" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Destination:6 (IM:DEST:6)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Time:6" x="420" y="343" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Time:6 (IM:TIME:6)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Number:7" x="41" y="386" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Number:7 (IM:TN:7)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Direction:7" x="97" y="380" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Direction:7 (IM:DIR:7)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Name:7" x="209" y="386" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Name:7 (IM:TNM:7)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Destination:7" x="349" y="386" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Destination:7 (IM:DEST:7)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Time:7" x="447" y="386" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Time:7 (IM:TIME:7)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Number:8" x="41" y="421" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Number:8 (IM:TN:8)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Direction:8" x="97" y="415" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Direction:8 (IM:DIR:8)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Name:8" x="209" y="421" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Name:8 (IM:TNM:8)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Destination:8" x="349" y="421" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Destination:8 (IM:DEST:8)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Time:8" x="447" y="421" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Time:8 (IM:TIME:8)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Number:9" x="41" y="460" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Number:9 (IM:TN:9)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Direction:9" x="97" y="454" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Direction:9 (IM:DIR:9)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Name:9" x="209" y="460" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Name:9 (IM:TNM:9)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Destination:9" x="349" y="460" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Destination:9 (IM:DEST:9)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Time:9" x="447" y="460" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Time:9 (IM:TIME:9)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Number:10" x="41" y="497" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Number:10 (IM:TN:10)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Direction:10" x="97" y="491" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Direction:10 (IM:DIR:10)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Train Name:10" x="209" y="497" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Train Name:10 (IM:TNM:10)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Destination:10" x="349" y="497" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Destination:10 (IM:DEST:10)</tooltip>
+    </memoryicon>
+    <memoryicon memory="Time:10" x="447" y="497" level="5" forcecontroloff="false" hidden="no" positionable="true" showtooltip="true" editable="false" fontname="Comic Sans MS" size="12" style="1" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Time:10 (IM:TIME:10)</tooltip>
+    </memoryicon>
+  </paneleditor>
+  <filehistory>
+    <operation>
+      <type>app</type>
+      <date>Sun Feb 11 19:25:43 CST 2018</date>
+      <filename>JMRI program</filename>
+    </operation>
+    <operation>
+      <type>Load OK</type>
+      <date>Sun Feb 11 19:26:12 CST 2018</date>
+      <filename>/C:/Users/pmorr/JMRI/Simulator/panels/MultiStationDepartures.xml</filename>
+      <filehistory>
+        <operation>
+          <type>app</type>
+          <date>Sun Feb 11 19:11:37 CST 2018</date>
+          <filename>JMRI program</filename>
+        </operation>
+        <operation>
+          <type>Load OK</type>
+          <date>Sun Feb 11 19:11:57 CST 2018</date>
+          <filename>/C:/Users/pmorr/JMRI/Simulator/panels/MultiStationDepartures.xml</filename>
+          <filehistory>
+            <operation>
+              <type>app</type>
+              <date>Sun Feb 11 18:48:21 CST 2018</date>
+              <filename>JMRI program</filename>
+            </operation>
+            <operation>
+              <type>Load OK</type>
+              <date>Sun Feb 11 18:48:41 CST 2018</date>
+              <filename>/C:/Users/pmorr/JMRI/Simulator/panels/MultiStationDepartures.xml</filename>
+              <filehistory>
+                <operation>
+                  <type>app</type>
+                  <date>Sun Feb 11 18:40:21 CST 2018</date>
+                  <filename>JMRI program</filename>
+                </operation>
+                <operation>
+                  <type>Load OK</type>
+                  <date>Sun Feb 11 18:40:45 CST 2018</date>
+                  <filename>/C:/Users/pmorr/JMRI/Simulator/panels/MultiStationDepartures.xml</filename>
+                  <filehistory>
+                    <operation>
+                      <type>app</type>
+                      <date>Sun Feb 11 18:25:12 CST 2018</date>
+                      <filename>JMRI program</filename>
+                    </operation>
+                    <operation>
+                      <type>Load OK</type>
+                      <date>Sun Feb 11 18:25:34 CST 2018</date>
+                      <filename>/C:/Users/pmorr/JMRI/Simulator/panels/MultiStationDepartures.xml</filename>
+                      <filehistory>
+                        <operation>
+                          <type>app</type>
+                          <date>Sun Feb 11 17:08:16 CST 2018</date>
+                          <filename>JMRI program</filename>
+                        </operation>
+                        <operation>
+                          <type>Load OK</type>
+                          <date>Sun Feb 11 17:08:23 CST 2018</date>
+                          <filename>/C:/Users/pmorr/JMRI/Simulator/panels/MultiStationDepartures.xml</filename>
+                        </operation>
+                        <operation>
+                          <type>Store</type>
+                          <date>Sun Feb 11 17:10:46 CST 2018</date>
+                          <filename />
+                        </operation>
+                      </filehistory>
+                    </operation>
+                    <operation>
+                      <type>Store</type>
+                      <date>Sun Feb 11 18:34:13 CST 2018</date>
+                      <filename />
+                    </operation>
+                  </filehistory>
+                </operation>
+                <operation>
+                  <type>Store</type>
+                  <date>Sun Feb 11 18:44:50 CST 2018</date>
+                  <filename />
+                </operation>
+              </filehistory>
+            </operation>
+            <operation>
+              <type>Store</type>
+              <date>Sun Feb 11 18:53:36 CST 2018</date>
+              <filename />
+            </operation>
+          </filehistory>
+        </operation>
+        <operation>
+          <type>Store</type>
+          <date>Sun Feb 11 19:25:12 CST 2018</date>
+          <filename />
+        </operation>
+      </filehistory>
+    </operation>
+    <operation>
+      <type>Store</type>
+      <date>Sun Feb 11 19:32:39 CST 2018</date>
+      <filename />
+    </operation>
+  </filehistory>
+  <!--Written by JMRI version 4.11.2+Rb400a47 on Sun Feb 11 19:32:39 CST 2018-->
+</layout-config>
