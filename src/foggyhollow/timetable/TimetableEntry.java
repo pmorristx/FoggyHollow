@@ -2,8 +2,6 @@ package foggyhollow.timetable;
 
 public class TimetableEntry
 {
-
-
     private String trainNumber;
     private String trainName;
     private String destination;
