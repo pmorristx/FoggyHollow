@@ -59,10 +59,10 @@ bool tankEmptying = false;
 bool rockWobbling = false;
 bool rockBouncing = false;
 
-const int ROCK_WOBBLE_FAST = 20;
-const int ROCK_WOBBLE_SLOW = 200;
-const int ROCK_TOP_FAST = 40;
-const int ROCK_TOP_SLOW = 35;
+const int ROCK_WOBBLE_FAST = 200;
+const int ROCK_WOBBLE_SLOW = 300;
+const int ROCK_TOP_FAST = 25;
+const int ROCK_TOP_SLOW = 30;
 const int ROCK_BOTTOM_FAST = 15;
 const int ROCK_BOTTOM_SLOW = 15;
 
