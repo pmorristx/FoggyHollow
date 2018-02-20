@@ -46,19 +46,16 @@ public class DimmableSensor implements PropertyChangeListener
 	    jmri.Sensor source = (jmri.Sensor) evt.getSource();
 	    if (source == this.guiOnSensor && source.getState() == jmri.Sensor.ACTIVE)
 	    {
-		System.out.println("*** In DimmableSensor, source = " + source.getUserName() + " state = " + source.getState());	    				
 		this.arduinoOnSensor.setState(jmri.Sensor.ACTIVE);
 		this.arduinoDimSensor.setState(jmri.Sensor.INACTIVE);
 	    }
 	    else if (source == this.guiDimSensor && source.getState() == jmri.Sensor.ACTIVE)
 	    {
-		System.out.println("*** In DimmableSensor, source = " + source.getUserName() + " state = " + source.getState());	    				
 		this.arduinoOnSensor.setState(jmri.Sensor.ACTIVE);
 		this.arduinoDimSensor.setState(jmri.Sensor.ACTIVE);
 	    }
 	    else if (source == this.guiOffSensor && source.getState() == jmri.Sensor.ACTIVE)
 	    {
-		System.out.println("*** In DimmableSensor, source = " + source.getUserName() + " state = " + source.getState());	    		
 		this.arduinoOnSensor.setState(jmri.Sensor.INACTIVE);
 		//this.arduinoDimSensor.setState(jmri.Sensor.INACTIVE);
 	    }
