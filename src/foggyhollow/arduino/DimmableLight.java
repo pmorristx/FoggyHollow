@@ -44,19 +44,16 @@ public class DimmableLight implements PropertyChangeListener
 
 	if (source == this.guiOnSensor && source.getState() == jmri.Sensor.ACTIVE)
 	{
-	    System.out.println("*** In DimmableLight, source = " + source.getUserName() + " state = " + source.getState());
 	    this.arduinoOnLight.setState(jmri.Light.ON);
 	    this.arduinoDimLight.setState(jmri.Light.OFF);
 	}
 	else if (source == this.guiDimSensor && source.getState() == jmri.Sensor.ACTIVE)
 	{
-	    System.out.println("*** In DimmableLight, source = " + source.getUserName() + " state = " + source.getState());	    
 	    this.arduinoOnLight.setState(jmri.Light.ON);
 	    this.arduinoDimLight.setState(jmri.Light.ON);
 	}
 	else if (source == this.guiOffSensor && source.getState() == jmri.Sensor.ACTIVE) 
 	{
-	    System.out.println("*** In DimmableLight, source = " + source.getUserName() + " state = " + source.getState());	    
 	    this.arduinoOnLight.setState(jmri.Light.OFF);
 	    //this.arduinoDimLight.setState(jmri.Light.OFF);
 	}
