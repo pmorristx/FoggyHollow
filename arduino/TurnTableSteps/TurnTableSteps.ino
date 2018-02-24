@@ -417,13 +417,26 @@ void moveMotor(int steps, boolean rotateClockWise, int sensorIdx)
 //
 void notifyPower (uint8_t state)
 {
-  if (state)
-  {
-  for (int i = 0; i < sizeof(sensorPins); i++)
-  {
-      LocoNet.reportSensor(outAddrs[currentTrack], LOW);  // Turn off inactive track sensors
-  }
-  LocoNet.reportSensor(outAddrs[currentTrack], HIGH);  // Turn on JMRI sensor on turntable
+	if (state)
+	{
+		for (int i = 0; i < sizeof(sensorPins); i++)
+		{
+			if (digitalRead(sensorPins[i]) == LOW)
+			{
+				LocoNet.reportSensor(outAddrs[i], HIGH);
+				currentTrack = i; // In case bridge was manually moved
+			}
+			else
+			{
+				LocoNet.reportSensor(outAddrs[i], LOW);
+			}
+		}
+	}
+  //for (int i = 0; i < sizeof(sensorPins); i++)
+  //{
+  //    LocoNet.reportSensor(outAddrs[currentTrack], LOW);  // Turn off inactive track sensors
+  //}
+  //LocoNet.reportSensor(outAddrs[currentTrack], HIGH);  // Turn on JMRI sensor on turntable
 }
 
 //
