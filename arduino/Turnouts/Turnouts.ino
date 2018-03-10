@@ -31,11 +31,6 @@ const int TURNOUT_0_ADDR = 3;
 const int TURNOUT_0_THROWN = 131;
 const int TURNOUT_0_CLOSED = 132;
 
-/*const int TURNOUT_1_LANTERN_CMD = 133;
-const int TURNOUT_1_THROWN = 134;
-const int TURNOUT_1_CLOSED = 135;
-const int TURNOUT_1_ADDR = 1;*/
-
 const int LEVEL_1_LIGHT_1_CMD = 136;
 const int LEVEL_1_LIGHT_1_DIM = 137;
 const int LEVEL_1_LIGHT_1_PIN = 5; // Pins 9 & 10 don't work as PWM with servo.
@@ -57,12 +52,6 @@ const int TURNOUT_0_LIGHT_PIN = 12;
 const int TURNOUT_0_THROWN_RELAY_PIN=10;
 const int TURNOUT_0_CLOSED_RELAY_PIN=11;
 
-/*
-const int TURNOUT_1_PIN = 9;
-const int TURNOUT_1_LIGHT_PIN = 13;
-const int TURNOUT_1_THROWN_RELAY_PIN=10;
-const int TURNOUT_1_CLOSED_RELAY_PIN=11	;
-*/
 const int LN_TX_PIN = 7;
 const int LN_RX_PIN = 8;
 
@@ -74,19 +63,19 @@ const int LN_RX_PIN = 8;
 
 struct LIGHT_DEF
 {
-  int pin;
-  uint8_t currentIntensity;
-  uint8_t maxIntensity;
-  uint8_t dimIntensity;
-  uint8_t targetIntensity;
-  bool isDimmed = false;
-  bool isOn = false;
-  bool isDimming = false;
-  bool isBrightening = false;
-  int rate = 2;
-  int counter = 0;
-  int dimCmd;
-  int onCmd;
+	int pin;
+	uint8_t currentIntensity;
+	uint8_t maxIntensity;
+	uint8_t dimIntensity;
+	uint8_t targetIntensity;
+	bool isDimmed = false;
+	bool isOn = false;
+	bool isDimming = false;
+	bool isBrightening = false;
+	int rate = 2;
+	int counter = 0;
+	int dimCmd;
+	int onCmd;
 };
 
 struct SERVO_DEF
@@ -122,8 +111,6 @@ uint8_t level1Light1State = OFF;
 uint8_t level1Light2State = OFF;
 
 lnMsg  *LnPacket;          // pointer to a received LNet packet
-//LocoNetThrottleClass  light1Dimmer ;
-//LocoNetThrottleClass  light2Dimmer ;
 //
 //********************************************************************************
 //
@@ -139,32 +126,32 @@ void setup()
 	Serial.println ("In setup");
 #endif
 
-  for (int i=0; i<numLights; i++)
-  {
-    light[i] = new LIGHT_DEF;
-    light[i]->dimIntensity = 50;
-    light[i]->maxIntensity = 255;
-    light[i]->currentIntensity = 0;
-    light[i]->targetIntensity = 0;
-    light[i]->isDimming = false;
-    light[i]->isBrightening = false;
-    light[i]->counter = 0;
-  }
-  light[0]->pin = LEVEL_1_LIGHT_1_PIN;
-  light[1]->pin = LEVEL_1_LIGHT_2_PIN;
-  light[2]->pin = LEVEL_1_LIGHT_3_PIN;  
-  light[0]->dimCmd = LEVEL_1_LIGHT_1_DIM;
-  light[0]->onCmd = LEVEL_1_LIGHT_1_CMD;
-  light[1]->dimCmd = LEVEL_1_LIGHT_2_DIM;
-  light[1]->onCmd = LEVEL_1_LIGHT_2_CMD;
-  light[2]->dimCmd = LEVEL_1_LIGHT_3_DIM;
-  light[2]->onCmd = LEVEL_1_LIGHT_3_CMD;    
+	for (int i=0; i<numLights; i++)
+	{
+		light[i] = new LIGHT_DEF;
+		light[i]->dimIntensity = 50;
+		light[i]->maxIntensity = 255;
+		light[i]->currentIntensity = 0;
+		light[i]->targetIntensity = 0;
+		light[i]->isDimming = false;
+		light[i]->isBrightening = false;
+		light[i]->counter = 0;
+	}
+	light[0]->pin = LEVEL_1_LIGHT_1_PIN;
+	light[1]->pin = LEVEL_1_LIGHT_2_PIN;
+	light[2]->pin = LEVEL_1_LIGHT_3_PIN;
+	light[0]->dimCmd = LEVEL_1_LIGHT_1_DIM;
+	light[0]->onCmd = LEVEL_1_LIGHT_1_CMD;
+	light[1]->dimCmd = LEVEL_1_LIGHT_2_DIM;
+	light[1]->onCmd = LEVEL_1_LIGHT_2_CMD;
+	light[2]->dimCmd = LEVEL_1_LIGHT_3_DIM;
+	light[2]->onCmd = LEVEL_1_LIGHT_3_CMD;
 
-  for (int i=0; i<numLights; i++)
-  {
-    analogWrite (light[i]->pin, 0);
-  }
-  
+	for (int i=0; i<numLights; i++)
+	{
+		analogWrite (light[i]->pin, 0);
+	}
+
 	for(int i=0; i<numTurnouts; i++)
 	{
 		SERVO_DEF *s = new SERVO_DEF;
@@ -182,16 +169,6 @@ void setup()
 	turnout[0]->frogRelayClosedPin = TURNOUT_0_CLOSED_RELAY_PIN;
 	turnout[0]->frogRelayThrownAddr = TURNOUT_0_THROWN;
 	turnout[0]->frogRelayClosedAddr = TURNOUT_0_CLOSED;
-/*
-	turnout[1]->lanternPin = TURNOUT_1_LIGHT_PIN;
-	turnout[1]->servoPin = TURNOUT_1_PIN;
-	turnout[1]->lanternCmd = TURNOUT_1_LANTERN_CMD;
-	turnout[1]->turnoutAddr = TURNOUT_1_ADDR;
-	turnout[1]->frogRelayThrownPin = TURNOUT_1_THROWN_RELAY_PIN;
-	turnout[1]->frogRelayClosedPin = TURNOUT_1_CLOSED_RELAY_PIN;
-	turnout[1]->frogRelayThrownAddr = TURNOUT_1_THROWN;
-	turnout[1]->frogRelayClosedAddr = TURNOUT_1_CLOSED;
-*/
 
 	LocoNet.init(LN_TX_PIN);
 
@@ -205,12 +182,12 @@ void setup()
 	{
 		pinMode(turnout[i]->lanternPin, OUTPUT);
 		pinMode(turnout[i]->servoPin, OUTPUT);
-    pinMode(turnout[i]->frogRelayThrownPin, OUTPUT);
-    pinMode(turnout[i]->frogRelayClosedPin, OUTPUT);
+		pinMode(turnout[i]->frogRelayThrownPin, OUTPUT);
+		pinMode(turnout[i]->frogRelayClosedPin, OUTPUT);
 		turnout[i]->lanternState = INACTIVE;
 		digitalWrite(turnout[i]->lanternPin, LOW);	// Turn lanterns off...prevents unused pins from being hot
-    digitalWrite(turnout[i]->frogRelayClosedPin, HIGH); // Turn both relays off (polarity is reversed on relay)
-    digitalWrite(turnout[i]->frogRelayThrownPin, HIGH);
+		digitalWrite(turnout[i]->frogRelayClosedPin, HIGH); // Turn both relays off (polarity is reversed on relay)
+		digitalWrite(turnout[i]->frogRelayThrownPin, HIGH);
 		LocoNet.requestSwitch(turnout[i]->turnoutAddr, 1, CLOSED);
 	}
 
@@ -233,7 +210,7 @@ void loop()
 	LnPacket = LocoNet.receive() ;
 	if ( LnPacket )
 	{
-    LocoNet.processSwitchSensorMessage(LnPacket);
+		LocoNet.processSwitchSensorMessage(LnPacket);
 	}
 
 	SoftwareServo::refresh();
@@ -247,17 +224,17 @@ void loop()
 		}
 	}
 
-  for (int i=0; i<numLights; i++)
-  {
-    if (light[i]->isDimming)
-    {
-      dimLight(light[i], -1);
-    }
-    else if (light[i]->isBrightening)
-    {
-      dimLight(light[i], 1);
-    }
-  }
+	for (int i=0; i<numLights; i++)
+	{
+		if (light[i]->isDimming)
+		{
+			dimLight(light[i], -1);
+		}
+		else if (light[i]->isBrightening)
+		{
+			dimLight(light[i], 1);
+		}
+	}
 }
 
 /**
@@ -266,64 +243,64 @@ void loop()
 void dimLight(LIGHT_DEF *light, int increment)
 {
 
-  if (light->counter++ > light->rate)
-  {  
+	if (light->counter++ > light->rate)
+	{
 #ifdef DEBUG
-    Serial.print ("In dimLight");
-    Serial.print (" currentIntensity = ");
-    Serial.print (light->currentIntensity);
-    Serial.print (" targetIntensity = ");
-    Serial.print (light->targetIntensity);
-    Serial.print (" increment = ");
-    Serial.print (increment);
-    Serial.println(""); 
+		Serial.print ("In dimLight");
+		Serial.print (" currentIntensity = ");
+		Serial.print (light->currentIntensity);
+		Serial.print (" targetIntensity = ");
+		Serial.print (light->targetIntensity);
+		Serial.print (" increment = ");
+		Serial.print (increment);
+		Serial.println("");
 #endif   
-    // Reset counter for next time through
-    light->counter = 0;
+		// Reset counter for next time through
+		light->counter = 0;
 
-    // Change light intensity 1 step
-    light->currentIntensity = light->currentIntensity + increment;
-    analogWrite(light->pin, light->currentIntensity);
+		// Change light intensity 1 step
+		light->currentIntensity = light->currentIntensity + increment;
+		analogWrite(light->pin, light->currentIntensity);
 
-    // Determine if we have reached the limit
-    if (light->isDimming && light->currentIntensity <= light->targetIntensity)
-    {
-      light->isDimming = false;
-      light->isBrightening = false;
-    } 
+		// Determine if we have reached the limit
+		if (light->isDimming && light->currentIntensity <= light->targetIntensity)
+		{
+			light->isDimming = false;
+			light->isBrightening = false;
+		}
 
-    if (light->isBrightening && light->currentIntensity >= light->targetIntensity)
-    {
-      light->isDimming = false;
-      light->isBrightening = false;
-    }        
-  }
+		if (light->isBrightening && light->currentIntensity >= light->targetIntensity)
+		{
+			light->isDimming = false;
+			light->isBrightening = false;
+		}
+	}
 }
- 
+
 /**
  * moveTurnout
  */
 void moveTurnout(SERVO_DEF *servo)
 {
 #ifdef DEBUG
-  Serial.print ("Moving Turnout");
-  Serial.print (" slowdown_counter = ");
-  Serial.print (servo->slowdown_counter);
-  Serial.print (" slowdown_rate = ");
-  Serial.print (servo->slowdown_rate);
-  Serial.print (" direction = ");
-  Serial.print (servo->direction);
- Serial.println ("");
+	Serial.print ("Moving Turnout");
+	Serial.print (" slowdown_counter = ");
+	Serial.print (servo->slowdown_counter);
+	Serial.print (" slowdown_rate = ");
+	Serial.print (servo->slowdown_rate);
+	Serial.print (" direction = ");
+	Serial.print (servo->direction);
+	Serial.println ("");
 #endif
 
 	if (servo->slowdown_counter++ > servo->slowdown_rate)
 	{
 #ifdef DEBUG
-  Serial.print (" currentPosition = ");
-  Serial.print (servo->currentPosition);
-  Serial.print (" increment = ");
-  Serial.print (servo->increment);
-  Serial.println ("");
+		Serial.print (" currentPosition = ");
+		Serial.print (servo->currentPosition);
+		Serial.print (" increment = ");
+		Serial.print (servo->increment);
+		Serial.println ("");
 #endif
 
 		// Reset counter for next time through
@@ -352,30 +329,114 @@ void moveTurnout(SERVO_DEF *servo)
 		}
 	}
 }
-
 String showDirection(uint8_t direction)
 {
-  if (direction == CLOSED)
-    return "CLOSED";
-  else
-    return "THROWN";
+	if (direction == CLOSED)
+		return "CLOSED";
+	else
+		return "THROWN";
 }
 
 String showState(uint8_t state)
 {
-  if (state == INACTIVE)
-    return "INACTIVE";
-  else
-    return "ACTIVE";
+	if (state == INACTIVE)
+		return "INACTIVE";
+	else
+		return "ACTIVE";
+}
+
+/**
+ * Change the position of a turnout....also deal with the on/off state of the turnout lantern.
+ */
+void changeTurnout(SERVO_DEF *turnout, uint8_t direction, bool lanternChange)
+{
+	if (!lanternChange)
+	{
+		if ((turnout->direction != CLOSED) && (turnout->currentPosition > turnout->thrownPosition))
+		{
+			turnout->increment = -1;
+		}
+		else if ((turnout->direction == CLOSED) && (turnout->currentPosition < turnout->closedPosition))
+		{
+			turnout->increment = 1;
+		}
+
+		turnout->moving = true;
+		turnout->direction = direction;
+		turnout->servo.attach(turnout->servoPin);
+		digitalWrite(turnout->frogRelayThrownPin, HIGH);
+		digitalWrite(turnout->frogRelayClosedPin, HIGH);
+		LocoNet.reportSensor(turnout->frogRelayThrownAddr, INACTIVE);
+		LocoNet.reportSensor(turnout->frogRelayClosedAddr, INACTIVE);
+	}
+	else
+	{
+		//
+		// Turn switch stand lantern on/off
+		if (direction == INACTIVE)
+			digitalWrite(turnout->lanternPin, LOW);
+		else
+			digitalWrite(turnout->lanternPin, HIGH);
+		turnout->lanternState = direction;
+	}
+}
+
+
+void changeLight (uint16_t address, LIGHT_DEF *light, uint8_t state)
+{
+	if (address == light->dimCmd)
+	{
+		light->isDimming = (state == ACTIVE) && light->isOn;
+		light->isBrightening = (state == INACTIVE) && light->isOn;
+		if (state == ACTIVE)
+		{
+			//Serial.println ("Setting dim");
+			light->targetIntensity = light->dimIntensity;
+		}
+		else
+		{
+			//Serial.println ("Unsetting dim");
+			light->targetIntensity = light->maxIntensity;
+		}
+		light->isDimmed = state == ACTIVE;
+	}
+	else if (address == light->onCmd)
+	{
+		if (state == INACTIVE)
+		{
+			//Serial.println("Turning light off");
+			light->isDimming = true;
+			light->isBrightening = false;
+			light->targetIntensity = 0;
+			light->isOn = false;
+		}
+		else
+		{
+			//Serial.println("Turning light on");
+			light->isDimming = false;
+			light->isBrightening = true;
+			if (light->isDimmed)
+			{
+				light->targetIntensity = light->dimIntensity;
+			}
+			else
+			{
+				light->targetIntensity = light->maxIntensity;
+			}
+			light->isOn = true;
+		}
+	}
 }
 /**
  *
  */
 void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t direction )
 {
+
 	// Address: Switch Address.
 	// Output: Value 0 for Coil Off, anything else for Coil On
 	// Direction: Value 0 for Closed/GREEN, anything else for Thrown/RED
+
 #ifdef DEBUG
 	Serial.print ("In notifySwitchRequest, Address = ");
 	Serial.print (address);
@@ -387,69 +448,35 @@ void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t direction )
 
 	for (int i=0; i<numTurnouts; i++)
 	{
-		if (address == turnout[i]->turnoutAddr  && output != 0 && turnout[i]->moving == false)
+		if ((address == turnout[i]->turnoutAddr  && output != 0 && turnout[i]->moving == false)
+				|| (address == turnout[i]->lanternCmd))
 		{
-			if ((turnout[i]->direction != CLOSED) && (turnout[i]->currentPosition > turnout[i]->thrownPosition))
-			{
-				turnout[i]->increment = -1;
-#ifdef DEBUG
-				Serial.print ("THROWN ");
-				Serial.print (" currentPosition = ");
-				Serial.print (turnout[i]->currentPosition);
-				Serial.print (" increment = ");
-				Serial.print (turnout[i]->increment);
-				Serial.print (" thrownPosition = ");
-				Serial.println (turnout[i]->thrownPosition);
-#endif
-			}
-			else if ((turnout[i]->direction == CLOSED) && (turnout[i]->currentPosition < turnout[i]->closedPosition))
-			{
-				turnout[i]->increment = 1;
-#ifdef DEBUG
-				Serial.print ("CLOSED ");
-				Serial.print (" currentPosition = ");
-				Serial.print (turnout[i]->currentPosition);
-				Serial.print (" increment = ");
-				Serial.print (turnout[i]->increment);
-				Serial.print (" closedPosition = ");
-				Serial.println (turnout[i]->closedPosition);
-#endif
-			}
-
-			turnout[i]->moving = true;
-			turnout[i]->direction = direction;
+			changeTurnout (turnout[i], direction, (address == turnout[i]->lanternCmd));
+		}
+		else if (address == CENTER_SERVO_CMD && direction != INACTIVE) // Center servos
+		{
 			turnout[i]->servo.attach(turnout[i]->servoPin);
-			digitalWrite(turnout[i]->frogRelayThrownPin, HIGH);
-			digitalWrite(turnout[i]->frogRelayClosedPin, HIGH);
-			LocoNet.reportSensor(turnout[i]->frogRelayThrownAddr, INACTIVE);
-			LocoNet.reportSensor(turnout[i]->frogRelayClosedAddr, INACTIVE);
+			SoftwareServo::refresh();
+			delay(4);
+			turnout[i]->servo.write(90);
+			SoftwareServo::refresh();
+			delay(4);
+			turnout[i]->servo.detach();
+
+			LocoNet.reportSensor(CENTER_SERVO_CMD, INACTIVE);
+		}
+	}
+
+	//  Not a turnout...check the level 1 lights
+	for (int i=0; i<numLights; i++)
+	{
+		if (address == light[i]->dimCmd || address == light[i]->onCmd)
+		{
+			changeLight(address, light[i], direction);
 		}
 	}
 }
 
-void notifySwitchReport( uint16_t Address, uint8_t Output, uint8_t Direction )
-{
-#ifdef DEBUG
-  Serial.print ("In notifySwitchReport...not doing anything, Address = ");
-  Serial.print (Address);
-  Serial.print (" Output = ");
-  Serial.print (Output);
-  Serial.print (" Direction = ");
-  Serial.println (Direction);
-#endif
-}
-
-void notifySwitchState( uint16_t Address, uint8_t Output, uint8_t Direction )
-{
-#ifdef DEBUG
-  Serial.print ("In notifySwitchState...not doing anything, Address = ");
-  Serial.print (Address);
-  Serial.print (" Output = ");
-  Serial.print (Output);
-  Serial.print (" Direction = ");
-  Serial.println (Direction);
-#endif
-}
 //
 //---------------------------------------------------------------------------------------
 //
@@ -459,35 +486,35 @@ void notifySwitchState( uint16_t Address, uint8_t Output, uint8_t Direction )
 //
 void notifyPower (uint8_t state)
 {
-  if (state)
-  {
-    LocoNet.reportSensor(CENTER_SERVO_CMD, INACTIVE);
+	if (state)
+	{
+		LocoNet.reportSensor(CENTER_SERVO_CMD, INACTIVE);
 
-    for (int i=0; i<numLights; i++)
-    {
-      if (light[i]->currentIntensity == light[i]->maxIntensity)
-      {
-        LocoNet.reportSensor(light[i]->onCmd, ACTIVE);
-        LocoNet.reportSensor(light[i]->dimCmd, INACTIVE);
-      }
-      else if (light[i]->currentIntensity == light[i]->dimIntensity)
-      {
-        LocoNet.reportSensor(light[i]->onCmd, ACTIVE);
-        LocoNet.reportSensor(light[i]->dimCmd, ACTIVE);
-      }
-      else if (light[i]->currentIntensity == 0)
-      {
-        LocoNet.reportSensor(light[i]->onCmd, INACTIVE);
-        LocoNet.reportSensor(light[i]->dimCmd, INACTIVE) ;     
-      }
-    }
-           
-	  for (int i=0; i<numTurnouts; i++)
-	  {
-		  LocoNet.reportSensor(turnout[i]->lanternCmd, turnout[i]->lanternState);  // Report to JMRI      
-		  LocoNet.reportSwitch(turnout[i]->turnoutAddr);
-	  }
-  }
+		for (int i=0; i<numLights; i++)
+		{
+			if (light[i]->currentIntensity == light[i]->maxIntensity)
+			{
+				LocoNet.reportSensor(light[i]->onCmd, ACTIVE);
+				LocoNet.reportSensor(light[i]->dimCmd, INACTIVE);
+			}
+			else if (light[i]->currentIntensity == light[i]->dimIntensity)
+			{
+				LocoNet.reportSensor(light[i]->onCmd, ACTIVE);
+				LocoNet.reportSensor(light[i]->dimCmd, ACTIVE);
+			}
+			else if (light[i]->currentIntensity == 0)
+			{
+				LocoNet.reportSensor(light[i]->onCmd, INACTIVE);
+				LocoNet.reportSensor(light[i]->dimCmd, INACTIVE) ;
+			}
+		}
+
+		for (int i=0; i<numTurnouts; i++)
+		{
+			LocoNet.reportSensor(turnout[i]->lanternCmd, turnout[i]->lanternState);  // Report to JMRI
+			LocoNet.reportSwitch(turnout[i]->turnoutAddr);
+		}
+	}
 }
 //
 //---------------------------------------------------------------------------------------
@@ -499,81 +526,10 @@ void notifyPower (uint8_t state)
 void notifySensor( uint16_t address, uint8_t state )
 {
 #ifdef DEBUG
-  Serial.print(" In notifySensor...");
-  Serial.print(" address = ");
-  Serial.print(address);
-  Serial.print(" state = ");
-  Serial.println(showState(state));
+	Serial.print(" In notifySensor...");
+	Serial.print(" address = ");
+	Serial.print(address);
+	Serial.print(" state = ");
+	Serial.println(showState(state));
 #endif
-	for (int i=0; i<numTurnouts; i++)
-	{
-		//
-		// Turn switch stand lantern on/off
-		if (address == turnout[i]->lanternCmd)
-		{
-			if (state == INACTIVE)
-				digitalWrite(turnout[i]->lanternPin, LOW);
-			else
-				digitalWrite(turnout[i]->lanternPin, HIGH);
-			turnout[i]->lanternState = state;
-		}
-    else if (address == CENTER_SERVO_CMD && state != INACTIVE) // Center servos
-    {
-      turnout[i]->servo.attach(turnout[i]->servoPin);
-      SoftwareServo::refresh();
-      delay(4);      
-      turnout[i]->servo.write(90);
-      SoftwareServo::refresh();
-      delay(4);
-      turnout[i]->servo.detach();
-  
-      LocoNet.reportSensor(CENTER_SERVO_CMD, INACTIVE);
-    }   
-	}
-
-  for (int i=0; i<numLights; i++)
-  {
-    if (address == light[i]->dimCmd)
-    {
-      light[i]->isDimming = (state == ACTIVE) && light[i]->isOn;
-      light[i]->isBrightening = (state == INACTIVE) && light[i]->isOn;
-      if (state == ACTIVE)
-      {
-        //Serial.println ("Setting dim");
-        light[i]->targetIntensity = light[i]->dimIntensity;
-      }
-      else
-      {
-        //Serial.println ("Unsetting dim");
-        light[i]->targetIntensity = light[i]->maxIntensity;        
-      }
-      light[i]->isDimmed = state == ACTIVE;
-    }
-    else if (address == light[i]->onCmd)
-    {
-      if (state == INACTIVE)
-      {
-        //Serial.println("Turning light off");
-        light[i]->isDimming = true;
-        light[i]->isBrightening = false;
-        light[i]->targetIntensity = 0;
-        light[i]->isOn = false;
-      }
-      else
-      {
-        //Serial.println("Turning light on");
-        light[i]->isDimming = false;
-        light[i]->isBrightening = true; 
-        if (light[i]->isDimmed)
-        {
-          light[i]->targetIntensity = light[i]->dimIntensity;       
-        }
-        else
-        {
-          light[i]->targetIntensity = light[i]->maxIntensity;
-        }
-        light[i]->isOn = true;
-      }
-    }
-  }
 }
