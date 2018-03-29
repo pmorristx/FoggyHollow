@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../../XSLT/aspecttable.xsl" type="text/xsl"?>
+
+<aspecttable
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation = "http://jmri.org/xml/schema/aspecttable.xsd"
+>
+
+  <name>Dimmable Light</name>
+  <reference>Signal head used to represent dimmable icons on panel</reference>
+
+  <aspects>
+    <aspect>
+      <name>On</name>
+      <indication>On</indication>
+      <speed>Normal</speed>
+      <route>Normal</route>      
+    </aspect>
+
+    <aspect>
+      <name>Dim</name>
+      <indication>Dim</indication>
+      <speed>Medium</speed>
+      <route>Normal</route>      
+    </aspect>
+
+    <aspect>
+      <name>Off</name>
+      <rule>Off</rule>
+      <indication>(used to indicate dark for e.g. approach lighting)</indication>
+      <speed>Stop</speed>
+    </aspect>
+
+  </aspects>
+  <appearancefiles>
+    <appearancefile href="appearance-one-head.xml"/>
+  </appearancefiles>
+
+</aspecttable>
+  

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xml/XSLT/locomotive.xsl"?>
+<locomotive-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/locomotive-config.xsd">
+  <!--Written by JMRI version 3.7.7-r26293 on Thu Jul 03 23:05:03 CDT 2014 $Id: XmlFile.java 26283 2014-06-12 04:24:18Z jacobsen $-->
+  <locomotive id="Foggy Hollow &amp; Western 32 4-6-0 Lights" fileName="FH_W_32_Loco_Lights.xml" roadNumber="32" roadName="Foggy Hollow &amp; Western" mfg="Baldwin" owner="Paul Morris" model="" dccAddress="32" comment="" maxSpeed="100" imageFilePath="" iconFilePath="" URL="" IsShuntingOn="">
+    <dateUpdated>Jul 3, 2014 11:05:03 PM</dateUpdated>
+    <decoder model="FL4" family="TCS Function Decoders" comment="Decoder Lock = 4&#xA;47K resistor on Class &amp; Cab lights&#xA;1K resistor on Firebox" />
+    <locoaddress>
+      <dcclocoaddress number="32" longaddress="no" />
+      <number>32</number>
+      <protocol>dcc_short</protocol>
+    </locoaddress>
+    <attributepairs>
+      <keyvaluepair>
+        <key>RosterGroup:Light Functions</key>
+        <value>yes</value>
+      </keyvaluepair>
+    </attributepairs>
+    <values>
+      <decoderDef>
+        <varValue item="Primary Address" value="32" />
+        <varValue item="Version ID" value="0" />
+        <varValue item="Manufacturer ID" value="0" />
+        <varValue item="Analog Mode Green" value="1" />
+        <varValue item="Analog Mode Purple" value="1" />
+        <varValue item="Analog Mode Brown" value="1" />
+        <varValue item="Analog Mode Pick" value="1" />
+        <varValue item="Decoder Lock ID number" value="4" />
+        <varValue item="Long Address" value="0" />
+        <varValue item="Consist Address" value="0" />
+        <varValue item="Consist Direction" value="0" />
+        <varValue item="Consist Address Active For Green" value="0" />
+        <varValue item="Consist Address Active For Purple" value="0" />
+        <varValue item="Consist Address Active For Brown" value="0" />
+        <varValue item="Consist Address Active For Pink" value="0" />
+        <varValue item="Normal direction of motion" value="0" />
+        <varValue item="Analog conversion mode" value="0" />
+        <varValue item="Addressing Mode" value="0" />
+        <varValue item="FL(f) controls output 1" value="0" />
+        <varValue item="FL(r) controls output 1" value="0" />
+        <varValue item="F1 controls output 1" value="0" />
+        <varValue item="F2 controls output 1" value="0" />
+        <varValue item="F3 controls output 1" value="0" />
+        <varValue item="F4 controls output 1" value="0" />
+        <varValue item="F5 controls output 1" value="0" />
+        <varValue item="F6 controls output 1" value="0" />
+        <varValue item="FL(f) controls output 2" value="0" />
+        <varValue item="FL(r) controls output 2" value="0" />
+        <varValue item="F1 controls output 2" value="0" />
+        <varValue item="F2 controls output 2" value="0" />
+        <varValue item="F3 controls output 2" value="0" />
+        <varValue item="F4 controls output 2" value="0" />
+        <varValue item="F5 controls output 2" value="0" />
+        <varValue item="F6 controls output 2" value="0" />
+        <varValue item="F7 controls output 1" value="0" />
+        <varValue item="F8 controls output 1" value="0" />
+        <varValue item="F9 controls output 1" value="1" />
+        <varValue item="F10 controls output 1" value="0" />
+        <varValue item="F11 controls output 1" value="0" />
+        <varValue item="F12 controls output 1" value="0" />
+        <varValue item="F7 controls output 2" value="0" />
+        <varValue item="F8 controls output 2" value="0" />
+        <varValue item="F9 controls output 2" value="0" />
+        <varValue item="F10 controls output 2" value="1" />
+        <varValue item="F11 controls output 2" value="0" />
+        <varValue item="F12 controls output 2" value="0" />
+        <varValue item="FL(f) controls output 3" value="0" />
+        <varValue item="FL(r) controls output 3" value="0" />
+        <varValue item="F1 controls output 3" value="0" />
+        <varValue item="F2 controls output 3" value="0" />
+        <varValue item="F3 controls output 3" value="0" />
+        <varValue item="F4 controls output 3" value="0" />
+        <varValue item="F5 controls output 3" value="0" />
+        <varValue item="F6 controls output 3" value="0" />
+        <varValue item="FL(f) controls output 4" value="0" />
+        <varValue item="FL(r) controls output 4" value="0" />
+        <varValue item="F1 controls output 4" value="0" />
+        <varValue item="F2 controls output 4" value="0" />
+        <varValue item="F3 controls output 4" value="0" />
+        <varValue item="F4 controls output 4" value="0" />
+        <varValue item="F5 controls output 4" value="0" />
+        <varValue item="F6 controls output 4" value="0" />
+        <varValue item="F7 controls output 3" value="0" />
+        <varValue item="F8 controls output 3" value="0" />
+        <varValue item="F9 controls output 3" value="0" />
+        <varValue item="F10 controls output 3" value="0" />
+        <varValue item="F11 controls output 3" value="1" />
+        <varValue item="F12 controls output 3" value="0" />
+        <varValue item="F7 controls output 4" value="0" />
+        <varValue item="F8 controls output 4" value="0" />
+        <varValue item="F9 controls output 4" value="0" />
+        <varValue item="F10 controls output 4" value="0" />
+        <varValue item="F11 controls output 4" value="0" />
+        <varValue item="F12 controls output 4" value="1" />
+        <varValue item="Green Wire Effect" value="12" />
+        <varValue item="Green Wire Timing" value="2" />
+        <varValue item="Purple Wire Effect" value="0" />
+        <varValue item="Purple Wire Timing" value="2" />
+        <varValue item="Brown Wire Effect" value="16" />
+        <varValue item="Brown Wire Timing" value="2" />
+        <varValue item="Pink Wire Effect" value="0" />
+        <varValue item="Pink Wire Timing" value="2" />
+        <varValue item="Constant Dim 1" value="4" />
+        <varValue item="Constant Dim 2" value="4" />
+        <varValue item="Constant Dim 3" value="16" />
+        <varValue item="Constant Dim 4" value="16" />
+        <varValue item="Oscillating Light Modulation" value="46" />
+        <varValue item="Oscillating Light Latency" value="54" />
+        <varValue item="Headlight Dim When Stopped" value="0" />
+        <varValue item="Opposite Headlight Dim" value="0" />
+        <varValue item="Momentary Pulse" value="60" />
+        <varValue item="Ditch Light Blink Holdover Time" value="10" />
+        <varValue item="Random Flicker Rate 1" value="255" />
+        <varValue item="Random Flicker Rate 2" value="16" />
+        <varValue item="User Private ID #1" value="0" />
+        <varValue item="User Private ID #2" value="0" />
+      </decoderDef>
+      <CVvalue name="1" value="32" />
+      <CVvalue name="7" value="0" />
+      <CVvalue name="8" value="0" />
+      <CVvalue name="13" value="15" />
+      <CVvalue name="16" value="4" />
+      <CVvalue name="17" value="0" />
+      <CVvalue name="18" value="0" />
+      <CVvalue name="19" value="0" />
+      <CVvalue name="21" value="0" />
+      <CVvalue name="29" value="0" />
+      <CVvalue name="35" value="0" />
+      <CVvalue name="36" value="0" />
+      <CVvalue name="37" value="16" />
+      <CVvalue name="38" value="32" />
+      <CVvalue name="39" value="0" />
+      <CVvalue name="40" value="0" />
+      <CVvalue name="41" value="64" />
+      <CVvalue name="42" value="128" />
+      <CVvalue name="51" value="44" />
+      <CVvalue name="52" value="32" />
+      <CVvalue name="53" value="33" />
+      <CVvalue name="54" value="32" />
+      <CVvalue name="64" value="4" />
+      <CVvalue name="153" value="4" />
+      <CVvalue name="154" value="16" />
+      <CVvalue name="155" value="16" />
+      <CVvalue name="59" value="46" />
+      <CVvalue name="60" value="54" />
+      <CVvalue name="61" value="0" />
+      <CVvalue name="62" value="60" />
+      <CVvalue name="63" value="10" />
+      <CVvalue name="135" value="255" />
+      <CVvalue name="152" value="16" />
+      <CVvalue name="105" value="0" />
+      <CVvalue name="106" value="0" />
+    </values>
+  </locomotive>
+</locomotive-config>
+

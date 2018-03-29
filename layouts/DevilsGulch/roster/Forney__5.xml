@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xml/XSLT/locomotive.xsl"?>
+<!DOCTYPE locomotive-config SYSTEM "/xml/DTD/locomotive-config.dtd">
+
+<locomotive-config>
+  <!--Written by JMRI version 3.7.7-r26293 on Tue Jul 01 22:12:49 CDT 2014 $Id: XmlFile.java 26283 2014-06-12 04:24:18Z jacobsen $-->
+  <locomotive id="Foggy Hollow &amp; Western 05 Forney" fileName="Forney__5.xml" roadNumber="05" roadName="Rio Grande Southern" mfg="Forney" owner="Paul Morris" model="2-4-4T" dccAddress="5" comment="" maxSpeed="100" imageFilePath="RGS #5.jpg" iconFilePath="RGS #5.jpg" URL="" IsShuntingOn="">
+    <dateUpdated>Jul 1, 2014 10:12:49 PM</dateUpdated>
+    <decoder model="Tsunami Bachmann OEM" family="Tsunami Steam" comment="" />
+    <locoaddress>
+      <dcclocoaddress number="5" longaddress="no" />
+      <number>5</number>
+      <protocol>dcc_short</protocol>
+    </locoaddress>
+    <functionlabels>
+      <functionlabel num="0" lockable="true" functionImage="" functionImageSelected="">Headlight</functionlabel>
+      <functionlabel num="1" lockable="true" functionImage="" functionImageSelected="">Bell</functionlabel>
+      <functionlabel num="2" lockable="true" functionImage="" functionImageSelected="">Whistle</functionlabel>
+      <functionlabel num="3" lockable="true" functionImage="" functionImageSelected="">Toot</functionlabel>
+      <functionlabel num="4" lockable="true" functionImage="" functionImageSelected="">Steam Release</functionlabel>
+      <functionlabel num="5" lockable="true" functionImage="" functionImageSelected="">Dim</functionlabel>
+      <functionlabel num="6" lockable="true" functionImage="" functionImageSelected="">Water Stop</functionlabel>
+    </functionlabels>
+    <attributepairs>
+      <keyvaluepair>
+        <key>ProductDescription</key>
+        <value>Bachmann Spectrum On30 2-4-4 Forney - Painted/Unlettered - Inside Frame - DCC Sound</value>
+      </keyvaluepair>
+      <keyvaluepair>
+        <key>ProductNumber</key>
+        <value>Bachmann #25499</value>
+      </keyvaluepair>
+      <keyvaluepair>
+        <key>RosterGroup:Foggy Hollow &amp; Western</key>
+        <value>yes</value>
+      </keyvaluepair>
+      <keyvaluepair>
+        <key>RosterGroup:Locomotives &amp; Cars</key>
+        <value>yes</value>
+      </keyvaluepair>
+      <keyvaluepair>
+        <key>RosterGroup:Rio Grande Southern</key>
+        <value>yes</value>
+      </keyvaluepair>
+    </attributepairs>
+    <values>
+      <decoderDef />
+      <CVvalue name="1" value="5" />
+      <CVvalue name="2" value="0" />
+      <CVvalue name="3" value="30" />
+      <CVvalue name="4" value="20" />
+      <CVvalue name="7" value="80" />
+      <CVvalue name="8" value="141" />
+      <CVvalue name="10" value="0" />
+      <CVvalue name="11" value="0" />
+      <CVvalue name="12" value="1" />
+      <CVvalue name="13" value="0" />
+      <CVvalue name="14" value="0" />
+      <CVvalue name="15" value="0" />
+      <CVvalue name="16" value="0" />
+      <CVvalue name="17" value="192" />
+      <CVvalue name="18" value="5" />
+      <CVvalue name="19" value="0" />
+      <CVvalue name="21" value="0" />
+      <CVvalue name="22" value="0" />
+      <CVvalue name="23" value="0" />
+      <CVvalue name="24" value="0" />
+      <CVvalue name="25" value="0" />
+      <CVvalue name="29" value="2" />
+      <CVvalue name="30" value="4" />
+      <CVvalue name="33" value="67" />
+      <CVvalue name="34" value="67" />
+      <CVvalue name="35" value="8" />
+      <CVvalue name="36" value="4" />
+      <CVvalue name="37" value="16" />
+      <CVvalue name="38" value="32" />
+      <CVvalue name="39" value="128" />
+      <CVvalue name="40" value="64" />
+      <CVvalue name="41" value="128" />
+      <CVvalue name="42" value="32" />
+      <CVvalue name="43" value="0" />
+      <CVvalue name="44" value="0" />
+      <CVvalue name="45" value="128" />
+      <CVvalue name="46" value="0" />
+      <CVvalue name="47" value="0" />
+      <CVvalue name="49" value="143" />
+      <CVvalue name="50" value="1" />
+      <CVvalue name="59" value="3" />
+      <CVvalue name="60" value="4" />
+      <CVvalue name="61" value="173" />
+      <CVvalue name="62" value="0" />
+      <CVvalue name="63" value="20" />
+      <CVvalue name="64" value="180" />
+      <CVvalue name="66" value="128" />
+      <CVvalue name="67" value="0" />
+      <CVvalue name="68" value="9" />
+      <CVvalue name="69" value="18" />
+      <CVvalue name="70" value="28" />
+      <CVvalue name="71" value="37" />
+      <CVvalue name="72" value="47" />
+      <CVvalue name="73" value="56" />
+      <CVvalue name="74" value="66" />
+      <CVvalue name="75" value="75" />
+      <CVvalue name="76" value="85" />
+      <CVvalue name="77" value="94" />
+      <CVvalue name="78" value="103" />
+      <CVvalue name="79" value="113" />
+      <CVvalue name="80" value="122" />
+      <CVvalue name="81" value="132" />
+      <CVvalue name="82" value="141" />
+      <CVvalue name="83" value="151" />
+      <CVvalue name="84" value="160" />
+      <CVvalue name="85" value="170" />
+      <CVvalue name="86" value="179" />
+      <CVvalue name="87" value="188" />
+      <CVvalue name="88" value="198" />
+      <CVvalue name="89" value="207" />
+      <CVvalue name="90" value="217" />
+      <CVvalue name="91" value="226" />
+      <CVvalue name="92" value="236" />
+      <CVvalue name="93" value="245" />
+      <CVvalue name="94" value="255" />
+      <CVvalue name="95" value="128" />
+      <CVvalue name="105" value="0" />
+      <CVvalue name="106" value="0" />
+      <CVvalue name="112" value="0" />
+      <CVvalue name="113" value="0" />
+      <CVvalue name="114" value="4" />
+      <CVvalue name="115" value="0" />
+      <CVvalue name="116" value="65" />
+      <CVvalue name="128" value="225" />
+      <CVvalue name="129" value="225" />
+      <CVvalue name="130" value="92" />
+      <CVvalue name="131" value="100" />
+      <CVvalue name="132" value="48" />
+      <CVvalue name="133" value="10" />
+      <CVvalue name="135" value="32" />
+      <CVvalue name="136" value="128" />
+      <CVvalue name="137" value="128" />
+      <CVvalue name="139" value="128" />
+      <CVvalue name="140" value="64" />
+      <CVvalue name="141" value="64" />
+      <CVvalue name="142" value="64" />
+      <CVvalue name="146" value="96" />
+      <CVvalue name="177" value="10" />
+      <CVvalue name="178" value="24" />
+      <CVvalue name="179" value="10" />
+      <CVvalue name="180" value="10" />
+      <CVvalue name="181" value="255" />
+      <CVvalue name="182" value="255" />
+      <CVvalue name="183" value="255" />
+      <CVvalue name="184" value="255" />
+      <CVvalue name="185" value="42" />
+      <CVvalue name="186" value="64" />
+      <CVvalue name="187" value="255" />
+      <CVvalue name="188" value="102" />
+      <CVvalue name="193" value="5" />
+      <CVvalue name="194" value="15" />
+      <CVvalue name="195" value="4" />
+      <CVvalue name="196" value="5" />
+      <CVvalue name="197" value="0" />
+      <CVvalue name="198" value="30" />
+      <CVvalue name="209" value="60" />
+      <CVvalue name="210" value="10" />
+      <CVvalue name="212" value="128" />
+      <CVvalue name="213" value="15" />
+      <CVvalue name="214" value="15" />
+    </values>
+  </locomotive>
+</locomotive-config>
+

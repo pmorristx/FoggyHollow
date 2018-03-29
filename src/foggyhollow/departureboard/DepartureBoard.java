@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
+
+import org.apache.commons.lang3.StringUtils;
+
 import jmri.InstanceManager;
 import jmri.Memory;
 import jmri.jmrit.catalog.NamedIcon;
@@ -14,7 +17,7 @@ import jmri.jmrit.display.Editor;
 import jmri.jmrit.display.MemoryIcon;
 import jmri.jmrit.operations.trains.Train;
 import jmri.jmrit.operations.trains.TrainManager;
-import org.apache.commons.lang3.StringUtils;
+import jmri.ConfigureManager;
 
 public class DepartureBoard
 {
@@ -99,8 +102,9 @@ public class DepartureBoard
     
     /**
      *  Create a new Departure board
+     * @throws Exception 
      */  
-    public DepartureBoard(String panelName, String boardName, int startX, int startY, int numRows, int numCols)
+    public DepartureBoard(String panelName, String boardName, int startX, int startY, int numRows, int numCols) throws Exception
     {
         this.startX = startX;
         this.startY = startY;
@@ -467,6 +471,7 @@ public class DepartureBoard
      * 
      * @param panelName
      * @return
+     * @throws Exception 
      */
     private Editor findPanelEditor(String panelName)
     {
@@ -475,27 +480,31 @@ public class DepartureBoard
             //  initialize loop to find all panel editors
             int i = 0;
             ArrayList <Editor>  editorList = new ArrayList<Editor>();
-            Editor editor = (Editor)jmri.InstanceManager.configureManagerInstance().findInstance(java.lang.Class.forName("jmri.jmrit.display.panelEditor.PanelEditor"),i);
-                   
+            //Editor editor = (Editor)jmri.InstanceManager.configureManagerInstance().findInstance(java.lang.Class.forName("jmri.jmrit.display.panelEditor.PanelEditor"),i);
+            jmri.ConfigureManager manager = (ConfigureManager) jmri.InstanceManager.getDefault(java.lang.Class.forName("jmri.ConfigureManager"));
+            Editor editor = (Editor)manager.findInstance(java.lang.Class.forName("jmri.jmrit.display.panelEditor.PanelEditor"), i);                  
             // loop, adding each editor found to the list
+            
             while (editor != null) 
             {
                 editorList.add(editor);
                 // loop again
-                editor = (Editor) jmri.InstanceManager.configureManagerInstance().findInstance(java.lang.Class.forName("jmri.jmrit.display.panelEditor.PanelEditor"),i++);
+                //editor = (Editor) jmri.InstanceManager.configureManagerInstance().findInstance(java.lang.Class.forName("jmri.jmrit.display.panelEditor.PanelEditor"),i++);
+                editor = (Editor)manager.findInstance(java.lang.Class.forName("jmri.jmrit.display.panelEditor.PanelEditor"), i++);                  
             }     
             // Now we have a list of editors.
             // For each editor, get the related panel and walk down 
             // its object hierarchy until the widgets themselves are reached    
             for (Editor e : editorList)
             {
+        	System.out.println("Editor name = " + e.getName());
                 if (e.getName().equals(panelName))
                 {
                     return e;
                 }
             }
         }
-        catch (Exception err)
+        catch (ClassNotFoundException err)
         {
             err.printStackTrace();
         }

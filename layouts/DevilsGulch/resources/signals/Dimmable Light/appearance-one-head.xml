@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../../XSLT/appearancetable.xsl" type="text/xsl"?>
+
+<appearancetable
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation = "http://jmri.org/xml/schema/appearancetable.xsd"
+>
+
+  <aspecttable>Dimmable Light</aspecttable>
+  <name>Single Light</name>
+  <reference>(similar to basic signals described in various magazine articles)</reference>
+  <description>A simple signal for use as e.g. a block signal</description>
+  
+  <appearances>
+
+    <appearance>
+      <aspectname>On</aspectname>
+      <show>green</show>
+      <imagelink>../../resources/icons/indicators/small/green-on.gif</imagelink>
+    </appearance>
+
+    <appearance>
+      <aspectname>Dim</aspectname>
+      <show>yellow</show>
+      <imagelink>../../resources/icons/indicators/small/yellow-on.gif</imagelink>      
+    </appearance>
+
+    <appearance>
+      <aspectname>Off</aspectname>
+      <show>dark</show>
+      <imagelink>../../resources/icons/indicators/small/green-off.gif</imagelink>            
+    </appearance>    
+
+  </appearances>
+
+    <specificappearances><!-- Start of Specific Appearances list -->
+      <dark>
+        <aspect>Not Lit</aspect>
+	<imagelink>../../resources/icons/indicators/small/green-off.gif</imagelink>            	
+      </dark>
+      <on>
+        <aspect>On</aspect>
+	<imagelink>../../resources/icons/indicators/small/green-on.gif</imagelink>            	
+      </on>
+      <on>
+        <aspect>Dim</aspect>
+	<imagelink>../../resources/icons/indicators/small/yellow-on.gif</imagelink>            	
+      </on>
+      <on>
+        <aspect>Off</aspect>
+	<imagelink>../../resources/icons/indicators/small/green-off.gif</imagelink>            	
+     </on>                  
+  </specificappearances><!-- End of Specific Appearances list -->
+  
+    <aspectMappings><!-- Start of Aspect Mapping -->
+
+    </aspectMappings>
+    
+</appearancetable>  

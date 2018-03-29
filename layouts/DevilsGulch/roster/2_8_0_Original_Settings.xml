@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.jmri.org/xml/XSLT/locomotive.xsl"?>
+<!DOCTYPE locomotive-config SYSTEM "locomotive-config.dtd">
+
+<locomotive-config>
+  <!--Written by JMRI version 2.8 on Thu Feb 04 17:40:36 CST 2010 $Id: XmlFile.java,v 1.49 2009/12/05 23:05:08 jacobsen Exp $-->
+  <locomotive id="2-8-0 Original Settings" fileName="2_8_0_Original_Settings.xml" roadNumber="28" roadName="Colorado Mining" mfg="Bachmann" owner="Paul Morris" model="2-8-0 Consolidated" dccAddress="2" comment="" imageFilePath="__noImage.jpg" iconFilePath="__noIcon.jpg" URL="">
+    <decoder model="4 function decoder (36-550)" family="E-Z Command decoders" comment="Settings from factory decoder" />
+    <locoaddress>
+      <dcclocoaddress number="2" longaddress="no" />
+    </locoaddress>
+    <values>
+      <decoderDef>
+        <varValue item="Primary Address" value="2" />
+        <varValue item="Start Volts" value="10" />
+        <varValue item="Accel" value="1" />
+        <varValue item="Decel" value="1" />
+        <varValue item="Version ID" value="46" />
+        <varValue item="Manufacturer ID" value="101" />
+        <varValue item="Long Address" value="0" />
+        <varValue item="Consist Address" value="0" />
+        <varValue item="Consist Direction" value="0" />
+        <varValue item="Normal direction of motion" value="0" />
+        <varValue item="Speed Steps" value="1" />
+        <varValue item="Analog conversion mode" value="1" />
+        <varValue item="Use Speed Table" value="0" />
+        <varValue item="Addressing Mode" value="0" />
+        <varValue item="Motor Drive Selection" value="0" />
+        <varValue item="Brake Momentum on DC" value="0" />
+        <varValue item="Directional Headlights" value="1" />
+        <varValue item="Output A dimming control" value="0" />
+        <varValue item="Output A dimming" value="0" />
+        <varValue item="Output A is Gyrolight" value="0" />
+        <varValue item="Output A is Mars light" value="0" />
+        <varValue item="Output A is single strobe" value="0" />
+        <varValue item="Output A is double strobe" value="0" />
+        <varValue item="Output A dim intensity" value="64" />
+        <varValue item="Output B dimming control" value="1" />
+        <varValue item="Output B dimming" value="1" />
+        <varValue item="Output B is Gyrolight" value="1" />
+        <varValue item="Output B is Mars light" value="1" />
+        <varValue item="Output B is single strobe" value="1" />
+        <varValue item="Output B is double strobe" value="1" />
+        <varValue item="Output B dim intensity" value="255" />
+        <varValue item="Output C, D blink rate" value="255" />
+        <varValue item="Output C blinks" value="1" />
+        <varValue item="Output D blinks" value="1" />
+        <varValue item="Output C, D are ditch lights" value="1" />
+        <varValue item="F1 controls output C" value="1" />
+        <varValue item="F2 controls output C" value="1" />
+        <varValue item="F3 controls output C" value="1" />
+        <varValue item="F4 controls output C" value="1" />
+        <varValue item="F5 controls output C" value="1" />
+        <varValue item="F6 controls output C" value="1" />
+        <varValue item="F7 controls output C" value="1" />
+        <varValue item="F8 controls output C" value="1" />
+        <varValue item="F1 controls output D" value="1" />
+        <varValue item="F2 controls output D" value="1" />
+        <varValue item="F3 controls output D" value="1" />
+        <varValue item="F4 controls output D" value="1" />
+        <varValue item="F5 controls output D" value="1" />
+        <varValue item="F6 controls output D" value="1" />
+        <varValue item="F7 controls output D" value="1" />
+        <varValue item="F8 controls output D" value="1" />
+        <varValue item="User Private ID #1" value="255" />
+        <varValue item="User Private ID #2" value="255" />
+        <varValue item="Speed Table" value="255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255" />
+        <varValue item="FL(f) controls output 1" value="0" />
+        <varValue item="FL(r) controls output 2" value="0" />
+      </decoderDef>
+      <CVvalue name="1" value="2" />
+      <CVvalue name="2" value="10" />
+      <CVvalue name="3" value="1" />
+      <CVvalue name="4" value="1" />
+      <CVvalue name="7" value="46" />
+      <CVvalue name="8" value="101" />
+      <CVvalue name="17" value="0" />
+      <CVvalue name="18" value="0" />
+      <CVvalue name="19" value="0" />
+      <CVvalue name="29" value="6" />
+      <CVvalue name="50" value="128" />
+      <CVvalue name="51" value="1" />
+      <CVvalue name="52" value="64" />
+      <CVvalue name="57" value="255" />
+      <CVvalue name="58" value="255" />
+      <CVvalue name="56" value="255" />
+      <CVvalue name="53" value="255" />
+      <CVvalue name="54" value="255" />
+      <CVvalue name="55" value="255" />
+      <CVvalue name="105" value="255" />
+      <CVvalue name="106" value="255" />
+      <CVvalue name="67" value="255" />
+      <CVvalue name="68" value="255" />
+      <CVvalue name="69" value="255" />
+      <CVvalue name="70" value="255" />
+      <CVvalue name="71" value="255" />
+      <CVvalue name="72" value="255" />
+      <CVvalue name="73" value="255" />
+      <CVvalue name="74" value="255" />
+      <CVvalue name="75" value="255" />
+      <CVvalue name="76" value="255" />
+      <CVvalue name="77" value="255" />
+      <CVvalue name="78" value="255" />
+      <CVvalue name="79" value="255" />
+      <CVvalue name="80" value="255" />
+      <CVvalue name="81" value="255" />
+      <CVvalue name="82" value="255" />
+      <CVvalue name="83" value="255" />
+      <CVvalue name="84" value="255" />
+      <CVvalue name="85" value="255" />
+      <CVvalue name="86" value="255" />
+      <CVvalue name="87" value="255" />
+      <CVvalue name="88" value="255" />
+      <CVvalue name="89" value="255" />
+      <CVvalue name="90" value="255" />
+      <CVvalue name="91" value="255" />
+      <CVvalue name="92" value="255" />
+      <CVvalue name="93" value="255" />
+      <CVvalue name="94" value="255" />
+    </values>
+  </locomotive>
+</locomotive-config>
+

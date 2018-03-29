@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../../XSLT/appearancetable.xsl" type="text/xsl"?>
+
+<appearancetable
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation = "http://jmri.org/xml/schema/appearancetable.xsd"
+>
+
+  <copyright xmlns="http://docbook.org/ns/docbook">
+    <year>2009</year><year>2010</year><holder>JMRI</holder>
+  </copyright>
+  
+  <authorgroup xmlns="http://docbook.org/ns/docbook">
+    <author>
+        <personname><firstname>Paul</firstname><surname>Morris</surname></personname>
+    </author>    
+    <author>
+        <personname><firstname>Bob</firstname><surname>Jacobsen</surname></personname>
+        <email>jake@physics.berkeley.edu</email>
+    </author>    
+  </authorgroup>
+    
+  <revhistory xmlns="http://docbook.org/ns/docbook">
+    <revision>
+        <revnumber>1</revnumber>
+        <date>2009-12-28</date>
+        <authorinitials>RGJ</authorinitials>
+        <revremark>Initial version</revremark>
+    </revision>
+    <revision>
+        <revnumber>1.1</revnumber>
+        <date>2011-06-13</date>
+        <authorinitials>KWD</authorinitials>
+        <revremark>Add Aspect Mapping and Specific Aspects</revremark>
+    </revision>
+  </revhistory>
+
+  <aspecttable>Train Order Semaphore</aspecttable>
+  <name>Single order board</name>
+  <reference>(similar to basic signals described in various magazine articles)</reference>
+  <description>A simple signal for use as e.g. a block signal</description>
+  
+  <appearances>
+
+    <appearance>
+      <aspectname>Clear</aspectname>
+      <show>green</show>
+      <imagelink>../../resources/icons/misc/Signals/East_clear.gif</imagelink>
+    </appearance>
+
+    <appearance>
+      <aspectname>Approach</aspectname>
+      <show>yellow</show>
+      <imagelink>../../resources/icons/misc/Signals/East_caution.gif</imagelink>      
+    </appearance>
+
+    <appearance>
+      <aspectname>Stop</aspectname>
+      <show>red</show>
+      <imagelink>../../resources/icons/misc/Signals/East_stop.gif</imagelink>            
+    </appearance>
+
+    <appearance>
+      <aspectname>Diverging Clear</aspectname>
+      <show>flashgreen</show>
+      <imagelink>../../resources/icons/misc/Signals/East_clear.gif</imagelink>      
+    </appearance>        
+
+    <appearance>
+      <aspectname>Diverging Approach</aspectname>
+      <show>flashyellow</show>
+      <imagelink>../../resources/icons/misc/Signals/East_caution.gif</imagelink>      
+    </appearance>    
+    
+    <appearance>
+      <aspectname>Not Lit</aspectname>
+      <show>green</show>
+      <imagelink>../../resources/icons/misc/Signals/dark.gif</imagelink>
+    </appearance>    
+
+  </appearances>
+  
+    <specificappearances><!-- Start of Specific Appearances list -->
+     <danger>
+        <aspect>Stop</aspect>
+     </danger>
+     <held>
+        <aspect>Stop</aspect>
+     </held>
+	 <dark>
+        <aspect>Not Lit</aspect>
+        <imagelink>../../resources/icons/misc/Signals/dark.gif</imagelink>
+     </dark>      
+  </specificappearances><!-- End of Specific Appearances list -->
+  
+    <aspectMappings><!-- Start of Aspect Mapping -->
+
+    <aspectMapping>
+     <advancedAspect>Stop</advancedAspect>
+     <ourAspect>Approach</ourAspect>
+     <ourAspect>Diverging Approach</ourAspect>
+    </aspectMapping>
+    
+    <aspectMapping>
+     <advancedAspect>Approach</advancedAspect>
+     <ourAspect>Clear</ourAspect>
+     <ourAspect>Diverging Clear</ourAspect>     
+    </aspectMapping>
+
+
+    <aspectMapping>
+     <advancedAspect>Clear</advancedAspect>
+     <ourAspect>Clear</ourAspect>
+     <ourAspect>Diverging Clear</ourAspect>
+    </aspectMapping>
+
+  </aspectMappings><!-- End of Aspect Mapping -->
+</appearancetable>  

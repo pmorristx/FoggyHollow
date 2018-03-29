@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../../XSLT/aspecttable.xsl" type="text/xsl"?>
+
+<aspecttable
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation = "http://jmri.org/xml/schema/aspecttable.xsd"
+>
+
+  <name>Tristate Signal</name>
+
+  <aspects>
+
+    <aspect>
+      <name>Steady</name>
+      <indication>Steady</indication>
+      <speed>Medium</speed>
+      <route>Normal</route>      
+    </aspect>
+
+    <aspect>
+      <name>Flashing</name>
+      <indication>Flashing</indication>
+      <speed>Stop</speed>
+      <route>Normal</route>
+    </aspect>
+
+    <aspect>
+      <name>Not Lit</name>
+      <rule>Dark</rule>
+      <indication>(used to indicate dark for e.g. approach lighting)</indication>
+      <speed>Stop</speed>
+    </aspect>
+
+  </aspects>
+  <appearancefiles>
+    <appearancefile href="appearance-one-head.xml"/>
+  </appearancefiles>
+
+</aspecttable>
+  

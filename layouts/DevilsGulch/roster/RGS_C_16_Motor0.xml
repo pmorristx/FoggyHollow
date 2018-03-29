@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xml/XSLT/locomotive.xsl"?>
+<locomotive-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/locomotive-config.xsd">
+  <!--Written by JMRI version 2.99.5-r20578 on Tue Jun 12 22:01:40 CDT 2012 $Id: XmlFile.java 18985 2011-10-31 05:24:36Z rhwood $-->
+  <locomotive id="RGS 41 Motor" fileName="RGS_C_16_Motor0.xml" roadNumber="41" roadName="Rio Grande Southern" mfg="Baldwin" owner="Paul Morris" model="C-16" dccAddress="41" comment="" maxSpeed="100" imageFilePath="RGS 41.jpg" iconFilePath="RGS 41.jpg" URL="" IsShuntingOn="">
+    <dateUpdated>Jun 12, 2012 10:01:40 PM</dateUpdated>
+    <decoder model="DZ123" family="Series 3 with FX3, silent, readback" comment="Keep motor kick-start at 0." />
+    <locoaddress>
+      <dcclocoaddress number="41" longaddress="no" />
+    </locoaddress>
+    <functionlabels>
+      <functionlabel num="0" lockable="true" functionImage="" functionImageSelected="">Headlight</functionlabel>
+      <functionlabel num="1" lockable="true" functionImage="" functionImageSelected="">Bell</functionlabel>
+      <functionlabel num="2" lockable="false" functionImage="" functionImageSelected="">Whistle</functionlabel>
+      <functionlabel num="3" lockable="true" functionImage="" functionImageSelected="">Coupler</functionlabel>
+      <functionlabel num="4" lockable="true" functionImage="" functionImageSelected="">Air Pump</functionlabel>
+      <functionlabel num="5" lockable="true" functionImage="" functionImageSelected="">Blow Down</functionlabel>
+      <functionlabel num="6" lockable="true" functionImage="" functionImageSelected="">Water Stop</functionlabel>
+      <functionlabel num="8" lockable="true" functionImage="" functionImageSelected="">Mute</functionlabel>
+      <functionlabel num="9" lockable="true" functionImage="" functionImageSelected="">Startup</functionlabel>
+      <functionlabel num="10" lockable="true" functionImage="" functionImageSelected="">Shovel Coal</functionlabel>
+      <functionlabel num="11" lockable="true" functionImage="" functionImageSelected="">Injector</functionlabel>
+      <functionlabel num="12" lockable="true" functionImage="" functionImageSelected="">Brake Set/Release</functionlabel>
+    </functionlabels>
+    <attributepairs>
+      <keyvaluepair>
+        <key>RosterGroup:Rio Grande Southern</key>
+        <value>yes</value>
+      </keyvaluepair>
+    </attributepairs>
+    <values>
+      <decoderDef>
+        <varValue item="Primary Address" value="41" />
+        <varValue item="Start Volts" value="45" />
+        <varValue item="Acceleration Rate" value="3" />
+        <varValue item="Deceleration Rate" value="4" />
+        <varValue item="Max Volts" value="152" />
+        <varValue item="Mid Volts" value="110" />
+        <varValue item="Version ID" value="36" />
+        <varValue item="Manufacturer ID" value="129" />
+        <varValue item="Motor Drive Frequency" value="0" />
+        <varValue item="Long Address" value="0" />
+        <varValue item="Advanced Consist address" value="0" />
+        <varValue item="Advanced Consist direction" value="0" />
+        <varValue item="Advanced Consist Function 1 Override" value="0" />
+        <varValue item="Advanced Consist Function 2 Override" value="0" />
+        <varValue item="Advanced Consist Function 3 Override" value="0" />
+        <varValue item="Advanced Consist Function 4 Override" value="0" />
+        <varValue item="Advanced Consist Function 5 Override" value="0" />
+        <varValue item="Advanced Consist Function 6 Override" value="0" />
+        <varValue item="Advanced Consist Function 7 Override" value="0" />
+        <varValue item="Advanced Consist Function 8 Override" value="0" />
+        <varValue item="Advanced Consist Function 0 Override" value="0" />
+        <varValue item="Normal direction of motion" value="0" />
+        <varValue item="Speed steps" value="1" />
+        <varValue item="Analog conversion mode" value="0" />
+        <varValue item="Use Speed Table" value="0" />
+        <varValue item="Addressing Mode" value="0" />
+        <varValue item="Forward light F0F effect generated" value="0" />
+        <varValue item="Forward light F0F behavior" value="0" />
+        <varValue item="Reverse light F0R effect generated" value="0" />
+        <varValue item="Reverse light F0R behavior" value="0" />
+        <varValue item="Static compensation for speed stabilization" value="128" />
+        <varValue item="Dynamic compensation for speed stabilization" value="80" />
+        <varValue item="Solo operation droop compensation for speed stabilization" value="6" />
+        <varValue item="Advanced consist droop compensation for speed stabilization" value="0" />
+        <varValue item="Speed Compensation Control" value="0" />
+        <varValue item="Digitrax Transponding" value="0" />
+        <varValue item="Split field motor" value="0" />
+        <varValue item="Vstart/Vmid/Vfull in 128 step mode" value="0" />
+        <varValue item="Short-circuit protection" value="0" />
+        <varValue item="Lamp keep-alive voltage" value="0" />
+        <varValue item="FX rate adjust" value="0" />
+        <varValue item="Ditch light hold-over time" value="0" />
+        <varValue item="Switching speed enabled by F6" value="0" />
+        <varValue item="Torque compensation" value="0" />
+        <varValue item="Decoder Lock Feature" value="0" />
+        <varValue item="Decoder Lock ID number" value="1" />
+        <varValue item="Kick Start" value="0" />
+        <varValue item="Forward Trim" value="5" />
+        <varValue item="Reverse Trim" value="0" />
+        <varValue item="User Private ID #1" value="0" />
+        <varValue item="User Private ID #2" value="0" />
+        <varValue item="Speed Table" value="41,51,63,80,104,104,104,104,114,125,134,144,154,165,175,175,175,175,175,175,175,175,175,175,175,175,175,175" />
+        <varValue item="FL(f) controls output 1" value="1" />
+        <varValue item="FL(f) controls output 2" value="0" />
+        <varValue item="FL(r) controls output 1" value="0" />
+        <varValue item="FL(r) controls output 2" value="1" />
+        <varValue item="F1 controls output 1" value="0" />
+        <varValue item="F1 controls output 2" value="0" />
+        <varValue item="F2 controls output 1" value="0" />
+        <varValue item="F2 controls output 2" value="0" />
+        <varValue item="F3 controls output 1" value="0" />
+        <varValue item="F3 controls output 2" value="0" />
+      </decoderDef>
+      <CVvalue name="1" value="41" />
+      <CVvalue name="2" value="45" />
+      <CVvalue name="3" value="3" />
+      <CVvalue name="4" value="4" />
+      <CVvalue name="5" value="152" />
+      <CVvalue name="6" value="110" />
+      <CVvalue name="7" value="36" />
+      <CVvalue name="8" value="129" />
+      <CVvalue name="9" value="0" />
+      <CVvalue name="17" value="0" />
+      <CVvalue name="18" value="0" />
+      <CVvalue name="19" value="0" />
+      <CVvalue name="21" value="0" />
+      <CVvalue name="22" value="0" />
+      <CVvalue name="29" value="2" />
+      <CVvalue name="49" value="0" />
+      <CVvalue name="50" value="0" />
+      <CVvalue name="55" value="128" />
+      <CVvalue name="56" value="80" />
+      <CVvalue name="57" value="6" />
+      <CVvalue name="61" value="0" />
+      <CVvalue name="62" value="0" />
+      <CVvalue name="63" value="0" />
+      <CVvalue name="54" value="0" />
+      <CVvalue name="16" value="1" />
+      <CVvalue name="65" value="0" />
+      <CVvalue name="66" value="5" />
+      <CVvalue name="95" value="0" />
+      <CVvalue name="105" value="0" />
+      <CVvalue name="106" value="0" />
+      <CVvalue name="67" value="41" />
+      <CVvalue name="68" value="51" />
+      <CVvalue name="69" value="63" />
+      <CVvalue name="70" value="80" />
+      <CVvalue name="71" value="104" />
+      <CVvalue name="72" value="104" />
+      <CVvalue name="73" value="104" />
+      <CVvalue name="74" value="104" />
+      <CVvalue name="75" value="114" />
+      <CVvalue name="76" value="125" />
+      <CVvalue name="77" value="134" />
+      <CVvalue name="78" value="144" />
+      <CVvalue name="79" value="154" />
+      <CVvalue name="80" value="165" />
+      <CVvalue name="81" value="175" />
+      <CVvalue name="82" value="175" />
+      <CVvalue name="83" value="175" />
+      <CVvalue name="84" value="175" />
+      <CVvalue name="85" value="175" />
+      <CVvalue name="86" value="175" />
+      <CVvalue name="87" value="175" />
+      <CVvalue name="88" value="175" />
+      <CVvalue name="89" value="175" />
+      <CVvalue name="90" value="175" />
+      <CVvalue name="91" value="175" />
+      <CVvalue name="92" value="175" />
+      <CVvalue name="93" value="175" />
+      <CVvalue name="94" value="175" />
+      <CVvalue name="33" value="1" />
+      <CVvalue name="34" value="2" />
+      <CVvalue name="35" value="0" />
+      <CVvalue name="36" value="0" />
+      <CVvalue name="37" value="0" />
+    </values>
+  </locomotive>
+</locomotive-config>
+

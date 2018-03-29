@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xml/XSLT/locomotive.xsl"?>
+<!DOCTYPE locomotive-config SYSTEM "/xml/DTD/locomotive-config.dtd">
+
+<locomotive-config>
+  <!--Written by JMRI version 3.7.7-r26293 on Tue Jul 01 22:15:28 CDT 2014 $Id: XmlFile.java 26283 2014-06-12 04:24:18Z jacobsen $-->
+  <locomotive id="Foggy Hollow CTC" fileName="SIC24AD_.xml" roadNumber="98" roadName="CTC Logic" mfg="" owner="Paul Morris" model="" dccAddress="98" comment="Control of Train Order Semaphore on CTC" maxSpeed="100" imageFilePath="CTC Front w lights.jpg" iconFilePath="CTC Front w lights.jpg" URL="" IsShuntingOn="">
+    <dateUpdated>Jul 1, 2014 10:15:28 PM</dateUpdated>
+    <decoder model="SIC24AD" family="SIC24AD" comment="" />
+    <locoaddress>
+      <dcclocoaddress number="98" longaddress="no" />
+      <number>98</number>
+      <protocol>dcc_short</protocol>
+    </locoaddress>
+    <values>
+      <decoderDef>
+        <varValue item="Ops Mode Address" value="98" />
+        <varValue item="Base Address" value="101" />
+        <varValue item="Cell 1 Address" value="101" />
+        <varValue item="Cell 2 Address" value="102" />
+        <varValue item="Cell 3 Address" value="103" />
+        <varValue item="Switch Address" value="1" />
+        <varValue item="Cell 4 Address" value="104" />
+        <varValue item="Cell 5 Address" value="105" />
+        <varValue item="Cell 6 Address" value="106" />
+        <varValue item="Cell 7 Address" value="107" />
+        <varValue item="Cell 8 Address" value="108" />
+        <varValue item="Cell 9 Address" value="109" />
+        <varValue item="Cell 10 Address" value="110" />
+        <varValue item="Cell 11 Address" value="111" />
+        <varValue item="Cell 12 Address" value="112" />
+        <varValue item="Cell 13 Address" value="113" />
+        <varValue item="Cell 14 Address" value="114" />
+        <varValue item="Cell 15 Address" value="115" />
+        <varValue item="Cell 16 Address" value="116" />
+        <varValue item="Cell 17 Address" value="117" />
+        <varValue item="Cell 18 Address" value="118" />
+        <varValue item="Cell 19 Address" value="119" />
+        <varValue item="Cell 20 Address" value="120" />
+        <varValue item="Cell 21 Address" value="121" />
+        <varValue item="Cell 22 Address" value="122" />
+        <varValue item="Cell 23 Address" value="123" />
+        <varValue item="Cell 24 Address" value="124" />
+        <varValue item="Switch Address" value="1" />
+        <varValue item="Version ID" value="0" />
+        <varValue item="Manufacturer ID" value="25" />
+        <varValue item="Ops Mode" value="1" />
+        <varValue item="Logic Cell Msg" value="0" />
+        <varValue item="DCC gateway" value="0" />
+        <varValue item="Sw Throw Msg" value="0" />
+        <varValue item="Sw Close Msg" value="0" />
+        <varValue item="Interrogate input" value="1" />
+        <varValue item="Common Cathode LEDs" value="1" />
+        <varValue item="Primary Address 1" value="81" />
+        <varValue item="Invert" value="1" />
+        <varValue item="Toggle" value="1" />
+        <varValue item="Primary Type 1" value="2" />
+        <varValue item="Primary Transition 1" value="3" />
+        <varValue item="Secondary Address 1" value="0" />
+        <varValue item="Invert" value="0" />
+        <varValue item="Secondary Type 1" value="0" />
+        <varValue item="Secondary Transition 1" value="0" />
+        <varValue item="Primary Address 2" value="82" />
+        <varValue item="Invert" value="1" />
+        <varValue item="Toggle" value="0" />
+        <varValue item="Primary Type 2" value="2" />
+        <varValue item="Primary Transition 2" value="3" />
+        <varValue item="Secondary Address 2" value="0" />
+        <varValue item="Invert" value="0" />
+        <varValue item="Secondary Type 2" value="2" />
+        <varValue item="Secondary Transition 2" value="2" />
+        <varValue item="Primary Address 3" value="83" />
+        <varValue item="Invert" value="1" />
+        <varValue item="Toggle" value="0" />
+        <varValue item="Primary Type 3" value="2" />
+        <varValue item="Primary Transition 3" value="3" />
+        <varValue item="Secondary Address 3" value="0" />
+        <varValue item="Invert" value="0" />
+        <varValue item="Secondary Type 3" value="0" />
+        <varValue item="Secondary Transition 3" value="0" />
+        <varValue item="Primary Address 4" value="84" />
+        <varValue item="Invert" value="1" />
+        <varValue item="Toggle" value="0" />
+        <varValue item="Primary Type 4" value="2" />
+        <varValue item="Primary Transition 4" value="3" />
+        <varValue item="Secondary Address 4" value="0" />
+        <varValue item="Invert" value="0" />
+        <varValue item="Secondary Type 4" value="0" />
+        <varValue item="Secondary Transition 4" value="0" />
+        <varValue item="Primary Address 5" value="85" />
+        <varValue item="Invert" value="1" />
+        <varValue item="Toggle" value="0" />
+        <varValue item="Primary Type 5" value="2" />
+        <varValue item="Primary Transition 5" value="3" />
+        <varValue item="Secondary Address 5" value="0" />
+        <varValue item="Invert" value="0" />
+        <varValue item="Secondary Type 5" value="0" />
+        <varValue item="Secondary Transition 5" value="0" />
+        <varValue item="Primary Address 6" value="86" />
+        <varValue item="Invert" value="1" />
+        <varValue item="Toggle" value="0" />
+        <varValue item="Primary Type 6" value="2" />
+        <varValue item="Primary Transition 6" value="3" />
+        <varValue item="Secondary Address 6" value="0" />
+        <varValue item="Invert" value="0" />
+        <varValue item="Secondary Type 6" value="0" />
+        <varValue item="Secondary Transition 6" value="0" />
+        <varValue item="Primary Address 7" value="87" />
+        <varValue item="Invert" value="1" />
+        <varValue item="Toggle" value="0" />
+        <varValue item="Primary Type 7" value="2" />
+        <varValue item="Primary Transition 7" value="3" />
+        <varValue item="Secondary Address 7" value="0" />
+        <varValue item="Invert" value="0" />
+        <varValue item="Secondary Type 7" value="0" />
+        <varValue item="Secondary Transition 7" value="0" />
+        <varValue item="Primary Address 8" value="88" />
+        <varValue item="Invert" value="1" />
+        <varValue item="Toggle" value="0" />
+        <varValue item="Primary Type 8" value="2" />
+        <varValue item="Primary Transition 8" value="3" />
+        <varValue item="Secondary Address 8" value="0" />
+        <varValue item="Invert" value="0" />
+        <varValue item="Secondary Type 8" value="0" />
+        <varValue item="Secondary Transition 8" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="2" />
+        <varValue item="Effect Duration" value="2" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="2" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="3" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="1" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="1" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="1" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Element A Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Element B Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Element C Address" value="0" />
+        <varValue item="Message Type " value="0" />
+        <varValue item="State" value="0" />
+        <varValue item="Logic" value="0" />
+        <varValue item="Bi-Color" value="0" />
+        <varValue item="Invert State" value="0" />
+        <varValue item="Reciprocal" value="0" />
+        <varValue item="Effect" value="0" />
+        <varValue item="Effect Duration" value="0" />
+        <varValue item="Start up delay" value="4" />
+      </decoderDef>
+      <CVvalue name="1" value="98" />
+      <CVvalue name="3" value="101" />
+      <CVvalue name="4" value="0" />
+      <CVvalue name="5" value="1" />
+      <CVvalue name="6" value="0" />
+      <CVvalue name="7" value="0" />
+      <CVvalue name="8" value="25" />
+      <CVvalue name="9" value="193" />
+      <CVvalue name="10" value="81" />
+      <CVvalue name="11" value="224" />
+      <CVvalue name="12" value="3" />
+      <CVvalue name="13" value="0" />
+      <CVvalue name="14" value="0" />
+      <CVvalue name="15" value="82" />
+      <CVvalue name="16" value="160" />
+      <CVvalue name="17" value="11" />
+      <CVvalue name="18" value="0" />
+      <CVvalue name="19" value="32" />
+      <CVvalue name="20" value="83" />
+      <CVvalue name="21" value="160" />
+      <CVvalue name="22" value="3" />
+      <CVvalue name="23" value="0" />
+      <CVvalue name="24" value="0" />
+      <CVvalue name="25" value="84" />
+      <CVvalue name="26" value="160" />
+      <CVvalue name="27" value="3" />
+      <CVvalue name="28" value="0" />
+      <CVvalue name="29" value="0" />
+      <CVvalue name="30" value="85" />
+      <CVvalue name="31" value="160" />
+      <CVvalue name="32" value="3" />
+      <CVvalue name="33" value="0" />
+      <CVvalue name="34" value="0" />
+      <CVvalue name="35" value="86" />
+      <CVvalue name="36" value="160" />
+      <CVvalue name="37" value="3" />
+      <CVvalue name="38" value="0" />
+      <CVvalue name="39" value="0" />
+      <CVvalue name="40" value="87" />
+      <CVvalue name="41" value="160" />
+      <CVvalue name="42" value="3" />
+      <CVvalue name="43" value="0" />
+      <CVvalue name="44" value="0" />
+      <CVvalue name="45" value="88" />
+      <CVvalue name="46" value="160" />
+      <CVvalue name="47" value="3" />
+      <CVvalue name="48" value="0" />
+      <CVvalue name="49" value="0" />
+      <CVvalue name="50" value="0" />
+      <CVvalue name="51" value="0" />
+      <CVvalue name="52" value="0" />
+      <CVvalue name="53" value="0" />
+      <CVvalue name="54" value="0" />
+      <CVvalue name="55" value="0" />
+      <CVvalue name="56" value="18" />
+      <CVvalue name="57" value="0" />
+      <CVvalue name="58" value="0" />
+      <CVvalue name="59" value="0" />
+      <CVvalue name="60" value="0" />
+      <CVvalue name="61" value="0" />
+      <CVvalue name="62" value="0" />
+      <CVvalue name="63" value="16" />
+      <CVvalue name="64" value="0" />
+      <CVvalue name="65" value="0" />
+      <CVvalue name="66" value="0" />
+      <CVvalue name="67" value="0" />
+      <CVvalue name="68" value="0" />
+      <CVvalue name="69" value="0" />
+      <CVvalue name="70" value="3" />
+      <CVvalue name="71" value="0" />
+      <CVvalue name="72" value="0" />
+      <CVvalue name="73" value="0" />
+      <CVvalue name="74" value="0" />
+      <CVvalue name="75" value="0" />
+      <CVvalue name="76" value="0" />
+      <CVvalue name="77" value="0" />
+      <CVvalue name="78" value="0" />
+      <CVvalue name="79" value="0" />
+      <CVvalue name="80" value="0" />
+      <CVvalue name="81" value="0" />
+      <CVvalue name="82" value="0" />
+      <CVvalue name="83" value="0" />
+      <CVvalue name="84" value="0" />
+      <CVvalue name="85" value="0" />
+      <CVvalue name="86" value="0" />
+      <CVvalue name="87" value="0" />
+      <CVvalue name="88" value="0" />
+      <CVvalue name="89" value="0" />
+      <CVvalue name="90" value="0" />
+      <CVvalue name="91" value="0" />
+      <CVvalue name="92" value="0" />
+      <CVvalue name="93" value="0" />
+      <CVvalue name="94" value="0" />
+      <CVvalue name="95" value="0" />
+      <CVvalue name="96" value="0" />
+      <CVvalue name="97" value="0" />
+      <CVvalue name="98" value="0" />
+      <CVvalue name="99" value="0" />
+      <CVvalue name="100" value="0" />
+      <CVvalue name="101" value="0" />
+      <CVvalue name="102" value="0" />
+      <CVvalue name="103" value="0" />
+      <CVvalue name="104" value="0" />
+      <CVvalue name="105" value="0" />
+      <CVvalue name="106" value="0" />
+      <CVvalue name="107" value="0" />
+      <CVvalue name="108" value="0" />
+      <CVvalue name="109" value="0" />
+      <CVvalue name="110" value="0" />
+      <CVvalue name="111" value="0" />
+      <CVvalue name="112" value="128" />
+      <CVvalue name="113" value="0" />
+      <CVvalue name="114" value="0" />
+      <CVvalue name="115" value="0" />
+      <CVvalue name="116" value="0" />
+      <CVvalue name="117" value="0" />
+      <CVvalue name="118" value="0" />
+      <CVvalue name="119" value="128" />
+      <CVvalue name="120" value="0" />
+      <CVvalue name="121" value="0" />
+      <CVvalue name="122" value="0" />
+      <CVvalue name="123" value="0" />
+      <CVvalue name="124" value="0" />
+      <CVvalue name="125" value="0" />
+      <CVvalue name="126" value="128" />
+      <CVvalue name="127" value="0" />
+      <CVvalue name="128" value="0" />
+      <CVvalue name="129" value="0" />
+      <CVvalue name="130" value="0" />
+      <CVvalue name="131" value="0" />
+      <CVvalue name="132" value="0" />
+      <CVvalue name="133" value="0" />
+      <CVvalue name="134" value="0" />
+      <CVvalue name="135" value="0" />
+      <CVvalue name="136" value="0" />
+      <CVvalue name="137" value="0" />
+      <CVvalue name="138" value="0" />
+      <CVvalue name="139" value="0" />
+      <CVvalue name="140" value="0" />
+      <CVvalue name="141" value="0" />
+      <CVvalue name="142" value="0" />
+      <CVvalue name="143" value="0" />
+      <CVvalue name="144" value="0" />
+      <CVvalue name="145" value="0" />
+      <CVvalue name="146" value="0" />
+      <CVvalue name="147" value="0" />
+      <CVvalue name="148" value="0" />
+      <CVvalue name="149" value="0" />
+      <CVvalue name="150" value="0" />
+      <CVvalue name="151" value="0" />
+      <CVvalue name="152" value="0" />
+      <CVvalue name="153" value="0" />
+      <CVvalue name="154" value="0" />
+      <CVvalue name="155" value="0" />
+      <CVvalue name="156" value="0" />
+      <CVvalue name="157" value="0" />
+      <CVvalue name="158" value="0" />
+      <CVvalue name="159" value="0" />
+      <CVvalue name="160" value="0" />
+      <CVvalue name="161" value="0" />
+      <CVvalue name="162" value="0" />
+      <CVvalue name="163" value="0" />
+      <CVvalue name="164" value="0" />
+      <CVvalue name="165" value="0" />
+      <CVvalue name="166" value="0" />
+      <CVvalue name="167" value="0" />
+      <CVvalue name="168" value="0" />
+      <CVvalue name="169" value="0" />
+      <CVvalue name="170" value="0" />
+      <CVvalue name="171" value="0" />
+      <CVvalue name="172" value="0" />
+      <CVvalue name="173" value="0" />
+      <CVvalue name="174" value="0" />
+      <CVvalue name="175" value="0" />
+      <CVvalue name="176" value="0" />
+      <CVvalue name="177" value="0" />
+      <CVvalue name="178" value="0" />
+      <CVvalue name="179" value="0" />
+      <CVvalue name="180" value="0" />
+      <CVvalue name="181" value="0" />
+      <CVvalue name="182" value="0" />
+      <CVvalue name="183" value="0" />
+      <CVvalue name="184" value="0" />
+      <CVvalue name="185" value="0" />
+      <CVvalue name="186" value="0" />
+      <CVvalue name="187" value="0" />
+      <CVvalue name="188" value="0" />
+      <CVvalue name="189" value="0" />
+      <CVvalue name="190" value="0" />
+      <CVvalue name="191" value="0" />
+      <CVvalue name="192" value="0" />
+      <CVvalue name="193" value="0" />
+      <CVvalue name="194" value="0" />
+      <CVvalue name="195" value="0" />
+      <CVvalue name="196" value="0" />
+      <CVvalue name="197" value="0" />
+      <CVvalue name="198" value="0" />
+      <CVvalue name="199" value="0" />
+      <CVvalue name="200" value="0" />
+      <CVvalue name="201" value="0" />
+      <CVvalue name="202" value="0" />
+      <CVvalue name="203" value="0" />
+      <CVvalue name="204" value="0" />
+      <CVvalue name="205" value="0" />
+      <CVvalue name="206" value="0" />
+      <CVvalue name="207" value="0" />
+      <CVvalue name="208" value="0" />
+      <CVvalue name="209" value="0" />
+      <CVvalue name="210" value="0" />
+      <CVvalue name="211" value="0" />
+      <CVvalue name="212" value="0" />
+      <CVvalue name="213" value="0" />
+      <CVvalue name="214" value="0" />
+      <CVvalue name="215" value="0" />
+      <CVvalue name="216" value="0" />
+      <CVvalue name="217" value="0" />
+      <CVvalue name="255" value="4" />
+    </values>
+  </locomotive>
+</locomotive-config>
+

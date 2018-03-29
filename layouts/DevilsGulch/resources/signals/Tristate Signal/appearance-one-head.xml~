@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../../XSLT/appearancetable.xsl" type="text/xsl"?>
+
+<appearancetable
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation = "http://jmri.org/xml/schema/appearancetable.xsd"
+>
+
+  <aspecttable>Tristate Signal</aspecttable>
+  <name>Single Head</name>
+  <reference>(similar to basic signals described in various magazine articles)</reference>
+  <description>A simple signal for use as e.g. a block signal</description>
+  
+  <appearances>
+
+    <appearance>
+      <aspectname>Steady</aspectname>
+      <show>green</show>
+      <imagelink>../../resources/icons/misc/Indicators/blueIndicatorOn.gif</imagelink>
+    </appearance>
+
+    <appearance>
+      <aspectname>Flashing</aspectname>
+      <show>flashGreen</show>
+      <imagelink>../../resources/icons/misc/Indicators/blueIndicatorOn.gif</imagelink>      
+    </appearance>
+
+    <appearance>
+      <aspectname>Not Lit</aspectname>
+      <show>dark</show>
+      <imagelink>../../resources/icons/misc/Indicators/blueIndicatorOff.gif</imagelink>
+    </appearance>    
+
+  </appearances>
+  
+    <specificappearances><!-- Start of Specific Appearances list -->
+     <danger>
+        <aspect>Stop</aspect>
+     </danger>
+     <held>
+        <aspect>Stop</aspect>
+     </held>
+	 <dark>
+        <aspect>Not Lit</aspect>
+        <imagelink>../../resources/icons/misc/indicators/blueIndicatorOff.gif</imagelink>
+     </dark>      
+  </specificappearances><!-- End of Specific Appearances list -->
+  
+    <aspectMappings><!-- Start of Aspect Mapping -->
+
+    <aspectMapping>
+     <advancedAspect>Flashing</advancedAspect>
+     <ourAspect>Flashing</ourAspect>
+    </aspectMapping>
+
+
+    <aspectMapping>
+     <advancedAspect>Steady</advancedAspect>
+     <ourAspect>Steady</ourAspect>
+    </aspectMapping>
+
+  </aspectMappings><!-- End of Aspect Mapping -->
+</appearancetable>  

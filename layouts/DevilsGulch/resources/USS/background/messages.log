@@ -1,0 +1,376 @@
+2014-07-22 22:56:06,546 util.Log4JUtil                        INFO  - ****** JMRI log ******* [main]
+2014-07-22 22:56:08,894 util.Log4JUtil                        INFO  - This log is appended to file: /home/pi/.jmri/log/messages.log [main]
+2014-07-22 22:56:08,969 util.Log4JUtil                        INFO  - This log is stored in file: /home/pi/.jmri/log/session.log [main]
+2014-07-22 22:56:09,240 apps.Apps                             INFO  - DecoderPro version 3.9.1-r26563 starts under Java 1.7.0_40 at Tue Jul 22 22:56:09 UTC 2014 [main]
+2014-07-22 22:56:18,478 profile.ProfileManager                INFO  - Created default profile "My JMRI Railroad" [main]
+2014-07-22 22:56:30,988 profile.ProfileManagerDialog          INFO  - Automatically starting with profile My_JMRI_Railroad.3c31e150 after timeout. [AWT-EventQueue-0]
+2014-07-22 22:56:31,445 apps.Apps                             INFO  - Starting with profile My_JMRI_Railroad.3c31e150 [main]
+2014-07-22 22:56:32,310 anagers.DefaultUserMessagePreferences INFO  - No saved user preferences file [main]
+2014-07-22 22:56:33,314 apps.Apps                             INFO  - No saved preferences, will open preferences window.  Searched for /home/pi/.jmri/My_JMRI_Railroad/ProfileConfig.xml [main]
+2014-07-22 22:56:36,996 progsupport.ProgServiceModeComboBox   INFO  - No programmer available, so modes not set [main]
+2014-07-22 22:56:43,078 util.FileUtil                         INFO  - File path program: is /home/pi/JMRI/ [main]
+2014-07-22 22:56:43,109 util.FileUtil                         INFO  - File path preference: is /home/pi/.jmri/My_JMRI_Railroad/ [main]
+2014-07-22 22:56:43,150 util.FileUtil                         INFO  - File path profile: is /home/pi/.jmri/My_JMRI_Railroad/ [main]
+2014-07-22 22:56:43,179 util.FileUtil                         INFO  - File path settings: is /home/pi/.jmri/ [main]
+2014-07-22 22:56:43,229 util.FileUtil                         INFO  - File path home: is /home/pi/ [main]
+2014-07-22 22:56:43,256 util.FileUtil                         INFO  - File path scripts: is /home/pi/JMRI/jython [main]
+2014-07-22 22:56:44,956 util.FileUtil                         WARN  - Creating directory: /home/pi/.jmri/My_JMRI_Railroad/throttle/ [initialize preferences]
+2014-07-22 22:56:45,100 throttle.ThrottlesPreferences         INFO  - Did not find throttle preferences file.  This is normal if you haven't save the preferences before [initialize preferences]
+2014-07-22 22:56:46,513 hrottle.AbstractWiThrottlePreferences INFO  - Could not find WiThrottle preferences file.  Normal if preferences have not been saved before. [initialize preferences]
+2014-07-22 22:57:06,737 progsupport.ProgServiceModeComboBox   INFO  - No programmer available, so modes not set [main]
+2014-07-22 22:57:28,480 util.FileUtil                         WARN  - Creating directory: /home/pi/.jmri/My_JMRI_Railroad/programmers [initialize preferences]
+2014-07-22 22:57:34,996 json.JsonServerPreferences            INFO  - Could not find JSON Server preferences file.  Normal if preferences have not been saved before. [initialize preferences]
+2014-07-22 22:57:35,370 server.WebServerPreferences           INFO  - Could not find Web Server preferences file.  Normal if preferences have not been saved before. [initialize preferences]
+2014-07-22 23:07:23,650 anagers.DefaultUserMessagePreferences INFO  - Storing preferences as part of shutdown [AWT-EventQueue-0]
+2014-07-22 23:07:23,803 managers.DefaultShutDownManager       INFO  - Normal termination complete [AWT-EventQueue-0]
+2014-07-22 23:15:22,648 util.Log4JUtil                        INFO  - ****** JMRI log ******* [main]
+2014-07-22 23:15:25,514 util.Log4JUtil                        INFO  - This log is appended to file: /home/pi/.jmri/log/messages.log [main]
+2014-07-22 23:15:25,626 util.Log4JUtil                        INFO  - This log is stored in file: /home/pi/.jmri/log/session.log [main]
+2014-07-22 23:15:26,626 apps.Apps                             INFO  - PanelPro version 3.9.1-r26563 starts under Java 1.7.0_40 at Tue Jul 22 23:15:25 UTC 2014 [main]
+2014-07-22 23:17:59,681 apps.Apps                             INFO  - Starting with profile Beaver_Bend.3f1cb983 [main]
+2014-07-22 23:18:03,437 usbdriver.UsbDriverAdapter            ERROR - Serial port COM9 not found [main]
+2014-07-22 23:18:03,495 configurexml.ErrorHandler             ERROR - COM9 not found while opening connection [main]
+2014-07-22 23:18:22,896 util.FileUtil                         WARN  - Creating directory: /home/pi/My Documents/JMRI/programmers [main]
+2014-07-22 23:18:31,530 util.FileUtil                         INFO  - File path program: is /home/pi/JMRI/ [main]
+2014-07-22 23:18:31,572 util.FileUtil                         INFO  - File path preference: is /home/pi/My Documents/JMRI/ [main]
+2014-07-22 23:18:31,581 util.FileUtil                         INFO  - File path profile: is /home/pi/MyJMRI/Beaver_Bend/ [main]
+2014-07-22 23:18:31,610 util.FileUtil                         INFO  - File path settings: is /home/pi/.jmri/ [main]
+2014-07-22 23:18:31,651 util.FileUtil                         INFO  - File path home: is /home/pi/ [main]
+2014-07-22 23:18:31,690 util.FileUtil                         INFO  - File path scripts: is /home/pi/My Documents/JMRI/jython/ [main]
+2014-07-22 23:18:33,735 powerpanel.PowerPane                  WARN  - No power manager instance found, panel not active [AWT-EventQueue-0]
+2014-07-22 23:18:33,758 throttle.PowerManagerButton           INFO  - No power manager instance found, panel not active [AWT-EventQueue-0]
+2014-07-22 23:18:35,838 withrottle.TrackPowerController       INFO  - No power manager instance. [WiThrottleGUIServer]
+2014-07-22 23:18:36,172 hrottle.AbstractWiThrottlePreferences INFO  - Could not find WiThrottle preferences file.  Normal if preferences have not been saved before. [WiThrottleGUIServer]
+2014-07-22 23:18:36,663 server.WebServerPreferences           INFO  - Could not find Web Server preferences file.  Normal if preferences have not been saved before. [Thread-2]
+2014-07-22 23:18:36,677 server.WebServerPreferences           INFO  - Could not find Web Server preferences file.  Normal if preferences have not been saved before. [WiThrottleGUIServer]
+2014-07-22 23:18:37,036 node.NodeIdentity                     INFO  - Using jmri-801F02DA5BD1-3f1cb983 as the JMRI Node identity [WiThrottleGUIServer]
+2014-07-22 23:18:37,669 configurexml.PerformScriptModelXml    INFO  - Run file /home/pi/My Documents/JMRI/scripts/initBeaverBend.py [AWT-EventQueue-0]
+2014-07-22 23:18:42,650 server.WebServer                      INFO  - Starting Web Server on port 12080 [WebServer]
+2014-07-22 23:18:44,260 server.WebServer                      INFO  - Starting ZeroConfService _http._tcp.local for Web Server [WebServer]
+2014-07-22 23:18:50,003 withrottle.UserInterface              INFO  - Creating new WiThrottle DeviceServer(socket) on port 41573, waiting for incoming connection... [WiThrottleGUIServer]
+2014-07-22 23:19:01,911 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("/home/pi/My Documents/JMRI/scripts/initBeaverBend.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/My Documents/JMRI/scripts/initBeaverBend.py (No such file or directory)')
+ [AWT-EventQueue-0]
+2014-07-22 23:19:02,412 configurexml.PerformScriptModelXml    INFO  - Run file /home/pi/My Documents/JMRI/scripts/BeaverBendInitLights.py [AWT-EventQueue-0]
+2014-07-22 23:19:02,548 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("/home/pi/My Documents/JMRI/scripts/BeaverBendInitLights.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/My Documents/JMRI/scripts/BeaverBendInitLights.py (No such file or directory)')
+ [AWT-EventQueue-0]
+2014-07-22 23:19:03,545 util.FileUtil                         WARN  - Creating directory: /home/pi/My Documents/JMRI/throttle/ [initialize preferences]
+2014-07-22 23:19:03,596 throttle.ThrottlesPreferences         INFO  - Did not find throttle preferences file.  This is normal if you haven't save the preferences before [initialize preferences]
+2014-07-22 23:19:17,909 server.WebServer                      WARN  - Error shutting down WebServer: java.lang.NullPointerException [AWT-EventQueue-0]
+2014-07-22 23:19:18,417 anagers.DefaultUserMessagePreferences INFO  - Storing preferences as part of shutdown [AWT-EventQueue-0]
+2014-07-22 23:19:20,233 managers.DefaultShutDownManager       INFO  - Normal termination complete [AWT-EventQueue-0]
+2014-07-22 23:19:28,726 util.Log4JUtil                        INFO  - ****** JMRI log ******* [main]
+2014-07-22 23:19:30,224 util.Log4JUtil                        INFO  - This log is appended to file: /home/pi/.jmri/log/messages.log [main]
+2014-07-22 23:19:30,284 util.Log4JUtil                        INFO  - This log is stored in file: /home/pi/.jmri/log/session.log [main]
+2014-07-22 23:19:30,845 apps.Apps                             INFO  - PanelPro version 3.9.1-r26563 starts under Java 1.7.0_40 at Tue Jul 22 23:19:30 UTC 2014 [main]
+2014-07-22 23:19:43,867 apps.Apps                             INFO  - Starting with profile Beaver_Bend.3f1cb983 [main]
+2014-07-22 23:19:48,818 usbdriver.UsbDriverAdapter            ERROR - Serial port COM9 not found [main]
+2014-07-22 23:19:48,900 configurexml.ErrorHandler             ERROR - COM9 not found while opening connection [main]
+2014-07-22 23:20:18,506 util.FileUtil                         INFO  - File path program: is /home/pi/JMRI/ [main]
+2014-07-22 23:20:18,515 util.FileUtil                         INFO  - File path preference: is /home/pi/My Documents/JMRI/ [main]
+2014-07-22 23:20:18,529 util.FileUtil                         INFO  - File path profile: is /home/pi/MyJMRI/Beaver_Bend/ [main]
+2014-07-22 23:20:18,558 util.FileUtil                         INFO  - File path settings: is /home/pi/.jmri/ [main]
+2014-07-22 23:20:18,594 util.FileUtil                         INFO  - File path home: is /home/pi/ [main]
+2014-07-22 23:20:18,634 util.FileUtil                         INFO  - File path scripts: is /home/pi/My Documents/JMRI/jython/ [main]
+2014-07-22 23:20:20,640 powerpanel.PowerPane                  WARN  - No power manager instance found, panel not active [AWT-EventQueue-0]
+2014-07-22 23:20:20,682 throttle.PowerManagerButton           INFO  - No power manager instance found, panel not active [AWT-EventQueue-0]
+2014-07-22 23:20:22,054 withrottle.TrackPowerController       INFO  - No power manager instance. [WiThrottleGUIServer]
+2014-07-22 23:20:22,275 hrottle.AbstractWiThrottlePreferences INFO  - Could not find WiThrottle preferences file.  Normal if preferences have not been saved before. [WiThrottleGUIServer]
+2014-07-22 23:20:22,754 server.WebServerPreferences           INFO  - Could not find Web Server preferences file.  Normal if preferences have not been saved before. [WiThrottleGUIServer]
+2014-07-22 23:20:22,789 server.WebServerPreferences           INFO  - Could not find Web Server preferences file.  Normal if preferences have not been saved before. [Thread-2]
+2014-07-22 23:20:23,669 node.NodeIdentity                     INFO  - Using jmri-801F02DA5BD1-3f1cb983 as the JMRI Node identity [WiThrottleGUIServer]
+2014-07-22 23:20:23,859 configurexml.PerformScriptModelXml    INFO  - Run file /home/pi/My Documents/JMRI/scripts/initBeaverBend.py [AWT-EventQueue-0]
+2014-07-22 23:20:29,164 server.WebServer                      INFO  - Starting Web Server on port 12080 [WebServer]
+2014-07-22 23:20:30,493 server.WebServer                      INFO  - Starting ZeroConfService _http._tcp.local for Web Server [WebServer]
+2014-07-22 23:20:35,013 withrottle.UserInterface              INFO  - Creating new WiThrottle DeviceServer(socket) on port 37148, waiting for incoming connection... [WiThrottleGUIServer]
+2014-07-22 23:20:47,786 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("/home/pi/My Documents/JMRI/scripts/initBeaverBend.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/My Documents/JMRI/scripts/initBeaverBend.py (No such file or directory)')
+ [AWT-EventQueue-0]
+2014-07-22 23:20:48,266 configurexml.PerformScriptModelXml    INFO  - Run file /home/pi/My Documents/JMRI/scripts/BeaverBendInitLights.py [AWT-EventQueue-0]
+2014-07-22 23:20:48,376 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("/home/pi/My Documents/JMRI/scripts/BeaverBendInitLights.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/My Documents/JMRI/scripts/BeaverBendInitLights.py (No such file or directory)')
+ [AWT-EventQueue-0]
+2014-07-22 23:20:49,262 throttle.ThrottlesPreferences         INFO  - Did not find throttle preferences file.  This is normal if you haven't save the preferences before [initialize preferences]
+2014-07-22 23:21:03,312 gui3.TabbedPreferencesAction          INFO  - We are already waiting for the preferences to be displayed [AWT-EventQueue-0]
+2014-07-22 23:21:13,223 json.JsonServerPreferences            INFO  - Could not find JSON Server preferences file.  Normal if preferences have not been saved before. [initialize preferences]
+2014-07-22 23:31:24,545 powerpanel.PowerPane                  WARN  - No power manager instance found, panel not active [AWT-EventQueue-0]
+2014-07-22 23:31:24,554 throttle.PowerManagerButton           INFO  - No power manager instance found, panel not active [AWT-EventQueue-0]
+2014-07-22 23:31:24,782 throttle.ThrottlesPreferences         INFO  - Did not find throttle preferences file.  This is normal if you haven't save the preferences before [AWT-EventQueue-0]
+2014-07-22 23:32:04,460 jmrit.XmlFile                         INFO  - No /home/pi/My Documents/JMRI/networkServices/WebServerPreferences.xml file to backup [AWT-EventQueue-0]
+2014-07-22 23:32:04,518 jmrit.XmlFile                         INFO  - No /home/pi/My Documents/JMRI/networkServices/JsonServerPreferences.xml file to backup [AWT-EventQueue-0]
+2014-07-22 23:32:04,543 throttle.ThrottlesPreferences         INFO  - Did not find throttle preferences file.  This is normal if you haven't save the preferences before [AWT-EventQueue-0]
+2014-07-22 23:32:04,561 jmrit.XmlFile                         INFO  - No /home/pi/My Documents/JMRI/throttle/ThrottlesPreferences.xml file to backup [AWT-EventQueue-0]
+2014-07-22 23:32:04,596 jmrit.XmlFile                         INFO  - No /home/pi/My Documents/JMRI/throttle/WiThrottlePreferences.xml file to backup [AWT-EventQueue-0]
+2014-07-22 23:32:06,840 server.WebServer                      INFO  - Stopping Web Server [AWT-EventQueue-0]
+2014-07-22 23:32:07,188 managers.DefaultShutDownManager       INFO  - Normal termination complete [AWT-EventQueue-0]
+2014-07-22 23:32:15,508 util.Log4JUtil                        INFO  - ****** JMRI log ******* [main]
+2014-07-22 23:32:16,881 util.Log4JUtil                        INFO  - This log is appended to file: /home/pi/.jmri/log/messages.log [main]
+2014-07-22 23:32:16,935 util.Log4JUtil                        INFO  - This log is stored in file: /home/pi/.jmri/log/session.log [main]
+2014-07-22 23:32:17,496 apps.Apps                             INFO  - PanelPro version 3.9.1-r26563 starts under Java 1.7.0_40 at Tue Jul 22 23:32:17 UTC 2014 [main]
+2014-07-22 23:32:32,421 apps.Apps                             INFO  - Starting with profile Beaver_Bend.3f1cb983 [main]
+2014-07-22 23:32:36,357 usbdriver.UsbDriverAdapter            INFO  - NCE USB /dev/ttyUSB0 port opened at 9600 baud [main]
+2014-07-22 23:32:37,498 nce.NceConnectionStatus               INFO  - NCE EPROM revision = 7.3.0 [AWT-EventQueue-0]
+2014-07-22 23:33:25,402 util.FileUtil                         INFO  - File path program: is /home/pi/JMRI/ [main]
+2014-07-22 23:33:25,460 util.FileUtil                         INFO  - File path preference: is /home/pi/MyJMRI/ [main]
+2014-07-22 23:33:25,486 util.FileUtil                         INFO  - File path profile: is /home/pi/MyJMRI/Beaver_Bend/ [main]
+2014-07-22 23:33:25,526 util.FileUtil                         INFO  - File path settings: is /home/pi/.jmri/ [main]
+2014-07-22 23:33:25,570 util.FileUtil                         INFO  - File path home: is /home/pi/ [main]
+2014-07-22 23:33:25,627 util.FileUtil                         INFO  - File path scripts: is /home/pi/MyJMRI/jython/ [main]
+2014-07-22 23:33:33,413 node.NodeIdentity                     INFO  - Using jmri-801F02DA5BD1-3f1cb983 as the JMRI Node identity [WiThrottleGUIServer]
+2014-07-22 23:33:34,366 configurexml.PerformScriptModelXml    INFO  - Run file /home/pi/MyJMRI/scripts/initBeaverBend.py [AWT-EventQueue-0]
+2014-07-22 23:33:42,399 server.WebServer                      INFO  - Starting Web Server on port 12080 [WebServer]
+2014-07-22 23:33:44,842 server.WebServer                      INFO  - Starting ZeroConfService _http._tcp.local for Web Server [WebServer]
+2014-07-22 23:33:51,036 withrottle.UserInterface              INFO  - Creating new WiThrottle DeviceServer(socket) on port 52345, waiting for incoming connection... [WiThrottleGUIServer]
+2014-07-22 23:34:18,372 configurexml.PerformScriptModelXml    INFO  - Run file /home/pi/MyJMRI/scripts/BeaverBendInitLights.py [AWT-EventQueue-0]
+2014-07-22 23:40:42,507 withrottle.UserInterface              INFO  - Creating new WiThrottle DeviceServer(socket) on port 52345, waiting for incoming connection... [WiThrottleGUIServer]
+2014-07-22 23:40:42,624 withrottle.DeviceServer               INFO  - Received Name: Paul's Tablet [WiThrottleUIDeviceServer]
+2014-07-22 23:40:49,289 withrottle.DeviceServer               INFO  - Received Name: Paul's Tablet [WiThrottleUIDeviceServer]
+2014-07-22 23:40:49,337 withrottle.DeviceServer               INFO  - Received Name: Paul's Tablet [WiThrottleUIDeviceServer]
+2014-07-22 23:40:49,382 withrottle.DeviceServer               INFO  - Received Name: Paul's Tablet [WiThrottleUIDeviceServer]
+2014-07-22 23:40:50,889 withrottle.DeviceServer               INFO  - Received Name: Paul's Tablet [WiThrottleUIDeviceServer]
+2014-07-22 23:41:22,774 withrottle.DeviceServer               ERROR - readLine from device failed, consecutive error # 1 [WiThrottleUIDeviceServer]
+2014-07-22 23:42:26,854 catalog.CatalogPanel                  ERROR - Exception from setIcons: java.lang.OutOfMemoryError: Java heap space [Image Fetcher 0]
+java.lang.OutOfMemoryError: Java heap space
+	at java.awt.image.DataBufferInt.<init>(DataBufferInt.java:75)
+	at java.awt.image.Raster.createPackedRaster(Raster.java:467)
+	at java.awt.image.DirectColorModel.createCompatibleWritableRaster(DirectColorModel.java:1032)
+	at sun.awt.image.ImageRepresentation.createBufferedImage(ImageRepresentation.java:253)
+	at sun.awt.image.ImageRepresentation.setPixels(ImageRepresentation.java:559)
+	at sun.awt.image.ImageDecoder.setPixels(ImageDecoder.java:138)
+	at sun.awt.image.JPEGImageDecoder.sendPixels(JPEGImageDecoder.java:114)
+	at sun.awt.image.JPEGImageDecoder.readImage(Native Method)
+	at sun.awt.image.JPEGImageDecoder.produceImage(JPEGImageDecoder.java:136)
+	at sun.awt.image.InputStreamImageSource.doFetch(InputStreamImageSource.java:269)
+	at sun.awt.image.ImageFetcher.fetchloop(ImageFetcher.java:205)
+	at sun.awt.image.ImageFetcher.run(ImageFetcher.java:169)
+2014-07-22 23:42:31,197 configurexml.MemoryIconXml            INFO  - Memory "IM20:H1" icon removed for url= preference:resources/icons/misc/Nixie/M3B.gif [__main__$setStartup$1]
+2014-07-22 23:42:36,550 configurexml.MemoryIconXml            INFO  - Memory "IM20:H1" icon removed for url= preference:resources/icons/misc/Nixie/M2B.gif [__main__$setStartup$1]
+2014-07-22 23:42:36,688 configurexml.MemoryIconXml            INFO  - Memory "IM20:H1" icon removed for url= preference:resources/icons/misc/Nixie/M1B.gif [__main__$setStartup$1]
+2014-07-22 23:42:36,759 configurexml.MemoryIconXml            INFO  - Memory "IM20:H1" icon removed for url= preference:resources/icons/misc/Nixie/M0B.gif [__main__$setStartup$1]
+2014-07-22 23:42:36,806 configurexml.MemoryIconXml            INFO  - Memory "IM20:H1" icon removed for url= preference:resources/icons/misc/Nixie/M7B.gif [__main__$setStartup$1]
+2014-07-22 23:42:36,837 configurexml.MemoryIconXml            INFO  - Memory "IM20:H1" icon removed for url= preference:resources/icons/misc/Nixie/M6B.gif [__main__$setStartup$1]
+2014-07-22 23:42:36,887 configurexml.MemoryIconXml            INFO  - Memory "IM20:H1" icon removed for url= preference:resources/icons/misc/Nixie/M5B.gif [__main__$setStartup$1]
+2014-07-22 23:42:36,921 configurexml.MemoryIconXml            INFO  - Memory "IM20:H1" icon removed for url= preference:resources/icons/misc/Nixie/M4B.gif [__main__$setStartup$1]
+2014-07-22 23:42:36,960 configurexml.MemoryIconXml            INFO  - Memory "IM20:H1" icon removed for url= preference:resources/icons/misc/Nixie/M9B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,000 configurexml.MemoryIconXml            INFO  - Memory "IM20:H1" icon removed for url= preference:resources/icons/misc/Nixie/M8B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,295 configurexml.MemoryIconXml            INFO  - Memory "IM20:H2" icon removed for url= preference:resources/icons/misc/Nixie/M3B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,333 configurexml.MemoryIconXml            INFO  - Memory "IM20:H2" icon removed for url= preference:resources/icons/misc/Nixie/M2B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,362 configurexml.MemoryIconXml            INFO  - Memory "IM20:H2" icon removed for url= preference:resources/icons/misc/Nixie/M1B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,409 configurexml.MemoryIconXml            INFO  - Memory "IM20:H2" icon removed for url= preference:resources/icons/misc/Nixie/M0B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,434 configurexml.MemoryIconXml            INFO  - Memory "IM20:H2" icon removed for url= preference:resources/icons/misc/Nixie/M7B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,472 configurexml.MemoryIconXml            INFO  - Memory "IM20:H2" icon removed for url= preference:resources/icons/misc/Nixie/M6B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,515 configurexml.MemoryIconXml            INFO  - Memory "IM20:H2" icon removed for url= preference:resources/icons/misc/Nixie/M5B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,546 configurexml.MemoryIconXml            INFO  - Memory "IM20:H2" icon removed for url= preference:resources/icons/misc/Nixie/M4B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,593 configurexml.MemoryIconXml            INFO  - Memory "IM20:H2" icon removed for url= preference:resources/icons/misc/Nixie/M9B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,617 configurexml.MemoryIconXml            INFO  - Memory "IM20:H2" icon removed for url= preference:resources/icons/misc/Nixie/M8B.gif [__main__$setStartup$1]
+2014-07-22 23:42:37,899 configurexml.MemoryIconXml            INFO  - Memory "IM20:H3" icon removed for url= preference:resources/icons/misc/Nixie/colonB.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,185 configurexml.MemoryIconXml            INFO  - Memory "IM20:M1" icon removed for url= preference:resources/icons/misc/Nixie/M3B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,225 configurexml.MemoryIconXml            INFO  - Memory "IM20:M1" icon removed for url= preference:resources/icons/misc/Nixie/M2B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,250 configurexml.MemoryIconXml            INFO  - Memory "IM20:M1" icon removed for url= preference:resources/icons/misc/Nixie/M1B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,300 configurexml.MemoryIconXml            INFO  - Memory "IM20:M1" icon removed for url= preference:resources/icons/misc/Nixie/M0B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,326 configurexml.MemoryIconXml            INFO  - Memory "IM20:M1" icon removed for url= preference:resources/icons/misc/Nixie/M7B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,365 configurexml.MemoryIconXml            INFO  - Memory "IM20:M1" icon removed for url= preference:resources/icons/misc/Nixie/M6B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,409 configurexml.MemoryIconXml            INFO  - Memory "IM20:M1" icon removed for url= preference:resources/icons/misc/Nixie/M5B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,448 configurexml.MemoryIconXml            INFO  - Memory "IM20:M1" icon removed for url= preference:resources/icons/misc/Nixie/M4B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,489 configurexml.MemoryIconXml            INFO  - Memory "IM20:M1" icon removed for url= preference:resources/icons/misc/Nixie/M9B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,520 configurexml.MemoryIconXml            INFO  - Memory "IM20:M1" icon removed for url= preference:resources/icons/misc/Nixie/M8B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,809 configurexml.MemoryIconXml            INFO  - Memory "IM20:M2" icon removed for url= preference:resources/icons/misc/Nixie/M3B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,850 configurexml.MemoryIconXml            INFO  - Memory "IM20:M2" icon removed for url= preference:resources/icons/misc/Nixie/M2B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,889 configurexml.MemoryIconXml            INFO  - Memory "IM20:M2" icon removed for url= preference:resources/icons/misc/Nixie/M1B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,933 configurexml.MemoryIconXml            INFO  - Memory "IM20:M2" icon removed for url= preference:resources/icons/misc/Nixie/M0B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,958 configurexml.MemoryIconXml            INFO  - Memory "IM20:M2" icon removed for url= preference:resources/icons/misc/Nixie/M7B.gif [__main__$setStartup$1]
+2014-07-22 23:42:38,996 configurexml.MemoryIconXml            INFO  - Memory "IM20:M2" icon removed for url= preference:resources/icons/misc/Nixie/M6B.gif [__main__$setStartup$1]
+2014-07-22 23:42:39,040 configurexml.MemoryIconXml            INFO  - Memory "IM20:M2" icon removed for url= preference:resources/icons/misc/Nixie/M5B.gif [__main__$setStartup$1]
+2014-07-22 23:42:39,076 configurexml.MemoryIconXml            INFO  - Memory "IM20:M2" icon removed for url= preference:resources/icons/misc/Nixie/M4B.gif [__main__$setStartup$1]
+2014-07-22 23:42:39,118 configurexml.MemoryIconXml            INFO  - Memory "IM20:M2" icon removed for url= preference:resources/icons/misc/Nixie/M9B.gif [__main__$setStartup$1]
+2014-07-22 23:42:39,143 configurexml.MemoryIconXml            INFO  - Memory "IM20:M2" icon removed for url= preference:resources/icons/misc/Nixie/M8B.gif [__main__$setStartup$1]
+2014-07-22 23:42:39,377 configurexml.PositionableLabelXml     INFO  - PositionableLabel  removed for url= preference:resources/USS/background/BeaverBendHorizontal.jpg [__main__$setStartup$1]
+2014-07-22 23:42:39,463 configurexml.PositionableLabelXml     INFO  - PositionableLabel  removed for url= preference:resources/USS/background/BeaverBendHorizontal.jpg [__main__$setStartup$1]
+2014-07-22 23:42:39,476 configurexml.PositionableLabelXml     INFO  - PositionableLabel icon removed for url= yes [__main__$setStartup$1]
+2014-07-22 23:43:07,035 withrottle.UserInterface              INFO  - Creating new WiThrottle DeviceServer(socket) on port 52345, waiting for incoming connection... [WiThrottleGUIServer]
+2014-07-22 23:43:07,404 withrottle.DeviceServer               INFO  - Received Name: Paul's Tablet [WiThrottleUIDeviceServer]
+2014-07-22 23:43:09,992 withrottle.DeviceServer               INFO  - Received Name: Paul's Tablet [WiThrottleUIDeviceServer]
+2014-07-22 23:43:12,111 automat.AbstractAutomaton             WARN  - Exception ends AbstractAutomaton thread: Traceback (most recent call last):
+  File "/home/pi/MyJMRI/scripts/BeaverBendTurnoutMonitor.py", line 73, in init
+    logFile = open(logFileName, "r")
+IOError: [Errno 2] No such file or directory: u'/home/pi/MyJMRI/BBTurnoutMonitor.log'
+ [__main__$BeaverBendTurnoutMonitor$12]
+Traceback (most recent call last):
+  File "/home/pi/MyJMRI/scripts/BeaverBendTurnoutMonitor.py", line 73, in init
+    logFile = open(logFileName, "r")
+IOError: [Errno 2] No such file or directory: u'/home/pi/MyJMRI/BBTurnoutMonitor.log'
+
+	at org.python.core.Py.IOError(Py.java:194)
+	at org.python.core.io.FileIO.<init>(FileIO.java:90)
+	at org.python.core.PyFile.file___init__(PyFile.java:150)
+	at org.python.core.PyFile$exposed___new__.createOfType(Unknown Source)
+	at org.python.core.PyOverridableNew.new_impl(PyOverridableNew.java:12)
+	at org.python.core.PyType.invokeNew(PyType.java:466)
+	at org.python.core.PyType.type___call__(PyType.java:1558)
+	at org.python.core.PyType.__call__(PyType.java:1548)
+	at org.python.core.OpenFunction.__call__(__builtin__.java:1564)
+	at org.python.core.PyObject.__call__(PyObject.java:404)
+	at org.python.core.PyObject.__call__(PyObject.java:408)
+	at org.python.pycode._pyx8.init$2(/home/pi/MyJMRI/scripts/BeaverBendTurnoutMonitor.py:113)
+	at org.python.pycode._pyx8.call_function(/home/pi/MyJMRI/scripts/BeaverBendTurnoutMonitor.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:301)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:194)
+	at org.python.core.PyFunction.__call__(PyFunction.java:387)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:220)
+	at org.python.core.PyMethod.__call__(PyMethod.java:211)
+	at org.python.core.PyMethod.__call__(PyMethod.java:201)
+	at org.python.core.PyMethod.__call__(PyMethod.java:196)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3502)
+	at org.python.core.PyObject._jcall(PyObject.java:3534)
+	at org.python.proxies.__main__$BeaverBendTurnoutMonitor$12.init(Unknown Source)
+	at jmri.jmrit.automat.AbstractAutomaton.run(AbstractAutomaton.java:116)
+	at java.lang.Thread.run(Thread.java:724)
+2014-07-22 23:45:17,993 server.WebServer                      WARN  - Error shutting down WebServer: java.lang.NullPointerException [AWT-EventQueue-0]
+2014-07-22 23:45:18,422 withrottle.DeviceServer               ERROR - readLine from device failed, consecutive error # 1 [WiThrottleUIDeviceServer]
+2014-07-22 23:45:18,582 anagers.DefaultUserMessagePreferences INFO  - Storing preferences as part of shutdown [AWT-EventQueue-0]
+2014-07-22 23:45:18,924 managers.DefaultShutDownManager       INFO  - Normal termination complete [AWT-EventQueue-0]
+2014-07-22 23:45:28,798 util.Log4JUtil                        INFO  - ****** JMRI log ******* [main]
+2014-07-22 23:45:30,285 util.Log4JUtil                        INFO  - This log is appended to file: /home/pi/.jmri/log/messages.log [main]
+2014-07-22 23:45:30,349 util.Log4JUtil                        INFO  - This log is stored in file: /home/pi/.jmri/log/session.log [main]
+2014-07-22 23:45:30,896 apps.Apps                             INFO  - PanelPro version 3.9.1-r26563 starts under Java 1.7.0_40 at Tue Jul 22 23:45:30 UTC 2014 [main]
+2014-07-22 23:45:51,188 profile.ProfileManagerDialog          INFO  - Automatically starting with profile Beaver_Bend.3f1cb983 after timeout. [AWT-EventQueue-0]
+2014-07-22 23:45:52,861 apps.Apps                             INFO  - Starting with profile Beaver_Bend.3f1cb983 [main]
+2014-07-22 23:45:57,056 usbdriver.UsbDriverAdapter            INFO  - NCE USB /dev/ttyUSB0 port opened at 9600 baud [main]
+2014-07-22 23:45:57,907 nce.NceConnectionStatus               INFO  - NCE EPROM revision = 7.3.0 [AWT-EventQueue-0]
+2014-07-22 23:46:45,740 util.FileUtil                         INFO  - File path program: is /home/pi/JMRI/ [main]
+2014-07-22 23:46:45,766 util.FileUtil                         INFO  - File path preference: is /home/pi/MyJMRI/ [main]
+2014-07-22 23:46:45,796 util.FileUtil                         INFO  - File path profile: is /home/pi/MyJMRI/Beaver_Bend/ [main]
+2014-07-22 23:46:45,830 util.FileUtil                         INFO  - File path settings: is /home/pi/.jmri/ [main]
+2014-07-22 23:46:45,903 util.FileUtil                         INFO  - File path home: is /home/pi/ [main]
+2014-07-22 23:46:45,974 util.FileUtil                         INFO  - File path scripts: is /home/pi/MyJMRI/jython/ [main]
+2014-07-22 23:46:52,593 node.NodeIdentity                     INFO  - Using jmri-801F02DA5BD1-3f1cb983 as the JMRI Node identity [WiThrottleGUIServer]
+2014-07-22 23:46:52,747 configurexml.PerformScriptModelXml    INFO  - Run file /home/pi/MyJMRI/scripts/initBeaverBend.py [AWT-EventQueue-0]
+2014-07-22 23:47:01,875 server.WebServer                      INFO  - Starting Web Server on port 12080 [WebServer]
+2014-07-22 23:47:04,522 server.WebServer                      INFO  - Starting ZeroConfService _http._tcp.local for Web Server [WebServer]
+2014-07-22 23:47:08,917 withrottle.UserInterface              INFO  - Creating new WiThrottle DeviceServer(socket) on port 52345, waiting for incoming connection... [WiThrottleGUIServer]
+2014-07-22 23:47:35,452 configurexml.PerformScriptModelXml    INFO  - Run file /home/pi/MyJMRI/scripts/BeaverBendInitLights.py [AWT-EventQueue-0]
+2014-07-22 23:58:21,769 automat.AbstractAutomaton             WARN  - Exception ends AbstractAutomaton thread: Traceback (most recent call last):
+  File "/home/pi/MyJMRI/scripts/BeaverBendTurnoutMonitor.py", line 73, in init
+    logFile = open(logFileName, "r")
+IOError: [Errno 2] No such file or directory: u'/home/pi/MyJMRI/BBTurnoutMonitor.log'
+ [__main__$BeaverBendTurnoutMonitor$14]
+Traceback (most recent call last):
+  File "/home/pi/MyJMRI/scripts/BeaverBendTurnoutMonitor.py", line 73, in init
+    logFile = open(logFileName, "r")
+IOError: [Errno 2] No such file or directory: u'/home/pi/MyJMRI/BBTurnoutMonitor.log'
+
+	at org.python.core.Py.IOError(Py.java:194)
+	at org.python.core.io.FileIO.<init>(FileIO.java:90)
+	at org.python.core.PyFile.file___init__(PyFile.java:150)
+	at org.python.core.PyFile$exposed___new__.createOfType(Unknown Source)
+	at org.python.core.PyOverridableNew.new_impl(PyOverridableNew.java:12)
+	at org.python.core.PyType.invokeNew(PyType.java:466)
+	at org.python.core.PyType.type___call__(PyType.java:1558)
+	at org.python.core.PyType.__call__(PyType.java:1548)
+	at org.python.core.OpenFunction.__call__(__builtin__.java:1564)
+	at org.python.core.PyObject.__call__(PyObject.java:404)
+	at org.python.core.PyObject.__call__(PyObject.java:408)
+	at org.python.pycode._pyx12.init$2(/home/pi/MyJMRI/scripts/BeaverBendTurnoutMonitor.py:113)
+	at org.python.pycode._pyx12.call_function(/home/pi/MyJMRI/scripts/BeaverBendTurnoutMonitor.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:301)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:194)
+	at org.python.core.PyFunction.__call__(PyFunction.java:387)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:220)
+	at org.python.core.PyMethod.__call__(PyMethod.java:211)
+	at org.python.core.PyMethod.__call__(PyMethod.java:201)
+	at org.python.core.PyMethod.__call__(PyMethod.java:196)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3502)
+	at org.python.core.PyObject._jcall(PyObject.java:3534)
+	at org.python.proxies.__main__$BeaverBendTurnoutMonitor$14.init(Unknown Source)
+	at jmri.jmrit.automat.AbstractAutomaton.run(AbstractAutomaton.java:116)
+	at java.lang.Thread.run(Thread.java:724)
+2014-07-22 23:58:22,888 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("J:\JMRI\scripts\RandomArc.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/JMRI/J:\\JMRI\\scripts\\RandomArc.py (No such file or directory)')
+ [__main__$setStartup$1]
+2014-07-22 23:58:23,286 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("J:\JMRI\scripts\RandomArc.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/JMRI/J:\\JMRI\\scripts\\RandomArc.py (No such file or directory)')
+ [__main__$setStartup$1]
+2014-07-22 23:58:23,567 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("J:\JMRI\scripts\RandomArc.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/JMRI/J:\\JMRI\\scripts\\RandomArc.py (No such file or directory)')
+ [__main__$setStartup$1]
+2014-07-22 23:58:45,602 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("J:\JMRI\scripts\RandomArc.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/JMRI/J:\\JMRI\\scripts\\RandomArc.py (No such file or directory)')
+ [AWT-EventQueue-0]
+2014-07-22 23:58:48,237 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("J:\JMRI\scripts\RandomArc.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/JMRI/J:\\JMRI\\scripts\\RandomArc.py (No such file or directory)')
+ [AWT-EventQueue-0]
+2014-07-23 00:00:12,864 withrottle.UserInterface              INFO  - Creating new WiThrottle DeviceServer(socket) on port 52345, waiting for incoming connection... [WiThrottleGUIServer]
+2014-07-23 00:00:13,022 withrottle.DeviceServer               INFO  - Received Name: Paul's Tablet [WiThrottleUIDeviceServer]
+2014-07-23 00:00:15,560 withrottle.DeviceServer               INFO  - Received Name: Paul's Tablet [WiThrottleUIDeviceServer]
+2014-07-23 00:00:17,563 withrottle.DeviceServer               INFO  - Received Name: Paul's Tablet [WiThrottleUIDeviceServer]
+2014-07-23 00:01:01,317 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("J:\JMRI\scripts\RandomArc.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/JMRI/J:\\JMRI\\scripts\\RandomArc.py (No such file or directory)')
+ [WebServer-128]
+2014-07-23 00:01:03,791 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("J:\JMRI\scripts\RandomArc.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/JMRI/J:\\JMRI\\scripts\\RandomArc.py (No such file or directory)')
+ [WebServer-47]
+2014-07-23 00:01:25,200 util.PythonInterp                     ERROR - InvocationTargetException while invoking command execfile("J:\JMRI\scripts\RandomArc.py"): Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+IOError: (2, 'File not found - /home/pi/JMRI/J:\\JMRI\\scripts\\RandomArc.py (No such file or directory)')
+ [WebServer-143]
+2014-07-23 00:43:21,110 server.WebServer                      INFO  - Stopping Web Server [AWT-EventQueue-0]
+2014-07-23 00:43:21,626 anagers.DefaultUserMessagePreferences INFO  - Storing preferences as part of shutdown [AWT-EventQueue-0]
+2014-07-23 00:43:21,890 managers.DefaultShutDownManager       INFO  - Normal termination complete [AWT-EventQueue-0]
+2014-07-22 19:58:28,279 util.Log4JUtil                        INFO  - ****** JMRI log ******* [main]
+2014-07-22 19:58:29,224 util.Log4JUtil                        INFO  - This log is appended to file: /home/pi/.jmri/log/messages.log [main]
+2014-07-22 19:58:29,241 util.Log4JUtil                        INFO  - This log is stored in file: /home/pi/.jmri/log/session.log [main]
+2014-07-22 19:58:29,394 apps.AppsBase                         INFO  - JmriFaceless version 3.9.1-r26563 starts under Java 1.7.0_40 at Tue Jul 22 19:58:29 CDT 2014 [main]
+2014-07-22 19:58:32,028 apps.AppsBase                         ERROR - Specify profile to use as command line argument. [main]
+2014-07-22 19:58:32,052 apps.AppsBase                         ERROR - If starting with saved profile configuration, ensure the autoStart property is set to "true" [main]
+2014-07-22 19:58:32,091 apps.AppsBase                         ERROR - Profiles not configurable. Using fallback per-application configuration. [main]
+2014-07-22 19:58:32,728 anagers.DefaultUserMessagePreferences INFO  - No saved user preferences file [main]
+2014-07-22 19:58:33,601 apps.AppsBase                         INFO  - No pre-existing config file found, searched for '/home/pi/.jmri/JmriFacelessConfig3.xml' [main]
+2014-07-22 19:58:33,646 util.FileUtil                         INFO  - File path program: is /home/pi/JMRI/ [main]
+2014-07-22 19:58:33,663 util.FileUtil                         INFO  - File path preference: is /home/pi/.jmri/ [main]
+2014-07-22 19:58:33,685 util.FileUtil                         INFO  - File path profile: is /home/pi/.jmri/ [main]
+2014-07-22 19:58:33,700 util.FileUtil                         INFO  - File path settings: is /home/pi/.jmri/ [main]
+2014-07-22 19:58:33,732 util.FileUtil                         INFO  - File path home: is /home/pi/ [main]
+2014-07-22 19:58:33,749 util.FileUtil                         INFO  - File path scripts: is /home/pi/JMRI/jython [main]
+2014-07-22 19:58:52,464 managers.DefaultShutDownManager       INFO  - Normal termination complete [Thread-0]
+2014-07-22 20:06:08,691 util.Log4JUtil                        INFO  - ****** JMRI log ******* [main]
+2014-07-22 20:06:09,614 util.Log4JUtil                        INFO  - This log is appended to file: /home/pi/.jmri/log/messages.log [main]
+2014-07-22 20:06:09,632 util.Log4JUtil                        INFO  - This log is stored in file: /home/pi/.jmri/log/session.log [main]
+2014-07-22 20:06:09,778 apps.AppsBase                         INFO  - JmriFaceless version 3.9.1-r26563 starts under Java 1.7.0_40 at Tue Jul 22 20:06:09 CDT 2014 [main]
+2014-07-22 20:06:54,359 apps.AppsBase                         ERROR - Specify profile to use as command line argument. [main]
+2014-07-22 20:06:54,385 apps.AppsBase                         ERROR - If starting with saved profile configuration, ensure the autoStart property is set to "true" [main]
+2014-07-22 20:06:54,416 apps.AppsBase                         ERROR - Profiles not configurable. Using fallback per-application configuration. [main]
+2014-07-22 20:06:55,377 anagers.DefaultUserMessagePreferences INFO  - No saved user preferences file [main]
+2014-07-22 20:06:56,236 apps.AppsBase                         INFO  - No pre-existing config file found, searched for '/home/pi/.jmri/JmriFacelessConfig3.xml' [main]
+2014-07-22 20:06:56,280 util.FileUtil                         INFO  - File path program: is /home/pi/JMRI/ [main]
+2014-07-22 20:06:56,297 util.FileUtil                         INFO  - File path preference: is /home/pi/.jmri/ [main]
+2014-07-22 20:06:56,322 util.FileUtil                         INFO  - File path profile: is /home/pi/.jmri/ [main]
+2014-07-22 20:06:56,336 util.FileUtil                         INFO  - File path settings: is /home/pi/.jmri/ [main]
+2014-07-22 20:06:56,356 util.FileUtil                         INFO  - File path home: is /home/pi/ [main]
+2014-07-22 20:06:56,376 util.FileUtil                         INFO  - File path scripts: is /home/pi/JMRI/jython [main]
+2014-07-22 20:07:15,135 managers.DefaultShutDownManager       INFO  - Normal termination complete [Thread-0]
+2014-07-22 20:11:52,119 util.Log4JUtil                        INFO  - ****** JMRI log ******* [main]
+2014-07-22 20:11:52,827 util.Log4JUtil                        INFO  - This log is appended to file: /home/pi/.jmri/log/messages.log [main]
+2014-07-22 20:11:52,841 util.Log4JUtil                        INFO  - This log is stored in file: /home/pi/.jmri/log/session.log [main]
+2014-07-22 20:11:53,046 apps.AppsBase                         INFO  - DecoderPro 3 version 3.9.1-r26563 starts under Java 1.7.0_40 at Tue Jul 22 20:11:52 CDT 2014 [main]
+2014-07-22 20:12:37,092 gui3.Apps3                            INFO  - Starting with profile Beaver_Bend.3f1cb983 [main]
+2014-07-22 20:12:42,180 usbdriver.UsbDriverAdapter            INFO  - NCE USB /dev/ttyUSB0 port opened at 9600 baud [main]
+2014-07-22 20:12:42,931 nce.NceConnectionStatus               INFO  - NCE EPROM revision = 7.3.0 [AWT-EventQueue-0]
+2014-07-22 20:13:35,337 node.NodeIdentity                     INFO  - Using jmri-801F02DA5BD1-3f1cb983 as the JMRI Node identity [WiThrottleGUIServer]
+2014-07-22 20:13:36,310 configurexml.PerformScriptModelXml    INFO  - Run file /home/pi/MyJMRI/scripts/initBeaverBend.py [main]
+2014-07-22 20:13:42,106 server.WebServer                      INFO  - Starting Web Server on port 12080 [WebServer]
+2014-07-22 20:13:44,533 server.WebServer                      INFO  - Starting ZeroConfService _http._tcp.local for Web Server [WebServer]
+2014-07-22 20:13:48,511 withrottle.UserInterface              INFO  - Creating new WiThrottle DeviceServer(socket) on port 52345, waiting for incoming connection... [WiThrottleGUIServer]

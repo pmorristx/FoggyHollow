@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xml/XSLT/locomotive.xsl"?>
+<locomotive-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/locomotive-config.xsd">
+  <!--Written by JMRI version 2.99.6-r20655 on Wed Jun 27 17:01:13 CDT 2012 $Id: XmlFile.java 18985 2011-10-31 05:24:36Z rhwood $-->
+  <locomotive id="Thomas Ben" fileName="Thomas_Ben.xml" roadNumber="" roadName="" mfg="" owner="Paul Morris" model="" dccAddress="3" comment="" maxSpeed="100" imageFilePath="__noImage.jpg" iconFilePath="__noIcon.jpg" URL="" IsShuntingOn="">
+    <dateUpdated>Jun 27, 2012 5:01:13 PM</dateUpdated>
+    <decoder model="2 function decoder (36-552)" family="E-Z Command decoders" comment="" />
+    <locoaddress>
+      <dcclocoaddress number="3" longaddress="no" />
+    </locoaddress>
+    <values>
+      <decoderDef>
+        <varValue item="Primary Address" value="3" />
+        <varValue item="Start Volts" value="10" />
+        <varValue item="Accel" value="1" />
+        <varValue item="Decel" value="1" />
+        <varValue item="Version ID" value="0" />
+        <varValue item="Manufacturer ID" value="0" />
+        <varValue item="Long Address" value="0" />
+        <varValue item="Consist Address" value="0" />
+        <varValue item="Consist Direction" value="0" />
+        <varValue item="Normal direction of motion" value="0" />
+        <varValue item="Speed Steps" value="1" />
+        <varValue item="Analog conversion mode" value="1" />
+        <varValue item="Addressing Mode" value="0" />
+        <varValue item="Brake Momentum on DC" value="0" />
+        <varValue item="Headlight Dimmed By" value="0" />
+        <varValue item="Headlight Dimming intensity" value="64" />
+        <varValue item="User Private ID #1" value="0" />
+        <varValue item="User Private ID #2" value="0" />
+        <varValue item="FL(f) controls output 1" value="0" />
+        <varValue item="FL(r) controls output 2" value="0" />
+      </decoderDef>
+      <CVvalue name="1" value="3" />
+      <CVvalue name="2" value="10" />
+      <CVvalue name="3" value="1" />
+      <CVvalue name="4" value="1" />
+      <CVvalue name="7" value="0" />
+      <CVvalue name="8" value="0" />
+      <CVvalue name="17" value="0" />
+      <CVvalue name="18" value="0" />
+      <CVvalue name="19" value="0" />
+      <CVvalue name="29" value="6" />
+      <CVvalue name="50" value="0" />
+      <CVvalue name="51" value="0" />
+      <CVvalue name="52" value="64" />
+      <CVvalue name="105" value="0" />
+      <CVvalue name="106" value="0" />
+    </values>
+  </locomotive>
+</locomotive-config>
+

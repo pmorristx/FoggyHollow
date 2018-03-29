@@ -1,0 +1,1584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xml/XSLT/locomotive.xsl"?>
+<locomotive-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/locomotive-config.xsd">
+  <!--Written by JMRI version 3.9.5-r27615 on Fri Jan 02 14:45:00 CST 2015 $Id: XmlFile.java 27564 2014-11-01 05:08:01Z jacobsen $-->
+  <locomotive id="FH&amp;W 32" fileName="FH_W_32_WOW.xml" roadNumber="32" roadName="Foggy Hollow &amp; Western" mfg="Baldwin" owner="Paul Morris" model="4-6-0" dccAddress="32" comment="" maxSpeed="100" imageFilePath="preference:resources/FH&amp;W 32 Grime Cropped.jpg" iconFilePath="preference:resources/FH&amp;W 32 Icon.jpg" URL="" IsShuntingOn="">
+    <dateUpdated>Jan 2, 2015 2:44:59 PM</dateUpdated>
+    <decoder model="WOW Sound 101" family="WOW Sound Set 3" comment="" />
+    <locoaddress>
+      <dcclocoaddress number="32" longaddress="no" />
+      <number>32</number>
+      <protocol>dcc_short</protocol>
+    </locoaddress>
+    <functionlabels>
+      <functionlabel num="0" lockable="true" functionImage="" functionImageSelected="">Light</functionlabel>
+      <functionlabel num="1" lockable="true" functionImage="" functionImageSelected="">Bell</functionlabel>
+      <functionlabel num="2" lockable="false" functionImage="" functionImageSelected="">Whistle</functionlabel>
+      <functionlabel num="3" lockable="true" functionImage="" functionImageSelected="">Toot</functionlabel>
+      <functionlabel num="4" lockable="false" functionImage="" functionImageSelected="">Quill</functionlabel>
+      <functionlabel num="5" lockable="true" functionImage="" functionImageSelected="">CylCocks</functionlabel>
+      <functionlabel num="6" lockable="false" functionImage="" functionImageSelected="">BrkRelease</functionlabel>
+      <functionlabel num="7" lockable="false" functionImage="" functionImageSelected="">Brake</functionlabel>
+      <functionlabel num="8" lockable="true" functionImage="" functionImageSelected="">Tender</functionlabel>
+      <functionlabel num="9" lockable="true" functionImage="" functionImageSelected="">GrnClass</functionlabel>
+      <functionlabel num="10" lockable="true" functionImage="" functionImageSelected="">WhtClass</functionlabel>
+      <functionlabel num="11" lockable="true" functionImage="" functionImageSelected="">Firebox</functionlabel>
+      <functionlabel num="12" lockable="true" functionImage="" functionImageSelected="">Cab</functionlabel>
+      <functionlabel num="13" lockable="true" functionImage="" functionImageSelected="">AirPump</functionlabel>
+      <functionlabel num="14" lockable="false" functionImage="" functionImageSelected="">AshDump</functionlabel>
+      <functionlabel num="15" lockable="true" functionImage="" functionImageSelected="">Blower</functionlabel>
+      <functionlabel num="16" lockable="false" functionImage="" functionImageSelected="">BlowDwn</functionlabel>
+      <functionlabel num="17" lockable="false" functionImage="" functionImageSelected="">Coupler</functionlabel>
+      <functionlabel num="18" lockable="true" functionImage="" functionImageSelected="">Dynamo</functionlabel>
+      <functionlabel num="19" lockable="true" functionImage="" functionImageSelected="">Injectr</functionlabel>
+      <functionlabel num="20" lockable="false" functionImage="" functionImageSelected="">Safety</functionlabel>
+      <functionlabel num="21" lockable="false" functionImage="" functionImageSelected="">WatrFill</functionlabel>
+      <functionlabel num="22" lockable="true" functionImage="" functionImageSelected="">RotWhistle</functionlabel>
+      <functionlabel num="23" lockable="true" functionImage="" functionImageSelected="">Mute</functionlabel>
+    </functionlabels>
+    <attributepairs>
+      <keyvaluepair>
+        <key>LastOperated</key>
+        <value>Fri Jan 02 10:51:52 CST 2015</value>
+      </keyvaluepair>
+      <keyvaluepair>
+        <key>OperatingDuration</key>
+        <value>422</value>
+      </keyvaluepair>
+      <keyvaluepair>
+        <key>RosterGroup:Locomotives &amp; Cars</key>
+        <value>yes</value>
+      </keyvaluepair>
+    </attributepairs>
+    <values>
+      <decoderDef>
+        <varValue item="Sound Set" value="3" />
+        <varValue item="Button 0 Sound" value="56" />
+        <varValue item="Button 1 Sound" value="7" />
+        <varValue item="Button 2 Sound" value="120" />
+        <varValue item="Button 3 Sound" value="243" />
+        <varValue item="Button 4 Sound" value="161" />
+        <varValue item="Button 5 Sound" value="51" />
+        <varValue item="Button 6 Sound" value="28" />
+        <varValue item="Button 7 Sound" value="30" />
+        <varValue item="Button 8 Sound" value="362" />
+        <varValue item="Button 9 Sound" value="362" />
+        <varValue item="Button 10 Sound" value="362" />
+        <varValue item="Button 11 Sound" value="362" />
+        <varValue item="Button 12 Sound" value="63" />
+        <varValue item="Button 13 Sound" value="2" />
+        <varValue item="Button 14 Sound" value="5" />
+        <varValue item="Button 15 Sound" value="26" />
+        <varValue item="Button 16 Sound" value="25" />
+        <varValue item="Button 17 Sound" value="39" />
+        <varValue item="Button 18 Sound" value="57" />
+        <varValue item="Button 19 Sound" value="62" />
+        <varValue item="Button 20 Sound" value="70" />
+        <varValue item="Button 21 Sound" value="75" />
+        <varValue item="Button 22 Sound" value="322" />
+        <varValue item="Button 23 Sound" value="65" />
+        <varValue item="Button 24 Sound" value="362" />
+        <varValue item="Button 25 Sound" value="362" />
+        <varValue item="Button 26 Sound" value="362" />
+        <varValue item="Button 27 Sound" value="362" />
+        <varValue item="Button 28 Sound" value="58" />
+        <varValue item="Random 1 Sound" value="2" />
+        <varValue item="Random 2 Sound" value="72" />
+        <varValue item="Random 3 Sound" value="62" />
+        <varValue item="Random 4 Sound" value="70" />
+        <varValue item="Bell Strasburg #475 Hand Powered " value="40" />
+        <varValue item="Bell Strasburg #475 Air Powered " value="40" />
+        <varValue item="Bell Strasburg #89 Air Powered " value="40" />
+        <varValue item="Bell Virginia Truckee Railroad 2-6-0 Hand Powered " value="40" />
+        <varValue item="Bell PRR 4-4-2 #7002 Hand Powered " value="40" />
+        <varValue item="Bell PRR #1223 American 4-4-0 D16SB Hand Powered " value="40" />
+        <varValue item="Bell Conrail #2233 GP30 Air Powered " value="40" />
+        <varValue item="Bell PRR GG1 " value="40" />
+        <varValue item="Bell John Bull Replica Hand Powered " value="40" />
+        <varValue item="Bell PRR 2-8-0 H3 1187 Hand Powered " value="40" />
+        <varValue item="Bell PRR 2-8-0 H3 2846 Air Powered " value="40" />
+        <varValue item="Bell Heisler Class 53833 #4 Hand Powered " value="40" />
+        <varValue item="Bell Leetonia Railroad Shay #1 " value="40" />
+        <varValue item="Bell Unknown  from Strasburg museum floor" value="40" />
+        <varValue item="Bell Williams Grove PRR #643 0-6-0 " value="40" />
+        <varValue item="Bell Strasburg #90 Hand Powered " value="40" />
+        <varValue item="Bell Strasburg #90 Hand Powered (Variation)" value="40" />
+        <varValue item="Whistle Alamo Michigan Plant Short" value="100" />
+        <varValue item="Whistle Alamo Michigan Plant Long" value="100" />
+        <varValue item="Whistle Alamo Michigian Plant Quill" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Original Short" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Original Long" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Original Quill" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Replica Short" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Replica Long" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Replica Quill" value="100" />
+        <varValue item="Whistle B &amp; O 3 Chime Short" value="100" />
+        <varValue item="Whistle B &amp; O 3 Chime Long" value="100" />
+        <varValue item="Whistle B &amp; O 3 Chime Quill" value="100" />
+        <varValue item="Whistle B &amp; M 6 Chime Short" value="100" />
+        <varValue item="Whistle B &amp; M 6 Chime Long" value="100" />
+        <varValue item="Whistle B &amp; M 6 Chime Quill" value="100" />
+        <varValue item="Whistle CNJ 3 Chime Short" value="100" />
+        <varValue item="Whistle CNJ 3 Chime Long" value="100" />
+        <varValue item="Whistle CNJ 3 Chime Quill" value="100" />
+        <varValue item="Whistle CB &amp; Q 3 Chime Short" value="100" />
+        <varValue item="Whistle CB &amp; Q 3 Chime Long" value="100" />
+        <varValue item="Whistle CB &amp; Q 3 Chime Quill" value="100" />
+        <varValue item="Whistle Great Northern 5 Chime Short" value="100" />
+        <varValue item="Whistle Great Northern 5 Chime Long" value="100" />
+        <varValue item="Whistle Great Northern 5 Chime Quill" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Short Bell Short" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Short Bell Long" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Short Bell Quill" value="100" />
+        <varValue item="Whistle Kingsly 4 Chime Short" value="100" />
+        <varValue item="Whistle Kingsly 4 Chime Long" value="100" />
+        <varValue item="Whistle Kingsly 4 Chime Quill" value="100" />
+        <varValue item="Whistle LV Crosby 3 Chime Short" value="100" />
+        <varValue item="Whistle LV Crosby 3 Chime Long" value="100" />
+        <varValue item="Whistle LV Crosby 3 Chime Quill" value="100" />
+        <varValue item="Whistle Lunkenheimer Single Chime Short" value="100" />
+        <varValue item="Whistle Lunkenheimer Single Chime Long" value="100" />
+        <varValue item="Whistle Lunkenheimer Single Chime Quill" value="100" />
+        <varValue item="Whistle Lunkenheimer 3 Chime Short" value="100" />
+        <varValue item="Whistle Lunkenheimer 3 Chime Long" value="100" />
+        <varValue item="Whistle Lunkenheimer 3 Chime Quill" value="100" />
+        <varValue item="Whistle Nathan 5 Chime Short" value="100" />
+        <varValue item="Whistle Nathan 5 Chime Long" value="100" />
+        <varValue item="Whistle Nathan 5 Chime Quill" value="100" />
+        <varValue item="Whistle NPR 765 Short" value="100" />
+        <varValue item="Whistle NPR 765 Long" value="100" />
+        <varValue item="Whistle NPR 765 Quill" value="100" />
+        <varValue item="Whistle NW Single Chime Long Bell Short" value="100" />
+        <varValue item="Whistle NW Single Chime Long Bell Long" value="100" />
+        <varValue item="Whistle NW Single Chime Long Bell Quill" value="100" />
+        <varValue item="Whistle NW Single Chime Short Bell Short" value="100" />
+        <varValue item="Whistle NW Single Chime Short Bell Long" value="100" />
+        <varValue item="Whistle NW Single Chime Short Bell Quill" value="100" />
+        <varValue item="Whistle NW Nathan 3 Chime Short" value="100" />
+        <varValue item="Whistle NW Nathan 3 Chime Long" value="100" />
+        <varValue item="Whistle NW Nathan 3 Chime Quill" value="100" />
+        <varValue item="Whistle PRR Banshee Short" value="100" />
+        <varValue item="Whistle PRR Banshee Long" value="100" />
+        <varValue item="Whistle PRR Banshee Quill" value="100" />
+        <varValue item="Whistle PRR 3 Chime Short" value="100" />
+        <varValue item="Whistle PRR 3 Chime Long" value="100" />
+        <varValue item="Whistle PRR 3 Chime Quill" value="100" />
+        <varValue item="Whistle PRR 3 Chime Short" value="100" />
+        <varValue item="Whistle PRR 3 Chime Long" value="100" />
+        <varValue item="Whistle PRR 3 Chime Quill" value="100" />
+        <varValue item="Whistle Pennsy K4 Short" value="100" />
+        <varValue item="Whistle Pennsy K4 Long" value="100" />
+        <varValue item="Whistle Pennsy K4 Quill" value="100" />
+        <varValue item="Whistle Reading Hooter Short" value="100" />
+        <varValue item="Whistle Reading Hooter Long" value="100" />
+        <varValue item="Whistle Reading Hooter Quill" value="100" />
+        <varValue item="Whistle Reading #179 G2 6 Chime Short" value="100" />
+        <varValue item="Whistle Reading #179 G2 6 Chime Long" value="100" />
+        <varValue item="Whistle Reading #179 G2 6 Chime Quill" value="100" />
+        <varValue item="Whistle Reading Pacific G2 Short" value="100" />
+        <varValue item="Whistle Reading Pacific G2 Long" value="100" />
+        <varValue item="Whistle Reading Pacific G2 Quill" value="100" />
+        <varValue item="Whistle Reading 6 Chime 1 Short" value="100" />
+        <varValue item="Whistle Reading 6 Chime 1 Long" value="100" />
+        <varValue item="Whistle Reading 6 Chime 1 Quill" value="100" />
+        <varValue item="Whistle Reading 6 Chime Short" value="100" />
+        <varValue item="Whistle Reading 6 Chime Long" value="100" />
+        <varValue item="Whistle Reading 6 Chime Quill" value="100" />
+        <varValue item="Whistle Southern Pacific 5 Chime Short" value="100" />
+        <varValue item="Whistle Southern Pacific 5 Chime Long" value="100" />
+        <varValue item="Whistle Southern Pacific 5 Chime Quill" value="100" />
+        <varValue item="Whistle Southern Single Chime Short" value="100" />
+        <varValue item="Whistle Southern Single Chime Long" value="100" />
+        <varValue item="Whistle Southern Single Chime Quill" value="100" />
+        <varValue item="Whistle Southern 3 Chime Short" value="100" />
+        <varValue item="Whistle Southern 3 Chime Long" value="100" />
+        <varValue item="Whistle Southern 3 Chime Quill" value="100" />
+        <varValue item="Whistle Southern 6 Chime Short" value="100" />
+        <varValue item="Whistle Southern 6 Chime Long" value="100" />
+        <varValue item="Whistle Southern 6 Chime Quill" value="100" />
+        <varValue item="Whistle 32 Short" value="100" />
+        <varValue item="Whistle 32 Long" value="100" />
+        <varValue item="Whistle 32 Quill" value="100" />
+        <varValue item="Whistle 33 Short" value="100" />
+        <varValue item="Whistle 33 Long" value="100" />
+        <varValue item="Whistle 33 Quill" value="100" />
+        <varValue item="Whistle 34 Short" value="100" />
+        <varValue item="Whistle 34 Long" value="100" />
+        <varValue item="Whistle 34 Quill" value="100" />
+        <varValue item="Whistle Unknown Circa 19th Century Short" value="100" />
+        <varValue item="Whistle Unknown Circa 19th Century Long" value="100" />
+        <varValue item="Whistle Unknown Circa 19th Century Quill" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Short" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Long" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Quill" value="100" />
+        <varValue item="Whistle Union Pacific 3 Chime Long Bell Short" value="100" />
+        <varValue item="Whistle Union Pacific 3 Chime Long Bell Long" value="100" />
+        <varValue item="Whistle Union Pacific 3 Chime Long Bell Quill" value="100" />
+        <varValue item="Whistle Wabash 3 Chime Short" value="100" />
+        <varValue item="Whistle Wabash 3 Chime Long" value="100" />
+        <varValue item="Whistle Wabash 3 Chime Quill" value="100" />
+        <varValue item="Whistle Wabash 6 Chime Short" value="100" />
+        <varValue item="Whistle Wabash 6 Chime Long" value="100" />
+        <varValue item="Whistle Wabash 6 Chime Quill" value="100" />
+        <varValue item="Whistle World War II era 3 Chime Short" value="100" />
+        <varValue item="Whistle World War II era 3 Chime Long" value="100" />
+        <varValue item="Whistle World War II era 3 Chime Quill" value="100" />
+        <varValue item="Whistle Nathan K5LA Horn Short" value="100" />
+        <varValue item="Whistle Nathan K5LA Horn Long" value="100" />
+        <varValue item="Whistle Nathan K5LA Horn Quill" value="100" />
+        <varValue item="Horn Nathan K5LA short" value="100" />
+        <varValue item="Horn Nathan K5LA long" value="100" />
+        <varValue item="Horn Nathan K5LA quill" value="100" />
+        <varValue item="Rod Clank 1" value="15" />
+        <varValue item="Rod Clank 2" value="15" />
+        <varValue item="Rod Clank 3" value="15" />
+        <varValue item="Rod Clank 4" value="15" />
+        <varValue item="Direction Change 1" value="40" />
+        <varValue item="Blow Down 1" value="100" />
+        <varValue item="Blow Down 2" value="100" />
+        <varValue item="Blow Down 3" value="100" />
+        <varValue item="Blower 1" value="20" />
+        <varValue item="Blower 2" value="20" />
+        <varValue item="Coupler Clank 1" value="40" />
+        <varValue item="Coupler Clank 2" value="40" />
+        <varValue item="Cylinder Cocks 1" value="40" />
+        <varValue item="Cylinder Cocks 2" value="40" />
+        <varValue item="Cylinder Cocks 3" value="40" />
+        <varValue item="Cylinder Cocks 4" value="40" />
+        <varValue item="Cylinder Cocks 5" value="40" />
+        <varValue item="Cylinder Cocks 6" value="40" />
+        <varValue item="Cylinder Cocks 7" value="40" />
+        <varValue item="Cylinder Cocks 8" value="40" />
+        <varValue item="Cylinder Cocks 9" value="40" />
+        <varValue item="Cylinder Cocks 10" value="40" />
+        <varValue item="Cylinder Cocks 11" value="40" />
+        <varValue item="Cylinder Cocks 12" value="40" />
+        <varValue item="Cylinder Cocks 13" value="40" />
+        <varValue item="Cylinder Cocks 14" value="40" />
+        <varValue item="Generator 1" value="20" />
+        <varValue item="Generator 2" value="20" />
+        <varValue item="Injector 1" value="20" />
+        <varValue item="Injector 2" value="20" />
+        <varValue item="Injector 3" value="20" />
+        <varValue item="Air Pump 1" value="45" />
+        <varValue item="Air Pump 2" value="45" />
+        <varValue item="Air Pump 3" value="45" />
+        <varValue item="Air Pump 4" value="45" />
+        <varValue item="Air Pump 5" value="45" />
+        <varValue item="Safety 1" value="100" />
+        <varValue item="Safety 2" value="100" />
+        <varValue item="Shovelling 1" value="35" />
+        <varValue item="Shovelling 2" value="35" />
+        <varValue item="Whistle Alamo Michigan Plant Forward" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Original Forward" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Replica Forward" value="100" />
+        <varValue item="Whistle B &amp; O 3 Chime Forward Whistle" value="100" />
+        <varValue item="Whistle B &amp; M 6 Chime Lykens Forward" value="100" />
+        <varValue item="Whistle CNJ 3 Chime Forward" value="100" />
+        <varValue item="Whistle CB &amp; Q 3 Chime Lykens Forward" value="100" />
+        <varValue item="Whistle Great Northern 5 Chime Forward" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Short Bell Forward" value="100" />
+        <varValue item="Whistle Kingsly 4 Chime Forward" value="100" />
+        <varValue item="Whistle LV Crosby 3 Chime Forward" value="100" />
+        <varValue item="Whistle Lunkenheimer Single Note Forward" value="100" />
+        <varValue item="Whistle Lunkenheimer 3 Chime Forward" value="100" />
+        <varValue item="Whistle Nathan 5 Chime Forward" value="100" />
+        <varValue item="Whistle NPR 765 Forward" value="100" />
+        <varValue item="Whistle NW Single Chime Long Bell Forward" value="100" />
+        <varValue item="Whistle NW Single Chime Short Bell Forward" value="100" />
+        <varValue item="Whistle NW Nathan 3 Chime Forward" value="100" />
+        <varValue item="Whistle PRR Banshee Forward" value="100" />
+        <varValue item="Whistle PRR 3 Chime Forward" value="100" />
+        <varValue item="Whistle PRR 3 Chime Forward" value="100" />
+        <varValue item="Whistle Pennsy K4 Forward" value="100" />
+        <varValue item="Whistle Reading Hooter Forward" value="100" />
+        <varValue item="Whistle Reading #179 G2 6 Chime Forward" value="100" />
+        <varValue item="Whistle Reading Pacific G2 Forward" value="100" />
+        <varValue item="Whistle Reading 6 Chime 2 Forward" value="100" />
+        <varValue item="Whistle Reading 6 Chime Forward" value="100" />
+        <varValue item="Whistle Southern Pacific 5 Chime Forward" value="100" />
+        <varValue item="Whistle Southern Single Chime Forward" value="100" />
+        <varValue item="Whistle Southern 3 Chime Forward" value="100" />
+        <varValue item="Whistle Southern 6 Chime Forward" value="100" />
+        <varValue item="Whistle Unknown 1 Forward" value="100" />
+        <varValue item="Whistle Unknown 3 Forward" value="100" />
+        <varValue item="Whistle Proceed Forward 34" value="100" />
+        <varValue item="Whistle Unknown Circa 19th Century Forward" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Forward" value="100" />
+        <varValue item="Whistle Union Pacific 3 Chime Forward" value="100" />
+        <varValue item="Whistle Wabash 3 Chime Forward" value="100" />
+        <varValue item="Whistle Wabash 6 Chime Forward" value="100" />
+        <varValue item="Whistle World War II era 3 Chime Forward" value="100" />
+        <varValue item="Whistle Nathan K5LA Horn Forward" value="100" />
+        <varValue item="Whistle Alamo Michigan Plant Reverse" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Original Reverse" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Replica Reverse" value="100" />
+        <varValue item="Whistle B &amp; O 3 Chime Reverse" value="100" />
+        <varValue item="Whistle B &amp; M 6 Chime Reverse" value="100" />
+        <varValue item="Whistle CNJ 3 Chime Reverse" value="100" />
+        <varValue item="Whistle CB &amp; Q 3 Chime Reverse" value="100" />
+        <varValue item="Whistle Great Northern 5 Chime Reverse" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Short Bell Reverse" value="100" />
+        <varValue item="Whistle Kingsly 4 Chime Reverse" value="100" />
+        <varValue item="Whistle Lehigh Valley Crosby 3 Chime Reverse" value="100" />
+        <varValue item="Whistle Lunkenheimer Single Chime Reverse" value="100" />
+        <varValue item="Whistle Lunkenheimer 3 Chime Reverse" value="100" />
+        <varValue item="Whistle Nathan 5 Chime Reverse" value="100" />
+        <varValue item="Whistle NPR 765 Reverse" value="100" />
+        <varValue item="Whistle NW Single Chime Long Bell Reverse" value="100" />
+        <varValue item="Whistle NW Single Chime Short Bell Reverse" value="100" />
+        <varValue item="Whistle NW Nathan 3 Chime Reverse" value="100" />
+        <varValue item="Whistle PRR Banshee Reverse" value="100" />
+        <varValue item="Whistle PRR 3 Chime Reverse" value="100" />
+        <varValue item="Whistle PRR 3 Chime Reverse" value="100" />
+        <varValue item="Whistle Pennsy K4 Reverse Whistle" value="100" />
+        <varValue item="Whistle Reading Hooter Reverse" value="100" />
+        <varValue item="Whistle Reading #179 G2 6 Chime Reverse" value="100" />
+        <varValue item="Whistle Reading Pacific G2 Reverse" value="100" />
+        <varValue item="Whistle Reading 6 Chime 2 Reverse" value="100" />
+        <varValue item="Whistle Reading 6 Chime Reverse" value="100" />
+        <varValue item="Whistle Southern Pacific 5 Chime Reverse" value="100" />
+        <varValue item="Whistle Southern Single Chime Reverse" value="100" />
+        <varValue item="Whistle Southern 3 Chime Reverse" value="100" />
+        <varValue item="Whistle Southern 6 Chime Reverse Whistle" value="100" />
+        <varValue item="Whistle Unknown 1 Reverse" value="100" />
+        <varValue item="Whistle Unknown 3 Reverse" value="100" />
+        <varValue item="Whistle Hamburg 1 Reverse" value="100" />
+        <varValue item="Whistle Unknown Circa 19th Century Reverse" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Reverse" value="100" />
+        <varValue item="Whistle Union Pacific 3 Chime Long Bell Reverse" value="100" />
+        <varValue item="Whistle Wabash 3 Chime Reverse" value="100" />
+        <varValue item="Whistle Wabash 6 Chime Reverse" value="100" />
+        <varValue item="Whistle World War II era 3 Chime Reverse" value="100" />
+        <varValue item="Whistle Nathan K5LA Horn Reverse" value="100" />
+        <varValue item="Whistle Alamo Michigan Plant Stop" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Original Stop" value="100" />
+        <varValue item="Whistle Atchison, Topeka, and Santa Fe 6 Chime Replica Stop" value="100" />
+        <varValue item="Whistle B &amp; O 3 Chime Stop" value="100" />
+        <varValue item="Whistle B &amp; M 6 Chime Stop" value="100" />
+        <varValue item="Whistle CNJ 3 Chime Stop" value="100" />
+        <varValue item="Whistle CB &amp; Q 3 Chime Stop" value="100" />
+        <varValue item="Whistle Great Northern 5 Chime Stop" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Short Bell Stop" value="100" />
+        <varValue item="Whistle Kingsly 4 Chime Stop" value="100" />
+        <varValue item="Whistle LV Crosby 3 Chime Stop" value="100" />
+        <varValue item="Whistle Lunkenheimer Single Chime Stop" value="100" />
+        <varValue item="Whistle Lunkenheimer 3 Chime Stop" value="100" />
+        <varValue item="Whistle Nathan 5 Chime Stop" value="100" />
+        <varValue item="Whistle NPR 765 Stop" value="100" />
+        <varValue item="Whistle NW Single Chime Long Bell Stop" value="100" />
+        <varValue item="Whistle NW Single Chime Short Bell Stop" value="100" />
+        <varValue item="Whistle NW Nathan 3 Chime Stop" value="100" />
+        <varValue item="Whistle PRR Banshee Stop" value="100" />
+        <varValue item="Whistle PRR 3 Chime Stop" value="100" />
+        <varValue item="Whistle PRR 3 Chime Stop" value="100" />
+        <varValue item="Whistle Pennsy K4 Stop" value="100" />
+        <varValue item="Whistle Reading Hooter Stop" value="100" />
+        <varValue item="Whistle Reading #179 G2 6 Chime Stop" value="100" />
+        <varValue item="Whistle Reading Pacific G2 Stop" value="100" />
+        <varValue item="Whistle Reading 6 Chime 1 Stop" value="100" />
+        <varValue item="Whistle Reading 6 Chime Stop" value="100" />
+        <varValue item="Whistle Southern Pacific 5 Chime Stop" value="100" />
+        <varValue item="Whistle Southern Single Chime Stop" value="100" />
+        <varValue item="Whistle Southern 3 Chime Stop" value="100" />
+        <varValue item="Whistle Southern 6 Chime Stop" value="100" />
+        <varValue item="Whistle Unknown 1 Stop" value="100" />
+        <varValue item="Whistle Unknown 3 Stop" value="100" />
+        <varValue item="Whistle Hamburg 1 Stop" value="100" />
+        <varValue item="Whistle Unknown Circa 19th Century Stop" value="100" />
+        <varValue item="Whistle Hancock 3 Chime Stop" value="100" />
+        <varValue item="Whistle Union Pacific 3 Chime Long Bell Stop" value="100" />
+        <varValue item="Whistle Wabash 3 Chime Stop" value="100" />
+        <varValue item="Whistle Wabash 6 Chime Stop" value="100" />
+        <varValue item="Whistle World War II era 3 Chime Stop" value="100" />
+        <varValue item="Whistle Nathan K5LA Horn Stop" value="100" />
+        <varValue item="Brake Squeal 1" value="50" />
+        <varValue item="Brake Squeal 2" value="50" />
+        <varValue item="Brake Squeal 3" value="50" />
+        <varValue item="Brake Squeal 4" value="50" />
+        <varValue item="Brake Squeal 5" value="50" />
+        <varValue item="Brake Squeal 6" value="50" />
+        <varValue item="Brake Squeal 7" value="50" />
+        <varValue item="Brake Squeal 8" value="50" />
+        <varValue item="Brake Squeal 9" value="50" />
+        <varValue item="Brake Release 1" value="40" />
+        <varValue item="Brake Release 2" value="40" />
+        <varValue item="Silence" value="60" />
+        <varValue item="Mute" value="60" />
+        <varValue item="Whistle Rotate Alamo Michigian Plant " value="80" />
+        <varValue item="Whistle Rotate ATSF Original 6 Chime" value="80" />
+        <varValue item="Whistle Rotate ATSF Reproduction 6 Chime" value="80" />
+        <varValue item="Whistle Rotate Baltimore &amp; Ohio 3 Chime " value="80" />
+        <varValue item="Whistle Rotate Boston and Maine 6 Chime" value="80" />
+        <varValue item="Whistle Rotate CNJ 3 Chime" value="80" />
+        <varValue item="Whistle Rotate Chicago Burlington and Quincy 3 Chime" value="80" />
+        <varValue item="Whistle Rotate Great Northern 5 Chime" value="80" />
+        <varValue item="Whistle Rotate Hancock Short Bell 3 Chime" value="80" />
+        <varValue item="Whistle Rotate Kingsly 4 Chime " value="80" />
+        <varValue item="Whistle Rotate Lehigh Valley 3 Chime" value="80" />
+        <varValue item="Whistle Rotate Lunkenheimer Single Chime " value="80" />
+        <varValue item="Whistle Rotate Lunkenheimer 3 Chime " value="80" />
+        <varValue item="Whistle Rotate Nathan 5 Chime Horn" value="80" />
+        <varValue item="Whistle Rotate Nickel Plate Road 765's " value="80" />
+        <varValue item="Whistle Rotate Norfolk &amp; Western Single Chime Long Bell " value="80" />
+        <varValue item="Whistle Rotate Norfolk &amp; Western Single Chime Short Bell" value="80" />
+        <varValue item="Whistle Rotate N &amp; W Nathan 3 Chime" value="80" />
+        <varValue item="Whistle Rotate Pennsylvania Banshee" value="80" />
+        <varValue item="Whistle Rotate Pennsylvania 3 Chime" value="80" />
+        <varValue item="Whistle Rotate Pennsylvania Railroad K4 " value="80" />
+        <varValue item="Whistle Rotate Reading Hooter Single Chime" value="80" />
+        <varValue item="Whistle Rotate Reading Railroad G2 Pacific 6 Chime" value="80" />
+        <varValue item="Whistle Rotate Reading Pacific G2 " value="80" />
+        <varValue item="Whistle Rotate Reading 6 Chime " value="80" />
+        <varValue item="Whistle Rotate Reading 6 Chime " value="80" />
+        <varValue item="Whistle Rotate Southern Pacific 5 Chime" value="80" />
+        <varValue item="Whistle Rotate Southern Single Chime" value="80" />
+        <varValue item="Whistle Rotate Southern 3 Chime" value="80" />
+        <varValue item="Whistle Rotate Southern 6 Chime" value="80" />
+        <varValue item="Whistle Rotate Unknown 1" value="80" />
+        <varValue item="Whistle Rotate Unknown 2" value="80" />
+        <varValue item="Whistle Rotate Unknown 3" value="80" />
+        <varValue item="Whistle Rotate Unknown Circa 19th Century Single Chime" value="80" />
+        <varValue item="Whistle Rotate Hancock 3 Chime" value="80" />
+        <varValue item="Whistle Rotate Union Pacific 3 Chime" value="80" />
+        <varValue item="Whistle Rotate Wabash 3 Chime " value="80" />
+        <varValue item="Whistle Rotate Wabash 6 Chime" value="80" />
+        <varValue item="Whistle Rotate World War II era 3 Chime" value="80" />
+        <varValue item="Whistle Rotate Nathan K5LA Horn" value="80" />
+        <varValue item="Idling Sounds 1" value="15" />
+        <varValue item="Ash Dump 1" value="100" />
+        <varValue item="Waterfill 1" value="100" />
+        <varValue item="Default Whistle Set" value="19" />
+        <varValue item="Global volume" value="54" />
+        <varValue item="Steam locomotive type" value="1" />
+        <varValue item="Button 2 toggle in Audio Assist" value="1" />
+        <varValue item="Bell" value="40" />
+        <varValue item="Whistle" value="100" />
+        <varValue item="Horn" value="100" />
+        <varValue item="Rod clank" value="9" />
+        <varValue item="Direction change" value="40" />
+        <varValue item="Blow Down" value="100" />
+        <varValue item="Blower" value="20" />
+        <varValue item="Coupler clank" value="33" />
+        <varValue item="Cylinder cox" value="40" />
+        <varValue item="Generator" value="15" />
+        <varValue item="Injector" value="20" />
+        <varValue item="Air Pump" value="40" />
+        <varValue item="Safety" value="58" />
+        <varValue item="Shovelling" value="0" />
+        <varValue item="Stoker" value="40" />
+        <varValue item="Forward" value="100" />
+        <varValue item="Reverse" value="100" />
+        <varValue item="Stop" value="100" />
+        <varValue item="Quillable whistle up" value="100" />
+        <varValue item="Quillable whistle down" value="100" />
+        <varValue item="Water pump" value="40" />
+        <varValue item="Brake squeal" value="65" />
+        <varValue item="Brake release" value="32" />
+        <varValue item="Chuff" value="1" />
+        <varValue item="Prime mover" value="10" />
+        <varValue item="Rotate whistle" value="80" />
+        <varValue item="Idling" value="15" />
+        <varValue item="Ash dump" value="100" />
+        <varValue item="Water fill" value="100" />
+        <varValue item="Version ID" value="0" />
+        <varValue item="Manufacturer ID" value="153" />
+        <varValue item="BEMF Cut Out" value="0" />
+        <varValue item="Analog Mode White/Yellow" value="1" />
+        <varValue item="Analog Mode Green" value="1" />
+        <varValue item="Analog Mode Purple" value="1" />
+        <varValue item="Analog Mode Brown" value="1" />
+        <varValue item="Analog Mode Pink" value="1" />
+        <varValue item="Decoder Lock control number" value="0" />
+        <varValue item="Decoder Lock ID number" value="2" />
+        <varValue item="Consist Address Active For Green" value="1" />
+        <varValue item="Consist Address Active For Purple" value="1" />
+        <varValue item="Consist Address Active For Brown" value="1" />
+        <varValue item="Consist Address Active For Pink" value="1" />
+        <varValue item="Consist Address Active For White" value="0" />
+        <varValue item="Consist Address Active For Yellow" value="0" />
+        <varValue item="Consist Acceleration Adjustment" value="0" />
+        <varValue item="Consist Deceleration Adjustment" value="0" />
+        <varValue item="FL(f) controls output 1" value="1" />
+        <varValue item="FL(r) controls output 1" value="0" />
+        <varValue item="F1 controls output 1" value="0" />
+        <varValue item="F2 controls output 1" value="0" />
+        <varValue item="F3 controls output 1" value="0" />
+        <varValue item="F4 controls output 1" value="0" />
+        <varValue item="F5 controls output 1" value="0" />
+        <varValue item="F6 controls output 1" value="0" />
+        <varValue item="FL(f) controls output 2" value="0" />
+        <varValue item="FL(r) controls output 2" value="1" />
+        <varValue item="F1 controls output 2" value="0" />
+        <varValue item="F2 controls output 2" value="0" />
+        <varValue item="F3 controls output 2" value="0" />
+        <varValue item="F4 controls output 2" value="0" />
+        <varValue item="F5 controls output 2" value="0" />
+        <varValue item="F6 controls output 2" value="0" />
+        <varValue item="FL(f) controls output 3" value="1" />
+        <varValue item="FL(r) controls output 3" value="1" />
+        <varValue item="F1 controls output 3" value="0" />
+        <varValue item="F2 controls output 3" value="0" />
+        <varValue item="F3 controls output 3" value="0" />
+        <varValue item="F4 controls output 3" value="0" />
+        <varValue item="F5 controls output 3" value="0" />
+        <varValue item="F6 controls output 3" value="0" />
+        <varValue item="FL(f) controls output 4" value="0" />
+        <varValue item="FL(r) controls output 4" value="0" />
+        <varValue item="F1 controls output 4" value="0" />
+        <varValue item="F2 controls output 4" value="0" />
+        <varValue item="F3 controls output 4" value="0" />
+        <varValue item="F4 controls output 4" value="0" />
+        <varValue item="F5 controls output 4" value="0" />
+        <varValue item="F6 controls output 4" value="0" />
+        <varValue item="F7 controls output 3" value="0" />
+        <varValue item="F8 controls output 3" value="0" />
+        <varValue item="F9 controls output 3" value="0" />
+        <varValue item="F10 controls output 3" value="0" />
+        <varValue item="F11 controls output 3" value="0" />
+        <varValue item="F12 controls output 3" value="0" />
+        <varValue item="F7 controls output 4" value="0" />
+        <varValue item="F8 controls output 4" value="1" />
+        <varValue item="F9 controls output 4" value="0" />
+        <varValue item="F10 controls output 4" value="0" />
+        <varValue item="F11 controls output 4" value="0" />
+        <varValue item="F12 controls output 4" value="0" />
+        <varValue item="FL(f) controls output 5" value="0" />
+        <varValue item="FL(r) controls output 5" value="0" />
+        <varValue item="F1 controls output 5" value="0" />
+        <varValue item="F2 controls output 5" value="0" />
+        <varValue item="F3 controls output 5" value="0" />
+        <varValue item="F4 controls output 5" value="0" />
+        <varValue item="F5 controls output 5" value="0" />
+        <varValue item="F6 controls output 5" value="0" />
+        <varValue item="FL(f) controls output 6" value="0" />
+        <varValue item="FL(r) controls output 6" value="0" />
+        <varValue item="F1 controls output 6" value="0" />
+        <varValue item="F2 controls output 6" value="0" />
+        <varValue item="F3 controls output 6" value="0" />
+        <varValue item="F4 controls output 6" value="0" />
+        <varValue item="F5 controls output 6" value="0" />
+        <varValue item="F6 controls output 6" value="0" />
+        <varValue item="F7 controls output 5" value="0" />
+        <varValue item="F8 controls output 5" value="0" />
+        <varValue item="F9 controls output 5" value="0" />
+        <varValue item="F10 controls output 5" value="0" />
+        <varValue item="F11 controls output 5" value="0" />
+        <varValue item="F12 controls output 5" value="0" />
+        <varValue item="F7 controls output 6" value="0" />
+        <varValue item="F8 controls output 6" value="0" />
+        <varValue item="F9 controls output 6" value="0" />
+        <varValue item="F10 controls output 6" value="0" />
+        <varValue item="F11 controls output 6" value="0" />
+        <varValue item="F12 controls output 6" value="0" />
+        <varValue item="White Wire Effect Group" value="0" />
+        <varValue item="White Wire Effect 1" value="0" />
+        <varValue item="White Wire Effect 0" value="0" />
+        <varValue item="White Wire Timing" value="0" />
+        <varValue item="Yellow Wire Effect Group" value="0" />
+        <varValue item="Yellow Wire Effect 1" value="0" />
+        <varValue item="Yellow Wire Effect 0" value="0" />
+        <varValue item="Yellow Wire Timing" value="1" />
+        <varValue item="Green Wire Effect Group" value="0" />
+        <varValue item="Green Wire Effect 1" value="0" />
+        <varValue item="Green Wire Effect 0" value="0" />
+        <varValue item="Green Wire Timing" value="2" />
+        <varValue item="Purple Wire Effect Group" value="0" />
+        <varValue item="Purple Wire Effect 1" value="5" />
+        <varValue item="Purple Wire Effect 0" value="12" />
+        <varValue item="Purple Wire Timing" value="0" />
+        <varValue item="Brown Wire Effect Group" value="0" />
+        <varValue item="Brown Wire Effect 1" value="0" />
+        <varValue item="Brown Wire Effect 0" value="0" />
+        <varValue item="Brown Wire Timing" value="0" />
+        <varValue item="Pink Wire Effect Group" value="0" />
+        <varValue item="Pink Wire Effect 1" value="0" />
+        <varValue item="Pink Wire Effect 0" value="0" />
+        <varValue item="Pink Wire Timing" value="2" />
+        <varValue item="Dither Frequency" value="3" />
+        <varValue item="Dither Amplitude" value="10" />
+        <varValue item="BEMF Enable" value="1" />
+        <varValue item="Enable BEMF Button Control" value="0" />
+        <varValue item="Enable Brake Button Control" value="0" />
+        <varValue item="Headlight Dim When Stopped" value="0" />
+        <varValue item="Opposite Headlight Dim" value="0" />
+        <varValue item="Motor Button Control" value="0" />
+        <varValue item="Button Control Direction" value="0" />
+        <varValue item="Momentary Pulse" value="60" />
+        <varValue item="Ditch Light Blink Holdover Time" value="10" />
+        <varValue item="Constant Dim 1 Brightness" value="16" />
+        <varValue item="Forward Motor Trim" value="128" />
+        <varValue item="Speed Table" value="0,9,18,28,37,47,56,66,75,85,94,103,113,122,132,141,151,160,170,179,188,198,207,217,226,236,245,255" />
+        <varValue item="Reverse Motor Trim" value="128" />
+        <varValue item="Primary Address" value="32" />
+        <varValue item="Extended Address" value="0" />
+        <varValue item="Address Format" value="0" />
+        <varValue item="Start voltage" value="0" />
+        <varValue item="Accel 1 Rate" value="30" />
+        <varValue item="Decel 1 Rate" value="50" />
+        <varValue item="Maximum Voltage" value="0" />
+        <varValue item="Midpoint Voltage" value="0" />
+        <varValue item="Advanced Consist Address" value="0" />
+        <varValue item="Locomotive Direction In Consist" value="0" />
+        <varValue item="Normal direction of motion" value="0" />
+        <varValue item="Speed steps" value="1" />
+        <varValue item="Analog conversion mode" value="0" />
+        <varValue item="Use Speed Table" value="0" />
+        <varValue item="User Private ID #1" value="0" />
+        <varValue item="User Private ID #2" value="0" />
+        <varValue item="Mars/Gyra Min Brightness" value="1" />
+        <varValue item="Mars/Gyra Max Bright Time" value="9" />
+        <varValue item="Mars/Gyra Total Cycle Time" value="1" />
+        <varValue item="Mars/Gyra Mid Brightness" value="6" />
+        <varValue item="Mars/Gyra Max Brightness" value="22" />
+        <varValue item="Ditch Light Blink Rate" value="2" />
+        <varValue item="Beacon Min Brightness" value="1" />
+        <varValue item="Beacon Max Bright Time" value="5" />
+        <varValue item="Beacon Total Cycle Time" value="1" />
+        <varValue item="Beacon Mid Brightness" value="15" />
+        <varValue item="Beacon Max Brightness" value="25" />
+        <varValue item="FL(f) controls output Dim" value="0" />
+        <varValue item="FL(r) controls output Dim" value="0" />
+        <varValue item="F1 controls output Dim" value="0" />
+        <varValue item="F2 controls output Dim" value="0" />
+        <varValue item="F3 controls output Dim" value="0" />
+        <varValue item="F4 controls output Dim" value="0" />
+        <varValue item="F5 controls output Dim" value="0" />
+        <varValue item="F6 controls output Dim" value="0" />
+        <varValue item="FL(f) controls output Ditch" value="0" />
+        <varValue item="FL(r) controls output Ditch" value="0" />
+        <varValue item="F1 controls output Ditch" value="0" />
+        <varValue item="F2 controls output Ditch" value="0" />
+        <varValue item="F3 controls output Ditch" value="0" />
+        <varValue item="F4 controls output Ditch" value="0" />
+        <varValue item="F5 controls output Ditch" value="0" />
+        <varValue item="F6 controls output Ditch" value="0" />
+        <varValue item="Decel 2 Ending Point" value="0" />
+        <varValue item="Decel 2 Rate" value="0" />
+        <varValue item="Decel 3 Ending Point" value="0" />
+        <varValue item="Decel 3 Rate" value="0" />
+        <varValue item="Accel 2 Starting Point" value="0" />
+        <varValue item="Accel 2 Rate" value="0" />
+        <varValue item="Accel 3 Starting Point" value="0" />
+        <varValue item="Accel 3 Rate" value="0" />
+        <varValue item="Power to button controlled motor" value="255" />
+        <varValue item="FL(f) controls output Motor" value="0" />
+        <varValue item="FL(r) controls output Motor" value="0" />
+        <varValue item="F1 controls output Motor" value="0" />
+        <varValue item="F2 controls output Motor" value="0" />
+        <varValue item="F3 controls output Motor" value="0" />
+        <varValue item="F4 controls output Motor" value="0" />
+        <varValue item="F5 controls output Motor" value="0" />
+        <varValue item="F6 controls output Motor" value="0" />
+        <varValue item="Random Flicker 1 Speed" value="16" />
+        <varValue item="F5 controls output BEMF" value="0" />
+        <varValue item="F6 controls output BEMF" value="1" />
+        <varValue item="F7 controls output BEMF" value="0" />
+        <varValue item="F8 controls output BEMF" value="0" />
+        <varValue item="F9 controls output BEMF" value="0" />
+        <varValue item="F10 controls output BEMF" value="0" />
+        <varValue item="F11 controls output BEMF" value="0" />
+        <varValue item="F12 controls output BEMF" value="0" />
+        <varValue item="Brake Light On Time" value="4351" />
+        <varValue item="FL(f) controls output Brake" value="0" />
+        <varValue item="FL(r) controls output Brake" value="0" />
+        <varValue item="F1 controls output Brake" value="0" />
+        <varValue item="F2 controls output Brake" value="0" />
+        <varValue item="F3 controls output Brake" value="0" />
+        <varValue item="F4 controls output Brake" value="0" />
+        <varValue item="F5 controls output Brake" value="0" />
+        <varValue item="F6 controls output Brake" value="1" />
+        <varValue item="Single Strobe 1 Off Duration" value="140" />
+        <varValue item="Single Strobe 1 On Duration" value="5" />
+        <varValue item="Single Strobe 2 Off Duration" value="124" />
+        <varValue item="Single Strobe 2 On Duration" value="5" />
+        <varValue item="Flashing Light On Duration" value="144" />
+        <varValue item="Flashing Light Off Duration" value="48" />
+        <varValue item="Double Strobe 1 Long Off Duration" value="112" />
+        <varValue item="Double Strobe 1 On Duration" value="5" />
+        <varValue item="Double Strobe 1 Short Off Duration" value="16" />
+        <varValue item="Double Strobe 2 Long Off Duration" value="117" />
+        <varValue item="Double Strobe 2 On Duration" value="16" />
+        <varValue item="Double Strobe 2 Short Off Duration" value="5" />
+        <varValue item="Random Flicker 2 Speed" value="16" />
+        <varValue item="Constant Dim 2 Brightness" value="5" />
+        <varValue item="Constant Dim 3 Brightness" value="5" />
+        <varValue item="Constant Dim 4 Brightness" value="0" />
+        <varValue item="Headlight Dim Brightness" value="0" />
+        <varValue item="Reverse Light Dim Brightness" value="0" />
+        <varValue item="Decoder ID" value="0" />
+        <varValue item="Month of Decoder Manufacture" value="0" />
+        <varValue item="Day of Decoder Manufacture" value="0" />
+        <varValue item="Year of Decoder Manufacture" value="0" />
+        <varValue item="Step 1 Chuff Rate" value="46592" />
+        <varValue item="Step 2 Chuff Rate" value="18176" />
+        <varValue item="Step 3 Chuff Rate" value="11360" />
+        <varValue item="Step 4 Chuff Rate" value="7680" />
+        <varValue item="Step 5 Chuff Rate" value="4992" />
+        <varValue item="Step 6 Chuff Rate" value="3408" />
+        <varValue item="Step 7 Chuff Rate" value="2816" />
+        <varValue item="Step 8 Chuff Rate" value="2432" />
+        <varValue item="Step 9 Chuff Rate" value="2048" />
+        <varValue item="Step 10 Chuff Rate" value="1792" />
+        <varValue item="Step 11 Chuff Rate" value="1536" />
+        <varValue item="Step 12 Chuff Rate" value="1280" />
+        <varValue item="Step 13 Chuff Rate" value="1152" />
+        <varValue item="Step 14 Chuff Rate" value="1024" />
+        <varValue item="Step 15 Chuff Rate" value="952" />
+        <varValue item="Step 16 Chuff Rate" value="904" />
+        <varValue item="Step 17 Chuff Rate" value="856" />
+        <varValue item="Step 18 Chuff Rate" value="808" />
+        <varValue item="Step 19 Chuff Rate" value="760" />
+        <varValue item="Step 20 Chuff Rate" value="712" />
+        <varValue item="Step 21 Chuff Rate" value="672" />
+        <varValue item="Step 22 Chuff Rate" value="648" />
+        <varValue item="Step 23 Chuff Rate" value="624" />
+        <varValue item="Step 24 Chuff Rate" value="600" />
+        <varValue item="Step 25 Chuff Rate" value="576" />
+        <varValue item="Step 26 Chuff Rate" value="558" />
+        <varValue item="Step 27 Chuff Rate" value="540" />
+        <varValue item="Step 28 Chuff Rate" value="522" />
+        <varValue item="Step 29 Chuff Rate" value="502" />
+        <varValue item="Step 30 Chuff Rate" value="486" />
+        <varValue item="Step 31 Chuff Rate" value="470" />
+        <varValue item="Step 32 Chuff Rate" value="454" />
+        <varValue item="Step 33 Chuff Rate" value="438" />
+        <varValue item="Step 34 Chuff Rate" value="422" />
+        <varValue item="Step 35 Chuff Rate" value="406" />
+        <varValue item="Step 36 Chuff Rate" value="396" />
+        <varValue item="Step 37 Chuff Rate" value="386" />
+        <varValue item="Step 38 Chuff Rate" value="376" />
+        <varValue item="Step 39 Chuff Rate" value="366" />
+        <varValue item="Step 40 Chuff Rate" value="356" />
+        <varValue item="Step 41 Chuff Rate" value="351" />
+        <varValue item="Step 42 Chuff Rate" value="346" />
+        <varValue item="Step 43 Chuff Rate" value="341" />
+        <varValue item="Step 44 Chuff Rate" value="336" />
+        <varValue item="Step 45 Chuff Rate" value="331" />
+        <varValue item="Step 46 Chuff Rate" value="326" />
+        <varValue item="Step 47 Chuff Rate" value="321" />
+        <varValue item="Step 48 Chuff Rate" value="316" />
+        <varValue item="Step 49 Chuff Rate" value="311" />
+        <varValue item="Step 50 Chuff Rate" value="306" />
+        <varValue item="Step 51 Chuff Rate" value="301" />
+        <varValue item="Step 52 Chuff Rate" value="296" />
+        <varValue item="Step 53 Chuff Rate" value="291" />
+        <varValue item="Step 54 Chuff Rate" value="286" />
+        <varValue item="Step 55 Chuff Rate" value="281" />
+        <varValue item="Step 56 Chuff Rate" value="276" />
+        <varValue item="Step 57 Chuff Rate" value="271" />
+        <varValue item="Step 58 Chuff Rate" value="266" />
+        <varValue item="Step 59 Chuff Rate" value="256" />
+        <varValue item="Step 60 Chuff Rate" value="251" />
+        <varValue item="Step 61 Chuff Rate" value="247" />
+        <varValue item="Step 62 Chuff Rate" value="243" />
+        <varValue item="Step 63 Chuff Rate" value="239" />
+        <varValue item="Step 64 Chuff Rate" value="235" />
+        <varValue item="Step 65 Chuff Rate" value="231" />
+        <varValue item="Step 66 Chuff Rate" value="228" />
+        <varValue item="Step 67 Chuff Rate" value="225" />
+        <varValue item="Step 68 Chuff Rate" value="222" />
+        <varValue item="Step 69 Chuff Rate" value="219" />
+        <varValue item="Step 70 Chuff Rate" value="216" />
+        <varValue item="Step 71 Chuff Rate" value="213" />
+        <varValue item="Step 72 Chuff Rate" value="210" />
+        <varValue item="Step 73 Chuff Rate" value="207" />
+        <varValue item="Step 74 Chuff Rate" value="204" />
+        <varValue item="Step 75 Chuff Rate" value="201" />
+        <varValue item="Step 76 Chuff Rate" value="198" />
+        <varValue item="Step 77 Chuff Rate" value="195" />
+        <varValue item="Step 78 Chuff Rate" value="192" />
+        <varValue item="Step 79 Chuff Rate" value="189" />
+        <varValue item="Step 80 Chuff Rate" value="186" />
+        <varValue item="Step 81 Chuff Rate" value="184" />
+        <varValue item="Step 82 Chuff Rate" value="182" />
+        <varValue item="Step 83 Chuff Rate" value="180" />
+        <varValue item="Step 84 Chuff Rate" value="178" />
+        <varValue item="Step 85 Chuff Rate" value="176" />
+        <varValue item="Step 86 Chuff Rate" value="174" />
+        <varValue item="Step 87 Chuff Rate" value="172" />
+        <varValue item="Step 88 Chuff Rate" value="170" />
+        <varValue item="Step 89 Chuff Rate" value="168" />
+        <varValue item="Step 90 Chuff Rate" value="166" />
+        <varValue item="Step 91 Chuff Rate" value="164" />
+        <varValue item="Step 92 Chuff Rate" value="162" />
+        <varValue item="Step 93 Chuff Rate" value="160" />
+        <varValue item="Step 94 Chuff Rate" value="158" />
+        <varValue item="Step 95 Chuff Rate" value="156" />
+        <varValue item="Step 96 Chuff Rate" value="154" />
+        <varValue item="Step 97 Chuff Rate" value="152" />
+        <varValue item="Step 98 Chuff Rate" value="150" />
+        <varValue item="Step 99 Chuff Rate" value="148" />
+        <varValue item="Step 100 Chuff Rate" value="147" />
+        <varValue item="Step 101 Chuff Rate" value="146" />
+        <varValue item="Step 102 Chuff Rate" value="145" />
+        <varValue item="Step 103 Chuff Rate" value="144" />
+        <varValue item="Step 104 Chuff Rate" value="143" />
+        <varValue item="Step 105 Chuff Rate" value="142" />
+        <varValue item="Step 106 Chuff Rate" value="141" />
+        <varValue item="Step 107 Chuff Rate" value="140" />
+        <varValue item="Step 108 Chuff Rate" value="139" />
+        <varValue item="Step 109 Chuff Rate" value="138" />
+        <varValue item="Step 110 Chuff Rate" value="137" />
+        <varValue item="Step 111 Chuff Rate" value="136" />
+        <varValue item="Step 112 Chuff Rate" value="135" />
+        <varValue item="Step 113 Chuff Rate" value="134" />
+        <varValue item="Step 114 Chuff Rate" value="133" />
+        <varValue item="Step 115 Chuff Rate" value="132" />
+        <varValue item="Step 116 Chuff Rate" value="131" />
+        <varValue item="Step 117 Chuff Rate" value="130" />
+        <varValue item="Step 118 Chuff Rate" value="129" />
+        <varValue item="Step 119 Chuff Rate" value="128" />
+        <varValue item="Step 120 Chuff Rate" value="127" />
+        <varValue item="Step 121 Chuff Rate" value="126" />
+        <varValue item="Step 122 Chuff Rate" value="125" />
+        <varValue item="Step 123 Chuff Rate" value="124" />
+        <varValue item="Step 124 Chuff Rate" value="123" />
+        <varValue item="Step 125 Chuff Rate" value="122" />
+        <varValue item="Step 126 Chuff Rate" value="121" />
+        <varValue item="Cylinder cocks shut off speed step" value="16" />
+        <varValue item="Random Sound 1 frequency level" value="250" />
+        <varValue item="Random Sound 2 frequency level" value="96" />
+        <varValue item="Random Sound 3 frequency level" value="64" />
+        <varValue item="Random Sound 4 frequency level" value="16" />
+        <varValue item="Random Sound Overall Timer" value="4228" />
+        <varValue item="Random Sound Cutout Speed Step" value="20" />
+        <varValue item="Proto chuff start speed step" value="1" />
+        <varValue item="Rod clank enable" value="1" />
+        <varValue item="Idling sound enable" value="1" />
+        <varValue item="Forward whistles enable" value="1" />
+        <varValue item="Reverse whistles enable" value="1" />
+        <varValue item="Stop whistles enable" value="1" />
+        <varValue item="Direction change enable" value="1" />
+        <varValue item="Random Sound 1 enable" value="1" />
+        <varValue item="Random Sound 2 enable" value="1" />
+        <varValue item="Random Sound 3 enable" value="1" />
+        <varValue item="Random Sound 4 enable" value="1" />
+        <varValue item="Brake grinding noise start speed" value="15" />
+        <varValue item="Dual function F0F" value="1" />
+        <varValue item="Dual function F0R" value="1" />
+        <varValue item="Dual function F1" value="1" />
+        <varValue item="Dual function F2" value="1" />
+        <varValue item="Dual function F3" value="1" />
+        <varValue item="Dual function F4" value="1" />
+        <varValue item="Dual function F5" value="1" />
+        <varValue item="Dual function F6" value="1" />
+        <varValue item="Dual function F7" value="1" />
+        <varValue item="Dual function F8" value="1" />
+        <varValue item="Dual function F9" value="1" />
+        <varValue item="Dual function F10" value="1" />
+        <varValue item="Dual function F11" value="1" />
+        <varValue item="Dual function F12" value="1" />
+        <varValue item="Dual function F13" value="1" />
+        <varValue item="Dual function F14" value="1" />
+        <varValue item="BEMF sensitivity" value="1" />
+        <varValue item="Chuff rate adjustment" value="65" />
+        <varValue item="Cylinder cocks auto turn on time" value="60" />
+        <varValue item="Cam enable" value="0" />
+        <varValue item="Mute on startup" value="0" />
+        <varValue item="Articulated chuff slip" value="0" />
+        <varValue item="Rotate Whistle Audio Feedback" value="1" />
+        <varValue item="Light Mode/Sound Mode Audio Feedback" value="0" />
+        <varValue item="Audio Auto Shutoff Timer" value="0" />
+        <varValue item="Articulated Chuff Slip Rate" value="240" />
+        <varValue item="Audio Auto Shut-off Time" value="256" />
+      </decoderDef>
+      <CVvalue name="248" value="3" />
+      <CVvalue name="T2CV.1.0" value="169" />
+      <CVvalue name="T2CV.1.1" value="11" />
+      <CVvalue name="T2CV.1.2" value="18" />
+      <CVvalue name="T2CV.1.3" value="17" />
+      <CVvalue name="T2CV.1.4" value="19" />
+      <CVvalue name="T2CV.1.5" value="160" />
+      <CVvalue name="T2CV.1.6" value="315" />
+      <CVvalue name="T2CV.1.7" value="306" />
+      <CVvalue name="T2CV.1.8" value="669" />
+      <CVvalue name="T2CV.1.9" value="669" />
+      <CVvalue name="T2CV.1.10" value="669" />
+      <CVvalue name="T2CV.1.11" value="669" />
+      <CVvalue name="T2CV.1.12" value="172" />
+      <CVvalue name="T2CV.1.13" value="176" />
+      <CVvalue name="T2CV.1.14" value="569" />
+      <CVvalue name="T2CV.1.15" value="151" />
+      <CVvalue name="T2CV.1.16" value="150" />
+      <CVvalue name="T2CV.1.17" value="153" />
+      <CVvalue name="T2CV.1.18" value="170" />
+      <CVvalue name="T2CV.1.19" value="171" />
+      <CVvalue name="T2CV.1.20" value="179" />
+      <CVvalue name="T2CV.1.21" value="570" />
+      <CVvalue name="T2CV.1.22" value="527" />
+      <CVvalue name="T2CV.1.23" value="526" />
+      <CVvalue name="T2CV.1.24" value="669" />
+      <CVvalue name="T2CV.1.25" value="669" />
+      <CVvalue name="T2CV.1.26" value="669" />
+      <CVvalue name="T2CV.1.27" value="669" />
+      <CVvalue name="T2CV.1.28" value="141" />
+      <CVvalue name="T2CV.1.29" value="176" />
+      <CVvalue name="T2CV.1.30" value="181" />
+      <CVvalue name="T2CV.1.31" value="171" />
+      <CVvalue name="T2CV.1.32" value="179" />
+      <CVvalue name="T3CV.2.0.0" value="40" />
+      <CVvalue name="T3CV.2.0.1" value="40" />
+      <CVvalue name="T3CV.2.0.2" value="40" />
+      <CVvalue name="T3CV.2.0.3" value="40" />
+      <CVvalue name="T3CV.2.0.4" value="40" />
+      <CVvalue name="T3CV.2.0.5" value="40" />
+      <CVvalue name="T3CV.2.0.6" value="40" />
+      <CVvalue name="T3CV.2.0.7" value="40" />
+      <CVvalue name="T3CV.2.0.8" value="40" />
+      <CVvalue name="T3CV.2.0.9" value="40" />
+      <CVvalue name="T3CV.2.0.10" value="40" />
+      <CVvalue name="T3CV.2.0.11" value="40" />
+      <CVvalue name="T3CV.2.0.12" value="40" />
+      <CVvalue name="T3CV.2.0.13" value="40" />
+      <CVvalue name="T3CV.2.0.14" value="40" />
+      <CVvalue name="T3CV.2.0.15" value="40" />
+      <CVvalue name="T3CV.2.0.16" value="40" />
+      <CVvalue name="T3CV.2.0.17" value="100" />
+      <CVvalue name="T3CV.2.0.18" value="100" />
+      <CVvalue name="T3CV.2.0.19" value="100" />
+      <CVvalue name="T3CV.2.0.20" value="100" />
+      <CVvalue name="T3CV.2.0.21" value="100" />
+      <CVvalue name="T3CV.2.0.22" value="100" />
+      <CVvalue name="T3CV.2.0.23" value="100" />
+      <CVvalue name="T3CV.2.0.24" value="100" />
+      <CVvalue name="T3CV.2.0.25" value="100" />
+      <CVvalue name="T3CV.2.0.26" value="100" />
+      <CVvalue name="T3CV.2.0.27" value="100" />
+      <CVvalue name="T3CV.2.0.28" value="100" />
+      <CVvalue name="T3CV.2.0.29" value="100" />
+      <CVvalue name="T3CV.2.0.30" value="100" />
+      <CVvalue name="T3CV.2.0.31" value="100" />
+      <CVvalue name="T3CV.2.0.32" value="100" />
+      <CVvalue name="T3CV.2.0.33" value="100" />
+      <CVvalue name="T3CV.2.0.34" value="100" />
+      <CVvalue name="T3CV.2.0.35" value="100" />
+      <CVvalue name="T3CV.2.0.36" value="100" />
+      <CVvalue name="T3CV.2.0.37" value="100" />
+      <CVvalue name="T3CV.2.0.38" value="100" />
+      <CVvalue name="T3CV.2.0.39" value="100" />
+      <CVvalue name="T3CV.2.0.40" value="100" />
+      <CVvalue name="T3CV.2.0.41" value="100" />
+      <CVvalue name="T3CV.2.0.42" value="100" />
+      <CVvalue name="T3CV.2.0.43" value="100" />
+      <CVvalue name="T3CV.2.0.44" value="100" />
+      <CVvalue name="T3CV.2.0.45" value="100" />
+      <CVvalue name="T3CV.2.0.46" value="100" />
+      <CVvalue name="T3CV.2.0.47" value="100" />
+      <CVvalue name="T3CV.2.0.48" value="100" />
+      <CVvalue name="T3CV.2.0.49" value="100" />
+      <CVvalue name="T3CV.2.0.50" value="100" />
+      <CVvalue name="T3CV.2.0.51" value="100" />
+      <CVvalue name="T3CV.2.0.52" value="100" />
+      <CVvalue name="T3CV.2.0.53" value="100" />
+      <CVvalue name="T3CV.2.0.54" value="100" />
+      <CVvalue name="T3CV.2.0.55" value="100" />
+      <CVvalue name="T3CV.2.0.56" value="100" />
+      <CVvalue name="T3CV.2.0.57" value="100" />
+      <CVvalue name="T3CV.2.0.58" value="100" />
+      <CVvalue name="T3CV.2.0.59" value="100" />
+      <CVvalue name="T3CV.2.0.60" value="100" />
+      <CVvalue name="T3CV.2.0.61" value="100" />
+      <CVvalue name="T3CV.2.0.62" value="100" />
+      <CVvalue name="T3CV.2.0.63" value="100" />
+      <CVvalue name="T3CV.2.0.64" value="100" />
+      <CVvalue name="T3CV.2.0.65" value="100" />
+      <CVvalue name="T3CV.2.0.66" value="100" />
+      <CVvalue name="T3CV.2.0.67" value="100" />
+      <CVvalue name="T3CV.2.0.68" value="100" />
+      <CVvalue name="T3CV.2.0.69" value="100" />
+      <CVvalue name="T3CV.2.0.70" value="100" />
+      <CVvalue name="T3CV.2.0.71" value="100" />
+      <CVvalue name="T3CV.2.0.72" value="100" />
+      <CVvalue name="T3CV.2.0.73" value="100" />
+      <CVvalue name="T3CV.2.0.74" value="100" />
+      <CVvalue name="T3CV.2.0.75" value="100" />
+      <CVvalue name="T3CV.2.0.76" value="100" />
+      <CVvalue name="T3CV.2.0.77" value="100" />
+      <CVvalue name="T3CV.2.0.78" value="100" />
+      <CVvalue name="T3CV.2.0.79" value="100" />
+      <CVvalue name="T3CV.2.0.80" value="100" />
+      <CVvalue name="T3CV.2.0.81" value="100" />
+      <CVvalue name="T3CV.2.0.82" value="100" />
+      <CVvalue name="T3CV.2.0.83" value="100" />
+      <CVvalue name="T3CV.2.0.84" value="100" />
+      <CVvalue name="T3CV.2.0.85" value="100" />
+      <CVvalue name="T3CV.2.0.86" value="100" />
+      <CVvalue name="T3CV.2.0.87" value="100" />
+      <CVvalue name="T3CV.2.0.88" value="100" />
+      <CVvalue name="T3CV.2.0.89" value="100" />
+      <CVvalue name="T3CV.2.0.90" value="100" />
+      <CVvalue name="T3CV.2.0.91" value="100" />
+      <CVvalue name="T3CV.2.0.92" value="100" />
+      <CVvalue name="T3CV.2.0.93" value="100" />
+      <CVvalue name="T3CV.2.0.94" value="100" />
+      <CVvalue name="T3CV.2.0.95" value="100" />
+      <CVvalue name="T3CV.2.0.96" value="100" />
+      <CVvalue name="T3CV.2.0.97" value="100" />
+      <CVvalue name="T3CV.2.0.98" value="100" />
+      <CVvalue name="T3CV.2.0.99" value="100" />
+      <CVvalue name="T3CV.2.0.100" value="100" />
+      <CVvalue name="T3CV.2.0.101" value="100" />
+      <CVvalue name="T3CV.2.0.102" value="100" />
+      <CVvalue name="T3CV.2.0.103" value="100" />
+      <CVvalue name="T3CV.2.0.104" value="100" />
+      <CVvalue name="T3CV.2.0.105" value="100" />
+      <CVvalue name="T3CV.2.0.106" value="100" />
+      <CVvalue name="T3CV.2.0.107" value="100" />
+      <CVvalue name="T3CV.2.0.108" value="100" />
+      <CVvalue name="T3CV.2.0.109" value="100" />
+      <CVvalue name="T3CV.2.0.110" value="100" />
+      <CVvalue name="T3CV.2.0.111" value="100" />
+      <CVvalue name="T3CV.2.0.112" value="100" />
+      <CVvalue name="T3CV.2.0.113" value="100" />
+      <CVvalue name="T3CV.2.0.114" value="100" />
+      <CVvalue name="T3CV.2.0.115" value="100" />
+      <CVvalue name="T3CV.2.0.116" value="100" />
+      <CVvalue name="T3CV.2.0.117" value="100" />
+      <CVvalue name="T3CV.2.0.118" value="100" />
+      <CVvalue name="T3CV.2.0.119" value="100" />
+      <CVvalue name="T3CV.2.0.120" value="100" />
+      <CVvalue name="T3CV.2.0.121" value="100" />
+      <CVvalue name="T3CV.2.0.122" value="100" />
+      <CVvalue name="T3CV.2.0.123" value="100" />
+      <CVvalue name="T3CV.2.0.124" value="100" />
+      <CVvalue name="T3CV.2.0.125" value="100" />
+      <CVvalue name="T3CV.2.0.126" value="100" />
+      <CVvalue name="T3CV.2.0.127" value="100" />
+      <CVvalue name="T3CV.2.0.128" value="100" />
+      <CVvalue name="T3CV.2.0.129" value="100" />
+      <CVvalue name="T3CV.2.0.130" value="100" />
+      <CVvalue name="T3CV.2.0.131" value="100" />
+      <CVvalue name="T3CV.2.0.132" value="100" />
+      <CVvalue name="T3CV.2.0.133" value="100" />
+      <CVvalue name="T3CV.2.0.134" value="100" />
+      <CVvalue name="T3CV.2.0.135" value="100" />
+      <CVvalue name="T3CV.2.0.136" value="100" />
+      <CVvalue name="T3CV.2.0.137" value="100" />
+      <CVvalue name="T3CV.2.0.138" value="100" />
+      <CVvalue name="T3CV.2.0.139" value="100" />
+      <CVvalue name="T3CV.2.0.140" value="100" />
+      <CVvalue name="T3CV.2.0.141" value="100" />
+      <CVvalue name="T3CV.2.0.142" value="100" />
+      <CVvalue name="T3CV.2.0.143" value="15" />
+      <CVvalue name="T3CV.2.0.144" value="15" />
+      <CVvalue name="T3CV.2.0.145" value="15" />
+      <CVvalue name="T3CV.2.0.146" value="15" />
+      <CVvalue name="T3CV.2.0.147" value="40" />
+      <CVvalue name="T3CV.2.0.148" value="100" />
+      <CVvalue name="T3CV.2.0.149" value="100" />
+      <CVvalue name="T3CV.2.0.150" value="100" />
+      <CVvalue name="T3CV.2.0.151" value="20" />
+      <CVvalue name="T3CV.2.0.152" value="20" />
+      <CVvalue name="T3CV.2.0.153" value="40" />
+      <CVvalue name="T3CV.2.0.154" value="40" />
+      <CVvalue name="T3CV.2.0.155" value="40" />
+      <CVvalue name="T3CV.2.0.156" value="40" />
+      <CVvalue name="T3CV.2.0.157" value="40" />
+      <CVvalue name="T3CV.2.0.158" value="40" />
+      <CVvalue name="T3CV.2.0.159" value="40" />
+      <CVvalue name="T3CV.2.0.160" value="40" />
+      <CVvalue name="T3CV.2.0.161" value="40" />
+      <CVvalue name="T3CV.2.0.162" value="40" />
+      <CVvalue name="T3CV.2.0.163" value="40" />
+      <CVvalue name="T3CV.2.0.164" value="40" />
+      <CVvalue name="T3CV.2.0.165" value="40" />
+      <CVvalue name="T3CV.2.0.166" value="40" />
+      <CVvalue name="T3CV.2.0.167" value="40" />
+      <CVvalue name="T3CV.2.0.168" value="40" />
+      <CVvalue name="T3CV.2.0.169" value="20" />
+      <CVvalue name="T3CV.2.0.170" value="20" />
+      <CVvalue name="T3CV.2.0.171" value="20" />
+      <CVvalue name="T3CV.2.0.172" value="20" />
+      <CVvalue name="T3CV.2.0.173" value="20" />
+      <CVvalue name="T3CV.2.0.174" value="45" />
+      <CVvalue name="T3CV.2.0.175" value="45" />
+      <CVvalue name="T3CV.2.0.176" value="45" />
+      <CVvalue name="T3CV.2.0.177" value="45" />
+      <CVvalue name="T3CV.2.0.178" value="45" />
+      <CVvalue name="T3CV.2.0.179" value="100" />
+      <CVvalue name="T3CV.2.0.180" value="100" />
+      <CVvalue name="T3CV.2.0.181" value="35" />
+      <CVvalue name="T3CV.2.0.182" value="35" />
+      <CVvalue name="T3CV.2.0.183" value="100" />
+      <CVvalue name="T3CV.2.0.184" value="100" />
+      <CVvalue name="T3CV.2.0.185" value="100" />
+      <CVvalue name="T3CV.2.0.186" value="100" />
+      <CVvalue name="T3CV.2.0.187" value="100" />
+      <CVvalue name="T3CV.2.0.188" value="100" />
+      <CVvalue name="T3CV.2.0.189" value="100" />
+      <CVvalue name="T3CV.2.0.190" value="100" />
+      <CVvalue name="T3CV.2.0.191" value="100" />
+      <CVvalue name="T3CV.2.0.192" value="100" />
+      <CVvalue name="T3CV.2.0.193" value="100" />
+      <CVvalue name="T3CV.2.0.194" value="100" />
+      <CVvalue name="T3CV.2.0.195" value="100" />
+      <CVvalue name="T3CV.2.0.196" value="100" />
+      <CVvalue name="T3CV.2.0.197" value="100" />
+      <CVvalue name="T3CV.2.0.198" value="100" />
+      <CVvalue name="T3CV.2.0.199" value="100" />
+      <CVvalue name="T3CV.2.0.200" value="100" />
+      <CVvalue name="T3CV.2.0.201" value="100" />
+      <CVvalue name="T3CV.2.0.202" value="100" />
+      <CVvalue name="T3CV.2.0.203" value="100" />
+      <CVvalue name="T3CV.2.0.204" value="100" />
+      <CVvalue name="T3CV.2.0.205" value="100" />
+      <CVvalue name="T3CV.2.0.206" value="100" />
+      <CVvalue name="T3CV.2.0.207" value="100" />
+      <CVvalue name="T3CV.2.0.208" value="100" />
+      <CVvalue name="T3CV.2.0.209" value="100" />
+      <CVvalue name="T3CV.2.0.210" value="100" />
+      <CVvalue name="T3CV.2.0.211" value="100" />
+      <CVvalue name="T3CV.2.0.212" value="100" />
+      <CVvalue name="T3CV.2.0.213" value="100" />
+      <CVvalue name="T3CV.2.0.214" value="100" />
+      <CVvalue name="T3CV.2.0.215" value="100" />
+      <CVvalue name="T3CV.2.0.216" value="100" />
+      <CVvalue name="T3CV.2.0.217" value="100" />
+      <CVvalue name="T3CV.2.0.218" value="100" />
+      <CVvalue name="T3CV.2.0.219" value="100" />
+      <CVvalue name="T3CV.2.0.220" value="100" />
+      <CVvalue name="T3CV.2.0.221" value="100" />
+      <CVvalue name="T3CV.2.0.222" value="100" />
+      <CVvalue name="T3CV.2.0.223" value="100" />
+      <CVvalue name="T3CV.2.0.224" value="100" />
+      <CVvalue name="T3CV.2.0.225" value="100" />
+      <CVvalue name="T3CV.2.0.226" value="100" />
+      <CVvalue name="T3CV.2.0.227" value="100" />
+      <CVvalue name="T3CV.2.0.228" value="100" />
+      <CVvalue name="T3CV.2.0.229" value="100" />
+      <CVvalue name="T3CV.2.0.230" value="100" />
+      <CVvalue name="T3CV.2.0.231" value="100" />
+      <CVvalue name="T3CV.2.0.232" value="100" />
+      <CVvalue name="T3CV.2.0.233" value="100" />
+      <CVvalue name="T3CV.2.0.234" value="100" />
+      <CVvalue name="T3CV.2.0.235" value="100" />
+      <CVvalue name="T3CV.2.0.236" value="100" />
+      <CVvalue name="T3CV.2.0.237" value="100" />
+      <CVvalue name="T3CV.2.0.238" value="100" />
+      <CVvalue name="T3CV.2.0.239" value="100" />
+      <CVvalue name="T3CV.2.0.240" value="100" />
+      <CVvalue name="T3CV.2.0.241" value="100" />
+      <CVvalue name="T3CV.2.0.242" value="100" />
+      <CVvalue name="T3CV.2.0.243" value="100" />
+      <CVvalue name="T3CV.2.0.244" value="100" />
+      <CVvalue name="T3CV.2.0.245" value="100" />
+      <CVvalue name="T3CV.2.0.246" value="100" />
+      <CVvalue name="T3CV.2.0.247" value="100" />
+      <CVvalue name="T3CV.2.0.248" value="100" />
+      <CVvalue name="T3CV.2.0.249" value="100" />
+      <CVvalue name="T3CV.2.0.250" value="100" />
+      <CVvalue name="T3CV.2.0.251" value="100" />
+      <CVvalue name="T3CV.2.0.252" value="100" />
+      <CVvalue name="T3CV.2.0.253" value="100" />
+      <CVvalue name="T3CV.2.0.254" value="100" />
+      <CVvalue name="T3CV.2.0.255" value="100" />
+      <CVvalue name="T3CV.2.1.0" value="100" />
+      <CVvalue name="T3CV.2.1.1" value="100" />
+      <CVvalue name="T3CV.2.1.2" value="100" />
+      <CVvalue name="T3CV.2.1.3" value="100" />
+      <CVvalue name="T3CV.2.1.4" value="100" />
+      <CVvalue name="T3CV.2.1.5" value="100" />
+      <CVvalue name="T3CV.2.1.6" value="100" />
+      <CVvalue name="T3CV.2.1.7" value="100" />
+      <CVvalue name="T3CV.2.1.8" value="100" />
+      <CVvalue name="T3CV.2.1.9" value="100" />
+      <CVvalue name="T3CV.2.1.10" value="100" />
+      <CVvalue name="T3CV.2.1.11" value="100" />
+      <CVvalue name="T3CV.2.1.12" value="100" />
+      <CVvalue name="T3CV.2.1.13" value="100" />
+      <CVvalue name="T3CV.2.1.14" value="100" />
+      <CVvalue name="T3CV.2.1.15" value="100" />
+      <CVvalue name="T3CV.2.1.16" value="100" />
+      <CVvalue name="T3CV.2.1.17" value="100" />
+      <CVvalue name="T3CV.2.1.18" value="100" />
+      <CVvalue name="T3CV.2.1.19" value="100" />
+      <CVvalue name="T3CV.2.1.20" value="100" />
+      <CVvalue name="T3CV.2.1.21" value="100" />
+      <CVvalue name="T3CV.2.1.22" value="100" />
+      <CVvalue name="T3CV.2.1.23" value="100" />
+      <CVvalue name="T3CV.2.1.24" value="100" />
+      <CVvalue name="T3CV.2.1.25" value="100" />
+      <CVvalue name="T3CV.2.1.26" value="100" />
+      <CVvalue name="T3CV.2.1.27" value="100" />
+      <CVvalue name="T3CV.2.1.28" value="100" />
+      <CVvalue name="T3CV.2.1.29" value="100" />
+      <CVvalue name="T3CV.2.1.30" value="100" />
+      <CVvalue name="T3CV.2.1.31" value="100" />
+      <CVvalue name="T3CV.2.1.32" value="100" />
+      <CVvalue name="T3CV.2.1.33" value="100" />
+      <CVvalue name="T3CV.2.1.34" value="100" />
+      <CVvalue name="T3CV.2.1.35" value="100" />
+      <CVvalue name="T3CV.2.1.36" value="100" />
+      <CVvalue name="T3CV.2.1.37" value="100" />
+      <CVvalue name="T3CV.2.1.38" value="100" />
+      <CVvalue name="T3CV.2.1.39" value="100" />
+      <CVvalue name="T3CV.2.1.40" value="100" />
+      <CVvalue name="T3CV.2.1.41" value="100" />
+      <CVvalue name="T3CV.2.1.42" value="100" />
+      <CVvalue name="T3CV.2.1.43" value="100" />
+      <CVvalue name="T3CV.2.1.44" value="100" />
+      <CVvalue name="T3CV.2.1.45" value="100" />
+      <CVvalue name="T3CV.2.1.46" value="100" />
+      <CVvalue name="T3CV.2.1.47" value="100" />
+      <CVvalue name="T3CV.2.1.48" value="100" />
+      <CVvalue name="T3CV.2.1.49" value="100" />
+      <CVvalue name="T3CV.2.1.50" value="50" />
+      <CVvalue name="T3CV.2.1.51" value="50" />
+      <CVvalue name="T3CV.2.1.52" value="50" />
+      <CVvalue name="T3CV.2.1.53" value="50" />
+      <CVvalue name="T3CV.2.1.54" value="50" />
+      <CVvalue name="T3CV.2.1.55" value="50" />
+      <CVvalue name="T3CV.2.1.56" value="50" />
+      <CVvalue name="T3CV.2.1.57" value="50" />
+      <CVvalue name="T3CV.2.1.58" value="50" />
+      <CVvalue name="T3CV.2.1.59" value="40" />
+      <CVvalue name="T3CV.2.1.60" value="40" />
+      <CVvalue name="T3CV.2.2.13" value="60" />
+      <CVvalue name="T3CV.2.2.14" value="60" />
+      <CVvalue name="T3CV.2.2.15" value="80" />
+      <CVvalue name="T3CV.2.2.16" value="80" />
+      <CVvalue name="T3CV.2.2.17" value="80" />
+      <CVvalue name="T3CV.2.2.18" value="80" />
+      <CVvalue name="T3CV.2.2.19" value="80" />
+      <CVvalue name="T3CV.2.2.20" value="80" />
+      <CVvalue name="T3CV.2.2.21" value="80" />
+      <CVvalue name="T3CV.2.2.22" value="80" />
+      <CVvalue name="T3CV.2.2.23" value="80" />
+      <CVvalue name="T3CV.2.2.24" value="80" />
+      <CVvalue name="T3CV.2.2.25" value="80" />
+      <CVvalue name="T3CV.2.2.26" value="80" />
+      <CVvalue name="T3CV.2.2.27" value="80" />
+      <CVvalue name="T3CV.2.2.28" value="80" />
+      <CVvalue name="T3CV.2.2.29" value="80" />
+      <CVvalue name="T3CV.2.2.30" value="80" />
+      <CVvalue name="T3CV.2.2.31" value="80" />
+      <CVvalue name="T3CV.2.2.32" value="80" />
+      <CVvalue name="T3CV.2.2.33" value="80" />
+      <CVvalue name="T3CV.2.2.34" value="80" />
+      <CVvalue name="T3CV.2.2.36" value="80" />
+      <CVvalue name="T3CV.2.2.37" value="80" />
+      <CVvalue name="T3CV.2.2.38" value="80" />
+      <CVvalue name="T3CV.2.2.39" value="80" />
+      <CVvalue name="T3CV.2.2.40" value="80" />
+      <CVvalue name="T3CV.2.2.41" value="80" />
+      <CVvalue name="T3CV.2.2.42" value="80" />
+      <CVvalue name="T3CV.2.2.43" value="80" />
+      <CVvalue name="T3CV.2.2.44" value="80" />
+      <CVvalue name="T3CV.2.2.45" value="80" />
+      <CVvalue name="T3CV.2.2.46" value="80" />
+      <CVvalue name="T3CV.2.2.47" value="80" />
+      <CVvalue name="T3CV.2.2.48" value="80" />
+      <CVvalue name="T3CV.2.2.49" value="80" />
+      <CVvalue name="T3CV.2.2.50" value="80" />
+      <CVvalue name="T3CV.2.2.51" value="80" />
+      <CVvalue name="T3CV.2.2.52" value="80" />
+      <CVvalue name="T3CV.2.2.53" value="80" />
+      <CVvalue name="T3CV.2.2.54" value="80" />
+      <CVvalue name="T3CV.2.2.55" value="80" />
+      <CVvalue name="T3CV.2.2.56" value="15" />
+      <CVvalue name="T3CV.2.2.57" value="100" />
+      <CVvalue name="T3CV.2.2.58" value="100" />
+      <CVvalue name="T2CV.4.8" value="20" />
+      <CVvalue name="T2CV.4.10" value="54" />
+      <CVvalue name="T2CV.4.11" value="1" />
+      <CVvalue name="T2CV.4.19" value="144" />
+      <CVvalue name="T3CV.6.0.1" value="40" />
+      <CVvalue name="T3CV.6.0.2" value="100" />
+      <CVvalue name="T3CV.6.0.3" value="100" />
+      <CVvalue name="T3CV.6.0.4" value="9" />
+      <CVvalue name="T3CV.6.0.5" value="40" />
+      <CVvalue name="T3CV.6.0.6" value="100" />
+      <CVvalue name="T3CV.6.0.7" value="20" />
+      <CVvalue name="T3CV.6.0.8" value="33" />
+      <CVvalue name="T3CV.6.0.9" value="40" />
+      <CVvalue name="T3CV.6.0.10" value="15" />
+      <CVvalue name="T3CV.6.0.11" value="20" />
+      <CVvalue name="T3CV.6.0.12" value="40" />
+      <CVvalue name="T3CV.6.0.13" value="58" />
+      <CVvalue name="T3CV.6.0.14" value="0" />
+      <CVvalue name="T3CV.6.0.15" value="40" />
+      <CVvalue name="T3CV.6.0.16" value="100" />
+      <CVvalue name="T3CV.6.0.17" value="100" />
+      <CVvalue name="T3CV.6.0.18" value="100" />
+      <CVvalue name="T3CV.6.0.19" value="100" />
+      <CVvalue name="T3CV.6.0.20" value="100" />
+      <CVvalue name="T3CV.6.0.21" value="40" />
+      <CVvalue name="T3CV.6.0.22" value="65" />
+      <CVvalue name="T3CV.6.0.23" value="32" />
+      <CVvalue name="T3CV.6.0.24" value="1" />
+      <CVvalue name="T3CV.6.0.25" value="10" />
+      <CVvalue name="T3CV.6.0.27" value="80" />
+      <CVvalue name="T3CV.6.0.28" value="15" />
+      <CVvalue name="T3CV.6.0.29" value="100" />
+      <CVvalue name="T3CV.6.0.30" value="100" />
+      <CVvalue name="7" value="0" />
+      <CVvalue name="8" value="153" />
+      <CVvalue name="10" value="0" />
+      <CVvalue name="13" value="31" />
+      <CVvalue name="15" value="0" />
+      <CVvalue name="16" value="2" />
+      <CVvalue name="21" value="15" />
+      <CVvalue name="22" value="0" />
+      <CVvalue name="23" value="0" />
+      <CVvalue name="24" value="0" />
+      <CVvalue name="33" value="1" />
+      <CVvalue name="34" value="2" />
+      <CVvalue name="35" value="3" />
+      <CVvalue name="36" value="0" />
+      <CVvalue name="37" value="0" />
+      <CVvalue name="38" value="8" />
+      <CVvalue name="39" value="0" />
+      <CVvalue name="40" value="0" />
+      <CVvalue name="41" value="0" />
+      <CVvalue name="42" value="0" />
+      <CVvalue name="49" value="0" />
+      <CVvalue name="50" value="16" />
+      <CVvalue name="51" value="32" />
+      <CVvalue name="52" value="12" />
+      <CVvalue name="53" value="0" />
+      <CVvalue name="54" value="32" />
+      <CVvalue name="56" value="3" />
+      <CVvalue name="57" value="10" />
+      <CVvalue name="61" value="1" />
+      <CVvalue name="62" value="60" />
+      <CVvalue name="63" value="10" />
+      <CVvalue name="64" value="16" />
+      <CVvalue name="66" value="128" />
+      <CVvalue name="67" value="0" />
+      <CVvalue name="68" value="9" />
+      <CVvalue name="69" value="18" />
+      <CVvalue name="70" value="28" />
+      <CVvalue name="71" value="37" />
+      <CVvalue name="72" value="47" />
+      <CVvalue name="73" value="56" />
+      <CVvalue name="74" value="66" />
+      <CVvalue name="75" value="75" />
+      <CVvalue name="76" value="85" />
+      <CVvalue name="77" value="94" />
+      <CVvalue name="78" value="103" />
+      <CVvalue name="79" value="113" />
+      <CVvalue name="80" value="122" />
+      <CVvalue name="81" value="132" />
+      <CVvalue name="82" value="141" />
+      <CVvalue name="83" value="151" />
+      <CVvalue name="84" value="160" />
+      <CVvalue name="85" value="170" />
+      <CVvalue name="86" value="179" />
+      <CVvalue name="87" value="188" />
+      <CVvalue name="88" value="198" />
+      <CVvalue name="89" value="207" />
+      <CVvalue name="90" value="217" />
+      <CVvalue name="91" value="226" />
+      <CVvalue name="92" value="236" />
+      <CVvalue name="93" value="245" />
+      <CVvalue name="94" value="255" />
+      <CVvalue name="95" value="128" />
+      <CVvalue name="1" value="32" />
+      <CVvalue name="17" value="0" />
+      <CVvalue name="18" value="0" />
+      <CVvalue name="29" value="2" />
+      <CVvalue name="2" value="0" />
+      <CVvalue name="3" value="30" />
+      <CVvalue name="4" value="50" />
+      <CVvalue name="5" value="0" />
+      <CVvalue name="6" value="0" />
+      <CVvalue name="19" value="0" />
+      <CVvalue name="105" value="0" />
+      <CVvalue name="106" value="0" />
+      <CVvalue name="112" value="1" />
+      <CVvalue name="113" value="9" />
+      <CVvalue name="114" value="1" />
+      <CVvalue name="115" value="6" />
+      <CVvalue name="116" value="22" />
+      <CVvalue name="117" value="3" />
+      <CVvalue name="118" value="1" />
+      <CVvalue name="119" value="5" />
+      <CVvalue name="120" value="1" />
+      <CVvalue name="121" value="15" />
+      <CVvalue name="122" value="25" />
+      <CVvalue name="123" value="0" />
+      <CVvalue name="124" value="0" />
+      <CVvalue name="125" value="0" />
+      <CVvalue name="126" value="0" />
+      <CVvalue name="127" value="0" />
+      <CVvalue name="128" value="0" />
+      <CVvalue name="129" value="0" />
+      <CVvalue name="130" value="0" />
+      <CVvalue name="131" value="0" />
+      <CVvalue name="132" value="0" />
+      <CVvalue name="133" value="255" />
+      <CVvalue name="134" value="0" />
+      <CVvalue name="135" value="16" />
+      <CVvalue name="136" value="2" />
+      <CVvalue name="137" value="255" />
+      <CVvalue name="138" value="16" />
+      <CVvalue name="139" value="128" />
+      <CVvalue name="140" value="140" />
+      <CVvalue name="141" value="5" />
+      <CVvalue name="142" value="124" />
+      <CVvalue name="143" value="5" />
+      <CVvalue name="144" value="144" />
+      <CVvalue name="145" value="48" />
+      <CVvalue name="146" value="112" />
+      <CVvalue name="147" value="5" />
+      <CVvalue name="148" value="16" />
+      <CVvalue name="149" value="117" />
+      <CVvalue name="150" value="16" />
+      <CVvalue name="151" value="5" />
+      <CVvalue name="152" value="16" />
+      <CVvalue name="153" value="5" />
+      <CVvalue name="154" value="5" />
+      <CVvalue name="155" value="0" />
+      <CVvalue name="156" value="0" />
+      <CVvalue name="157" value="0" />
+      <CVvalue name="249" value="0" />
+      <CVvalue name="250" value="0" />
+      <CVvalue name="251" value="0" />
+      <CVvalue name="252" value="0" />
+      <CVvalue name="T2CV.3.1" value="46592" />
+      <CVvalue name="T2CV.3.2" value="18176" />
+      <CVvalue name="T2CV.3.3" value="11360" />
+      <CVvalue name="T2CV.3.4" value="7680" />
+      <CVvalue name="T2CV.3.5" value="4992" />
+      <CVvalue name="T2CV.3.6" value="3408" />
+      <CVvalue name="T2CV.3.7" value="2816" />
+      <CVvalue name="T2CV.3.8" value="2432" />
+      <CVvalue name="T2CV.3.9" value="2048" />
+      <CVvalue name="T2CV.3.10" value="1792" />
+      <CVvalue name="T2CV.3.11" value="1536" />
+      <CVvalue name="T2CV.3.12" value="1280" />
+      <CVvalue name="T2CV.3.13" value="1152" />
+      <CVvalue name="T2CV.3.14" value="1024" />
+      <CVvalue name="T2CV.3.15" value="952" />
+      <CVvalue name="T2CV.3.16" value="904" />
+      <CVvalue name="T2CV.3.17" value="856" />
+      <CVvalue name="T2CV.3.18" value="808" />
+      <CVvalue name="T2CV.3.19" value="760" />
+      <CVvalue name="T2CV.3.20" value="712" />
+      <CVvalue name="T2CV.3.21" value="672" />
+      <CVvalue name="T2CV.3.22" value="648" />
+      <CVvalue name="T2CV.3.23" value="624" />
+      <CVvalue name="T2CV.3.24" value="600" />
+      <CVvalue name="T2CV.3.25" value="576" />
+      <CVvalue name="T2CV.3.26" value="558" />
+      <CVvalue name="T2CV.3.27" value="540" />
+      <CVvalue name="T2CV.3.28" value="522" />
+      <CVvalue name="T2CV.3.29" value="502" />
+      <CVvalue name="T2CV.3.30" value="486" />
+      <CVvalue name="T2CV.3.31" value="470" />
+      <CVvalue name="T2CV.3.32" value="454" />
+      <CVvalue name="T2CV.3.33" value="438" />
+      <CVvalue name="T2CV.3.34" value="422" />
+      <CVvalue name="T2CV.3.35" value="406" />
+      <CVvalue name="T2CV.3.36" value="396" />
+      <CVvalue name="T2CV.3.37" value="386" />
+      <CVvalue name="T2CV.3.38" value="376" />
+      <CVvalue name="T2CV.3.39" value="366" />
+      <CVvalue name="T2CV.3.40" value="356" />
+      <CVvalue name="T2CV.3.41" value="351" />
+      <CVvalue name="T2CV.3.42" value="346" />
+      <CVvalue name="T2CV.3.43" value="341" />
+      <CVvalue name="T2CV.3.44" value="336" />
+      <CVvalue name="T2CV.3.45" value="331" />
+      <CVvalue name="T2CV.3.46" value="326" />
+      <CVvalue name="T2CV.3.47" value="321" />
+      <CVvalue name="T2CV.3.48" value="316" />
+      <CVvalue name="T2CV.3.49" value="311" />
+      <CVvalue name="T2CV.3.50" value="306" />
+      <CVvalue name="T2CV.3.51" value="301" />
+      <CVvalue name="T2CV.3.52" value="296" />
+      <CVvalue name="T2CV.3.53" value="291" />
+      <CVvalue name="T2CV.3.54" value="286" />
+      <CVvalue name="T2CV.3.55" value="281" />
+      <CVvalue name="T2CV.3.56" value="276" />
+      <CVvalue name="T2CV.3.57" value="271" />
+      <CVvalue name="T2CV.3.58" value="266" />
+      <CVvalue name="T2CV.3.59" value="256" />
+      <CVvalue name="T2CV.3.60" value="251" />
+      <CVvalue name="T2CV.3.61" value="247" />
+      <CVvalue name="T2CV.3.62" value="243" />
+      <CVvalue name="T2CV.3.63" value="239" />
+      <CVvalue name="T2CV.3.64" value="235" />
+      <CVvalue name="T2CV.3.65" value="231" />
+      <CVvalue name="T2CV.3.66" value="228" />
+      <CVvalue name="T2CV.3.67" value="225" />
+      <CVvalue name="T2CV.3.68" value="222" />
+      <CVvalue name="T2CV.3.69" value="219" />
+      <CVvalue name="T2CV.3.70" value="216" />
+      <CVvalue name="T2CV.3.71" value="213" />
+      <CVvalue name="T2CV.3.72" value="210" />
+      <CVvalue name="T2CV.3.73" value="207" />
+      <CVvalue name="T2CV.3.74" value="204" />
+      <CVvalue name="T2CV.3.75" value="201" />
+      <CVvalue name="T2CV.3.76" value="198" />
+      <CVvalue name="T2CV.3.77" value="195" />
+      <CVvalue name="T2CV.3.78" value="192" />
+      <CVvalue name="T2CV.3.79" value="189" />
+      <CVvalue name="T2CV.3.80" value="186" />
+      <CVvalue name="T2CV.3.81" value="184" />
+      <CVvalue name="T2CV.3.82" value="182" />
+      <CVvalue name="T2CV.3.83" value="180" />
+      <CVvalue name="T2CV.3.84" value="178" />
+      <CVvalue name="T2CV.3.85" value="176" />
+      <CVvalue name="T2CV.3.86" value="174" />
+      <CVvalue name="T2CV.3.87" value="172" />
+      <CVvalue name="T2CV.3.88" value="170" />
+      <CVvalue name="T2CV.3.89" value="168" />
+      <CVvalue name="T2CV.3.90" value="166" />
+      <CVvalue name="T2CV.3.91" value="164" />
+      <CVvalue name="T2CV.3.92" value="162" />
+      <CVvalue name="T2CV.3.93" value="160" />
+      <CVvalue name="T2CV.3.94" value="158" />
+      <CVvalue name="T2CV.3.95" value="156" />
+      <CVvalue name="T2CV.3.96" value="154" />
+      <CVvalue name="T2CV.3.97" value="152" />
+      <CVvalue name="T2CV.3.98" value="150" />
+      <CVvalue name="T2CV.3.99" value="148" />
+      <CVvalue name="T2CV.3.100" value="147" />
+      <CVvalue name="T2CV.3.101" value="146" />
+      <CVvalue name="T2CV.3.102" value="145" />
+      <CVvalue name="T2CV.3.103" value="144" />
+      <CVvalue name="T2CV.3.104" value="143" />
+      <CVvalue name="T2CV.3.105" value="142" />
+      <CVvalue name="T2CV.3.106" value="141" />
+      <CVvalue name="T2CV.3.107" value="140" />
+      <CVvalue name="T2CV.3.108" value="139" />
+      <CVvalue name="T2CV.3.109" value="138" />
+      <CVvalue name="T2CV.3.110" value="137" />
+      <CVvalue name="T2CV.3.111" value="136" />
+      <CVvalue name="T2CV.3.112" value="135" />
+      <CVvalue name="T2CV.3.113" value="134" />
+      <CVvalue name="T2CV.3.114" value="133" />
+      <CVvalue name="T2CV.3.115" value="132" />
+      <CVvalue name="T2CV.3.116" value="131" />
+      <CVvalue name="T2CV.3.117" value="130" />
+      <CVvalue name="T2CV.3.118" value="129" />
+      <CVvalue name="T2CV.3.119" value="128" />
+      <CVvalue name="T2CV.3.120" value="127" />
+      <CVvalue name="T2CV.3.121" value="126" />
+      <CVvalue name="T2CV.3.122" value="125" />
+      <CVvalue name="T2CV.3.123" value="124" />
+      <CVvalue name="T2CV.3.124" value="123" />
+      <CVvalue name="T2CV.3.125" value="122" />
+      <CVvalue name="T2CV.3.126" value="121" />
+      <CVvalue name="T2CV.4.1" value="16" />
+      <CVvalue name="T2CV.4.2" value="250" />
+      <CVvalue name="T2CV.4.3" value="96" />
+      <CVvalue name="T2CV.4.4" value="64" />
+      <CVvalue name="T2CV.4.5" value="16" />
+      <CVvalue name="T2CV.4.6" value="4228" />
+      <CVvalue name="T2CV.4.7" value="20" />
+      <CVvalue name="T2CV.4.9" value="1" />
+      <CVvalue name="T2CV.4.12" value="4086" />
+      <CVvalue name="T2CV.4.13" value="15" />
+      <CVvalue name="T2CV.4.14" value="65535" />
+      <CVvalue name="T2CV.4.15" value="1" />
+      <CVvalue name="T2CV.4.16" value="65" />
+      <CVvalue name="T2CV.4.18" value="60" />
+      <CVvalue name="T2CV.4.20" value="240" />
+      <CVvalue name="T2CV.4.21" value="256" />
+    </values>
+  </locomotive>
+</locomotive-config>
+

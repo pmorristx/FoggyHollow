@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../../XSLT/aspecttable.xsl" type="text/xsl"?>
+
+<aspecttable
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation = "http://jmri.org/xml/schema/aspecttable.xsd"
+>
+
+  <name>Train Order Semaphore</name>
+  <reference>Train order-board semaphores</reference>
+
+  <copyright xmlns="http://docbook.org/ns/docbook">
+    <year>2009</year><year>2010</year><holder>JMRI</holder>
+  </copyright>
+
+  <authorgroup xmlns="http://docbook.org/ns/docbook">
+    <author>
+        <personname><firstname>Paul</firstname><surname>Morris</surname></personname>
+    </author>       
+    <author>
+        <personname><firstname>Bob</firstname><surname>Jacobsen</surname></personname>
+        <email>jake@physics.berkeley.edu</email>
+    </author>
+  </authorgroup>
+
+  <revhistory xmlns="http://docbook.org/ns/docbook">
+    <revision>
+        <revnumber>1</revnumber>
+        <date>2014-10-25</date>
+        <authorinitials>PM</authorinitials>
+        <revremark>Initial version</revremark>
+    </revision>    
+  </revhistory>
+
+  <aspects>
+    <aspect>
+      <name>Clear</name>
+      <indication>Proceed</indication>
+      <speed>Normal</speed>
+      <route>Normal</route>      
+    </aspect>
+
+    <aspect>
+      <name>Approach</name>
+      <indication>Proceed preparing to stop at next signal</indication>
+      <speed>Medium</speed>
+      <route>Normal</route>      
+    </aspect>
+
+    <aspect>
+      <name>Stop</name>
+      <indication>Stop</indication>
+      <speed>Stop</speed>
+      <route>Normal</route>
+    </aspect>
+
+    <aspect>
+      <name>Diverging Approach</name>
+      <indication>Diverging Approach</indication>
+      <speed>Medium</speed>
+      <route>Diverging</route>
+    </aspect>
+
+    <aspect>
+      <name>Diverging Clear</name>
+      <indication>Diverging Clear</indication>
+      <speed>Normal</speed>
+      <route>Diverging</route>
+    </aspect>        
+    
+    <aspect>
+      <name>Not Lit</name>
+      <rule>Dark</rule>
+      <indication>(used to indicate unmanned station - lamp unlit - proceed)</indication>
+      <speed>Normal</speed>
+    </aspect>
+
+  </aspects>
+  <appearancefiles>
+    <appearancefile href="appearance-one-board.xml"/>
+  </appearancefiles>
+
+</aspecttable>
+  
