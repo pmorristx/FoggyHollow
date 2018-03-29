@@ -32,9 +32,9 @@ public class DimmableLight implements PropertyChangeListener
 
     public void init()
     {
-	guiOnSensor.addPropertyChangeListener(this);
-	guiOffSensor.addPropertyChangeListener(this);
-	guiDimSensor.addPropertyChangeListener(this);
+	if (guiOnSensor != null) {guiOnSensor.addPropertyChangeListener(this);}
+	if (guiOffSensor != null) {guiOffSensor.addPropertyChangeListener(this);}
+	if (guiDimSensor != null) { guiDimSensor.addPropertyChangeListener(this);}	
     }
 
     @Override
@@ -44,17 +44,17 @@ public class DimmableLight implements PropertyChangeListener
 
 	if (source == this.guiOnSensor && source.getState() == jmri.Sensor.ACTIVE)
 	{
-	    this.arduinoOnLight.setState(jmri.Light.ON);
-	    this.arduinoDimLight.setState(jmri.Light.OFF);
+	    if (arduinoOnLight != null) {this.arduinoOnLight.setState(jmri.Light.ON);}
+	    if (arduinoDimLight != null) {this.arduinoDimLight.setState(jmri.Light.OFF);}
 	}
 	else if (source == this.guiDimSensor && source.getState() == jmri.Sensor.ACTIVE)
 	{
-	    this.arduinoOnLight.setState(jmri.Light.ON);
-	    this.arduinoDimLight.setState(jmri.Light.ON);
+	    if (arduinoOnLight != null) {this.arduinoOnLight.setState(jmri.Light.ON);}
+	    if (arduinoDimLight != null) {this.arduinoDimLight.setState(jmri.Light.ON);}
 	}
 	else if (source == this.guiOffSensor && source.getState() == jmri.Sensor.ACTIVE) 
 	{
-	    this.arduinoOnLight.setState(jmri.Light.OFF);
+	    if (arduinoOnLight != null) {this.arduinoOnLight.setState(jmri.Light.OFF);}
 	    //this.arduinoDimLight.setState(jmri.Light.OFF);
 	}
     }

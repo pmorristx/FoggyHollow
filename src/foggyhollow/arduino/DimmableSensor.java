@@ -31,9 +31,9 @@ public class DimmableSensor implements PropertyChangeListener
 
     public void init()
     {
-	guiOnSensor.addPropertyChangeListener(this);
-	guiOffSensor.addPropertyChangeListener(this);
-	guiDimSensor.addPropertyChangeListener(this);
+	if (guiOnSensor != null) {guiOnSensor.addPropertyChangeListener(this);}
+	if (guiOffSensor != null) {guiOffSensor.addPropertyChangeListener(this);}
+	if (guiDimSensor != null) { guiDimSensor.addPropertyChangeListener(this);}
     }
 
 
@@ -46,17 +46,17 @@ public class DimmableSensor implements PropertyChangeListener
 	    jmri.Sensor source = (jmri.Sensor) evt.getSource();
 	    if (source == this.guiOnSensor && source.getState() == jmri.Sensor.ACTIVE)
 	    {
-		this.arduinoOnSensor.setState(jmri.Sensor.ACTIVE);
-		this.arduinoDimSensor.setState(jmri.Sensor.INACTIVE);
+		if (arduinoOnSensor != null) { this.arduinoOnSensor.setState(jmri.Sensor.ACTIVE);}
+		if (arduinoDimSensor != null) {this.arduinoDimSensor.setState(jmri.Sensor.INACTIVE);}
 	    }
 	    else if (source == this.guiDimSensor && source.getState() == jmri.Sensor.ACTIVE)
 	    {
-		this.arduinoOnSensor.setState(jmri.Sensor.ACTIVE);
-		this.arduinoDimSensor.setState(jmri.Sensor.ACTIVE);
+		if (arduinoOnSensor != null) {this.arduinoOnSensor.setState(jmri.Sensor.ACTIVE);}
+		if (arduinoDimSensor != null) {this.arduinoDimSensor.setState(jmri.Sensor.ACTIVE);}
 	    }
 	    else if (source == this.guiOffSensor && source.getState() == jmri.Sensor.ACTIVE)
 	    {
-		this.arduinoOnSensor.setState(jmri.Sensor.INACTIVE);
+		if (arduinoOnSensor != null) {this.arduinoOnSensor.setState(jmri.Sensor.INACTIVE);}
 		//this.arduinoDimSensor.setState(jmri.Sensor.INACTIVE);
 	    }
 	}

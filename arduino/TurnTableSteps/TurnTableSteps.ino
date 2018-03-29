@@ -24,21 +24,27 @@
 
 #define MANUAL_MOVE 17
 
+const uint8_t ACTIVE = 16;	// HIGH
+const uint8_t INACTIVE = 0; // LOW
+
+const uint8_t TURNOUT_NORMAL = 1;  // aka closed
+const uint8_t TURNOUT_DIVERGING = 0;  // thrown
+
+
 byte sensorPins [] = {2, 3, 4, 5, 6}; // These will be HIGH when the switch is open; LOW when it is closed.
 
-uint16_t inAddrs [] = {50, 51, 52, 53, 54}; // JMRI Sensor address used as a button to select which track to move to
-uint16_t outAddrs[] = {55, 56, 57, 58, 59}; // JMRI sensor address to report when move is complete
+uint16_t requestTrackCmds [] = {50, 51, 52, 53, 54}; // JMRI Sensor address used as a button to select which track to move to
+uint16_t trackSensors[] = {55, 56, 57, 58, 59}; // JMRI sensor address to report when move is complete
 
-byte lightPins[]      = {A5, A6, A7};
-uint16_t lightAddrs[] = {60, 61, 62, 63}; 
+boolean isTrackActive[5];
 
 boolean moving = false;
+boolean moveBySteps = false;
+boolean moveBySensor = false;
+byte seekingPin = -1;
 
-uint16_t lastOutState [] = {LOW, LOW, LOW, LOW, LOW, LOW};
-
-// Loconet turnout position definitions to make code easier to read
-#define TURNOUT_NORMAL     1  // aka closed
-#define TURNOUT_DIVERGING  0  // thrown
+int currentStep = 0;
+int numSteps = 0;
 
 int currentTrack;
 int	requestedTrack;
@@ -72,12 +78,6 @@ void sendOPC_SW_REQ(int address, byte dir, byte on) {
   LocoNet.send( &SendPacket );
 }
 
-// Some turnout decoders (DS54?) can use solenoids, this code emulates the digitrax
-// throttles in toggling the "power" bit to cause a pulse
-void setLNTurnout(int address, byte dir) {
-  sendOPC_SW_REQ(address - 1, dir, 1);
-  sendOPC_SW_REQ(address - 1, dir, 0);
-}
 
 void setup()
 {
@@ -89,11 +89,6 @@ void setup()
   pinMode(SLP, OUTPUT);
 
   pinMode(MANUAL_MOVE, INPUT_PULLUP);
-
-  for (int i=0; i<sizeof(lightPins); i++)
-  {
-    pinMode (lightPins[i], OUTPUT);
-  }
 
   int stepsPerRevolution[4];
   stepsPerRevolution[0] = 200; // Full Step
@@ -211,24 +206,25 @@ void setup()
     Serial.print (" value = ");
     Serial.println (digitalRead(sensorPins[i]));
 #endif
-    lastOutState[i] = digitalRead(sensorPins[i]);
-//    digitalWrite (trackLEDPins[i], lastOutState[i]);
 
     // Report initial state of sensors to JMRI
-    if (lastOutState[i] == LOW)
-      LocoNet.reportSensor(outAddrs[i], HIGH);
-    else
-      LocoNet.reportSensor(outAddrs[i], LOW);
-          
-    LocoNet.reportSensor(inAddrs[i], LOW);
 
-    if (digitalRead(sensorPins[i]) == LOW)
+    boolean trackActive = digitalRead(sensorPins[i]) == LOW;
+    if (trackActive)
     {
+      LocoNet.reportSensor(trackSensors[i], ACTIVE);
       currentTrack = i;
+      isTrackActive[i] = true;
+    }
+    else
+    {
+      LocoNet.reportSensor(trackSensors[i], INACTIVE);
+      isTrackActive[i] = false;
     }
   }
 
   // None of the reed switches are active.  We need to move the bridge until one of them activates
+  /*
   if (currentTrack == 0)
   {
     Serial.println ("Turntable setup searching for bridge orientation");
@@ -252,6 +248,7 @@ void setup()
     Serial.print ("Turntable setup found bridge at track ");
     Serial.println (currentTrack);
   }
+  */
 
 #ifdef DEBUG
   Serial.println ("Setup complete");
@@ -291,7 +288,8 @@ void seekAnyTrack()
 
 void seekTrack(byte sensorPin, int fudge)
 {
-    while (digitalRead(sensorPin) == HIGH)
+    boolean trackActive = digitalRead(sensorPins) == LOW;
+    while (!trackActive)
     {
       digitalWrite(MOTOR_PIN, LOW);
       delay(2);
@@ -322,26 +320,32 @@ void loop() {
     // this function will call the specially named functions below...
   }
 
+  if (moving)
+  {
+	  bumpMotor();
+  }
   // Check if any of the reed switches have changed.  If so, report new state
   for (int i = 0; i < sizeof(sensorPins); i++)
   {  
-    if (digitalRead(sensorPins[i]) != lastOutState[i])
-    {
-      lastOutState[i] = digitalRead(sensorPins[i]);
-      if (lastOutState[i] == LOW)
-      {
-        LocoNet.reportSensor(outAddrs[i], HIGH);
-        currentTrack = i; // In case bridge was manually moved
-      }
-      else
-      {
-        LocoNet.reportSensor(outAddrs[i], LOW);  
-      }    
-    }
+	  boolean trackActive = digitalRead(sensorPins[i]) == LOW;
+	  if (trackActive != isTrackActive[i]) // Don't flood LocoNet with sensorReports if the table hasn't moved.
+	  {
+		  isTrackActive[i] = trackActive;
+		  if (trackActive)
+		  {
+			LocoNet.reportSensor(trackSensors[i], ACTIVE);
+			currentTrack = i; // In case bridge was manually moved
+		  }
+		  else
+		  {
+			LocoNet.reportSensor(trackSensors[i], INACTIVE);
+		  }
+	  }
   }
 
   //
   // Manually move motor to count steps
+  /*
   if (digitalRead(MANUAL_MOVE) == LOW)
   {
 	  int count = 0;
@@ -353,9 +357,48 @@ void loop() {
 	  Serial.print ("--- MOVED MOTOR ");
 	  Serial.print (count);
 	  Serial.print (" steps ---- ");
-  }
+  */
 }
+void bumpMotor()
+{
+	if (moveBySteps)
+	{
+		if (currentStep++ < numSteps)
+		{
+		  digitalWrite(MOTOR_PIN, LOW);
+		  delay(2);
+		  digitalWrite(MOTOR_PIN, HIGH);
+		  delay(80);
+		}
+		else
+		{
+			moving = false;
+			moveBySteps = false;
+		    currentTrack = requestedTrack;
+//		    LocoNet.reportSensor(trackSensors[currentTrack], ACTIVE);  // Turn on JMRI sensor on turntable
+//		    LocoNet.reportSensor(address, INACTIVE);  // Turn off the sensor on the UI that activated this move
+		    digitalWrite(SLP, LOW);
+		}
+	}
+	else if (moveBySensor)
+	{
+	    if (digitalRead(seekingPin) == HIGH)
+	    {
+			{
+			  digitalWrite(MOTOR_PIN, LOW);
+			  delay(2);
+			  digitalWrite(MOTOR_PIN, HIGH);
+			  delay(80);
+			}
+	    }
+	    else // Finish up the fudge factor
+	    {
+	    	moveBySensor = false;
+	    	moveBySteps = true;
+	    }
+	}
 
+}
 //
 //---------------------------------------------------------------------------------------
 //
@@ -366,9 +409,11 @@ void loop() {
 void moveMotor(int steps, boolean rotateClockWise, int sensorIdx)
 {
   int count = 0;
-
-
   int direction = 0;
+
+  Serial.print ("In moveMotor, steps = ");
+  Serial.println(steps);
+
   if (rotateClockWise)
   {
     digitalWrite(DIRECTION_PIN, LOW);
@@ -381,26 +426,24 @@ void moveMotor(int steps, boolean rotateClockWise, int sensorIdx)
   }
   delay(500);
   
-  Serial.print ("In moveMotor, steps = ");
-  Serial.println(steps);
-
   digitalWrite(SLP, HIGH);
   delay(500);
+
+  currentStep = 0;
+  numSteps = steps;
+
+  moveBySteps = false;
   if (sensorIdx < 0 || steps == halfCircle)
   {
-    for (int i=0; i<steps; i++)
-    {
-      digitalWrite(MOTOR_PIN, LOW);
-      delay(2);
-      digitalWrite(MOTOR_PIN, HIGH);
-      delay(80);
-    }
+	moveBySteps = true;
   }
   else
   {
-    seekTrack(sensorPins[sensorIdx], sensorOffset[sensorIdx][direction]);
+	moveBySensor = true;
+	seekingPin = sensorPins[sensorIdx];
+	currentStep = 0;
+	numSteps = sensorOffset[sensorIdx][direction];
   }
-  digitalWrite(SLP, LOW);
 }
 
 
@@ -417,26 +460,35 @@ void moveMotor(int steps, boolean rotateClockWise, int sensorIdx)
 //
 void notifyPower (uint8_t state)
 {
-	if (state)
+	if (state == ACTIVE)
 	{
 		for (int i = 0; i < sizeof(sensorPins); i++)
 		{
 			if (digitalRead(sensorPins[i]) == LOW)
 			{
-				LocoNet.reportSensor(outAddrs[i], HIGH);
+				LocoNet.reportSensor(trackSensors[i], ACTIVE);
 				currentTrack = i; // In case bridge was manually moved
 			}
 			else
 			{
-				LocoNet.reportSensor(outAddrs[i], LOW);
+				LocoNet.reportSensor(trackSensors[i], INACTIVE);
 			}
 		}
 	}
-  //for (int i = 0; i < sizeof(sensorPins); i++)
-  //{
-  //    LocoNet.reportSensor(outAddrs[currentTrack], LOW);  // Turn off inactive track sensors
-  //}
-  //LocoNet.reportSensor(outAddrs[currentTrack], HIGH);  // Turn on JMRI sensor on turntable
+	else
+	{
+		moving = false;
+		moveBySteps = false;
+		moveBySensor = false;
+		currentStep = 0;
+		numSteps = 0;
+	    digitalWrite(SLP, LOW);
+	}
+//	for (int i = 0; i < sizeof(sensorPins); i++)
+//	{
+//		LocoNet.reportSensor(trackSensors[i], LOW);  // Turn off inactive track sensors
+//	}
+//	LocoNet.reportSensor(trackSensors[currentTrack], HIGH);  // Turn on JMRI sensor on turntable
 }
 
 //
@@ -448,32 +500,13 @@ void notifyPower (uint8_t state)
 //
 void notifySensor( uint16_t address, uint8_t state )
 {
-  //  Input from JMRI
-  // Request to move turntable; otherwise an output sensor changed.
-/*
-  if (address >= lightAddrs[0] && address <= lightAddrs[3])
-  {
-    if (address == lightAddrs[0])
-    {
-      // Turn on/off all three turntable lights
-      fadeAllLightsOnOff(state);
-    }
-    else
-    {
-      // Turn on/off a specified turntable light
-      fadeOnOff(lightPins[address-lightAddrs[1]], state);
-    }
-  }
-  */
-  if (((address >= inAddrs[0]) && (address <= inAddrs[4])) && (state != 0) && !moving)
-  {
-    moving = true;
-    // fadeAllLightsOnOff(LOW);
-    requestedTrack = address - inAddrs[0];
-
 #ifdef DEBUG
     Serial.print ("In notifySensor, State changed, new State = ");
-    Serial.print (state);
+    if (state == INACTIVE)
+    	Serial.print ("INACTIVE");
+    else
+    	Serial.print ("ACTIVE");
+
     Serial.print (" currentTrack = ");
     Serial.print (currentTrack);
     Serial.print (" requestedTrack = ");
@@ -481,57 +514,44 @@ void notifySensor( uint16_t address, uint8_t state )
     Serial.print (" address = ");
     Serial.println(address);
 #endif
+}
 
-    LocoNet.reportSensor(outAddrs[currentTrack], LOW);
-   
+void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t direction )
+{
+  //  Input from JMRI
+  // Request to move turntable; otherwise an output sensor changed.
+  if (((address >= requestTrackCmds[0]) && (address <= requestTrackCmds[4])) && !moving)
+  {
+#ifdef DEBUG
+  Serial.print ("In notifySwitchRequest, Address = ");
+  Serial.print (address);
+  Serial.print (" currentTrack = ");
+  Serial.print (currentTrack);
+  Serial.print (" requestedTrack = ");
+  Serial.print (requestedTrack);
+  if (moving)
+	  Serial.print (" moving = TRUE ");
+  else
+	  Serial.print (" moving = FALSE ");
+  Serial.print (" Output = ");
+  Serial.print (output);
+  Serial.print (" Direction = ");
+  Serial.println (direction);
+#endif
+    moving = true;
+    requestedTrack = address - requestTrackCmds[0];
 
     //  Move motor the shorter direction
     int steps = 0;
-
     if (cwSteps[currentTrack][requestedTrack] < ccwSteps[currentTrack][requestedTrack])
     {
       moveMotor(cwSteps[currentTrack][requestedTrack], true, requestedTrack);
-      steps = cwSteps[currentTrack][requestedTrack];
     }
     else
     {
       moveMotor(ccwSteps[currentTrack][requestedTrack], false, requestedTrack);
-      steps = ccwSteps[currentTrack][requestedTrack];
     }
-    
-    #ifdef DEBUG
-        Serial.print ("Moved motor ");
-        Serial.print (steps);
-        Serial.print (" steps from Track ");
-        Serial.print (currentTrack);
-        Serial.print (" to ");
-        Serial.print (requestedTrack);
-
-        Serial.print (" --- CW Steps = ");
-        Serial.print (cwSteps[currentTrack][requestedTrack]);
-        Serial.print (" CCW Steps = ");
-        Serial.println (ccwSteps[currentTrack][requestedTrack]);
-    #endif
-    
-    currentTrack = requestedTrack;
-    LocoNet.reportSensor(outAddrs[currentTrack], HIGH);  // Turn on JMRI sensor on turntable
-    LocoNet.reportSensor(address, LOW);  // Turn off the sensor on the UI that activated this move
-
-    // fadeAllLightsOnOff(HIGH);
-    moving = false;
   }
-}
-
-void notifySwitchRequest( uint16_t Address, uint8_t Output, uint8_t Direction )
-{
-#ifdef DEBUG
-  Serial.print ("In notifySwitchRequest, Address = ");
-  Serial.print (Address);
-  Serial.print (" Output = ");
-  Serial.print (Output);
-  Serial.print (" Direction = ");
-  Serial.println (Direction);
-#endif
 }
 
 void notifySwitchReport( uint16_t Address, uint8_t Output, uint8_t Direction )
@@ -557,49 +577,3 @@ void notifySwitchState( uint16_t Address, uint8_t Output, uint8_t Direction )
   Serial.println (Direction);
 #endif
 }
-
-void fadeAllLightsOnOff(int state)
-{
-  for (int l=0; l<sizeof(lightPins); l++)
-  {
-    fadeOnOff(lightPins[l], state);
-    delay(3000);
-  }
-}
-
-void fadeOnOff(int lightPin, int state)
-{
-  #define fadedelay 24
-  if (state == LOW) 
-  {
-    #ifdef DEBUG
-        Serial.print("Turning fade ON, pin = ");
-        Serial.println(lightPin);
-    #endif
-    for (int t = 0; t < 3; t += 1)
-    {
-      digitalWrite( lightPin, LOW);         
-      delay(fadedelay * (t / 3));
-      digitalWrite( lightPin, HIGH);          
-      delay(fadedelay - (fadedelay * (t / 3)));
-    }
-    digitalWrite( lightPin,  LOW );
-  } else {
-    #ifdef DEBUG
-        Serial.print("Turning fade OFF, pin = ");
-        Serial.println(lightPin);
-    #endif        
-    if (state == HIGH)
-    {
-      for (int t = 0; t < 3; t += 1)
-      {
-        digitalWrite( lightPin, HIGH);          
-        delay(fadedelay * (t / 3));
-        digitalWrite( lightPin, LOW);           
-        delay(fadedelay - (fadedelay * (t / 3)));
-      }
-      digitalWrite(lightPin, HIGH);
-    }
-  }  
-}
-

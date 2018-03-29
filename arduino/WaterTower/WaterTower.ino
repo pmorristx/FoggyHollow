@@ -59,30 +59,30 @@ bool tankEmptying = false;
 bool rockWobbling = false;
 bool rockBouncing = false;
 
-const int ROCK_WOBBLE_FAST = 200;
-const int ROCK_WOBBLE_SLOW = 300;
+const int ROCK_WOBBLE_FAST = 400;
+const int ROCK_WOBBLE_SLOW = 600;
 const int ROCK_TOP_FAST = 25;
 const int ROCK_TOP_SLOW = 30;
-const int ROCK_BOTTOM_FAST = 15;
-const int ROCK_BOTTOM_SLOW = 15;
+const int ROCK_BOTTOM_FAST = 20;
+const int ROCK_BOTTOM_SLOW = 20;
+
+const int servo_start_delay = 50;
+const int servo_init_delay = 7;
 
 int rockTopLimit = ROCK_TOP_FAST;
 int rockBottomLimit = ROCK_BOTTOM_FAST;
 
-#define servo_start_delay 50
-#define servo_init_delay 7
-
 struct MY_SERVO_DEF
 {
-	String servoName;				// Name of the servo so we can identify the function
-	bool moving;					// Indicates that the servo is currently moving
+//	String servoName;		// Name of the servo so we can identify the function
+	bool moving;				// Indicates that the servo is currently moving
 	bool finishedMoving = false;  	// Use to identify transition at end of move
 	int currentPosition;			// Current position of servo (angle)
 	int direction;					// Direction servo is moving (UP or DOWN)
-	int topPosition;				// Position (angle) of servo when spout is UP (tank is full)
-	int bottomPosition;				// Position (angle) of servo when spout is DOWN (tank is empty)
-	int slowdown_rate;				// Indicates how many times through LOOP to skip between moving servo - slows down movement
-	int slowdown_counter = 0;		// Used with slowdown_rate to slow down movement...current counter
+	int topPosition;// Position (angle) of servo when spout is UP (tank is full)
+	int bottomPosition;	// Position (angle) of servo when spout is DOWN (tank is empty)
+	int slowdown_rate;// Indicates how many times through LOOP to skip between moving servo - slows down movement
+	int slowdown_counter = 0;// Used with slowdown_rate to slow down movement...current counter
 	SoftwareServo servo;			// Servo to move
 };
 
@@ -90,7 +90,7 @@ MY_SERVO_DEF *spout = new MY_SERVO_DEF;
 MY_SERVO_DEF *gauge = new MY_SERVO_DEF;
 MY_SERVO_DEF *rock = new MY_SERVO_DEF;
 
-lnMsg  *LnPacket;          // pointer to a received LNet packet
+lnMsg *LnPacket;          // pointer to a received LNet packet
 
 //
 //********************************************************************************
@@ -116,16 +116,16 @@ void setup()
 	//
 	// Initialize the two servos to the initial position
 	spout->servo.attach(SPOUT_PIN);
-	spout->servoName = "spout";
+//	spout->servoName = "spout";
 	spout->topPosition = 170; // Spout raised
 	spout->currentPosition = 170;
 	spout->bottomPosition = 70;
 	spout->slowdown_rate = 10;
 	spout->moving = false;
-	spout-finishedMoving = false;
+	spout->finishedMoving = false;
 
 	gauge->servo.attach(GAUGE_PIN);
-	gauge->servoName = "gauge";
+//	gauge->servoName = "gauge";
 	gauge->topPosition = 15; // Ball at bottom (Full tank) - Smaller number = lower ball
 	gauge->currentPosition = 15;
 	gauge->bottomPosition = 180; // Ball at top (Empty tank)
@@ -133,24 +133,15 @@ void setup()
 	gauge->moving = false;
 	gauge->finishedMoving = false;
 
-	rock->servo.attach(ROCK_PIN);
-	rock->servoName = "rock";
-	rock->topPosition = ROCK_TOP_SLOW; // Ball at bottom (Full tank) - Smaller number = lower ball
-	rock->bottomPosition = ROCK_BOTTOM_SLOW;
-	rock->slowdown_rate = ROCK_WOBBLE_FAST;
-	rock->currentPosition = rock->bottomPosition;
-	rock->moving = false;
-	rock->direction = UP;
-
 	//
 	//  Move the servos to the inital position.  We want the spout up and the tank full.
 	spout->servo.write(spout->topPosition);
 	gauge->servo.write(gauge->topPosition);
-	rock->servo.write(rock->topPosition);
 
+	initRock();
 	//
 	//  Wait for spout/gauge to move
-	for (int t=0; t<servo_start_delay; t++)
+	for (int t = 0; t < servo_start_delay; t++)
 	{
 		SoftwareServo::refresh();
 		delay(servo_init_delay);
@@ -164,6 +155,28 @@ void setup()
 #endif
 }
 
+void initRock()
+{
+#ifdef DEBUG
+	Serial.println ("Initializing rock");
+#endif
+	rock->servo.attach(ROCK_PIN);
+//	rock->servoName = "rock";
+	rock->topPosition = ROCK_TOP_SLOW; // Ball at bottom (Full tank) - Smaller number = lower ball
+	rock->bottomPosition = ROCK_BOTTOM_SLOW;
+	rock->slowdown_rate = ROCK_WOBBLE_FAST;
+	rock->slowdown_counter = 0;
+	rock->currentPosition = rock->bottomPosition;
+	rock->moving = false;
+	rock->direction = UP;
+
+	rock->servo.write(rock->topPosition);
+	SoftwareServo::refresh();
+
+#ifdef DEBUG
+	Serial.println ("Done Initializing rock");
+#endif
+}
 //
 //********************************************************************************
 //
@@ -172,21 +185,21 @@ void setup()
 //
 //********************************************************************************
 //
-void loop()   
+void loop()
 {
 	// Check for any received LocoNet packets - Only one we get is to raise/lower spout
-	LnPacket = LocoNet.receive() ;
-	if ( LnPacket )
+	LnPacket = LocoNet.receive();
+	if (LnPacket)
 	{
 		LocoNet.processSwitchSensorMessage(LnPacket);
 	}
 
 	SoftwareServo::refresh();
-	delay(4);
+	delay(2);
 
 	if (spout->moving)
 	{
-		moveServo (spout);
+		moveServo(spout);
 	}
 
 	if (spout->finishedMoving)
@@ -273,25 +286,14 @@ void bounceRock()
 	{
 		rock->direction = newDirection;
 		rockBottomLimit = rockBottomLimit + 1;
-		rockTopLimit = rockTopLimit -1;
+		rockTopLimit = rockTopLimit - 1;
 	}
 
 	if (rock->slowdown_counter++ > rock->slowdown_rate)
 	{
 		rock->currentPosition = rock->currentPosition + increment;
-
-		//  Serial.print (" current Position = ");
-		//  Serial.print (rock->currentPosition);
-		//  Serial.print (" rockTopLimit = ");
-		//  Serial.print (rockTopLimit);
-		//  Serial.print (" rockBottomLimit = ");
-		//  Serial.print (rockBottomLimit);
-		//  Serial.println (" ");
-
 		rock->servo.write(rock->currentPosition);
 		rock->slowdown_counter = 0;
-
-
 
 		if (rockBottomLimit >= rockTopLimit)
 		{
@@ -310,7 +312,8 @@ void wobbleRock()
 	int increment = 1;
 	if (rock->currentPosition < rock->topPosition && rock->direction == UP)
 		increment = 1;
-	else if (rock->currentPosition > rock->bottomPosition && rock->direction == DOWN)
+	else if (rock->currentPosition > rock->bottomPosition
+			&& rock->direction == DOWN)
 		increment = -1;
 
 	if (rock->currentPosition >= rock->topPosition)
@@ -318,20 +321,23 @@ void wobbleRock()
 	else if (rock->currentPosition <= rock->bottomPosition)
 		rock->direction = UP;
 
+	if (rock->slowdown_counter++ > rock->slowdown_rate)
+	{
 #ifdef DEBUG
 	Serial.println (" ");
-	Serial.print ("*** Moving servo ");
-	Serial.print(rock->servoName);
+	Serial.print ("*** Wobbling rock ");
+//	Serial.print(rock->servoName);
 	if (rock->direction == UP)
 	{
-		Serial.println (" UP");
+		Serial.println ("UP");
 	}
 	else
 	{
-		Serial.println (" DOWN");
+		Serial.println ("DOWN");
 	}
 	Serial.print (" current position = ");
-	Serial.print (rock->currentPosition);  Serial.print (" increment = ");
+	Serial.print (rock->currentPosition);
+	Serial.print (" increment = ");
 	Serial.print (increment);
 	Serial.print (" topPosition = ");
 	Serial.print (rock->topPosition);
@@ -343,11 +349,11 @@ void wobbleRock()
 	Serial.println (rock->slowdown_rate);
 	Serial.println (" ");
 #endif
-
-	if (rock->slowdown_counter++ > rock->slowdown_rate)
-	{
+		if (!rock->servo.attached())
+		{
+			rock->servo.attach(ROCK_PIN);
+		}
 		rock->currentPosition = rock->currentPosition + increment;
-
 		rock->servo.write(rock->currentPosition);
 		rock->slowdown_counter = 0;
 	}
@@ -364,7 +370,11 @@ void reportWaterLevel()
 	//
 	//  Determine the water level based on the tank capacity and the current servo position.
 	int gaugeTravel = gauge->bottomPosition - gauge->topPosition;
-	int waterLevel = TANK_CAPACITY - (int)(TANK_CAPACITY * 1.0/(float(gaugeTravel) / (float)(gauge->currentPosition - gauge->topPosition)));
+	int waterLevel = TANK_CAPACITY
+			- (int) (TANK_CAPACITY * 1.0
+					/ (float(gaugeTravel)
+							/ (float) (gauge->currentPosition
+									- gauge->topPosition)));
 
 #ifdef DEBUG
 	Serial.print ("Water Level = ");
@@ -373,12 +383,12 @@ void reportWaterLevel()
 
 	//
 	// We send the water level to JMRI as a 4-bit binary value using 4 consecutive JMRI sensors.
-	for (int i=0; i<4; i++)
+	for (int i = 0; i < 4; i++)
 	{
-		if ((waterLevel & 1<<i) == 0)
-			LocoNet.reportSensor(WATER_LEVEL_LSB+i, INACTIVE);
+		if ((waterLevel & 1 << i) == 0)
+			LocoNet.reportSensor(WATER_LEVEL_LSB + i, INACTIVE);
 		else
-			LocoNet.reportSensor(WATER_LEVEL_LSB+i, ACTIVE);
+			LocoNet.reportSensor(WATER_LEVEL_LSB + i, ACTIVE);
 	}
 
 	//
@@ -421,15 +431,18 @@ void reportWaterLevel()
 void moveServo(MY_SERVO_DEF *servo)
 {
 	int increment = 0;
-	if ((servo->direction == UP) && (servo->topPosition > servo->bottomPosition))
+	if ((servo->direction == UP)
+			&& (servo->topPosition > servo->bottomPosition))
 	{
 		increment = 1;
 	}
-	else if ((servo->direction == DOWN) && (servo->topPosition > servo->bottomPosition))
+	else if ((servo->direction == DOWN)
+			&& (servo->topPosition > servo->bottomPosition))
 	{
 		increment = -1;
 	}
-	else if ((servo->direction == UP) && (servo->topPosition < servo->bottomPosition))
+	else if ((servo->direction == UP)
+			&& (servo->topPosition < servo->bottomPosition))
 	{
 		increment = -1;
 	}
@@ -438,10 +451,12 @@ void moveServo(MY_SERVO_DEF *servo)
 		increment = 1;
 	}
 
+	if (servo->slowdown_counter++ > servo->slowdown_rate)
+	{
 #ifdef DEBUG
 	Serial.println (" ");
 	Serial.print ("*** Moving servo ");
-	Serial.print(servo->servoName);
+//	Serial.print(servo->servoName);
 	if (servo->direction == UP)
 	{
 		Serial.println ("UP");
@@ -451,7 +466,7 @@ void moveServo(MY_SERVO_DEF *servo)
 		Serial.println ("DOWN");
 	}
 	Serial.print (" current position = ");
-	Serial.print (servo->currentPosition);  Serial.print (" increment = ");
+	Serial.print (servo->currentPosition); Serial.print (" increment = ");
 	Serial.print (increment);
 	Serial.print (" topPosition = ");
 	Serial.print (servo->topPosition);
@@ -463,13 +478,12 @@ void moveServo(MY_SERVO_DEF *servo)
 	Serial.println (servo->slowdown_rate);
 	Serial.println (" ");
 #endif
-
-	if (servo->slowdown_counter++ > servo->slowdown_rate)
-	{
 		servo->currentPosition = servo->currentPosition + increment;
-		if (servo->direction == UP) 
+		if (servo->direction == UP)
 		{
-			if (((servo->currentPosition >= servo->topPosition) && increment > 0) || ((servo->currentPosition <= servo->topPosition) && increment < 0))
+			if (((servo->currentPosition >= servo->topPosition) && increment > 0)
+					|| ((servo->currentPosition <= servo->topPosition)
+							&& increment < 0))
 			{
 				servo->currentPosition = servo->topPosition;
 				servo->moving = false;
@@ -477,7 +491,7 @@ void moveServo(MY_SERVO_DEF *servo)
 				servo->servo.detach();
 #ifdef DEBUG
 				Serial.print (" Finished moving servo ");
-				Serial.print (servo->servoName);
+//				Serial.print (servo->servoName);
 				Serial.print (" Position = ");
 				Serial.println (servo->currentPosition);
 #endif
@@ -485,7 +499,10 @@ void moveServo(MY_SERVO_DEF *servo)
 		}
 		else
 		{
-			if (((servo->currentPosition <= servo->bottomPosition) && increment < 0) || ((servo->currentPosition >= servo->bottomPosition) && increment > 0))
+			if (((servo->currentPosition <= servo->bottomPosition)
+					&& increment < 0)
+					|| ((servo->currentPosition >= servo->bottomPosition)
+							&& increment > 0))
 			{
 				servo->currentPosition = servo->bottomPosition;
 				servo->moving = false;
@@ -493,7 +510,7 @@ void moveServo(MY_SERVO_DEF *servo)
 				servo->servo.detach();
 #ifdef DEBUG
 				Serial.print (" Finished moving servo ");
-				Serial.print (servo->servoName);
+//				Serial.print (servo->servoName);
 				Serial.print (" Position = ");
 				Serial.println (servo->currentPosition);
 #endif
@@ -511,7 +528,7 @@ void moveServo(MY_SERVO_DEF *servo)
 //
 //---------------------------------------------------------------------------------------
 //
-void notifyPower (uint8_t state)
+void notifyPower(uint8_t state)
 {
 	if (state)
 	{
@@ -526,7 +543,7 @@ void notifyPower (uint8_t state)
 //
 //---------------------------------------------------------------------------------------
 //
-void notifySensor( uint16_t address, uint8_t state )
+void notifySensor(uint16_t address, uint8_t state)
 {
 	//  Input from JMRI
 	if (address == SPOUT_SENSOR)
@@ -542,7 +559,7 @@ void notifySensor( uint16_t address, uint8_t state )
 		gauge->servo.detach();
 		SoftwareServo::refresh();
 
-		if (!spout->moving)  
+		if (!spout->moving)
 		{
 			spout->servo.attach(SPOUT_PIN);
 			spout->slowdown_counter = 0;
@@ -566,32 +583,34 @@ void notifySensor( uint16_t address, uint8_t state )
 	}
 	else if (address == ROCK_WOBBLE)
 	{
-		if (state != INACTIVE)
+		if (state == INACTIVE && rockWobbling)
 		{
-			rockWobbling = true;
-			//rockBouncing = false;
-			//LocoNet.reportSensor(ROCK_BOUNCE, INACTIVE);
-			rock->servo.attach(ROCK_PIN);
-		}
-		else
-		{
+#ifdef DEBUG
+			Serial.println ("Stopping rock wobble");
+#endif
 			rockWobbling = false;
 			rock->servo.detach();
 		}
-
+		else if (state != INACTIVE && !rockWobbling)
+		{
+#ifdef DEBUG
+			Serial.println ("Starting rock wobble");
+#endif
+			rockWobbling = true;
+			rockBouncing = false;
+			initRock();
+		}
 	}
 	else if (address == ROCK_BOUNCE)
 	{
 		rockBouncing = (state != INACTIVE);
 		if (state != INACTIVE)
 		{
-			rock->servo.attach (ROCK_PIN);
+			initRock();
+			rock->servo.attach(ROCK_PIN);
 			rockTopLimit = ROCK_TOP_FAST;
 			rockBottomLimit = ROCK_BOTTOM_FAST;
 			rock->currentPosition = rockBottomLimit;
-
-			//rockWobbling = false;
-			//LocoNet.reportSensor(ROCK_WOBBLE, INACTIVE);
 		}
 		else
 		{

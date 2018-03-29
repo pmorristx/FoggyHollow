@@ -1,3 +1,5 @@
+#include <LocoNet.h>
+
 /*
       Loconet on pins 8 (RX on UNO) and 7 (TX) (via a LocoShield or similar)
  */
@@ -14,6 +16,13 @@
 #include <LocoNet.h>
 
 #define DEBUG
+
+const uint8_t ACTIVE = 16;
+const uint8_t INACTIVE = 0;
+
+const uint8_t SWITCH_ON = 32; // Light ON
+const uint8_t SWITCH_OFF = 0; // Light OFF
+
 #define ESTOP_PIN 6 // Use NC switch so we can put several switches in series.  Stop if circuit is broken.
 #define LN_TX_PIN 7 // LocoNet
 #define LN_RX_PIN 8 // LocoNet
@@ -26,7 +35,7 @@
 #define SLP 14
 #define SECOND_FLOOR_LIGHT_PIN 17
 #define SIDE_LIGHT_PIN 18
-#define DECK_LIGHT_PIN 19
+#define BRIDGE_LIGHT_PIN 19
 
 #define PULSE_DELAY 2
 #define MOTOR_DELAY 5
@@ -35,10 +44,11 @@
 #define LIGHT_CMD 74 	// JMRI sensor/light to turn lights on/off
 #define LIGHT_DIM_CMD 75
 #define SIDE_LIGHT_CMD 76
-#define DECK_LIGHT_CMD 77
+#define BRIDGE_LIGHT_CMD 77
 #define SECOND_FLOOR_LIGHT_CMD 78
 #define FIRE_CMD 79
 #define FIRE_INTENSITY_CMD 80
+
 #define SEEK_LEVEL_CMD 81
 
 #define ORANGE_FIRE_IDX 0
@@ -56,8 +66,8 @@ bool isFireOn = true;
 
 int numSensorPins = 4;
 byte sensorPins [] = {2, 3, 4, 5}; // These will be HIGH when the switch is open; LOW when it is closed.
-byte lightPins[2] = {9, 10};
-byte flickerPins[2] = {15, 16};
+byte engineRoomLightPins[2] = {9, 10};
+byte boilerFlickerPins[2] = {15, 16};
 
 int numInAddrs = 7;
 uint16_t inAddrs [] = {60, 61, 62, 63, 64, 65, 66}; // JMRI Sensor address used as a button to select which level to move to
@@ -78,6 +88,15 @@ bool hasSensor[7];
 
 lnMsg  *LnPacket;          // pointer to a received LNet packet
 
+struct REPORT_SENSOR
+{
+	uint16_t address;
+	uint8_t state;
+};
+
+const int numLights = 7;
+REPORT_SENSOR* light[numLights];
+
 void setup()
 {
 	pinMode(MOTOR_PIN, OUTPUT);
@@ -85,14 +104,29 @@ void setup()
 	pinMode(ENB, OUTPUT);
 	pinMode(SLP, OUTPUT);
 	pinMode(ESTOP_PIN, INPUT_PULLUP);
-	pinMode(DECK_LIGHT_PIN, OUTPUT);
+
+	pinMode(BRIDGE_LIGHT_PIN, OUTPUT);
+	digitalWrite(BRIDGE_LIGHT_PIN, LOW);
+
 	pinMode(SIDE_LIGHT_PIN, OUTPUT);
+	digitalWrite(SIDE_LIGHT_PIN, LOW);
 
-	for (int i=0; i<sizeof(flickerPins); i++)
-		pinMode(flickerPins[i], OUTPUT);
+	for (int i=0; i<numLights; i++)
+	{
+		light[i]->address = LIGHT_CMD + i;
+		light[i]->state = INACTIVE;
+	}
+	for (int i=0; i<sizeof(boilerFlickerPins); i++)
+	{
+		pinMode(boilerFlickerPins[i], OUTPUT);
+		digitalWrite(boilerFlickerPins[i], LOW);
+	}
 
-	for (int i=0; i<sizeof(lightPins); i++)
-		pinMode(lightPins[i], OUTPUT);
+	for (int i=0; i<sizeof(engineRoomLightPins); i++)
+	{
+		pinMode(engineRoomLightPins[i], OUTPUT);
+		digitalWrite(engineRoomLightPins[i], LOW);
+	}
 
 	int steps;
 	hasSensor[0] = false;
@@ -172,26 +206,9 @@ void setup()
 		Serial.print ("Hoist setup found cage at Level ");
 		Serial.println (currentLevel);
 	}
-	reportLevels();
 }
 
-void reportLevels()
-{
 
-  for (int i=0; i<numOutAddrs; i++)
-  {
-#ifdef DEBUG
-    Serial.print ("At end of setup, lastOutState[");
-    Serial.print (i);
-    Serial.print ("] = ");
-    Serial.println (lastOutState[i]);
-#endif
-    LocoNet.reportSensor(outAddrs[i], lastOutState[i]);
-  }
-#ifdef DEBUG
-  Serial.println ("Setup complete");  
-#endif
-}
 
 /**
  *
@@ -497,45 +514,6 @@ void notifySensor( uint16_t address, uint8_t state )
 		}
 	}
 
-	// Turn side door on/off if requested
-	if (address == SIDE_LIGHT_CMD)
-	{
-		fadeOnOff(SIDE_LIGHT_PIN, state);
-	}
-
-	// Turn deck door on/off if requested
-	if (address == DECK_LIGHT_CMD)
-	{
-		fadeOnOff(DECK_LIGHT_PIN, state);
-	}
-
-  if (address == SECOND_FLOOR_LIGHT_CMD)
-  {
-    fadeOnOff(SECOND_FLOOR_LIGHT_PIN, state);
-  }
-	if (address == LIGHT_DIM_CMD)
-	{
-		areLightsDimmed = (state != LOW);
-		toggleMainLights();
-	}
-	//
-	// Turn on interior lights
-	if (address == LIGHT_CMD)
-	{
-		areLightsOn = (state != LOW);
-		toggleMainLights();
-	}
-
-	//
-	// Turn on boiler fire
-	if (address == FIRE_CMD)
-	{
-		isFireOn = (state != LOW);
-    // Force a report of the current level status
-    reportLevels();
-	}
-
-
   // 
   // Find a current level by wiggling the cage down then up
   if (address == SEEK_LEVEL_CMD && state != LOW)
@@ -545,7 +523,7 @@ void notifySensor( uint16_t address, uint8_t state )
     #endif
     seekAnyLevel();
   }
-
+/*
 	//
 	// Adjust intensity of boiler fire.
 	if (address == FIRE_INTENSITY_CMD)
@@ -559,7 +537,7 @@ void notifySensor( uint16_t address, uint8_t state )
 			fireIntensity = LOW;
 		}
 	}
-
+*/
 	// Request to move hoist cage...and we're not already moving it.
      requestedLevel = address - inAddrs[0];
   #ifdef DEBUG
@@ -673,23 +651,23 @@ void toggleMainLights()
 	if (!areLightsDimmed && areLightsOn)
 	{
 		lightIntensity = 255;
-		analogWrite(lightPins[1], lightIntensity);
+		analogWrite(engineRoomLightPins[1], lightIntensity);
 		delay(2000);
-		analogWrite(lightPins[0], lightIntensity);
+		analogWrite(engineRoomLightPins[0], lightIntensity);
 	}
 	else if (areLightsDimmed && areLightsOn)
 	{
 		lightIntensity = 255;
-		analogWrite(lightPins[1], lightIntensity);
+		analogWrite(engineRoomLightPins[1], lightIntensity);
 		delay(2000);
-		analogWrite(lightPins[0], 0);
+		analogWrite(engineRoomLightPins[0], 0);
 	}
 	else
 	{
 		lightIntensity = 128;
-		analogWrite(lightPins[1], lightIntensity);
+		analogWrite(engineRoomLightPins[1], lightIntensity);
 		delay(2000);
-		analogWrite(lightPins[0], lightIntensity);
+		analogWrite(engineRoomLightPins[0], lightIntensity);
 	}
 }
 
@@ -750,12 +728,12 @@ void flicker(bool isMoving)
     {
       rate = rate / 3; // Higher number = slower flicker
       phaseRate = 90;
-      digitalWrite(flickerPins[YELLOW_FIRE_IDX], LOW); // Turn off yellow LED
+      digitalWrite(boilerFlickerPins[YELLOW_FIRE_IDX], LOW); // Turn off yellow LED
     }  
 		if (flickerCount++ > rate  || isMoving)
 		{
 			flickerCount = 0;
-			for (int i=0; i<sizeof(flickerPins); i++)
+			for (int i=0; i<sizeof(boilerFlickerPins); i++)
 			{
 				if (random(1,100) > phaseRate) // Change phase (on/off) of LED to randomly keep the LED on longer or shorter
 				{
@@ -769,15 +747,15 @@ void flicker(bool isMoving)
         //
         // Flicker both LEDS on high intensity.  Only flicker the orange LED on low intensity.
         if (fireIntensity == HIGH || (fireIntensity == LOW && i == ORANGE_FIRE_IDX))
-					  digitalWrite(flickerPins[i], phase);
+					  digitalWrite(boilerFlickerPins[i], phase);
 			}
 		}
 	}
 	else // Turn Fire Off
 	{
-		for (int i=0; i<sizeof(flickerPins); i++)
+		for (int i=0; i<sizeof(boilerFlickerPins); i++)
 		{
-			digitalWrite(flickerPins[i], LOW);
+			digitalWrite(boilerFlickerPins[i], LOW);
 		}
 	}
 }
@@ -785,17 +763,98 @@ void flicker(bool isMoving)
 /**
  *
  */
-void notifySwitchRequest( uint16_t Address, uint8_t Output, uint8_t Direction )
+void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t direction )
 {
 #ifdef DEBUG
-  Serial.print ("In notifySwitchRequest, Address = ");
-  Serial.print (Address);
-  Serial.print (" Output = ");
-  Serial.print (Output);
-  Serial.print (" Direction = ");
-  Serial.println (Direction);
+	Serial.print ("In notifySwitchRequest, Address = ");
+	Serial.print (address);
+	Serial.print (" Output = ");
+	Serial.print (output);
+	Serial.print (" Direction = ");
+	Serial.println (direction);
 #endif
+	int idx = address-LIGHT_CMD;
+	if (direction != light[idx]->state)
+	{
+		// Turn side door on/off if requested
+		if (address == SIDE_LIGHT_CMD)
+		{
+			fadeOnOff(SIDE_LIGHT_PIN, direction);
+		}
+
+		// Turn bridge door on/off if requested
+		if (address == BRIDGE_LIGHT_CMD)
+		{
+			fadeOnOff(BRIDGE_LIGHT_PIN, direction);
+		}
+
+		if (address == SECOND_FLOOR_LIGHT_CMD)
+		{
+			fadeOnOff(SECOND_FLOOR_LIGHT_PIN, direction);
+		}
+		if (address == LIGHT_DIM_CMD)
+		{
+			areLightsDimmed = (direction != LOW);
+			toggleMainLights();
+		}
+		//
+		// Turn on interior lights
+		if (address == LIGHT_CMD)
+		{
+			areLightsOn = (direction != LOW);
+			toggleMainLights();
+		}
+
+		//
+		// Turn on boiler fire
+		if (address == FIRE_CMD)
+		{
+			isFireOn = (direction != LOW);
+		}
+
+		//
+		// Adjust intensity of boiler fire.
+		if (address == FIRE_INTENSITY_CMD)
+		{
+			if (direction != LOW)
+			{
+				fireIntensity = HIGH;
+			}
+			else
+			{
+				fireIntensity = LOW;
+			}
+		}
+
+		light[idx]->state = direction;
+		LocoNet.reportSensor(address, direction);
+	}
 }
+
+//
+//---------------------------------------------------------------------------------------
+//
+// notifyPower - used to trigger reporting of sensor state when JMRI powers up.
+//
+//---------------------------------------------------------------------------------------
+//
+void notifyPower (uint8_t state)
+{
+	if (state)
+	{
+	  for (int i=0; i<numOutAddrs; i++)
+	  {
+		LocoNet.reportSensor(outAddrs[i], lastOutState[i]);
+		LocoNet.reportSwitch(outAddrs[i]);
+	  }
+
+	  for (int i=0; i<numLights; i++)
+	  {
+		  LocoNet.reportSensor(light[i]->address, light[i]->state);
+	  }
+	}
+}
+
 
 void notifySwitchReport( uint16_t Address, uint8_t Output, uint8_t Direction )
 {

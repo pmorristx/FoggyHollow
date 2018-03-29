@@ -2,9 +2,10 @@
 
 #include <LocoNet.h>
 #include <SoftwareServo.h> 
+#include <FoggyHollow.h>
 
-const uint8_t ACTIVE = 16;
-const uint8_t INACTIVE = 0;
+//const uint8_t ACTIVE = 16;
+//const uint8_t INACTIVE = 0;
 
 SoftwareServo servo[2];
 #define servo_start_delay 50
@@ -14,11 +15,11 @@ int servo_slow_counter = 1; //servo loop counter to slowdown servo transit
 
 struct SERVO_DEF
 {
-  int inuse;
-  int current_position;
-  int increment;
-  int stop_value;
-  int start_value;
+	int inuse;
+	int current_position;
+	int increment;
+	int stop_value;
+	int start_value;
 };
 SERVO_DEF *servoParams = new SERVO_DEF[2];
 
@@ -27,24 +28,22 @@ bool JMRI_ACTIVE = false;
 
 //
 // Function Address Controls (lights on/off or chute up/down)
-const uint16_t GATE_LIGHT = 89;
-const uint16_t CHUTE_LEFT = 90;
-const uint16_t CHUTE_RIGHT = 91;
-const uint16_t BRIDGE_LEFT = 92;
-const uint16_t BRIDGE_RIGHT = 93;
-const uint16_t INSIDE_LIGHTS = 94;
-const uint16_t CHUTE_LIGHT = 95;
-const uint16_t EOT_LANTERN_WHITE = 96;
-const uint16_t EOT_LANTERN_RED = 97;
-const uint16_t ORE_BIN_SENSOR = 98;
-const uint16_t EOT_SENSOR = 99;
+const uint16_t GATE_LIGHT_CMD = 89;
+const uint16_t CHUTE_LEFT_CMD = 90;
+const uint16_t CHUTE_RIGHT_CMD = 91;
+const uint16_t BRIDGE_LEFT_CMD = 92;
+const uint16_t BRIDGE_RIGHT_CMD = 93;
+const uint16_t INSIDE_LIGHTS_CMD = 94;
+const uint16_t CHUTE_LIGHT_CMD = 95;
+const uint16_t EOT_LANTERN_WHITE_CMD = 96;
+const uint16_t EOT_LANTERN_RED_CMD = 97;
+const uint16_t ORE_BIN_SENSOR_CMD = 98;
+const uint16_t EOT_SENSOR_CMD = 99;
 
 
 
 uint8_t EOTState;
 uint8_t OreBinState;
-
-uint8_t sensorState[9];
 
 //
 // Pin definitions
@@ -71,6 +70,9 @@ const int GATE_LIGHT_PIN = 16;
 
 lnMsg  *LnPacket;          // pointer to a received LNet packet
 
+const int numLights = 8;
+LIGHT_DEF* light[numLights];
+
 void setup()   //******************************************************
 {
 
@@ -79,18 +81,53 @@ void setup()   //******************************************************
 	//Serial.println ("In setup");
 #endif
 
-  JMRI_ACTIVE = false;
+
+
+	JMRI_ACTIVE = false;
 	// initialize the digital pins as outputs
-	for (uint8_t i=0; i < sizeof(ledPins); i++)
+
+
+	for (int i = 0; i < numLights; i++)
 	{
-		pinMode(ledPins[i], OUTPUT);
-    digitalWrite(ledPins[i], LOW);
+		light[i] = new LIGHT_DEF;
 	}
 
-  pinMode(EOT_SENSOR_PIN, INPUT_PULLUP);
-  pinMode(ORE_BIN_SENSOR_PIN, INPUT_PULLUP);
-  EOTState = -1;
-  OreBinState = -1;
+	light[0]->pin = BRIDGE_RIGHT_PIN;
+	light[0]->onCmd = BRIDGE_RIGHT_CMD;
+
+	light[1]->pin = INSIDE_LEFT_PIN;
+	light[1]->onCmd = INSIDE_LIGHTS_CMD;
+
+	light[2]->pin = INSIDE_RIGHT_PIN;
+
+	light[3]->pin = EOT_LANTERN_WHITE_PIN;
+	light[3]->onCmd = EOT_LANTERN_WHITE_CMD;
+
+	light[4]->pin = EOT_LANTERN_RED_PIN;
+	light[4]->onCmd = EOT_LANTERN_RED_CMD;
+
+	light[5]->pin = BRIDGE_LEFT_PIN;
+	light[5]->onCmd = BRIDGE_LEFT_CMD;
+
+	light[6]->pin = CHUTE_LIGHT_PIN;
+	light[6]->onCmd = CHUTE_LIGHT_CMD;
+
+	light[7]->pin = GATE_LIGHT_PIN;
+	light[7]->onCmd = GATE_LIGHT_CMD;
+
+	for (int i = 0; i < numLights; i++)
+	{
+		pinMode(light[i]->pin, OUTPUT);
+		digitalWrite(light[i]->pin, LOW);
+		light[i]->isOn = false;
+	}
+
+
+	pinMode(EOT_SENSOR_PIN, INPUT_PULLUP);
+	pinMode(ORE_BIN_SENSOR_PIN, INPUT_PULLUP);
+
+	EOTState = -1;
+	OreBinState = -1;
 
 	LocoNet.init(LN_TX_PIN);
 
@@ -100,7 +137,7 @@ void setup()   //******************************************************
 	servoParams[0].start_value = 0;
 	servoParams[0].increment = -1;
 
-  // Init right chute
+	// Init right chute
 	servoParams[1].current_position = 0;
 	servoParams[1].stop_value = 270;
 	servoParams[1].start_value = 0;
@@ -120,12 +157,8 @@ void setup()   //******************************************************
 		servo[i].detach();
 	}
 
-    for (uint8_t i=0; i<sizeof(sensorState); i++)
-    {
-    	sensorState[i] = 0;
-    }
-    reportSensors();
-    
+	reportSensors();
+
 #ifdef DEBUG
 	Serial.println ("Setup complete");
 #endif
@@ -134,9 +167,9 @@ void setup()   //******************************************************
 void reportSensors()
 {
 	//  Report initial state to JMRI...probably isn't listening
-	for (uint8_t i=0; i<sizeof(sensorState); i++)
+	for (uint8_t i=0; i<numLights; i++)
 	{
-	  LocoNet.reportSensor(i+89, sensorState[i]);
+		LocoNet.reportSensor(light[i]->onCmd, light[i]->isOn ? ACTIVE : INACTIVE);
 	}
 }
 
@@ -151,72 +184,6 @@ void loop()   //****************************************************************
 		// this function will call the specially named functions below...
 	}
 
-
-/*
-  uint8_t newState = digitalRead(EOT_SENSOR_PIN);
-  //Serial.print (" new State = ");
-  //Serial.println (newState);  
-  if (newState != EOTState)
-  {
-    EOTState = newState;
-    //  Have to flip the state from what hardware reads
-    if (EOTState != LOW)
-    {
-      //  If the room is dark, the EOT sensors keep flipping
-      if (sensorState[3] == ACTIVE && sensorState[4] == ACTIVE)
-      {      
-        LocoNet.reportSensor(EOT_SENSOR, ACTIVE); 
-        LocoNet.reportSensor(EOT_LANTERN_RED, ACTIVE);
-      }
-    }
-    else
-    {
-      if (sensorState[3] == ACTIVE && sensorState[4] == ACTIVE)
-      {
-        LocoNet.reportSensor(EOT_SENSOR, INACTIVE);              
-        LocoNet.reportSensor(EOT_LANTERN_RED, INACTIVE);
-      }
-    }
-  }
-  */
-
-/**  newState = digitalRead(ORE_BIN_SENSOR_PIN);
-  //Serial.print (" new State = ");
-  //Serial.println (newState);
-  if (newState != OreBinState)
-  {
-#ifdef DEBUG
-  Serial.print (" OreBin State = ");
-  Serial.print (OreBinState);
-  Serial.print (" LOW = ");
-  Serial.print (LOW);
-  Serial.print (" newState = ");
-  Serial.println (newState);  
-#endif  
-    OreBinState = newState;
-    //  Have to flip the state from what hardware reads
-    if (OreBinState != LOW)
-    {
-      //Serial.println ("Changing sensor state to ACTIVE");
-
-      if (sensorState[2] == ACTIVE && sensorState[4] == ACTIVE)
-      {
-        LocoNet.reportSensor(ORE_BIN_SENSOR, ACTIVE);        
-        LocoNet.reportSensor(EOT_LANTERN_WHITE, ACTIVE);
-      }
-    }
-    else
-    {
-      //Serial.println ("Changing sensor state to INACTIVE");
-
-      if (sensorState[2] == ACTIVE && sensorState[4] == ACTIVE)
-      { 
-        LocoNet.reportSensor(ORE_BIN_SENSOR, INACTIVE);                   
-        LocoNet.reportSensor(EOT_LANTERN_WHITE, INACTIVE);
-      } 
-    }   
-  }  
-  */
 	SoftwareServo::refresh();
 	delay(4);
 
@@ -233,6 +200,12 @@ void loop()   //****************************************************************
 						servoParams[i].current_position = servoParams[i].stop_value;
 						servoParams[i].inuse = 0;
 						servo[i].detach();
+						/*
+						if (i == 0)
+							LocoNet.reportSensor(CHUTE_LEFT_CMD, ACTIVE);
+						else
+							LocoNet.reportSensor(CHUTE_RIGHT_CMD, ACTIVE);
+						*/
 					}
 				}
 				if (servoParams[i].increment < 0) {
@@ -241,16 +214,22 @@ void loop()   //****************************************************************
 						servoParams[i].current_position = servoParams[i].start_value;
 						servoParams[i].inuse = 0;
 						servo[i].detach();
+						/*
+						if (i == 0)
+							LocoNet.reportSensor(CHUTE_LEFT_CMD, INACTIVE);
+						else
+							LocoNet.reportSensor(CHUTE_RIGHT_CMD, INACTIVE);
+							*/
 					}
 				}
 
 #ifdef DEBUG       
-        Serial.print (" Start position = ");
-        Serial.print (servoParams[i].start_value);
-        Serial.print (" Stop position = ");
-        Serial.print (servoParams[i].stop_value);        
-        Serial.print (" Servo position = ");
-        Serial.println(servoParams[i].current_position);
+				Serial.print (" Start position = ");
+				Serial.print (servoParams[i].start_value);
+				Serial.print (" Stop position = ");
+				Serial.print (servoParams[i].stop_value);
+				Serial.print (" Servo position = ");
+				Serial.println(servoParams[i].current_position);
 #endif        
 				servo[i].write(servoParams[i].current_position);
 				servo_slow_counter = 0;
@@ -262,15 +241,16 @@ void loop()   //****************************************************************
 /**
  *
  */
-void fadeOnOff(int lightPin, uint8_t state)
+/*
+void FoggyHollow.fadeLED(int lightPin, uint8_t state)
 {
-//#define fadedelay 36
+	//#define fadedelay 36
 #define fadestep 8
 
-int fadedelay = fadestep * fadestep;
+	int fadedelay = fadestep * fadestep;
 #ifdef DEBUG
-    Serial.print("In FadeOnOff, state = ");
-    Serial.println(state);
+	Serial.print("In FoggyHollow.fadeLED, state = ");
+	Serial.println(state);
 #endif
 	if (state != LOW)
 	{
@@ -295,18 +275,31 @@ int fadedelay = fadestep * fadestep;
 		for (int t = 1; t <= fadestep; t += 1)
 		{
 			digitalWrite( lightPin, HIGH);
-      delay(fadedelay - (fadedelay * (t / fadestep)));
+			delay(fadedelay - (fadedelay * (t / fadestep)));
 			digitalWrite( lightPin, LOW);
-      delay(fadedelay * (t / fadestep));      
+			delay(fadedelay * (t / fadestep));
 		}
 		digitalWrite(lightPin, LOW);
 	}
 }
-
+*/
 // Callbacks from LocoNet.processSwitchSensorMessage() ...
 // We tie into the ones connected to turnouts so we can capture anything
-// that can change (or indicatea change to) a turnout's position.
-
+// that can change (or indicates change to) a turnout's position.
+//
+//---------------------------------------------------------------------------------------
+//
+// notifyPower - used to trigger reporting of sensor state when JMRI powers up.
+//
+//---------------------------------------------------------------------------------------
+//
+void notifyPower(uint8_t state)
+{
+	if (state)
+	{
+		reportSensors();
+	}
+}
 //
 //---------------------------------------------------------------------------------------
 //
@@ -324,102 +317,102 @@ void notifySensor( uint16_t address, uint8_t state )
 	Serial.print (" Address = ");
 	Serial.println (address);
 #endif
-  
-  int idx = 0;
-	if (address >= GATE_LIGHT && address <= EOT_LANTERN_RED)
+}
+/**
+*
+*/
+void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t state )
+{
+#ifdef DEBUG
+	Serial.print ("In notifySwitchRequest, Address = ");
+	Serial.print (address);
+	Serial.print (" Output = ");
+	Serial.print (output);
+	Serial.print (" state = ");
+	Serial.println (state);
+#endif
+	int idx = 0;
+	if (address >= GATE_LIGHT_CMD && address <= EOT_LANTERN_RED_CMD)
 	{
-		sensorState[address - GATE_LIGHT] = state;
+		if (address == CHUTE_RIGHT_CMD || address == CHUTE_LEFT_CMD)
+		{
+			idx = address - CHUTE_LEFT_CMD;
+			if (servoParams[idx].inuse == 0)  {
+				servoParams[idx].inuse = 1;
+				if (address == CHUTE_LEFT_CMD)
+				{
+					servo[idx].attach(CHUTE_LEFT_PIN);
+					if (state != INACTIVE)
+					{
+						servoParams[idx].increment = 1;
+						servoParams[idx].stop_value = 180; // Stop
+					}
+					else
+					{
+						servoParams[idx].increment = -1;
+						servoParams[idx].stop_value = 0;  // Start
+					}
+				}
+				else
+				{
+					servo[idx].attach(CHUTE_RIGHT_PIN);
+					if (state != INACTIVE)
+					{
+						servoParams[idx].increment = 1;
+						servoParams[idx].stop_value = 180; // Stop
+					}
+					else
+					{
+						servoParams[idx].increment = -1;
+						servoParams[idx].stop_value = 0;  // Start
+					}
+				}
+			}
+		}
 
-  	switch (address)
-  	{
-  	case CHUTE_RIGHT :
-  	case CHUTE_LEFT :
-      idx = address - CHUTE_LEFT;
-  		if (servoParams[idx].inuse == 0)  {
-  			servoParams[idx].inuse = 1;
-  			if (address == CHUTE_LEFT)
-  			{
-  				servo[idx].attach(CHUTE_LEFT_PIN);
-  				if (state == ACTIVE)
-  				{
-  					servoParams[idx].increment = 1;
-  					servoParams[idx].stop_value = 180; // Stop
-  				}
-  				else
-  				{
-  					servoParams[idx].increment = -1;
-  					servoParams[idx].stop_value = 0;  // Start
-  				}
-  			}
-  			else
-  			{
-  				servo[idx].attach(CHUTE_RIGHT_PIN);
-  				if (state == ACTIVE)
-  				{
-  					servoParams[idx].increment = 1;
-  					servoParams[idx].stop_value = 180; // Stop
-  				}
-  				else
-  				{
-  					servoParams[idx].increment = -1;
-  					servoParams[idx].stop_value = 0;  // Start
-  				}
-  			}
-  		}
-  
-  		break;
-  
-  	case BRIDGE_LEFT :
-  		fadeOnOff(BRIDGE_LEFT_PIN, state);
-  		break;
-  	case BRIDGE_RIGHT :
-  		fadeOnOff(BRIDGE_RIGHT_PIN, state);
-  		break;
-  	case CHUTE_LIGHT :
-  		fadeOnOff(CHUTE_LIGHT_PIN, state);
-  		break;
-    case GATE_LIGHT :
-      fadeOnOff(GATE_LIGHT_PIN, state);
-      break;    
-      
-  	case INSIDE_LIGHTS :
-  		fadeOnOff(INSIDE_LEFT_PIN, state);
-  		delay(2000);
-  		fadeOnOff(INSIDE_RIGHT_PIN, state);
-  		break;
-  
-    //
-    // EOT Lantern only allow one LED on at a time....but both can be off.
-  	case EOT_LANTERN_WHITE :
-      if (state == ACTIVE)
-      {
-        //digitalWrite(EOT_LANTERN_RED_PIN, 0);     
-        fadeOnOff(EOT_LANTERN_WHITE_PIN, state);
-        LocoNet.reportSensor(EOT_LANTERN_RED, INACTIVE);   
-      }
-      else
-      {
-        digitalWrite(EOT_LANTERN_WHITE_PIN, 0);      
-      }
-  		break;
-    case EOT_LANTERN_RED :
-      if (state == ACTIVE)
-      {
-        //digitalWrite(EOT_LANTERN_WHITE_PIN, 0);
-        LocoNet.reportSensor(EOT_LANTERN_WHITE, INACTIVE);     
-        fadeOnOff(EOT_LANTERN_RED_PIN, state);      
-      }
-      else
-      {
-        digitalWrite(EOT_LANTERN_RED_PIN, 0);      
-      }
-      break;
-  	}
-
-    if (JMRI_ACTIVE == false)
-    {
-      JMRI_ACTIVE = true;
-      reportSensors();
-    }
+		for (int l=0; l<numLights; l++)
+		{
+			if (address == light[l]->onCmd)
+			{
+				if (address == INSIDE_LIGHTS_CMD)
+				{
+					FoggyHollow.fadeLED(light[l], state);
+					delay(2000);
+					FoggyHollow.fadeLED(light[l+1], state);
+				}
+				else if (address == EOT_LANTERN_WHITE_CMD)
+				{
+					if (state != INACTIVE)
+					{
+						FoggyHollow.fadeLED(light[3], ACTIVE);
+						FoggyHollow.fadeLED(light[4], INACTIVE);
+						LocoNet.reportSensor(EOT_LANTERN_RED_CMD, INACTIVE);
+						LocoNet.requestSwitch(EOT_LANTERN_RED_CMD, output, INACTIVE);
+					}
+					else
+					{
+						FoggyHollow.fadeLED(light[3], INACTIVE);
+					}
+				}
+				else if (address == EOT_LANTERN_RED_CMD)
+				{
+					if (state != INACTIVE)
+					{
+						FoggyHollow.fadeLED(light[l-1], INACTIVE);
+						FoggyHollow.fadeLED(light[l], ACTIVE);
+						LocoNet.reportSensor(EOT_LANTERN_WHITE_CMD, INACTIVE);
+						//LocoNet.requestSwitch(EOT_LANTERN_WHITE_CMD, output, INACTIVE);
+					}
+					else
+					{
+						FoggyHollow.fadeLED(light[l], INACTIVE);
+					}
+				}
+				else
+				{
+					FoggyHollow.fadeLED(light[l], state);
+				}
+			}
+		}
 	}
 }

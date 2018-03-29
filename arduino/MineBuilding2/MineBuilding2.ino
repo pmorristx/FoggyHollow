@@ -1,4 +1,4 @@
-#define DEBUG
+//#define DEBUG
 //
 //********************************************************************************
 //
@@ -8,9 +8,13 @@
 //********************************************************************************
 //
 #include <LocoNet.h>
+#include <Arduino.h>
 
 const uint8_t ACTIVE = 16;
 const uint8_t INACTIVE = 0;
+
+const uint8_t SWITCH_ON = 32; // Light ON
+const uint8_t SWITCH_OFF = 0; // Light OFF
 
 const uint8_t ON = 1;
 const uint8_t OFF = 0;
@@ -29,6 +33,7 @@ const int loadingDockDim = 146;
 const int surface2Dim = 147;
 const int surface3Dim = 148;
 const int roofSignDim = 149;
+const int surface2Light2Cmd = 150;
 
 //
 // Pin connections
@@ -41,11 +46,12 @@ const int roofSignPin2 = 6;
 const int LN_TX_PIN = 7;
 const int LN_RX_PIN = 8;
 
-const int surface2Pin = 9;
+const int surface2Pin1 = 9;
 const int surface3Pin1 = 10;
 const int surface3Pin2 = 11;
+const int surface2Pin2 = 12;
 
-const int numLights = 8;
+const int numLights = 9;
 
 struct LIGHT_DEF
 {
@@ -93,6 +99,7 @@ void setup()
 		light[i]->isDimming = false;
 		light[i]->isBrightening = false;
 		light[i]->counter = 0;
+		light[i]->dimCmd = NULL;
 	}
 
 	//
@@ -100,41 +107,45 @@ void setup()
 	light[0]->pin = loadingDockPin;
 	light[1]->pin = sideDoorPin;
 	light[2]->pin = surface1Pin;
-	light[3]->pin = surface2Pin;
-	light[4]->pin = surface3Pin1;
-	light[5]->pin = surface3Pin2;
-	light[6]->pin = roofSignPin1;
-	light[7]->pin = roofSignPin2;
+	light[3]->pin = surface2Pin1;
+	light[4]->pin = surface2Pin2;
+	light[5]->pin = surface3Pin1;
+	light[6]->pin = surface3Pin2;
+	light[7]->pin = roofSignPin1;
+	light[8]->pin = roofSignPin2;
 
 	light[0]->isPWM = true; // Loading Dock
 	light[3]->isPWM = false; // S2
-  light[3]->dimIntensity = 254; // S2
+	light[3]->dimIntensity = 254; // S2
+	light[4]->isPWM = false; // S2
+	light[4]->dimIntensity = 250; // S2
 
   // S3
-	light[4]->isPWM = false;
 	light[5]->isPWM = false;
-  light[4]->dimIntensity = 200;
+	light[6]->isPWM = false;
   light[5]->dimIntensity = 200;
+  light[6]->dimIntensity = 200;
  
-	light[6]->isPWM = true;
 	light[7]->isPWM = true;
+	light[8]->isPWM = true;
 
 	// Initialize on/off commands
 	light[0]->onCmd = loadingDockCmd;
 	light[1]->onCmd = sideDoorCmd;
 	light[2]->onCmd = surface1Cmd;
 	light[3]->onCmd = surface2Cmd;
-	light[4]->onCmd = surface3Cmd;
+	light[4]->onCmd = surface2Light2Cmd;
 	light[5]->onCmd = surface3Cmd;
-	light[6]->onCmd = roofSignCmd;
+	light[6]->onCmd = surface3Cmd;
 	light[7]->onCmd = roofSignCmd;
+	light[8]->onCmd = roofSignCmd;
 
   light[0]->dimCmd = loadingDockDim;
-	light[3]->dimCmd = surface2Dim;
-  light[4]->dimCmd = surface3Dim;
+  light[3]->dimCmd = surface2Dim;
   light[5]->dimCmd = surface3Dim;
-  light[6]->dimCmd = roofSignDim;
-  light[7]->dimCmd = roofSignDim;    
+  light[6]->dimCmd = surface3Dim;
+  light[7]->dimCmd = roofSignDim;
+  light[8]->dimCmd = roofSignDim;
 
 	for (int i = 0; i < numLights; i++)
 	{
@@ -223,7 +234,44 @@ void dimLight(LIGHT_DEF *light, int increment)
 		}
 	}
 }
+void fadeOnOff(int lightPin, uint8_t state)
+{
+#define fadedelay 24
+#define fadestep 12
 
+#ifdef DEBUG
+    Serial.print("In FadeOnOff, state = ");
+    Serial.println(state);
+#endif
+	if (state != LOW)
+	{
+#ifdef DEBUG
+		Serial.print("Turning fade ON, pin = ");
+		Serial.println(lightPin);
+#endif
+		for (int t = 0; t < fadestep; t += 1)
+		{
+			digitalWrite( lightPin, HIGH);
+			delay(fadedelay * (t / fadestep));
+			digitalWrite( lightPin, LOW);
+			delay(fadedelay - (fadedelay * (t / fadestep)));
+		}
+		digitalWrite( lightPin,  HIGH );
+	} else if (state == LOW) {
+#ifdef DEBUG
+		Serial.print("Turning fade OFF, pin = ");
+		Serial.println(lightPin);
+#endif
+		for (int t = 0; t < fadestep; t += 1)
+		{
+			digitalWrite( lightPin, LOW);
+			delay(fadedelay * (t / fadestep));
+			digitalWrite( lightPin, HIGH);
+			delay(fadedelay - (fadedelay * (t / fadestep)));
+		}
+		digitalWrite(lightPin, LOW);
+	}
+}
 //
 //---------------------------------------------------------------------------------------
 //
@@ -237,6 +285,12 @@ void notifyPower(uint8_t state)
 	{
 		for (int i = 0; i < numLights; i++)
 		{
+#ifdef DEBUG
+  Serial.print ("In notifyPower, Address = ");
+  Serial.print (light[i]->onCmd);
+#endif
+			/*
+
 			if (light[i]->currentIntensity == light[i]->maxIntensity)
 			{
 				LocoNet.reportSensor(light[i]->onCmd, ACTIVE);
@@ -255,6 +309,12 @@ void notifyPower(uint8_t state)
 				if (light[i]->dimCmd > 0)
 					LocoNet.reportSensor(light[i]->dimCmd, INACTIVE);
 			}
+			*/
+			LocoNet.reportSwitch(light[i]->onCmd);
+			if (light[i]->dimCmd != NULL)
+			{
+				LocoNet.reportSwitch(light[i]->dimCmd);
+			}
 		}
 	}
 }
@@ -265,16 +325,28 @@ void notifyPower(uint8_t state)
 //
 //---------------------------------------------------------------------------------------
 //
+/*
 void notifySensor(uint16_t address, uint8_t state)
 {
-
+}
+*/
+void notifySwitchRequest( uint16_t address, uint8_t output, uint8_t state )
+{
+#ifdef DEBUG
+  Serial.print ("In notifySwitchRequest, Address = ");
+  Serial.print (address);
+  Serial.print (" Output = ");
+  Serial.print (output);
+  Serial.print (" state = ");
+  Serial.println (state);
+#endif
 	for (int i = 0; i < numLights; i++)
 	{
 		if (address == light[i]->dimCmd)
 		{
-			light[i]->isDimming = (state == ACTIVE) && light[i]->isOn;
-			light[i]->isBrightening = (state == INACTIVE) && light[i]->isOn;
-			if (state == ACTIVE)
+			light[i]->isDimming = (state == SWITCH_ON) && light[i]->isOn;
+			light[i]->isBrightening = (state == SWITCH_OFF) && light[i]->isOn;
+			if (state == SWITCH_ON)
 			{
 				//Serial.println ("Setting dim");
 				light[i]->targetIntensity = light[i]->dimIntensity;
@@ -284,11 +356,12 @@ void notifySensor(uint16_t address, uint8_t state)
 				//Serial.println ("Unsetting dim");
 				light[i]->targetIntensity = light[i]->maxIntensity;
 			}
-			light[i]->isDimmed = state == ACTIVE;
+			light[i]->isDimmed = state == SWITCH_ON;
+			//LocoNet.reportSwitch(address);
 		}
 		else if (address == light[i]->onCmd)
 		{
-			if (state == INACTIVE)
+			if (state == SWITCH_OFF)
 			{
 				//Serial.println("Turning light off");
 				if (light[i]->isPWM)
@@ -299,7 +372,8 @@ void notifySensor(uint16_t address, uint8_t state)
 				}
 				else
 				{
-					digitalWrite(light[i]->pin, LOW);
+//					digitalWrite(light[i]->pin, LOW);
+					fadeOnOff(light[i]->pin, state);
 				}
 				light[i]->isOn = false;
 			}
@@ -321,10 +395,36 @@ void notifySensor(uint16_t address, uint8_t state)
 				}
 				else
 				{
-					digitalWrite(light[i]->pin, HIGH);
+					//digitalWrite(light[i]->pin, HIGH);
+					fadeOnOff(light[i]->pin, state);
 				}
 				light[i]->isOn = true;
 			}
+			//LocoNet.reportSwitch(address);
 		}
 	}
+}
+void notifySwitchReport( uint16_t Address, uint8_t Output, uint8_t Direction )
+{
+#ifdef DEBUG
+  Serial.print ("In notifySwitchReport, Address = ");
+  Serial.print (Address);
+  Serial.print (" Output = ");
+  Serial.print (Output);
+  Serial.print (" Direction = ");
+  Serial.println (Direction);
+#endif
+}
+
+
+void notifySwitchState( uint16_t Address, uint8_t Output, uint8_t Direction )
+{
+#ifdef DEBUG
+  Serial.print ("In notifySwitchState, Address = ");
+  Serial.print (Address);
+  Serial.print (" Output = ");
+  Serial.print (Output);
+  Serial.print (" Direction = ");
+  Serial.println (Direction);
+#endif
 }
