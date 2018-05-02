@@ -5,6 +5,22 @@ FoggyHollowClass::FoggyHollowClass()
 
 }
 
+void FoggyHollowClass::blinkLED(LIGHT_DEF *light)
+{
+	if (light->blinkCount++ > light->blinkRate1 && light->blinkPhase)
+	{
+		light->blinkCount = 0;
+		light->blinkPhase = !light->blinkPhase;
+		digitalWrite(light->pin, LOW);
+	}
+	else if (light->blinkCount++ > light->blinkRate2 && !light->blinkPhase)
+	{
+		light->blinkCount = 0;
+		light->blinkPhase = !light->blinkPhase;
+		digitalWrite(light->pin, HIGH);
+	}
+}
+
 void FoggyHollowClass::fadeLED(LIGHT_DEF *light, uint8_t requestedState)
 {
 	  int fade_time = 170;
@@ -62,6 +78,30 @@ void FoggyHollowClass::fadeOnOff(LIGHT_DEF *light, uint8_t state)
 		}
 		digitalWrite(lightPin, LOW);
 		light->isOn = false;
+	}
+}
+
+/**
+ *
+ */
+void FoggyHollowClass::flickerLED(LIGHT_DEF *light)
+{
+	if (light->isOn)
+	{
+		int phase = LOW;
+		if (light->flickerCount++ > light->flickerRate)
+		{
+			light->flickerCount = 0;
+			if (random(1,100) > 50) // Change phase (on/off) of LED to randomly keep the LED on longer or shorter
+			{
+				phase = HIGH;
+			}
+			else
+			{
+				phase = LOW;
+			}
+			digitalWrite(light->pin, phase);
+		}
 	}
 }
 

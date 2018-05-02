@@ -37,6 +37,16 @@ const uint8_t SWITCH_OFF = 0; // Light OFF
 		int counter = 0;
 		int dimCmd = -1;
 		int onCmd = -1;
+
+		bool isBlinking = false;
+		int blinkCount = 0;
+		int blinkRate1 = 128;
+		int blinkRate2 = 128;
+		boolean blinkPhase = false;
+
+		int flickerCount = 0;
+		int flickerRate = 500;
+		bool isFlickering = false;
 	};
 
 class FoggyHollowClass
@@ -45,5 +55,8 @@ class FoggyHollowClass
 		FoggyHollowClass();
 		void fadeOnOff(LIGHT_DEF *light, uint8_t state);
 		void fadeLED(LIGHT_DEF *light, uint8_t requestedState);
+		void blinkLED(LIGHT_DEF *light);
+		void flickerLED(LIGHT_DEF *light);
+
 };
 extern  FoggyHollowClass FoggyHollow;
