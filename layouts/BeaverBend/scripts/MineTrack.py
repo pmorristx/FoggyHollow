@@ -1,6 +1,7 @@
 import java
 #
 #  Script to shuttle mine train back & forth, turning on various lights, etc. along the way.
+#
 
 import sys
 sys.path.append("/home/pi/MyJMRI/lib/foggyhollow.jar")
