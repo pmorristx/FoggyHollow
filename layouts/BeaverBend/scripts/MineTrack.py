@@ -787,6 +787,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		if (self.automationSwitch.getState() != ACTIVE)	:
 			self.stopAnimation()
 		return
+	
 	#
 	#  Return northbound to mine after delay at building.
 	def returnToMine(self):
