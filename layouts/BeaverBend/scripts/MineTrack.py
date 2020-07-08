@@ -788,6 +788,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 			self.stopAnimation()
 		return
 	
+	
 	#
 	#  Return northbound to mine after delay at building.
 	def returnToMine(self):
