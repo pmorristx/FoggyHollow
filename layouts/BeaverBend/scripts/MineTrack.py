@@ -46,7 +46,11 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 	botDelayDemo = 20
 	
 	eotDelayLong = 7 * 60
-	botDelayLong = 8 * 60		
+	botDelayLong = 8 * 60
+
+        # Delay for coffee break
+        coffeeDelayLong = 10 * 60
+        coffeeDelayDemo = 2 * 60        
 	
 	#
 	#  Listen for user to turn the GUI automation switch off.  Stop the locomotive and turn lights on.			
@@ -59,6 +63,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		
 		def propertyChange(self, event) :
 			if (event.source.getState() != ACTIVE) :
+                                print "\n\n ### Stopping mine train animation ###\n\n"
 				self.parent.currentState = 999
 				try :
 					self.parent.locomotive.setSpeed(self.parent.stopSpeed)
@@ -76,7 +81,9 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 									
 				sensors.provideSensor("Red EOT Lantern").setState(ACTIVE)
 				sensors.provideSensor("IS:DIR").setState(UNKNOWN)	
-				
+
+				self.parent.departureBoard.stop()
+                                
 				self.parent.departureBoard.clearRow(1,True)
 				self.parent.departureBoard.clearRow(2,True)
 				self.parent.departureBoard.clearRow(0,True)
@@ -86,7 +93,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 				self.parent.departureBoard.setField("LocoDescr", "Foggy Hollow & Western RailRoad", 2, 0)	
 				self.parent.departureBoard.setField("LocoDescr", "Beaver Bend Division", 3, 0)							
 
-				self.parent.departureBoard.stop()
+
 			else :
 				self.parent.reseting = True
 				self.parent.currentState = 999
@@ -145,8 +152,8 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 	# Check for a delayed departure.  10% of the time delay by 5 minutes + up to 5 more minutes.
 	def checkForDelay(self):
 		import java
-		
-		if (java.util.Random().nextInt(100) <= 10) :
+
+		if (sensors.provideSensor("Demo Switch").getState == INACTIVE and java.util.Random().nextInt(100) <= 10) :
 			delaySeconds = 5*60 + java.util.Random().nextInt(5*60)
 			adjustedDelay = self.postDepartureTime(delaySeconds)
 			self.departureBoard.setField("Status", "DELAYED", self.trackNumber-1, 1)
@@ -171,7 +178,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		self.mineCar = Locomotive()
 		self.mineCar.init("Ace of Spades", 6)
 		
-
+                self.tripCounter = 0
 		self.currentState = 999
 		self.automationSwitch = sensors.provideSensor("IS:MTS")	
 		self.automationSwitch.setState(INACTIVE);
@@ -256,10 +263,12 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		try :
 			#
 			#  Turn the animation switch off to stop any currently running locomotive.  Force reset to BOT next time animation is restarted.
-
-			blockList = blocks.getNamedBeanList()
+                        #try:
+			#        blockList = blocks.getNamedBeanList()
+		        #except:
+			#        print "Unexpected error in SetRosterIcon getting blockList: ", sys.exc_info()[0], sys.exc_info()[1]	                                
 					
-			rosterlist = jmri.jmrit.roster.Roster.instance().matchingList(None, None, memories.getMemory("Mine Locomotive").getValue(), None, None, None, None)		
+			rosterlist = jmri.jmrit.roster.Roster.getDefault().matchingList(None, None, memories.getMemory("Mine Locomotive").getValue(), None, None, None, None)		
 			for entry in rosterlist.toArray() :
 				print "Roster ", entry.getDccAddress(), " entry.getMfg()= ", entry.getMfg()
 				if ((entry.getDecoderFamily().startswith("Tsunami Steam")) or (entry.getDecoderFamily().startswith("WOW Sound")) or len(rosterlist) == 1):
@@ -275,12 +284,13 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 					# Break loco ID at 
 					locoids = entry.getId().split()
 					locoid = locoids[0] + " " + locoids[1].lstrip("0")
-					
-					for b in blockList:
-						if (b.getState() == jmri.Block.OCCUPIED) :
-							b.setValue(locoid)
-						else :
-							b.setValue("")						
+
+
+					#for b in blockList:
+					#	if (b.getState() == jmri.Block.OCCUPIED) :
+					#		b.setValue(locoid)
+					#	else :
+					#		b.setValue("")						
 							
 		except:
 			print "Unexpected error in SetRosterIcon: ", sys.exc_info()[0], sys.exc_info()[1]	
@@ -295,9 +305,10 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 			if (sensors.provideSensor("BOT").getState() != ACTIVE) :					
 				self.reseting = True
 				self.currentState = 999
+                                self.tripCounter = 0
 
 				self.departureBoard.clearRow(2, True)				
-				self.setDepartureBoard(self.getTrainNumber("NORTH"), str(self.trackNumber), "Beginning of Track", "RESET EXPRESS",  " ", " ", 2)
+				self.setDepartureBoard(self.getTrainNumber("NORTH"), str(self.trackNumber), "Beginning of Track", "RESET TRAIN LOCATION",  " ", " ", 2)
 
 				self.departureBoard.clearRow(1, False)
 				self.departureBoard.clearRow(3, False)												
@@ -322,7 +333,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		import sys
 		try :
 			self.locomotive.setSpeed(self.stopSpeed)
-			self.locomotive.changeDirection(Forward)				
+			self.locomotive.changeDirection("Forward")				
 			self.locomotive.setFunction("Light", True)  # Turn headlight on
 			self.locomotive.setFunction("Bell", False) # Turn bell off
 			self.locomotive.throttle.setF2(False) # Turn whistle off				
@@ -331,6 +342,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 			#self.waterFill(0.1) # Turn water fill off	
 			self.locomotive.setCabLight(True) # Turn cab light on
 			self.mineCar.setFunction("Light", True)
+
 		except:
 			print "Unexpected error in SetRosterIcon: ", sys.exc_info()[0], sys.exc_info()[1]	
 							
@@ -343,12 +355,13 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 	def changeDirection(self, direction):
 
 		self.reseting = False
-		self.locomotive.changeDirection(direction)		
+		self.locomotive.changeDirection(direction)
+		self.mineCar.changeDirection(direction)
 		if (direction == "Reverse"):
-			self.mineCar.changeDirection("Forward")
+			#self.mineCar.changeDirection("Forward")
 			sensors.provideSensor("IS:DIR").setState(INACTIVE)
 		else :
-			self.mineCar.changeDirection("Reverse")
+			#self.mineCar.changeDirection("Reverse")
 			sensors.provideSensor("IS:DIR").setState(ACTIVE)	
 		return 0
 
@@ -373,7 +386,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 	#  Randomly blow out the boiler
 	def blowoutBoiler(self) :
 		import java
-		if (java.util.Random().nextInt(100) < 20) :
+		if (java.util.Random().nextInt(100) < 35) :
 			self.locomotive.steamRelease(1 + java.util.Random().nextInt(3))
 			self.needBoilerPurge = False
 		
@@ -385,6 +398,45 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		self.locomotive.waterFill(seconds)
 		self.departureBoard.clearField("Destination", 3, 0)		
 
+        #
+        #  Let the crew take a coffee break before heading back to the mine
+        def coffeeBreak(self, seconds):
+
+                #  Move train forward to EOT
+		self.changeDirection("Forward")	
+		self.waitMsec(300)
+		self.locomotive.setBrake(False)
+		self.waitMsec(500)
+		self.locomotive.ringBell(True) # Start ringing bell
+		self.waitMsec(500)
+		self.locomotive.tootWhistle(2)                
+		self.waitMsec(3000)			
+		self.locomotive.setSpeed(self.creepSpeed);
+
+
+                # Wait for train to get to EOT
+		self.waitSensorActive(sensors.provideSensor("EOT"))
+		self.waitMsec(5000)
+                
+                # Stop the train at EOT
+		self.locomotive.setSpeed(self.stopSpeed);
+		self.waitMsec(100)
+		self.locomotive.tapBrake(2)
+
+		self.waitMsec(100)
+		self.locomotive.ringBell(False) # Quit ringing bell		
+				
+		self.waitMsec(1500)
+		self.locomotive.tootWhistle(1)			                
+
+                # Take a coffee break
+                breakString = str(int(round(seconds / 60))) + " MIN COFFEE BREAK"
+		self.departureBoard.setField("Destination", breakString, 3, 0)
+
+
+		self.waitMsec(seconds * 1000 )
+		self.departureBoard.clearField("Destination", 3, 0)		                
+                
 
 	def findPanelIcon(self, panelEditor, targetName) :
 		if (panelEditor != None) :
@@ -441,6 +493,9 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 	
 	def BOTAction(self):	
 		import java
+
+                self.waitMsec(1500)
+                
 		if (self.currentState == -2 or self.currentState == 999) :
 #			print "BOTAction"
 			
@@ -468,7 +523,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 					botDelay = self.botDelayDemo
 					
 				self.departureBoard.clearRow(2, True)
-				self.setDepartureBoard(self.getTrainNumber("SOUTH"), str(self.trackNumber), self.trainName, "ACE OF SPADES MINE", "     ", "ON TIME", 2)
+				self.setDepartureBoard(self.getTrainNumber("SOUTH"), str(self.trackNumber), self.trainName, "ACE OF SPADES #2", "     ", "ON TIME", 2)
 				secsToDepart = self.postDepartureTime(botDelay)
 				self.waitMsec(secsToDepart * 1000) #  Still have to wait here to prevent train from moving.
 				
@@ -480,7 +535,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 
 				self.locomotive.setSpeed(self.stopSpeed)
 				self.departureBoard.clearRow(2, True)				
-				self.setDepartureBoard(self.getTrainNumber("SOUTH"), str(self.trackNumber), self.trainName, "ACE OF SPADES MINE", "     ", "ON TIME", 2)				
+				self.setDepartureBoard(self.getTrainNumber("SOUTH"), str(self.trackNumber), self.trainName, "ACE OF SPADES #2", "     ", "ON TIME", 2)				
 				self.departureBoard.createRandomRow(0, 0);
 				self.departureBoard.createRandomRow(1, 10);			
 				
@@ -502,7 +557,12 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 				self.locomotive.setBrake(False)
 				self.locomotive.setSpeed(self.fastSpeed * self.speedScale) # Start moving forward
 				self.departureBoard.setField("Status", "DEPARTD", self.trackNumber-1, 4)
-			
+
+                                self.tripCounter = self.tripCounter + 1
+		                sensors.provideSensor("IS:SERVICENEEDED").setState(INACTIVE)
+		                sensors.provideSensor("IS:SERVICELIGHT").setState(INACTIVE)                                                
+			        if (java.util.Random().nextInt(100) < 50 or self.tripCounter == 1) :
+                                        sensors.provideSensor("IS:SERVICENEEDED").setState(ACTIVE)
 				#
 				#  Turn the sound back on...
 				#self.throttle.setF8(False)													
@@ -548,7 +608,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 			self.locomotive.setSpeed(speed)
 			self.locomotive.setCabLight(False) # Turn cab light off
 
-			self.waitMsec(1500)
+			self.waitMsec(4000)
 			self.blowoutBoiler()
 		return
 	
@@ -657,7 +717,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		self.locomotive.reverseWhistle()
 		self.waitMsec(3000)			
 		self.locomotive.setSpeed(self.extraSlowSpeed);
-		self.waitMsec(10000)			
+		self.waitMsec(18000)			
 				
 		self.locomotive.tapBrake(2)
 
@@ -671,7 +731,8 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		self.waitMsec(4000)
 		self.locomotive.stopWhistle()
 		
-		sensors.provideSensor("IS:SERVICELIGHT").setState(ACTIVE)
+		sensors.provideSensor("IS:SERVICENEEDED").setState(INACTIVE)
+		sensors.provideSensor("IS:SERVICELIGHT").setState(ACTIVE)                
 		
 		self.setLocomotiveDescription()
 
@@ -700,8 +761,8 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		self.waitMsec(1500)
 		self.locomotive.setSpeed(self.extraSlowSpeed)
 		#
-		#  Wait for EOT sensor, then stop
-		self.waitMsec(15500)	
+		#  Move forward and wait in building
+		self.waitMsec(14500)	
 		self.locomotive.setBrake(True)
 		self.waitMsec(1000)
 		self.locomotive.setSpeed(self.stopSpeed)	
@@ -709,13 +770,20 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		self.waitMsec(1000)
 		self.locomotive.tootWhistle(1)
 
-		self.waitMsec(30 + java.util.Random().nextInt(30) * 1000)
+		self.waitMsec(15 + java.util.Random().nextInt(30) * 1000)
 		self.waterFill(30)
-		self.waitMsec(45 + java.util.Random().nextInt(30) * 1000)
+		self.waitMsec(60 + java.util.Random().nextInt(30) * 1000)
 		#
 		#  Service complete
 		self.clearLocomotiveDescription()
-		sensors.provideSensor("IS:SERVICELIGHT").setState(INACTIVE)	
+		sensors.provideSensor("IS:SERVICELIGHT").setState(INACTIVE)
+
+		if (self.automationSwitch.getState() == ACTIVE)	:
+		        coffeeDelay = (self.coffeeDelayLong + java.util.Random().nextInt(self.coffeeDelayLong))
+		        if (sensors.provideSensor("Demo Switch").getState() == ACTIVE) :
+		                coffeeDelay = self.coffeeDelayDemo                
+                        self.coffeeBreak(coffeeDelay)
+                        
 		if (self.automationSwitch.getState() != ACTIVE)	:
 			self.stopAnimation()
 		return		
@@ -764,15 +832,15 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 			sensors.provideSensor("IS:DIR").setState(UNKNOWN)			
 
 			#
-			#  Service Locomotive 60% of the time	
-			if (java.util.Random().nextInt(100) < 60) :
+			#  Service Locomotive when indicated	
+                        if (sensors.provideSensor("IS:SERVICENEEDED").getState() == ACTIVE):
 				self.serviceLocomotive()
 						
 			eotDelay = (self.eotDelayLong + java.util.Random().nextInt(self.eotDelayLong))
 			if (sensors.provideSensor("Demo Switch").getState() == ACTIVE) :
 				eotDelay = self.eotDelayDemo
 			
-			self.setDepartureBoard(self.getTrainNumber("NORTH"), str(self.trackNumber), self.trainName,  "MYSTIC SPRINGS", "     ", "ON TIME", 2)
+			self.setDepartureBoard(self.getTrainNumber("NORTH"), str(self.trackNumber), self.trainName,  "DEVIL'S GULCH", "     ", "ON TIME", 2)
 			secsToDepart = self.postDepartureTime(eotDelay)
 			# Hide the direction indicator
 			sensors.provideSensor("IS:DIR").setState(UNKNOWN)		
