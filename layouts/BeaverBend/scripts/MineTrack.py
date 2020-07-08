@@ -193,7 +193,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		self.slowSpeed = 14 * self.locomotive.throttle.getSpeedIncrement()
 		self.extraSlowSpeed = 12 * self.locomotive.throttle.getSpeedIncrement()
 		self.creepSpeed = 8 * self.locomotive.throttle.getSpeedIncrement()
-		
+	
 		#
 		#  Listen for user to turn off the animation switch
 		stopTrainListener = self.StopTrainListener()
