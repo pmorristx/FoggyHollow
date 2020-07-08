@@ -777,7 +777,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		#  Service complete
 		self.clearLocomotiveDescription()
 		sensors.provideSensor("IS:SERVICELIGHT").setState(INACTIVE)
-
+		
 		if (self.automationSwitch.getState() == ACTIVE)	:
 		        coffeeDelay = (self.coffeeDelayLong + java.util.Random().nextInt(self.coffeeDelayLong))
 		        if (sensors.provideSensor("Demo Switch").getState() == ACTIVE) :
