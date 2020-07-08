@@ -3,9 +3,9 @@
 <layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-2-9-6.xsd">
   <jmriversion>
     <major>4</major>
-    <minor>10</minor>
-    <test>0</test>
-    <modifier>ish</modifier>
+    <minor>13</minor>
+    <test>5</test>
+    <modifier />
   </jmriversion>
   <sensors class="jmri.jmrix.internal.configurexml.InternalSensorManagerXml">
     <defaultInitialState>unknown</defaultInitialState>
@@ -13,6 +13,9 @@
       <goingActive>300</goingActive>
       <goingInActive>300</goingInActive>
     </globalDebounceTimers>
+    <sensor inverted="false">
+      <systemName>ISCLOCKRUNNING</systemName>
+    </sensor>
     <sensor inverted="false">
       <systemName>IS16:CCK</systemName>
       <userName>Code Send Indicator</userName>
@@ -132,45 +135,59 @@
     </sensor>
     <sensor inverted="false">
       <systemName>IS:SERVICELIGHT</systemName>
+      <userName>Men Working</userName>      
     </sensor>
     <sensor inverted="false">
+      <systemName>IS:SERVICENEEDED</systemName>
+      <userName>Locomotive Service Needed</userName>
+    </sensor>    
+    <sensor inverted="false">
       <systemName>IS:STA1:K</systemName>
+      <userName>Station Order Board Light Indicator</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA1:OFF</systemName>
+      <userName>Station Order Board Light Off</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA1:ON</systemName>
+      <userName>Station Order Board Light On</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA2:K</systemName>
+      <userName>Station Master Light Indicator</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA2:OFF</systemName>
+      <userName>Station Master Light Off</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA2:ON</systemName>
+      <userName>Station Master Light On</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA3:K</systemName>
+      <userName>Station Tower Light Indicator</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA3:OFF</systemName>
+      <userName>Station Tower Light Off</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA3:ON</systemName>
+      <userName>Station Tower Light On</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA4:K</systemName>
+      <userName>Station Sign Light Indicator</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA4:OFF</systemName>
+      <userName>Station Sign Light Off</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>IS:STA4:ON</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>ISCLOCKRUNNING</systemName>
+      <userName>Station Sign Light On</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>ISIS:RTE:WATEROFF</systemName>
@@ -193,39 +210,6 @@
       <systemName>LS1</systemName>
       <userName>Bridge-1</userName>
       <useGlobalDebounceTimer>yes</useGlobalDebounceTimer>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS10</systemName>
-      <comment>Plug-Orange/White</comment>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS11</systemName>
-      <userName>Mine North Light</userName>
-      <comment>Brown</comment>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS12</systemName>
-      <comment>Brown/White</comment>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS13</systemName>
-      <userName>Mine Building Lights</userName>
-      <comment>Green</comment>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS14</systemName>
-      <userName>White EOT Lantern</userName>
-      <comment>Green/White</comment>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS15</systemName>
-      <userName>Mine South Light</userName>
-      <comment>Orange</comment>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS16</systemName>
-      <userName>Red EOT Lantern</userName>
-      <comment>Orange/White</comment>
     </sensor>
     <sensor inverted="false">
       <systemName>LS2</systemName>
@@ -264,6 +248,39 @@
       <systemName>LS8</systemName>
     </sensor>
     <sensor inverted="false">
+      <systemName>LS10</systemName>
+      <comment>Plug-Orange/White</comment>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS11</systemName>
+      <userName>Mine North Light</userName>
+      <comment>Brown</comment>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS12</systemName>
+      <comment>Brown/White</comment>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS13</systemName>
+      <userName>Mine Building Lights</userName>
+      <comment>Green</comment>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS14</systemName>
+      <userName>White EOT Lantern</userName>
+      <comment>Green/White</comment>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS15</systemName>
+      <userName>Mine South Light</userName>
+      <comment>Orange</comment>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS16</systemName>
+      <userName>Red EOT Lantern</userName>
+      <comment>Orange/White</comment>
+    </sensor>
+    <sensor inverted="false">
       <systemName>LS9</systemName>
       <comment>Plug-Orange</comment>
     </sensor>
@@ -300,19 +317,25 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
+    <memory value="4:13 PM">
+      <systemName>IMCURRENTTIME</systemName>
+    </memory>
+    <memory value="1.0">
+      <systemName>IMRATEFACTOR</systemName>
+    </memory>
     <memory value="0">
       <systemName>IM20:H1</systemName>
     </memory>
-    <memory value="8">
+    <memory value="4">
       <systemName>IM20:H2</systemName>
     </memory>
     <memory value=":">
       <systemName>IM20:H3</systemName>
     </memory>
-    <memory value="4">
+    <memory value="1">
       <systemName>IM20:M1</systemName>
     </memory>
-    <memory value="9">
+    <memory value="3">
       <systemName>IM20:M2</systemName>
     </memory>
     <memory value="N">
@@ -330,7 +353,7 @@
     <memory value="Mystic Springs">
       <systemName>IM:1:DST</systemName>
     </memory>
-    <memory value="">
+    <memory value="Deprted">
       <systemName>IM:1:RMK</systemName>
     </memory>
     <memory value="Night Owl Flyer">
@@ -348,7 +371,7 @@
     <memory value="Mystic Springs">
       <systemName>IM:2:DST</systemName>
     </memory>
-    <memory value="">
+    <memory value="Deprted">
       <systemName>IM:2:RMK</systemName>
     </memory>
     <memory value="Weekend Escape">
@@ -366,7 +389,7 @@
     <memory value="Foggy Hollow">
       <systemName>IM:3:DST</systemName>
     </memory>
-    <memory value="">
+    <memory value="Deprted">
       <systemName>IM:3:RMK</systemName>
     </memory>
     <memory value="Weekend Escape">
@@ -1018,11 +1041,1061 @@
       <userName>Roster ID</userName>
       <comment>Selected loco ID on mine track panel</comment>
     </memory>
-    <memory value="8:49 PM">
-      <systemName>IMCURRENTTIME</systemName>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C0</systemName>
     </memory>
-    <memory value="1.0">
-      <systemName>IMRATEFACTOR</systemName>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C0</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C1</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C1</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C2</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C2</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C3</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C3</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C4</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C4</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C5</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C5</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C6</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C6</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C7</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C7</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C8</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C8</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C9</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C9</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C10</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C10</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C11</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C11</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C12</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C12</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C13</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C13</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C14</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C14</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C15</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C15</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C16</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C16</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C17</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C17</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C18</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C18</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C19</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C19</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C20</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C20</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C21</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C21</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C22</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C22</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C23</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C23</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C24</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C24</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C25</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C25</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C26</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C26</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C27</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C27</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C28</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C28</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C29</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C29</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C30</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C30</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C31</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C31</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C32</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C32</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C33</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C33</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C34</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C34</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C35</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C35</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C36</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C36</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C37</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C37</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C38</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C38</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C39</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C39</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C40</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C40</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C41</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C41</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C42</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C42</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C43</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R0C43</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C0</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C0</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C1</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C1</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C2</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C2</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C3</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C3</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C4</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C4</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C5</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C5</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C6</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C6</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C7</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C7</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C8</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C8</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C9</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C9</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C10</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C10</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C11</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C11</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C12</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C12</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C13</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C13</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C14</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C14</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C15</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C15</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C16</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C16</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C17</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C17</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C18</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C18</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C19</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C19</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C20</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C20</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C21</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C21</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C22</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C22</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C23</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C23</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C24</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C24</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C25</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C25</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C26</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C26</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C27</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C27</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C28</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C28</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C29</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C29</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C30</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C30</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C31</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C31</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C32</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C32</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C33</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C33</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C34</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C34</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C35</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C35</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C36</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C36</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C37</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C37</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C38</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C38</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C39</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C39</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C40</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C40</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C41</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C41</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C42</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C42</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C43</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R1C43</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C0</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C0</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C1</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C1</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C2</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C2</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C3</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C3</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C4</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C4</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C5</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C5</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C6</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C6</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C7</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C7</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C8</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C8</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C9</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C9</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C10</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C10</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C11</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C11</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C12</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C12</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C13</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C13</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C14</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C14</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C15</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C15</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C16</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C16</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C17</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C17</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C18</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C18</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C19</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C19</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C20</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C20</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C21</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C21</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C22</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C22</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C23</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C23</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C24</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C24</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C25</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C25</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C26</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C26</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C27</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C27</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C28</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C28</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C29</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C29</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C30</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C30</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C31</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C31</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C32</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C32</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C33</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C33</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C34</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C34</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C35</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C35</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C36</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C36</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C37</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C37</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C38</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C38</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C39</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C39</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C40</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C40</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C41</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C41</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C42</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C42</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C43</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R2C43</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C0</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C0</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C1</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C1</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C2</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C2</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C3</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C3</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C4</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C4</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C5</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C5</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C6</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C6</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C7</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C7</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C8</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C8</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C9</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C9</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C10</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C10</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C11</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C11</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C12</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C12</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C13</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C13</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C14</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C14</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C15</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C15</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C16</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C16</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C17</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C17</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C18</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C18</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C19</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C19</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C20</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C20</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C21</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C21</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C22</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C22</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C23</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C23</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C24</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C24</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C25</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C25</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C26</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C26</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C27</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C27</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C28</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C28</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C29</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C29</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C30</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C30</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C31</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C31</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C32</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C32</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C33</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C33</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C34</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C34</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C35</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C35</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C36</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C36</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C37</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C37</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C38</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C38</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C39</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C39</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C40</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C40</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C41</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C41</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C42</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C42</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C43</systemName>
+    </memory>
+    <memory>
+      <systemName>IM:DEPARTURES:R3C43</systemName>
     </memory>
   </memories>
   <signalmasts class="jmri.managers.configurexml.DefaultSignalMastManagerXml">
@@ -1361,19 +2434,6 @@
         <lockTurnouts>no</lockTurnouts>
       </destinationMast>
     </signalmastlogic>
-    <signalmastlogic source="SM-4-S">
-      <sourceSignalMast>SM-4-S</sourceSignalMast>
-      <destinationMast destination="SM-5-S">
-        <destinationSignalMast>SM-5-S</destinationSignalMast>
-        <comment />
-        <enabled>yes</enabled>
-        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
-        <useLayoutEditor>yes</useLayoutEditor>
-        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
-        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
-        <lockTurnouts>no</lockTurnouts>
-      </destinationMast>
-    </signalmastlogic>
     <signalmastlogic source="SM-2-S">
       <sourceSignalMast>SM-2-S</sourceSignalMast>
       <destinationMast destination="SM-3-S">
@@ -1391,6 +2451,19 @@
       <sourceSignalMast>SM-3-S</sourceSignalMast>
       <destinationMast destination="SM-4-S">
         <destinationSignalMast>SM-4-S</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-4-S">
+      <sourceSignalMast>SM-4-S</sourceSignalMast>
+      <destinationMast destination="SM-5-S">
+        <destinationSignalMast>SM-5-S</destinationSignalMast>
         <comment />
         <enabled>yes</enabled>
         <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
@@ -1556,15 +2629,15 @@
       <userName>Water Tower Turnout  Monitor</userName>
       <logixConditional systemName="IXLX24:TC1" order="0" />
     </logix>
-    <logix userName="Water Tower" enabled="yes">
-      <systemName>IXLX:24</systemName>
-      <userName>Water Tower</userName>
-      <logixConditional systemName="IXLX:24C1" order="0" />
-    </logix>
     <logix userName="Tower Light" enabled="yes">
       <systemName>IXLX:3</systemName>
       <userName>Tower Light</userName>
       <logixConditional systemName="IXLX:3C1" order="0" />
+    </logix>
+    <logix userName="Water Tower" enabled="yes">
+      <systemName>IXLX:24</systemName>
+      <userName>Water Tower</userName>
+      <logixConditional systemName="IXLX:24C1" order="0" />
     </logix>
     <logix userName="Switch 21 Lever" enabled="yes">
       <systemName>LX21:L</systemName>
@@ -1587,8 +2660,6 @@
     <conditional systemName="IS22C1" antecedent="R1" logicType="1" triggerOnChange="yes">
       <systemName>IS22C1</systemName>
       <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS22:BO" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/gear turning.wav" />
       <conditionalAction option="1" type="9" systemName="IS22:K" data="4" delay="0" string="" />
       <conditionalAction option="1" type="2" systemName="NT1" data="2" delay="0" string="" />
       <conditionalAction option="2" type="9" systemName="IS22:K" data="2" delay="0" string="" />
@@ -1635,8 +2706,8 @@
       <systemName>IX:AUTO:0005C1</systemName>
       <userName>White EOT Lantern</userName>
       <conditionalStateVariable operator="4" negated="no" type="1" systemName="Mine Building" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalStateVariable operator="3" negated="yes" type="1" systemName="EOT" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalStateVariable operator="3" negated="yes" type="1" systemName="Red EOT Lantern" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="1" negated="yes" type="1" systemName="EOT" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="1" negated="yes" type="1" systemName="Red EOT Lantern" dataString="" num1="0" num2="0" triggersCalc="yes" />
       <conditionalStateVariable operator="1" negated="no" type="1" systemName="Direction" dataString="" num1="0" num2="0" triggersCalc="yes" />
       <conditionalAction option="1" type="10" systemName="White EOT Lantern" data="2" delay="24" string="24" />
       <conditionalAction option="2" type="9" systemName="White EOT Lantern" data="4" delay="0" string="" />
@@ -1659,8 +2730,6 @@
       <systemName>IX:AUTO:0009C1</systemName>
       <conditionalStateVariable operator="4" negated="no" type="1" systemName="Demo Switch" dataString="" num1="0" num2="0" triggersCalc="yes" />
       <conditionalStateVariable operator="5" negated="no" type="1" systemName="Mine Track Switch" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalAction option="1" type="15" systemName=" " data="-1" delay="0" string="program:resources/sounds/toggle-on.wav" />
-      <conditionalAction option="2" type="15" systemName=" " data="-1" delay="0" string="program:resources/sounds/toggle-off.wav" />
     </conditional>
     <conditional systemName="IXIS22RC1" userName="Train Order Control Red" antecedent="R1" logicType="1" triggerOnChange="yes">
       <systemName>IXIS22RC1</systemName>
@@ -1668,7 +2737,6 @@
       <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS22:TOBR" dataString="" num1="0" num2="0" triggersCalc="yes" />
       <conditionalAction option="1" type="9" systemName="IS22:TOBG" data="4" delay="0" string="" />
       <conditionalAction option="1" type="9" systemName="IS22:TOG" data="4" delay="0" string="" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
       <conditionalAction option="1" type="2" systemName="NT1" data="4" delay="0" string="" />
     </conditional>
     <conditional systemName="IXLX21:TC1" userName="LX21:T:Normal" antecedent="R1" logicType="1" triggerOnChange="yes">
@@ -1678,19 +2746,15 @@
       <conditionalAction option="3" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/SendReceiveRelay.py" />
       <conditionalAction option="1" type="10" systemName="IS21:NK" data="2" delay="18" string="18" />
       <conditionalAction option="1" type="10" systemName="IS21:RK" data="4" delay="1" string="1" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/EnhancedCTCRelayTrimmed.wav" />
       <conditionalAction option="1" type="9" systemName="IS21:L" data="2" delay="0" string="" />
       <conditionalAction option="2" type="10" systemName="IS21:NK" data="4" delay="1" string="1" />
       <conditionalAction option="2" type="10" systemName="IS21:RK" data="2" delay="18" string="18" />
       <conditionalAction option="2" type="9" systemName="IS21:L" data="4" delay="0" string="" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
     </conditional>
     <conditional systemName="IXLX22:TC1" userName="Order Board Turnout C1" antecedent="R1" logicType="1" triggerOnChange="yes">
       <systemName>IXLX22:TC1</systemName>
       <userName>Order Board Turnout C1</userName>
       <conditionalStateVariable operator="4" negated="no" type="4" systemName="NT1" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/gear turning.wav" />
       <conditionalAction option="1" type="9" systemName="IS22:K" data="4" delay="0" string="" />
       <conditionalAction option="1" type="9" systemName="IS22:BO" data="2" delay="0" string="" />
       <conditionalAction option="2" type="9" systemName="IS22:K" data="2" delay="0" string="" />
@@ -1707,8 +2771,6 @@
       <conditionalAction option="2" type="10" systemName="Turnout 23 Normal LED" data="4" delay="1" string="1" />
       <conditionalAction option="2" type="10" systemName="Turnout 23 Reverse LED" data="2" delay="18" string="18" />
       <conditionalAction option="2" type="2" systemName="NT23" data="4" delay="0" string="" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/EnhancedCTCRelayTrimmed.wav" />
     </conditional>
     <conditional systemName="IXLX23:TC1" userName="LX23:T:Normal" antecedent="R1" logicType="1" triggerOnChange="yes">
       <systemName>IXLX23:TC1</systemName>
@@ -1721,15 +2783,11 @@
       <conditionalAction option="2" type="10" systemName="Turnout 23 Normal LED" data="4" delay="1" string="1" />
       <conditionalAction option="2" type="10" systemName="Turnout 23 Reverse LED" data="2" delay="18" string="18" />
       <conditionalAction option="2" type="9" systemName="IS23:L" data="4" delay="0" string="" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/EnhancedCTCRelayTrimmed.wav" />
     </conditional>
     <conditional systemName="IXLX24:TC1" userName="IS24T1" antecedent="R1" logicType="1" triggerOnChange="yes">
       <systemName>IXLX24:TC1</systemName>
       <userName>IS24T1</userName>
       <conditionalStateVariable operator="4" negated="no" type="3" systemName="NT24" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/ChainPulley.wav" />
       <conditionalAction option="1" type="9" systemName="IS24:K" data="4" delay="0" string="" />
       <conditionalAction option="1" type="9" systemName="IS24:BO" data="2" delay="0" string="" />
       <conditionalAction option="2" type="9" systemName="IS24:K" data="2" delay="0" string="" />
@@ -1739,8 +2797,6 @@
       <systemName>IXLX:24C1</systemName>
       <userName>IS24C1</userName>
       <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS24:BO" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/ChainPulley.wav" />
       <conditionalAction option="1" type="9" systemName="IS24:K" data="4" delay="0" string="" />
       <conditionalAction option="1" type="2" systemName="NT24" data="4" delay="0" string="" />
       <conditionalAction option="2" type="9" systemName="IS24:K" data="2" delay="0" string="" />
@@ -1750,10 +2806,8 @@
       <systemName>IXLX:3C1</systemName>
       <userName>LX:3C1</userName>
       <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS:STA3:ON" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/toggle-on.wav" />
-      <conditionalAction option="1" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/RandomArc.py" />
-      <conditionalAction option="1" type="9" systemName="IS:STA3:K" data="2" delay="0" string="" />
-      <conditionalAction option="2" type="9" systemName="IS:STA3:K" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="9" systemName="Station Tower Light Indicator" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="Station Tower Light Indicator" data="4" delay="0" string="" />
       <conditionalAction option="2" type="9" systemName="IS:STA3:OFF" data="2" delay="0" string="" />
     </conditional>
     <conditional systemName="LX21:LC1" userName="LX21:Normal" antecedent="R1" logicType="1" triggerOnChange="yes">
@@ -1763,37 +2817,29 @@
       <conditionalAction option="3" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/SendReceiveRelay.py" />
       <conditionalAction option="1" type="10" systemName="IS21:NK" data="2" delay="18" string="18" />
       <conditionalAction option="1" type="10" systemName="IS21:RK" data="4" delay="1" string="1" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/EnhancedCTCRelayTrimmed.wav" />
       <conditionalAction option="1" type="2" systemName="Mystic Springs Turnout" data="2" delay="0" string="" />
       <conditionalAction option="2" type="10" systemName="IS21:NK" data="4" delay="1" string="1" />
       <conditionalAction option="2" type="10" systemName="IS21:RK" data="2" delay="18" string="18" />
       <conditionalAction option="2" type="2" systemName="Mystic Springs Turnout" data="4" delay="0" string="" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
     </conditional>
     <conditional systemName="LX:2C1" antecedent="R1" logicType="1" triggerOnChange="yes">
       <systemName>LX:2C1</systemName>
       <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS:STA2:ON" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/toggle-on.wav" />
-      <conditionalAction option="1" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/RandomArc.py" />
-      <conditionalAction option="1" type="9" systemName="IS:STA2:K" data="2" delay="0" string="" />
-      <conditionalAction option="2" type="9" systemName="IS:STA2:K" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="9" systemName="Station Master Light Indicator" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="Station Master Light Indicator" data="4" delay="0" string="" />
       <conditionalAction option="2" type="9" systemName="IS:STA2:OFF" data="2" delay="0" string="" />
     </conditional>
     <conditional systemName="LX:STA1C1" antecedent="R1" logicType="1" triggerOnChange="yes">
       <systemName>LX:STA1C1</systemName>
       <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS:STA1:ON" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalAction option="1" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
-      <conditionalAction option="1" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/RandomArc.py" />
       <conditionalAction option="1" type="9" systemName="IS:STA1:OFF" data="4" delay="0" string="" />
-      <conditionalAction option="1" type="9" systemName="IS:STA1:K" data="2" delay="0" string="" />
+      <conditionalAction option="1" type="9" systemName="Station Order Board Light Indicator" data="2" delay="0" string="" />
     </conditional>
     <conditional systemName="LX:STA1C2" antecedent="R1" logicType="1" triggerOnChange="yes">
       <systemName>LX:STA1C2</systemName>
       <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS:STA1:OFF" dataString="" num1="0" num2="0" triggersCalc="yes" />
-      <conditionalAction option="1" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/Switch-lever.wav" />
-      <conditionalAction option="1" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/RandomArc.py" />
       <conditionalAction option="1" type="9" systemName="IS:STA1:ON" data="4" delay="0" string="" />
-      <conditionalAction option="1" type="9" systemName="IS:STA1:K" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="9" systemName="Station Order Board Light Indicator" data="4" delay="0" string="" />
     </conditional>
   </conditionals>
   <timebase class="jmri.jmrit.simpleclock.configurexml.SimpleTimebaseXml" time="Mon Jul 13 11:22:25 CDT 2015" rate="1.0" run="yes" master="yes" sync="no" correct="no" display="no" startstopped="no" startsettime="no" startclockoption="0" showbutton="no" />
@@ -2136,22 +3182,25 @@
     <positionablelabel x="574" y="448" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Demo" size="16" style="1" red="192" green="192" blue="192" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
       <tooltip>Text Label</tooltip>
     </positionablelabel>
-    <sensoricon sensor="IS:SERVICELIGHT" x="330" y="437" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
-      <tooltip>IS:SERVICELIGHT</tooltip>
-      <active url="preference:resources/Controls/service-track-small-3.gif" degrees="0" scale="1.0">
+    <multisensoricon x="335" y="443" level="10" forcecontroloff="false" hidden="no" positionable="true" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <tooltip>Service Needed; Service Light</tooltip>
+      <active url="preference:resources/Controls/bluebutton-small.gif" degrees="0" scale="0.75" sensor="IS:SERVICELIGHT">
         <rotation>0</rotation>
       </active>
-      <inactive url="preference:resources/Controls/blue-dark-small.gif" degrees="0" scale="1.0">
+      <active url="preference:resources/Controls/red-blink.gif" degrees="0" scale="0.75" sensor="IS:SERVICENEEDED">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.75">
         <rotation>0</rotation>
       </inactive>
-      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="1.0">
+      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.75">
         <rotation>0</rotation>
       </unknown>
-      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="1.0">
+      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.75">
         <rotation>0</rotation>
       </inconsistent>
-      <iconmaps />
-    </sensoricon>
+    </multisensoricon>
+    
     <fastclock x="788" y="41" scale="1.0" color="black" class="jmri.jmrit.display.configurexml.AnalogClock2DisplayXml" />
   </paneleditor>
   <paneleditor class="jmri.jmrit.display.panelEditor.configurexml.PanelEditorXml" name="Beaver Bend" x="0" y="28" height="532" width="1001" editable="no" positionable="no" showtooltips="no" controlling="yes" hide="yes" panelmenu="no" scrollable="none">
@@ -2440,7 +3489,7 @@
       </inconsistent>
       <iconmaps />
     </sensoricon>
-    <sensoricon sensor="IS:STA1:K" x="561" y="209" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+    <sensoricon sensor="Station Order Board Light Indicator" x="561" y="209" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
       <tooltip>IS:STA1:K</tooltip>
       <active url="preference:resources/icons/misc/Indicators/DirtyRedOn.jpg" degrees="0" scale="0.25">
         <rotation>0</rotation>
@@ -2456,7 +3505,7 @@
       </inconsistent>
       <iconmaps />
     </sensoricon>
-    <sensoricon sensor="IS:STA2:K" x="663" y="156" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+    <sensoricon sensor="Station Master Light Indicator" x="663" y="156" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
       <tooltip>IS:STA2:K</tooltip>
       <active url="preference:resources/icons/misc/Indicators/redOn.GIF" degrees="0" scale="0.15">
         <rotation>0</rotation>
@@ -2472,7 +3521,7 @@
       </inconsistent>
       <iconmaps />
     </sensoricon>
-    <sensoricon sensor="IS:STA4:K" x="785" y="202" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+    <sensoricon sensor="Station Sign Light Indicator" x="785" y="202" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
       <tooltip>IS:STA4:K</tooltip>
       <active url="preference:resources/icons/misc/Indicators/MissingCoverOn.jpg" degrees="0" scale="0.7">
         <rotation>0</rotation>
@@ -2536,7 +3585,7 @@
       </inconsistent>
       <iconmaps />
     </sensoricon>
-    <sensoricon sensor="IS:STA3:K" x="704" y="156" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+    <sensoricon sensor="Station Tower Light Indicator" x="704" y="156" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
       <tooltip>IS:STA3:K</tooltip>
       <active url="preference:resources/icons/misc/Indicators/redOn.GIF" degrees="0" scale="0.15">
         <rotation>0</rotation>
@@ -2625,7 +3674,7 @@
     <memoryicon memory="IM:1:DIR" x="32" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:1:DIR</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:1:TNO" x="89" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:1:TNO" x="96" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:1:TNO</tooltip>
     </memoryicon>
     <memoryicon memory="IM:1:TNM" x="127" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
@@ -2637,31 +3686,31 @@
     <memoryicon memory="IM:1:DPRT" x="410" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:1:DPRT</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:1:RMK" x="465" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:1:RMK" x="425" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:1:RMK</tooltip>
     </memoryicon>
     <memoryicon memory="IM:2:DIR" x="32" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:2:DIR</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:2:TNO" x="89" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:2:TNO" x="96" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:2:TNO</tooltip>
     </memoryicon>
     <memoryicon memory="IM:2:TNM" x="127" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:2:TNM</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:2:DST" x="241" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:2:DST" x="239" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:2:DST</tooltip>
     </memoryicon>
     <memoryicon memory="IM:2:DPRT" x="410" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:2:DPRT</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:2:RMK" x="465" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:2:RMK" x="425" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:2:RMK</tooltip>
     </memoryicon>
     <memoryicon memory="IM:3:DIR" x="32" y="169" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:3:DIR</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:3:TNO" x="89" y="169" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:3:TNO" x="96" y="169" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:3:TNO</tooltip>
     </memoryicon>
     <memoryicon memory="IM:3:TNM" x="127" y="169" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
@@ -2673,13 +3722,13 @@
     <memoryicon memory="IM:3:DPRT" x="410" y="169" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:3:DPRT</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:3:RMK" x="401" y="169" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:3:RMK" x="425" y="169" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:3:RMK</tooltip>
     </memoryicon>
     <memoryicon memory="IM:4:DIR" x="32" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:4:DIR</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:4:TNO" x="89" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:4:TNO" x="96" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:4:TNO</tooltip>
     </memoryicon>
     <memoryicon memory="IM:4:TNM" x="127" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
@@ -2688,50 +3737,76 @@
     <memoryicon memory="IM:4:DST" x="239" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:4:DST</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:4:DPRT" x="358" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:4:DPRT" x="410" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:4:DPRT</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:4:RMK" x="403" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:4:RMK" x="425" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:4:RMK</tooltip>
     </memoryicon>
     <memoryicon memory="IM:5:DIR" x="32" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:5:DIR</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:5:TNO" x="89" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:5:TNO" x="96" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:5:TNO</tooltip>
     </memoryicon>
     <memoryicon memory="IM:5:TNM" x="127" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:5:TNM</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:5:DST" x="242" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:5:DST" x="241" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:5:DST</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:5:DPRT" x="359" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:5:DPRT" x="410" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:5:DPRT</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:5:RMK" x="421" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:5:RMK" x="425" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:5:RMK</tooltip>
     </memoryicon>
     <memoryicon memory="IM:6:DIR" x="32" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:6:DIR</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:6:TNO" x="89" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:6:TNO" x="96" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:6:TNO</tooltip>
     </memoryicon>
     <memoryicon memory="IM:6:TNM" x="127" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:6:TNM</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:6:DST" x="291" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:6:DST" x="239" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:6:DST</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:6:DPRT" x="291" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:6:DPRT" x="410" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:6:DPRT</tooltip>
     </memoryicon>
-    <memoryicon memory="IM:6:RMK" x="465" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM:6:RMK" x="425" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM:6:RMK</tooltip>
     </memoryicon>
   </paneleditor>
   <LayoutEditor class="jmri.jmrit.display.layoutEditor.configurexml.LayoutEditorXml" name="AoS Layout" x="0" y="15" height="960" width="1900" windowheight="60" windowwidth="60" panelheight="960" panelwidth="1900" sliders="no" scrollable="none" editable="no" positionable="yes" controlling="yes" animating="yes" showhelpbar="no" drawgrid="no" snaponadd="no" snaponmove="no" antialiasing="no" turnoutcircles="no" tooltipsnotedit="no" tooltipsinedit="yes" mainlinetrackwidth="4" xscale="1.0" yscale="1.0" sidetrackwidth="2" defaulttrackcolor="black" defaultoccupiedtrackcolor="red" defaultalternativetrackcolor="white" defaulttextcolor="black" turnoutcirclecolor="black" turnoutcirclesize="2" turnoutdrawunselectedleg="yes" turnoutbx="20.0" turnoutcx="20.0" turnoutwid="10.0" xoverlong="30.0" xoverhwid="10.0" xovershort="10.0" autoblkgenerate="yes" gridSize="10" gridSize2nd="10" openDispatcher="no" useDirectTurnoutControl="no">
+    <layoutTrackDrawingOptions name="AoS Layout" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutTrackDrawingOptionsXml">
+      <mainBallastColor>#000000</mainBallastColor>
+      <mainBallastWidth>0</mainBallastWidth>
+      <mainBlockLineDashPercentageX10>0</mainBlockLineDashPercentageX10>
+      <mainBlockLineWidth>4</mainBlockLineWidth>
+      <mainRailColor>#000000</mainRailColor>
+      <mainRailCount>1</mainRailCount>
+      <mainRailGap>0</mainRailGap>
+      <mainRailWidth>4</mainRailWidth>
+      <mainTieColor>#000000</mainTieColor>
+      <mainTieGap>0</mainTieGap>
+      <mainTieLength>0</mainTieLength>
+      <mainTieWidth>0</mainTieWidth>
+      <sideBallastColor>#000000</sideBallastColor>
+      <sideBallastWidth>0</sideBallastWidth>
+      <sideBlockLineDashPercentageX10>0</sideBlockLineDashPercentageX10>
+      <sideBlockLineWidth>2</sideBlockLineWidth>
+      <sideRailColor>#000000</sideRailColor>
+      <sideRailCount>1</sideRailCount>
+      <sideRailGap>0</sideRailGap>
+      <sideRailWidth>2</sideRailWidth>
+      <sideTieColor>#000000</sideTieColor>
+      <sideTieGap>0</sideTieGap>
+      <sideTieLength>0</sideTieLength>
+      <sideTieWidth>0</sideTieWidth>
+    </layoutTrackDrawingOptions>
     <BlockContentsIcon blockcontents="BOT" x="55" y="157" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.bolditalic" size="12" style="3" red="255" green="255" blue="255" hasBackground="no" fixedWidth="100" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.BlockContentsIconXml">
       <tooltip>BOT (IB11)</tooltip>
     </BlockContentsIcon>
@@ -2803,124 +3878,114 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Sat Feb 10 19:59:21 CST 2018</date>
+      <date>Sat Nov 24 09:10:23 CST 2018</date>
       <filename>JMRI program</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Sat Feb 10 19:59:45 CST 2018</date>
+      <date>Sat Nov 24 09:10:54 CST 2018</date>
       <filename>/home/pi/MyJMRI/panels/BeaverBendCombinedDepartureBoard.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Tue Jul 26 07:37:46 CDT 2016</date>
+          <date>Sat Feb 10 19:59:21 CST 2018</date>
           <filename>JMRI program</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Tue Jul 26 07:38:08 CDT 2016</date>
+          <date>Sat Feb 10 19:59:45 CST 2018</date>
           <filename>/home/pi/MyJMRI/panels/BeaverBendCombinedDepartureBoard.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Mon Jul 25 14:53:37 CDT 2016</date>
+              <date>Tue Jul 26 07:37:46 CDT 2016</date>
               <filename>JMRI program</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Mon Jul 25 14:54:01 CDT 2016</date>
+              <date>Tue Jul 26 07:38:08 CDT 2016</date>
               <filename>/home/pi/MyJMRI/panels/BeaverBendCombinedDepartureBoard.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Thu Jul 14 14:29:02 CDT 2016</date>
+                  <date>Mon Jul 25 14:53:37 CDT 2016</date>
                   <filename>JMRI program</filename>
                 </operation>
                 <operation>
-                  <type>Load with errors</type>
-                  <date>Thu Jul 14 14:29:42 CDT 2016</date>
+                  <type>Load OK</type>
+                  <date>Mon Jul 25 14:54:01 CDT 2016</date>
                   <filename>/home/pi/MyJMRI/panels/BeaverBendCombinedDepartureBoard.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Thu Jul 16 16:32:56 CDT 2015</date>
+                      <date>Thu Jul 14 14:29:02 CDT 2016</date>
                       <filename>JMRI program</filename>
                     </operation>
                     <operation>
-                      <type>Load OK</type>
-                      <date>Thu Jul 16 16:32:57 CDT 2015</date>
-                      <filename>/home/pi/MyJMRI/Beaver_Bend/UserPrefsProfileConfig.xml</filename>
-                    </operation>
-                    <operation>
-                      <type>Load OK</type>
-                      <date>Thu Jul 16 16:33:01 CDT 2015</date>
-                      <filename>/home/pi/MyJMRI/Beaver_Bend/ProfileConfig.xml</filename>
-                    </operation>
-                    <operation>
-                      <type>Load OK</type>
-                      <date>Thu Jul 16 16:33:17 CDT 2015</date>
+                      <type>Load with errors</type>
+                      <date>Thu Jul 14 14:29:42 CDT 2016</date>
                       <filename>/home/pi/MyJMRI/panels/BeaverBendCombinedDepartureBoard.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Thu Jul 16 14:28:59 CDT 2015</date>
+                          <date>Thu Jul 16 16:32:56 CDT 2015</date>
                           <filename>JMRI program</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Thu Jul 16 14:28:59 CDT 2015</date>
+                          <date>Thu Jul 16 16:32:57 CDT 2015</date>
                           <filename>/home/pi/MyJMRI/Beaver_Bend/UserPrefsProfileConfig.xml</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Thu Jul 16 14:29:03 CDT 2015</date>
+                          <date>Thu Jul 16 16:33:01 CDT 2015</date>
                           <filename>/home/pi/MyJMRI/Beaver_Bend/ProfileConfig.xml</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Thu Jul 16 14:29:20 CDT 2015</date>
+                          <date>Thu Jul 16 16:33:17 CDT 2015</date>
                           <filename>/home/pi/MyJMRI/panels/BeaverBendCombinedDepartureBoard.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Thu Jul 16 14:36:04 CDT 2015</date>
+                          <date>Thu Jul 16 16:35:01 CDT 2015</date>
                           <filename />
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Thu Jul 16 16:35:01 CDT 2015</date>
+                      <date>Thu Jul 14 14:41:39 CDT 2016</date>
                       <filename />
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Thu Jul 14 14:41:39 CDT 2016</date>
+                  <date>Mon Jul 25 19:36:08 CDT 2016</date>
                   <filename />
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Mon Jul 25 19:36:08 CDT 2016</date>
+              <date>Tue Jul 26 08:28:07 CDT 2016</date>
               <filename />
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Tue Jul 26 08:28:07 CDT 2016</date>
+          <date>Sat Feb 10 20:50:00 CST 2018</date>
           <filename />
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Sat Feb 10 20:50:00 CST 2018</date>
+      <date>Sat Nov 24 16:13:04 CST 2018</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.10ish+pmorr+20180210T2118Z+R419243e on Sat Feb 10 20:50:00 CST 2018-->
+  <!--Written by JMRI version 4.13.5+Rb27c31c on Sat Nov 24 16:13:04 CST 2018-->
 </layout-config>
