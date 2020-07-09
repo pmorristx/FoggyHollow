@@ -12,9 +12,9 @@ class Locomotive(jmri.jmrit.automat.AbstractAutomaton) :
         self.locoNumber = locoNumber
         self.roadName = roadName
 
-        print "*** Getting throttle for ", self.locoNumber
+        #print "*** Getting throttle for ", self.locoNumber
         self.throttle = self.getThrottle(self.locoNumber, False)
-        print "*** Get throttle complete"
+        #print "*** Get throttle complete"
         
         rosterlist = jmri.jmrit.roster.Roster.getDefault().matchingList(roadName, str(locoNumber), None, None, None, None, None) 
         if (len(rosterlist) == 1) :
@@ -58,7 +58,7 @@ class Locomotive(jmri.jmrit.automat.AbstractAutomaton) :
         self.functionMap["CylinderCox"] = self.findFunction("Cyl")                                              
         self.functionMap["DimLight"] = self.findFunction("Dim")                                                      
         
-        print "\n\n", self.roadName, " #", self.locoNumber, ": ", self.functionMap, "\n\n"  
+        #print "\n\n", self.roadName, " #", self.locoNumber, ": ", self.functionMap, "\n\n"  
         return 0                                                             
     
     #
