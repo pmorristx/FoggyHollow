@@ -1,7 +1,6 @@
 import jmri.jmrit
 
-class Locomotive(jmri.jmrit.automat.AbstractAutomaton) :
-
+class Locomotive(jmri.jmrit.automat.AbstractAutomaton) : 
     #
     #  Initialize the locomotive using the Roadname and Road number used in the 
     #  JMRI Roster.  This needs to be a unique match.
