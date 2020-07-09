@@ -776,7 +776,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		        coffeeDelay = (self.coffeeDelayLong + java.util.Random().nextInt(self.coffeeDelayLong))
 		        if (sensors.provideSensor("Demo Switch").getState() == ACTIVE) :
 		                #coffeeDelay = self.coffeeDelayDemo
-                                coffeeDelay = java.util.Random().nextInt(self.coffeeDelay)
+                                coffeeDelay = java.util.Random().nextInt(self.coffeeDelayDemo)
                         self.coffeeBreak(coffeeDelay)
                         
 		if (self.automationSwitch.getState() != ACTIVE)	:
