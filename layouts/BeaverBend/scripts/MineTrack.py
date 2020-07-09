@@ -772,6 +772,7 @@ class MineTrack(jmri.jmrit.automat.AbstractAutomaton) :
 		self.waitMsec(1000)
 		self.locomotive.tootWhistle(1)
 
+
 		self.waitMsec(15 + java.util.Random().nextInt(30) * 1000)
 		self.waterFill(30)
 		self.waitMsec(30 + java.util.Random().nextInt(30) * 1000)
