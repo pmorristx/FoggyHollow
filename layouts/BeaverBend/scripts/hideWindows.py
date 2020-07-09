@@ -16,6 +16,8 @@ for w in jmri.util.JmriJFrame.getFrameList() :
         w.setExtendedState(java.awt.Frame.ICONIFIED)         
     if (w.getTitle() == "WiThrottle") :
         w.setExtendedState(java.awt.Frame.ICONIFIED)
+    if (w.getTitle() == "AoS Layout") :
+        w.setExtendedState(java.awt.Frame.ICONIFIED)
     if (w.getTitle() == "Ace of Spades Mine") :
         w.setExtendedState(java.awt.Frame.NORMAL)
     if (w.getTitle() == "Beaver Bend") :
