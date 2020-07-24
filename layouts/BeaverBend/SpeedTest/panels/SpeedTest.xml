@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/xml/XSLT/panelfile-2-9-6.xsl" type="text/xsl"?>
+<layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-2-9-6.xsd">
+  <jmriversion>
+    <major>4</major>
+    <minor>18</minor>
+    <test>0</test>
+    <modifier />
+  </jmriversion>
+  <sensors class="jmri.jmrix.internal.configurexml.InternalSensorManagerXml">
+    <defaultInitialState>unknown</defaultInitialState>
+    <sensor inverted="false">
+      <systemName>IS:ESTOP</systemName>
+      <userName>Emergency Stop</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:StartBtn</systemName>
+      <userName>Start Button</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-grn-0</systemName>
+      <userName>State0-Grn</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-grn-1</systemName>
+      <userName>State1-Grn</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-grn-2</systemName>
+      <userName>State2-Grn</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-grn-3</systemName>
+      <userName>State3-Grn</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-grn-4</systemName>
+      <userName>State4-Grn</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-grn-5</systemName>
+      <userName>State5-Grn</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-grn-6</systemName>
+      <userName>State6-Grn</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-grn-7</systemName>
+      <userName>State7-Grn</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-red-0</systemName>
+      <userName>State0-Red</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-red-1</systemName>
+      <userName>State1-Red</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-red-2</systemName>
+      <userName>State2-Red</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-red-3</systemName>
+      <userName>State3-Red</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-red-4</systemName>
+      <userName>State4-Red</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-red-5</systemName>
+      <userName>State5-Red</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-red-6</systemName>
+      <userName>State6-Red</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-red-7</systemName>
+      <userName>State7-Red</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-yel-0</systemName>
+      <userName>State0-Yel</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-yel-1</systemName>
+      <userName>State1-Yel</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-yel-2</systemName>
+      <userName>State2-Yel</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-yel-3</systemName>
+      <userName>State3-Yel</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-yel-4</systemName>
+      <userName>State4-Yel</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-yel-5</systemName>
+      <userName>State5-Yel</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-yel-6</systemName>
+      <userName>State6-Yel</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>IS:state-yel-7</systemName>
+      <userName>State7-Yel</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>ISCLOCKRUNNING</systemName>
+    </sensor>
+  </sensors>
+  <sensors class="jmri.jmrix.loconet.configurexml.LnSensorManagerXml">
+    <sensor inverted="false">
+      <systemName>LS1</systemName>
+      <userName>Bridge-1</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS2</systemName>
+      <userName>Bridge-2</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS3</systemName>
+      <userName>Mine Building</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS4</systemName>
+      <userName>EOT</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS5</systemName>
+      <userName>Tunnel</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS6</systemName>
+      <userName>BOT</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS7</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS8</systemName>
+    </sensor>
+  </sensors>
+  <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
+    <memory value="64.97">
+      <systemName>IM:Elapsed Time-0</systemName>
+      <userName>Elapsed Time-0</userName>
+    </memory>
+    <memory value="38.66">
+      <systemName>IM:Elapsed Time-1</systemName>
+      <userName>Elapsed Time-1</userName>
+    </memory>
+    <memory value="28.08">
+      <systemName>IM:Elapsed Time-2</systemName>
+      <userName>Elapsed Time-2</userName>
+    </memory>
+    <memory value="22.47">
+      <systemName>IM:Elapsed Time-3</systemName>
+      <userName>Elapsed Time-3</userName>
+    </memory>
+    <memory value="17.81">
+      <systemName>IM:Elapsed Time-4</systemName>
+      <userName>Elapsed Time-4</userName>
+    </memory>
+    <memory value="15.02">
+      <systemName>IM:Elapsed Time-5</systemName>
+      <userName>Elapsed Time-5</userName>
+    </memory>
+    <memory value="12.75">
+      <systemName>IM:Elapsed Time-6</systemName>
+      <userName>Elapsed Time-6</userName>
+    </memory>
+    <memory value="11.27">
+      <systemName>IM:Elapsed Time-7</systemName>
+      <userName>Elapsed Time-7</userName>
+    </memory>
+    <memory value="WOW Steam Sound Set 4">
+      <systemName>IM:Loco Decoder</systemName>
+      <userName>Loco Decoder</userName>
+    </memory>
+    <memory value="WOW Steam 101 SS4">
+      <systemName>IM:Loco Decoder Model</systemName>
+    </memory>
+    <memory value="FH&amp;W 16">
+      <systemName>IM:Loco ID</systemName>
+    </memory>
+    <memory value="Stearns-Heisler">
+      <systemName>IM:Loco MFG</systemName>
+      <userName>Loco Mfg</userName>
+    </memory>
+    <memory value="14-Ton 2-Truck">
+      <systemName>IM:Loco Model</systemName>
+      <userName>Loco Model</userName>
+    </memory>
+    <memory value="0.0">
+      <systemName>IM:Loco Speed</systemName>
+      <userName>Locomotive Speed</userName>
+    </memory>
+    <memory value="16">
+      <systemName>IM:LocoNumber</systemName>
+      <userName>Locomotive Number</userName>
+    </memory>
+    <memory value="0.99">
+      <systemName>IM:ST:0:FPS</systemName>
+      <userName>Feet Per Second-0</userName>
+    </memory>
+    <memory value="0.67">
+      <systemName>IM:ST:0:MPH</systemName>
+      <userName>Miles Per Hour-0</userName>
+    </memory>
+    <memory value="15">
+      <systemName>IM:ST:0:SS</systemName>
+      <userName>Speed Step-0</userName>
+    </memory>
+    <memory value="1.66">
+      <systemName>IM:ST:1:FPS</systemName>
+      <userName>Feet Per Second-1</userName>
+    </memory>
+    <memory value="1.13">
+      <systemName>IM:ST:1:MPH</systemName>
+      <userName>Miles Per Hour-1</userName>
+    </memory>
+    <memory value="20">
+      <systemName>IM:ST:1:SS</systemName>
+      <userName>Speed Step-1</userName>
+    </memory>
+    <memory value="2.28">
+      <systemName>IM:ST:2:FPS</systemName>
+      <userName>Feet Per Second-2</userName>
+    </memory>
+    <memory value="1.55">
+      <systemName>IM:ST:2:MPH</systemName>
+      <userName>Miles Per Hour-2</userName>
+    </memory>
+    <memory value="25">
+      <systemName>IM:ST:2:SS</systemName>
+      <userName>Speed Step-2</userName>
+    </memory>
+    <memory value="2.85">
+      <systemName>IM:ST:3:FPS</systemName>
+      <userName>Feet Per Second-3</userName>
+    </memory>
+    <memory value="1.94">
+      <systemName>IM:ST:3:MPH</systemName>
+      <userName>Miles Per Hour-3</userName>
+    </memory>
+    <memory value="30">
+      <systemName>IM:ST:3:SS</systemName>
+      <userName>Speed Step-3</userName>
+    </memory>
+    <memory value="3.59">
+      <systemName>IM:ST:4:FPS</systemName>
+      <userName>Feet Per Second-4</userName>
+    </memory>
+    <memory value="2.45">
+      <systemName>IM:ST:4:MPH</systemName>
+      <userName>Miles Per Hour-4</userName>
+    </memory>
+    <memory value="35">
+      <systemName>IM:ST:4:SS</systemName>
+      <userName>Speed Step-4</userName>
+    </memory>
+    <memory value="4.26">
+      <systemName>IM:ST:5:FPS</systemName>
+      <userName>Feet Per Second-5</userName>
+    </memory>
+    <memory value="2.91">
+      <systemName>IM:ST:5:MPH</systemName>
+      <userName>Miles Per Hour-5</userName>
+    </memory>
+    <memory value="40">
+      <systemName>IM:ST:5:SS</systemName>
+      <userName>Speed Step-5</userName>
+    </memory>
+    <memory value="5.02">
+      <systemName>IM:ST:6:FPS</systemName>
+      <userName>Feet Per Second-6</userName>
+    </memory>
+    <memory value="3.42">
+      <systemName>IM:ST:6:MPH</systemName>
+      <userName>Miles Per Hour-6</userName>
+    </memory>
+    <memory value="45">
+      <systemName>IM:ST:6:SS</systemName>
+      <userName>Speed Step-6</userName>
+    </memory>
+    <memory value="5.68">
+      <systemName>IM:ST:7:FPS</systemName>
+      <userName>Feet Per Second-7</userName>
+    </memory>
+    <memory value="3.87">
+      <systemName>IM:ST:7:MPH</systemName>
+      <userName>Miles Per Hour-7</userName>
+    </memory>
+    <memory value="50">
+      <systemName>IM:ST:7:SS</systemName>
+      <userName>Speed Step-7</userName>
+    </memory>
+    <memory value="06:39:55">
+      <systemName>IM:ST:Bridge 2 Timer</systemName>
+      <userName>Bridge 2 Timer</userName>
+    </memory>
+    <memory value="06:40:06">
+      <systemName>IM:ST:Mine Building Timer</systemName>
+      <userName>Mine Building Timer</userName>
+    </memory>
+    <memory value="6:40 PM">
+      <systemName>IMCURRENTTIME</systemName>
+    </memory>
+    <memory>
+      <systemName>IMElapsed Time</systemName>
+    </memory>
+    <memory value="1.0">
+      <systemName>IMRATEFACTOR</systemName>
+    </memory>
+    <memory value="64">
+      <systemName>IMTrack Lenght Scale</systemName>
+      <userName>Track Length (Scale)</userName>
+    </memory>
+    <memory value="16">
+      <systemName>IMTrack Length Actual</systemName>
+      <userName>Track Length (Actual)</userName>
+    </memory>
+  </memories>
+  <signalmastlogics class="jmri.managers.configurexml.DefaultSignalMastLogicManagerXml">
+    <logicDelay>500</logicDelay>
+  </signalmastlogics>
+  <logixs class="jmri.managers.configurexml.DefaultLogixManagerXml">
+    <logix userName="ChangeTrackLength" enabled="yes">
+      <systemName>IX:AUTO:0001</systemName>
+      <userName>ChangeTrackLength</userName>
+      <logixConditional systemName="IX:AUTO:0001C1" order="0" />
+    </logix>
+    <logix userName="CalculateSpeed" enabled="no">
+      <systemName>IX:AUTO:0002</systemName>
+      <userName>CalculateSpeed</userName>
+      <logixConditional systemName="IX:AUTO:0002C1" order="0" />
+    </logix>
+  </logixs>
+  <conditionals class="jmri.managers.configurexml.DefaultConditionalManagerXml">
+    <conditional systemName="IX:AUTO:0001C1" antecedent="R1" logicType="1" triggerOnChange="no">
+      <systemName>IX:AUTO:0001C1</systemName>
+      <conditionalStateVariable operator="4" negated="no" type="9" systemName="Track Length (Actual)" dataString="0" num1="5" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/CalculateTrackLength.py" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0002C1" userName="CalculateSpeed" antecedent="R1" logicType="1" triggerOnChange="no">
+      <systemName>IX:AUTO:0002C1</systemName>
+      <userName>CalculateSpeed</userName>
+      <conditionalStateVariable operator="4" negated="no" type="9" systemName="Elapsed Time" dataString="0" num1="5" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/CalculateSpeed.py" />
+    </conditional>
+  </conditionals>
+  <timebase class="jmri.jmrit.simpleclock.configurexml.SimpleTimebaseXml" time="Mon Jul 20 15:30:12 CDT 2020" rate="1.0" startrate="1.0" run="yes" master="yes" sync="no" correct="no" display="no" startstopped="no" startrunning="yes" startsettime="no" startclockoption="0" showbutton="no" startsetrate="yes" />
+  <paneleditor class="jmri.jmrit.display.panelEditor.configurexml.PanelEditorXml" name="Speed Test" x="774" y="58" height="524" width="828" editable="no" positionable="no" showtooltips="no" controlling="yes" hide="yes" panelmenu="no" scrollable="none" redBackground="209" greenBackground="209" blueBackground="209">
+    <positionablelabel x="0" y="0" level="1" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" icon="yes" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <icon url="preference:resources/icons/backgrounds/SpeedTest.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </icon>
+    </positionablelabel>
+    <sensoricon sensor="Bridge-1" x="208" y="326" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <active url="preference:resources/icons/indicators/small/red-on.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/red-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Bridge-2" x="292" y="326" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <active url="preference:resources/icons/indicators/small/green-on.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/green-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Mine Building" x="376" y="326" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <active url="preference:resources/icons/indicators/small/red-on.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/red-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <memoryicon memory="IM:ST:Bridge 2 Timer" x="281" y="375" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="5" borderSize="1" redBorder="128" greenBorder="128" blueBorder="128" fixedWidth="70" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="IM:ST:Mine Building Timer" x="364" y="375" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="5" borderSize="1" redBorder="128" greenBorder="128" blueBorder="128" fixedWidth="70" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <positionablelabel x="197" y="306" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="BRIDGE 1" fontname="Old Rubber Stamp" size="10" style="1" red="0" green="0" blue="0" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <positionablelabel x="283" y="306" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="BRIDGE 2" fontname="Old Rubber Stamp" size="10" style="1" red="0" green="0" blue="0" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <positionablelabel x="367" y="306" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="BUILDING" fontname="Old Rubber Stamp" size="10" style="1" red="0" green="0" blue="0" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <sensoricon sensor="Start Button" x="28" y="82" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <active url="preference:resources/icons/switches/Lever-up.png" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/switches/Lever-down.png" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/switches/Lever-down.png" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/switches/Lever-down.png" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Emergency Stop" x="359" y="129" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <active url="preference:resources/icons/switches/EmergencyStopButton.png" degrees="0" scale="0.17">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/switches/EmergencyStopButton.png" degrees="0" scale="0.17">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/switches/EmergencyStopButton.png" degrees="0" scale="0.17">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/switches/EmergencyStopButton.png" degrees="0" scale="0.17">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <memoryicon memory="Track Length (Scale)" x="320" y="440" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" borderSize="1" redBorder="128" greenBorder="128" blueBorder="128" fixedWidth="23" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Track Length (Actual)" x="320" y="411" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" borderSize="1" redBorder="128" greenBorder="128" blueBorder="128" fixedWidth="23" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <positionablelabel x="162" y="415" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Track Length (Actual)" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <positionablelabel x="168" y="444" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Track Length (Scale)" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <positionablelabel x="655" y="204" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Duration" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" justification="centre" orientation="vertical_up" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <memoryicon memory="Speed Step-0" x="610" y="270" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="25" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Elapsed Time-0" x="638" y="270" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Feet Per Second-0" x="686" y="270" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Miles Per Hour-0" x="734" y="270" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Speed Step-1" x="610" y="293" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="25" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Elapsed Time-1" x="638" y="293" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Feet Per Second-1" x="686" y="293" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Miles Per Hour-1" x="734" y="293" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Speed Step-2" x="610" y="316" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="25" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Elapsed Time-2" x="638" y="316" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Feet Per Second-2" x="686" y="316" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Miles Per Hour-2" x="734" y="316" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Speed Step-3" x="610" y="339" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="25" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Elapsed Time-3" x="638" y="339" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Feet Per Second-3" x="686" y="339" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Miles Per Hour-3" x="734" y="339" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Speed Step-4" x="610" y="362" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="25" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Elapsed Time-4" x="638" y="362" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Feet Per Second-4" x="686" y="362" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Miles Per Hour-4" x="734" y="362" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Speed Step-5" x="610" y="385" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="25" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Elapsed Time-5" x="638" y="385" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Feet Per Second-5" x="686" y="385" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Miles Per Hour-5" x="734" y="385" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Speed Step-6" x="610" y="408" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="25" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Elapsed Time-6" x="638" y="408" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Feet Per Second-6" x="686" y="408" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Miles Per Hour-6" x="734" y="408" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Speed Step-7" x="610" y="431" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="25" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Elapsed Time-7" x="638" y="431" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Feet Per Second-7" x="686" y="431" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Miles Per Hour-7" x="734" y="431" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" fixedWidth="45" justification="right" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <positionablelabel x="703" y="195" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Feet / Sec" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" justification="centre" orientation="vertical_up" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <positionablelabel x="751" y="180" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Miles / Hour" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" justification="centre" orientation="vertical_up" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <memoryicon memory="Locomotive Number" x="46" y="25" level="5" forcecontroloff="false" hidden="yes" positionable="false" showtooltip="false" editable="false" size="24" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" margin="3" borderSize="3" redBorder="128" greenBorder="128" blueBorder="128" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <positionablelabel x="613" y="185" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Speed Step" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" justification="centre" orientation="vertical_up" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <sensoricon sensor="Tunnel" x="124" y="326" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <active url="preference:resources/icons/indicators/small/red-on.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/red-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <positionablelabel x="112" y="307" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="TUNNEL" fontname="Old Rubber Stamp" size="10" style="1" red="0" green="0" blue="0" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <positionablelabel x="355" y="415" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Inches" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <positionablelabel x="355" y="444" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Feet" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <memoryicon memory="Loco Decoder" x="134" y="229" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" fixedWidth="200" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <multisensoricon x="581" y="293" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <active url="preference:resources/icons/indicators/small/green-on.gif" degrees="0" scale="0.5" sensor="State1-Grn">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/yellow-blink.gif" degrees="0" scale="0.5" sensor="State1-Yel">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5" sensor="State1-Red">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inconsistent>
+    </multisensoricon>
+    <multisensoricon x="581" y="316" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <active url="preference:resources/icons/indicators/small/green-on.gif" degrees="0" scale="0.5" sensor="State2-Grn">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/yellow-blink.gif" degrees="0" scale="0.5" sensor="State2-Yel">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5" sensor="State2-Red">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inconsistent>
+    </multisensoricon>
+    <multisensoricon x="581" y="339" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <active url="preference:resources/icons/indicators/small/green-on.gif" degrees="0" scale="0.5" sensor="State3-Grn">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/yellow-blink.gif" degrees="0" scale="0.5" sensor="State3-Yel">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5" sensor="State3-Red">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inconsistent>
+    </multisensoricon>
+    <multisensoricon x="581" y="362" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <active url="preference:resources/icons/indicators/small/green-on.gif" degrees="0" scale="0.5" sensor="State4-Grn">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/yellow-blink.gif" degrees="0" scale="0.5" sensor="State4-Yel">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5" sensor="State4-Red">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inconsistent>
+    </multisensoricon>
+    <multisensoricon x="581" y="385" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <active url="preference:resources/icons/indicators/small/green-on.gif" degrees="0" scale="0.5" sensor="State5-Grn">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/yellow-blink.gif" degrees="0" scale="0.5" sensor="State5-Yel">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5" sensor="State5-Red">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inconsistent>
+    </multisensoricon>
+    <multisensoricon x="581" y="408" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <active url="preference:resources/icons/indicators/small/green-on.gif" degrees="0" scale="0.5" sensor="State6-Grn">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/yellow-blink.gif" degrees="0" scale="0.5" sensor="State6-Yel">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5" sensor="State6-Red">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inconsistent>
+    </multisensoricon>
+    <multisensoricon x="581" y="431" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <active url="preference:resources/icons/indicators/small/green-on.gif" degrees="0" scale="0.5" sensor="State7-Grn">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/yellow-blink.gif" degrees="0" scale="0.5" sensor="State7-Yel">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5" sensor="State7-Red">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inconsistent>
+    </multisensoricon>
+    <multisensoricon x="581" y="270" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <active url="preference:resources/icons/indicators/small/green-on.gif" degrees="0" scale="0.5" sensor="State0-Grn">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/yellow-blink.gif" degrees="0" scale="0.5" sensor="State0-Yel">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5" sensor="State0-Red">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/dark-off.gif" degrees="0" scale="0.5">
+        <rotation>0</rotation>
+      </inconsistent>
+    </multisensoricon>
+    <memoryicon memory="Loco Mfg" x="134" y="187" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" fixedWidth="200" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="Loco Model" x="134" y="207" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" fixedWidth="200" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="IM:Loco ID" x="632" y="159" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Old Rubber Stamp" size="18" style="0" red="51" green="51" blue="51" hasBackground="no" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <memoryicon memory="IM:Loco Decoder Model" x="134" y="249" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" fixedWidth="200" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif" />
+    <sensoricon sensor="BOT" x="40" y="326" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <active url="preference:resources/icons/indicators/small/red-on.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/red-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/red-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/red-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="EOT" x="460" y="326" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <active url="preference:resources/icons/indicators/small/red-on.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/indicators/small/red-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/indicators/small/red-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/indicators/small/red-off.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <positionablelabel x="46" y="306" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="BOT" fontname="Old Rubber Stamp" size="10" style="1" red="51" green="51" blue="51" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <positionablelabel x="465" y="306" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="EOT" fontname="Old Rubber Stamp" size="10" style="1" red="51" green="51" blue="51" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml" />
+    <memoryInputIcon colWidth="2" memory="Locomotive Number" x="203" y="141" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="24" style="1" red="51" green="51" blue="51" hasBackground="yes" redBack="255" greenBack="255" blueBack="255" justification="right" class="jmri.jmrit.display.configurexml.MemoryInputIconXml" />
+  </paneleditor>
+  <filehistory>
+    <operation>
+      <type>app</type>
+      <date>Thu Jul 23 18:19:13 CDT 2020</date>
+      <filename>JMRI program</filename>
+    </operation>
+    <operation>
+      <type>Load OK</type>
+      <date>Thu Jul 23 18:19:31 CDT 2020</date>
+      <filename>/home/pi/MyJMRI/SpeedTest/panels/SpeedTest.xml</filename>
+      <filehistory>
+        <operation>
+          <type>app</type>
+          <date>Thu Jul 23 14:15:11 CDT 2020</date>
+          <filename>JMRI program</filename>
+        </operation>
+        <operation>
+          <type>Load OK</type>
+          <date>Thu Jul 23 14:15:29 CDT 2020</date>
+          <filename>/home/pi/MyJMRI/SpeedTest/panels/SpeedTest.xml</filename>
+          <filehistory>
+            <operation>
+              <type>app</type>
+              <date>Thu Jul 23 14:03:38 CDT 2020</date>
+              <filename>JMRI program</filename>
+            </operation>
+            <operation>
+              <type>Load OK</type>
+              <date>Thu Jul 23 14:03:57 CDT 2020</date>
+              <filename>/home/pi/MyJMRI/SpeedTest/panels/SpeedTest.xml</filename>
+              <filehistory>
+                <operation>
+                  <type>app</type>
+                  <date>Thu Jul 23 12:30:10 CDT 2020</date>
+                  <filename>JMRI program</filename>
+                </operation>
+                <operation>
+                  <type>Load OK</type>
+                  <date>Thu Jul 23 12:30:30 CDT 2020</date>
+                  <filename>/home/pi/MyJMRI/SpeedTest/panels/SpeedTest.xml</filename>
+                  <filehistory>
+                    <operation>
+                      <type>app</type>
+                      <date>Thu Jul 23 12:07:26 CDT 2020</date>
+                      <filename>JMRI program</filename>
+                    </operation>
+                    <operation>
+                      <type>Load OK</type>
+                      <date>Thu Jul 23 12:07:45 CDT 2020</date>
+                      <filename>/home/pi/MyJMRI/SpeedTest/panels/SpeedTest.xml</filename>
+                      <filehistory>
+                        <operation>
+                          <type>app</type>
+                          <date>Thu Jul 23 11:43:49 CDT 2020</date>
+                          <filename>JMRI program</filename>
+                        </operation>
+                        <operation>
+                          <type>Load OK</type>
+                          <date>Thu Jul 23 11:44:07 CDT 2020</date>
+                          <filename>/home/pi/MyJMRI/SpeedTest/panels/SpeedTest.xml</filename>
+                        </operation>
+                        <operation>
+                          <type>Store</type>
+                          <date>Thu Jul 23 12:07:10 CDT 2020</date>
+                          <filename />
+                        </operation>
+                      </filehistory>
+                    </operation>
+                    <operation>
+                      <type>Store</type>
+                      <date>Thu Jul 23 12:14:36 CDT 2020</date>
+                      <filename />
+                    </operation>
+                  </filehistory>
+                </operation>
+                <operation>
+                  <type>Store</type>
+                  <date>Thu Jul 23 12:32:33 CDT 2020</date>
+                  <filename />
+                </operation>
+              </filehistory>
+            </operation>
+            <operation>
+              <type>Store</type>
+              <date>Thu Jul 23 14:13:27 CDT 2020</date>
+              <filename />
+            </operation>
+          </filehistory>
+        </operation>
+        <operation>
+          <type>Store</type>
+          <date>Thu Jul 23 14:17:23 CDT 2020</date>
+          <filename />
+        </operation>
+      </filehistory>
+    </operation>
+    <operation>
+      <type>Store</type>
+      <date>Thu Jul 23 18:40:36 CDT 2020</date>
+      <filename />
+    </operation>
+  </filehistory>
+  <!--Written by JMRI version 4.18+R37ad3d0 on Thu Jul 23 18:40:36 CDT 2020-->
+</layout-config>
