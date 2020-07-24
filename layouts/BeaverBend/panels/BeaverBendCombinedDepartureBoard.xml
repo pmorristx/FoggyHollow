@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?xml-stylesheet href="/xml/XSLT/panelfile-2-9-6.xsl" type="text/xsl"?>
 <layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-2-9-6.xsd">
   <jmriversion>
@@ -351,9 +350,30 @@
     <memory value="5:58 AM">
       <systemName>IM:1:DPRT</systemName>
     </memory>
+
+    <memory value="">
+      <systemName>IM:1:DPRTTS</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IM:2:DPRTTS</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IM:3:DPRTTS</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IM:4:DPRTTS</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IM:5:DPRTTS</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IM:6:DPRTTS</systemName>
+    </memory>    
+	
     <memory value="Mystic Springs">
       <systemName>IM:1:DST</systemName>
     </memory>
+
     <memory value="Deprted">
       <systemName>IM:1:RMK</systemName>
     </memory>
@@ -452,6 +472,9 @@
     </memory>
     <memory value="">
       <systemName>IM:6:TNO</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IM:DOM</systemName>
     </memory>
     <memory value="Block 1">
       <systemName>IM:BLK:1</systemName>
@@ -1029,15 +1052,31 @@
       <systemName>IM:NULL</systemName>
       <userName>Flip Board Spacer</userName>
     </memory>
-    <memory value="Stearns-Heisler - 14-Ton 2-Truck">
-      <systemName>IM:ROSTERDESCRIPTION</systemName>
-      <userName>Roster Description</userName>
+    <memory value="">
+      <systemName>IM:ROSTERDESCRIPTION1</systemName>
+      <userName>Roster Description 1</userName>
     </memory>
+    <memory value="">
+      <systemName>IM:ROSTERDESCRIPTION2</systemName>
+      <userName>Roster Description 2</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:SERV1</systemName>
+      <userName>Service 1</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:SERV2</systemName>
+      <userName>Service 2</userName>
+    </memory>
+    <memory value="">
+      <systemName>IM:SERV3</systemName>
+      <userName>Service 3</userName>
+    </memory>        
     <memory value="file:/home/pi/MyJMRI/roster/FH&amp;W%2016%20Heisler%20Icon.jpg">
       <systemName>IM:ROSTERICON</systemName>
       <userName>Roster Icon</userName>
     </memory>
-    <memory value="Foggy Hollow &amp; Western #16">
+    <memory value="">
       <systemName>IM:ROSTERID</systemName>
       <userName>Roster ID</userName>
       <comment>Selected loco ID on mine track panel</comment>
@@ -2848,39 +2887,49 @@
     <memoryicon memory="IM:MINE:LOCO" x="123" y="332" level="8" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="1" style="1" red="51" green="51" blue="51" hasBackground="no" fixedWidth="56" fixedHeight="44" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>Current Mine Locomotive</tooltip>
     </memoryicon>
-    <positionablelabel x="90" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Train No." size="14" style="1" red="255" green="255" blue="255" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+
+    <positionableRectangle x="27" y="247" level="10" forcecontroloff="false" hidden="no" positionable="true" showtooltip="false" editable="true" lineWidth="0" hideOnSensor="false" changeLevelOnSensor="5" class="jmri.jmrit.display.controlPanelEditor.shape.configurexml.PositionableRectangleXml">
+      <lineColor red="255" green="255" blue="255" alpha="0" />
+      <fillColor red="125" green="125" blue="125" alpha="255" />
+      <size width="662" height="1" />
+    </positionableRectangle>
+
+    
+    <memoryicon memory="IM:DOM" x="250" y="261" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Comic Sans MS Bold Italic" size="18" style="3" red="255" green="255" blue="255" hasBackground="no" fixedWidth="200" fixedHeight="29" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:DOM</tooltip>
+    </memoryicon>    
+
+    
+    <positionablelabel x="32" y="283" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Train" size="14" style="1" red="255" green="255" blue="255" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
       <tooltip>Text Label</tooltip>
     </positionablelabel>
-    <positionablelabel x="33" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Track" size="14" style="1" red="255" green="255" blue="255" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+    <positionablelabel x="43" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="No." size="14" style="1" red="255" green="255" blue="255" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>    
+    <positionablelabel x="87" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Dir." size="14" style="1" red="255" green="255" blue="255" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
       <tooltip>Text Label</tooltip>
     </positionablelabel>
-    <positionablelabel x="231" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Destination / Train Name" size="14" style="1" red="255" green="255" blue="255" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+    <positionablelabel x="187" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Destination / Train Name" size="14" style="1" red="255" green="255" blue="255" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
       <tooltip>Text Label</tooltip>
     </positionablelabel>
-    <positionablelabel x="501" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Departs" size="14" style="1" red="255" green="255" blue="255" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+    <positionablelabel x="485" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Departs" size="14" style="1" red="255" green="255" blue="255" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
       <tooltip>Text Label</tooltip>
     </positionablelabel>
     <positionablelabel x="608" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Status" size="14" style="1" red="255" green="255" blue="255" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
       <tooltip>Text Label</tooltip>
     </positionablelabel>
-    <positionablelabel x="276" y="452" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Service" size="12" style="1" red="192" green="192" blue="192" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
-      <tooltip>Text Label</tooltip>
-    </positionablelabel>
-    <positionablelabel x="375" y="452" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Locomotive" size="12" style="1" red="192" green="192" blue="192" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
-      <tooltip>Text Label</tooltip>
-    </positionablelabel>
-    <sensoricon sensor="Mine Building Lights" x="734" y="406" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" text="" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" justification="left" class="jmri.jmrit.display.configurexml.SensorIconXml">
+    <sensoricon sensor="Mine Building Lights" x="720" y="300" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" text="" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" justification="left" class="jmri.jmrit.display.configurexml.SensorIconXml">
       <tooltip>Mine Building Lights (LS13)</tooltip>
-      <active url="preference:resources/icons/misc/Indicators/redIndicatorOn.gif" degrees="0" scale="0.2">
+      <active url="preference:resources/icons/misc/Indicators/redIndicatorOn.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </active>
-      <inactive url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+      <inactive url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </inactive>
-      <unknown url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+      <unknown url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </unknown>
-      <inconsistent url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+      <inconsistent url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </inconsistent>
       <iconmaps />
@@ -2889,34 +2938,34 @@
       <unknownText red="0" green="0" blue="255" />
       <inconsistentText red="0" green="0" blue="0" />
     </sensoricon>
-    <sensoricon sensor="Mine North Light" x="734" y="370" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+    <sensoricon sensor="Mine North Light" x="720" y="273" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
       <tooltip>Mine North Light (LS15)</tooltip>
-      <active url="preference:resources/icons/misc/Indicators/redIndicatorOn.gif" degrees="0" scale="0.2">
+      <active url="preference:resources/icons/misc/Indicators/redIndicatorOn.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </active>
-      <inactive url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+      <inactive url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </inactive>
-      <unknown url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+      <unknown url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </unknown>
-      <inconsistent url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+      <inconsistent url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </inconsistent>
       <iconmaps />
     </sensoricon>
-    <sensoricon sensor="Mine South Light" x="734" y="440" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" text="" fontname="Dialog.plain" size="12" style="0" red="51" green="51" blue="51" hasBackground="no" justification="left" class="jmri.jmrit.display.configurexml.SensorIconXml">
+    <sensoricon sensor="Mine South Light" x="720" y="328" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" text="" fontname="Dialog.plain" size="12" style="0" red="51" green="51" blue="51" hasBackground="no" justification="left" class="jmri.jmrit.display.configurexml.SensorIconXml">
       <tooltip>Mine South Light (LS11)</tooltip>
-      <active url="preference:resources/icons/misc/Indicators/redIndicatorOn.gif" degrees="0" scale="0.2">
+      <active url="preference:resources/icons/misc/Indicators/redIndicatorOn.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </active>
-      <inactive url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+      <inactive url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </inactive>
-      <unknown url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+      <unknown url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </unknown>
-      <inconsistent url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+      <inconsistent url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.15">
         <rotation>0</rotation>
       </inconsistent>
       <iconmaps />
@@ -2941,7 +2990,7 @@
       </inconsistent>
       <iconmaps />
     </sensoricon>
-    <multisensoricon x="699" y="193" level="10" forcecontroloff="false" hidden="no" positionable="true" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+    <multisensoricon x="704" y="337" level="10" forcecontroloff="false" hidden="no" positionable="true" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
       <tooltip>White EOT Lantern,Red EOT Lantern</tooltip>
       <active url="preference:resources/icons/misc/lantern-white-small.gif" degrees="0" scale="1.2" sensor="White EOT Lantern">
         <rotation>0</rotation>
@@ -3110,7 +3159,7 @@
       <tooltip>Text Label</tooltip>
     </positionablelabel>
     <positionablelabel x="0" y="0" level="1" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" icon="yes" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
-      <icon url="preference:resources/icons/misc/Backgrounds/AceOfSpadesBrickClock.png" degrees="0" scale="1.0">
+      <icon url="preference:resources/icons/misc/Backgrounds/AceOfSpadesBrickClock3.png" degrees="0" scale="1.0">
         <rotation>0</rotation>
       </icon>
     </positionablelabel>
@@ -3146,13 +3195,29 @@
       </inconsistent>
       <iconmaps />
     </sensoricon>
-    <memoryicon memory="Roster ID" x="271" y="76" level="5" forcecontroloff="false" hidden="yes" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="20" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="300" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="Roster ID" x="765" y="295" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Comic Sans MS Bold Italic" size="16" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="200" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>Roster ID</tooltip>
     </memoryicon>
-    <memoryicon memory="Roster Description" x="170" y="108" level="5" forcecontroloff="false" hidden="yes" positionable="false" showtooltip="false" editable="false" fontname="Dialog.italic" size="16" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="300" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
-      <tooltip>Roster Description</tooltip>
+    <memoryicon memory="Roster Description 1" x="765" y="315" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Comic Sans MS Bold Italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="200" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Roster Description 1</tooltip>
     </memoryicon>
-    <memoryicon memory="Roster Icon" x="758" y="249" level="0" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" fixedWidth="200" fixedHeight="135" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+
+    <memoryicon memory="Roster Description 2" x="793" y="395" level="5" forcecontroloff="false" hidden="yes" positionable="false" showtooltip="false" editable="false" fontname="Comic Sans MS Bold Italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="150" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Roster Description 2</tooltip>
+    </memoryicon>
+
+    <memoryicon memory="Service 1" x="765" y="340" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Comic Sans MS Bold Italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="200" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Service 1</tooltip>
+    </memoryicon>
+
+    <memoryicon memory="Service 2" x="765" y="360" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Comic Sans MS Bold Italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="200" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Service 2</tooltip>
+    </memoryicon>
+
+    <memoryicon memory="Service 3" x="765" y="380" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Comic Sans MS Bold Italic" size="12" style="2" red="255" green="255" blue="255" hasBackground="no" fixedWidth="200" justification="centre" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Service 3</tooltip>
+    </memoryicon>    
+    <memoryicon memory="Roster Icon" x="814" y="369" level="0" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" hasBackground="no" fixedWidth="200" fixedHeight="135" justification="left" selectable="no" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>Roster Icon (IM:ROSTERICON)</tooltip>
     </memoryicon>
     <positionablelabel x="507" y="13" level="0" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" icon="yes" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
@@ -3183,29 +3248,48 @@
     <positionablelabel x="574" y="448" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Demo" size="16" style="1" red="192" green="192" blue="192" hasBackground="no" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
       <tooltip>Text Label</tooltip>
     </positionablelabel>
-    <multisensoricon x="335" y="443" level="10" forcecontroloff="false" hidden="no" positionable="true" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+    <multisensoricon x="716" y="28" level="10" forcecontroloff="false" hidden="yes" positionable="true" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
       <tooltip>Service Needed; Service Light</tooltip>
-      <active url="preference:resources/Controls/bluebutton-small.gif" degrees="0" scale="0.75" sensor="IS:SERVICELIGHT">
+      <active url="preference:resources/Controls/bluebutton-small.gif" degrees="0" scale="0.60" sensor="IS:SERVICELIGHT">
         <rotation>0</rotation>
       </active>
-      <active url="preference:resources/Controls/red-blink.gif" degrees="0" scale="0.75" sensor="IS:SERVICENEEDED">
+      <active url="preference:resources/Controls/red-blink.gif" degrees="0" scale="0.60" sensor="IS:SERVICENEEDED">
         <rotation>0</rotation>
       </active>
-      <inactive url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.75">
+      <inactive url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.60">
         <rotation>0</rotation>
       </inactive>
-      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.75">
+      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.60">
         <rotation>0</rotation>
       </unknown>
-      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.75">
+      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.60">
         <rotation>0</rotation>
       </inconsistent>
     </multisensoricon>
+
+    <multisensoricon x="768" y="262" level="10" forcecontroloff="false" hidden="no" positionable="true" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <tooltip>Service Needed; Service Light</tooltip>
+      <active url="preference:resources/ServiceLocomotive-BLUE.png" degrees="0" scale="1.0" sensor="IS:SERVICELIGHT">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/ServiceLocomotive-RedBlink.gif" degrees="0" scale="1.0" sensor="IS:SERVICENEEDED">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/ServiceLocomotive-OFF.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/ServiceLocomotive-OFF.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/ServiceLocomotive-OFF.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+    </multisensoricon>    
     
-    <fastclock x="788" y="41" scale="1.0" color="black" class="jmri.jmrit.display.configurexml.AnalogClock2DisplayXml" />
+    <fastclock x="785" y="55" scale="1.0" color="black" class="jmri.jmrit.display.configurexml.AnalogClock2DisplayXml" />
   </paneleditor>
   <paneleditor class="jmri.jmrit.display.panelEditor.configurexml.PanelEditorXml" name="Beaver Bend" x="0" y="28" height="532" width="1001" editable="no" positionable="no" showtooltips="no" controlling="yes" hide="yes" panelmenu="no" scrollable="none">
-    <memoryicon memory="IM20:H1" x="182" y="423" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.plain" size="11" style="0" red="51" green="51" blue="51" hasBackground="no" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM20:H1" x="182" y="296" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.plain" size="11" style="0" red="51" green="51" blue="51" hasBackground="no" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM20:H1</tooltip>
       <memorystate value="0" icon="preference:resources/icons/misc/Nixie/M0B.gif" />
       <memorystate value="1" icon="preference:resources/icons/misc/Nixie/M1B.gif" />
@@ -3218,7 +3302,7 @@
       <memorystate value="8" icon="preference:resources/icons/misc/Nixie/M8B.gif" />
       <memorystate value="9" icon="preference:resources/icons/misc/Nixie/M9B.gif" />
     </memoryicon>
-    <memoryicon memory="IM20:H2" x="211" y="423" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.plain" size="11" style="0" red="51" green="51" blue="51" hasBackground="no" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM20:H2" x="211" y="296" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.plain" size="11" style="0" red="51" green="51" blue="51" hasBackground="no" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM20:H2</tooltip>
       <memorystate value="0" icon="preference:resources/icons/misc/Nixie/M0B.gif" />
       <memorystate value="1" icon="preference:resources/icons/misc/Nixie/M1B.gif" />
@@ -3231,11 +3315,11 @@
       <memorystate value="8" icon="preference:resources/icons/misc/Nixie/M8B.gif" />
       <memorystate value="9" icon="preference:resources/icons/misc/Nixie/M9B.gif" />
     </memoryicon>
-    <memoryicon memory="IM20:H3" x="241" y="423" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.plain" size="11" style="0" red="51" green="51" blue="51" hasBackground="no" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM20:H3" x="241" y="296" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.plain" size="11" style="0" red="51" green="51" blue="51" hasBackground="no" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM20:H3</tooltip>
       <memorystate value=":" icon="preference:resources/icons/misc/Nixie/colonB.gif" />
     </memoryicon>
-    <memoryicon memory="IM20:M1" x="262" y="423" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.plain" size="11" style="0" red="51" green="51" blue="51" hasBackground="no" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM20:M1" x="262" y="296" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.plain" size="11" style="0" red="51" green="51" blue="51" hasBackground="no" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM20:M1</tooltip>
       <memorystate value="0" icon="preference:resources/icons/misc/Nixie/M0B.gif" />
       <memorystate value="1" icon="preference:resources/icons/misc/Nixie/M1B.gif" />
@@ -3248,7 +3332,7 @@
       <memorystate value="8" icon="preference:resources/icons/misc/Nixie/M8B.gif" />
       <memorystate value="9" icon="preference:resources/icons/misc/Nixie/M9B.gif" />
     </memoryicon>
-    <memoryicon memory="IM20:M2" x="294" y="423" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.plain" size="11" style="0" red="51" green="51" blue="51" hasBackground="no" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+    <memoryicon memory="IM20:M2" x="294" y="296" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" fontname="Dialog.plain" size="11" style="0" red="51" green="51" blue="51" hasBackground="no" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" updateBlockValue="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
       <tooltip>IM20:M2</tooltip>
       <memorystate value="0" icon="preference:resources/icons/misc/Nixie/M0B.gif" />
       <memorystate value="1" icon="preference:resources/icons/misc/Nixie/M1B.gif" />
@@ -3602,13 +3686,13 @@
       </inconsistent>
       <iconmaps />
     </sensoricon>
-    <positionablelabel x="173" y="291" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" icon="yes" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+    <positionablelabel x="173" y="365" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" icon="yes" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
       <tooltip>Icon</tooltip>
       <icon url="preference:resources/USS/plates/Control - Indication Code.GIF" degrees="0" scale="0.6">
         <rotation>0</rotation>
       </icon>
     </positionablelabel>
-    <sensoricon sensor="IS16:CCK" x="201" y="336" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+    <sensoricon sensor="IS16:CCK" x="201" y="410" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
       <tooltip>IS16:CCK</tooltip>
       <active url="preference:resources/Controls/redbutton-small.gif" degrees="0" scale="0.75">
         <rotation>0</rotation>
@@ -3624,7 +3708,7 @@
       </inconsistent>
       <iconmaps />
     </sensoricon>
-    <sensoricon sensor="IS17:ICK" x="269" y="336" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+    <sensoricon sensor="IS17:ICK" x="269" y="410" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
       <tooltip>IS17:ICK</tooltip>
       <active url="preference:resources/Controls/redbutton-small.gif" degrees="0" scale="0.75">
         <rotation>0</rotation>
