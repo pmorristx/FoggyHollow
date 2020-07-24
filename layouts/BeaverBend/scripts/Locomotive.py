@@ -1,6 +1,7 @@
 import jmri.jmrit
 
-class Locomotive(jmri.jmrit.automat.AbstractAutomaton) : 
+class Locomotive(jmri.jmrit.automat.AbstractAutomaton) :
+
     #
     #  Initialize the locomotive using the Roadname and Road number used in the 
     #  JMRI Roster.  This needs to be a unique match.
@@ -55,7 +56,8 @@ class Locomotive(jmri.jmrit.automat.AbstractAutomaton) :
         self.functionMap["Safety"] = self.findFunction("Safety")
         self.functionMap["J-Bar Down"] = self.findFunction("J-Bar Down")                                      
         self.functionMap["CylinderCox"] = self.findFunction("Cyl")                                              
-        self.functionMap["DimLight"] = self.findFunction("Dim")                                                      
+        self.functionMap["DimLight"] = self.findFunction("Dim")
+        self.functionMap["Mute"] = self.findFunction("Mute")                                                              
         
         #print "\n\n", self.roadName, " #", self.locoNumber, ": ", self.functionMap, "\n\n"  
         return 0                                                             
@@ -142,6 +144,12 @@ class Locomotive(jmri.jmrit.automat.AbstractAutomaton) :
     #
     #========================================================================================
     #
+    #
+    #  Mute sound
+    def setMute(self, state) :
+        self.setFunction("Mute", state)    
+
+    
     #  Whistle Quill
     def quillWhistle(self) :
         if (self.isWOWDecoder()) :

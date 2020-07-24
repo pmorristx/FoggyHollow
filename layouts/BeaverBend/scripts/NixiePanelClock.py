@@ -12,7 +12,6 @@ class NixiePanelClock(jmri.jmrit.automat.AbstractAutomaton) :
 
         clock = self.TrackDevice()
         time =  memories.getMemory("IMCURRENTTIME").getValue()
-        print "Initializing Nixie Panel Clock - current time = " + time
 
         clock.init("IMCURRENTTIME",  memories.getMemory("IMCURRENTTIME"))
         memories.getMemory("IM20:H3").setValue(":")
@@ -50,7 +49,6 @@ class NixiePanelClock(jmri.jmrit.automat.AbstractAutomaton) :
         # aDevice        : JMRI device instance
         #
         def init(self, aName, aDevice) :
-            print "Creating new time tracker"
             self.DeviceName = aName
             self.Device = aDevice
             self.Device.addPropertyChangeListener(self)

@@ -7,10 +7,10 @@ def hidePanel(dummy) :
         jmri.util.JmriJFrame.getFrame("PanelPro").setState(java.awt.Frame.ICONIFIED)
 
 frs = jmri.util.JmriJFrame.getFrameList()
-print "Number of frames = " + str(len(frs))
+#print "Number of frames = " + str(len(frs))
 
 for w in jmri.util.JmriJFrame.getFrameList() :
-    print " window = " + w.getTitle()
+    #print " window = " + w.getTitle()
     if (w.getTitle() == "PanelPro" or w.getTitle() == "JMRI"):
         w.setState(java.awt.Frame.ICONIFIED)
         w.setExtendedState(java.awt.Frame.ICONIFIED)         
