@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/xml/XSLT/panelfile-2-9-6.xsl" type="text/xsl"?>
+<layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-2-9-6.xsd">
+  <jmriversion>
+    <major>4</major>
+    <minor>0</minor>
+    <test>0</test>
+    <modifier />
+  </jmriversion>
+  <connection userName="NCE" systemPrefix="N" manufacturer="NCE" disabled="no" port="/dev/ttyUSB0" speed="9,600 baud" class="jmri.jmrix.nce.usbdriver.configurexml.ConnectionConfigXml">
+    <options>
+      <option>
+        <name>System</name>
+        <value>PowerCab</value>
+      </option>
+      <option>
+        <name>USB Version</name>
+        <value>V7.x.x</value>
+      </option>
+    </options>
+  </connection>
+  <connection userName="LocoNet" systemPrefix="L" manufacturer="Digitrax" disabled="no" port="/dev/ttyUSB1" speed="57,600 baud" class="jmri.jmrix.loconet.locobufferusb.configurexml.ConnectionConfigXml">
+    <options>
+      <option>
+        <name>CommandStation</name>
+        <value>DCS100 (Chief)</value>
+      </option>
+      <option>
+        <name>TurnoutHandle</name>
+        <value>Normal</value>
+      </option>
+    </options>
+  </connection>
+  <fileLocations class="apps.configurexml.FileLocationPaneXml">
+    <fileLocation defaultScriptLocation="preference:jython/" />
+    <fileLocation defaultUserLocation="home:MyJMRI/" />
+  </fileLocations>
+  <gui LAFclass="Metal" class="apps.configurexml.GuiLafConfigPaneXml" LocaleLanguage="en" LocaleCountry="US" LocaleVariant="" nonStandardMouseEvent="no" />
+  <console class="apps.configurexml.SystemConsoleConfigPanelXml" scheme="5" fontfamily="Monospaced" fontsize="12" fontstyle="0" wrapstyle="2" />
+  <programmer defaultFile="Advanced" verifyBeforeWrite="no" showCvNumbers="yes" class="jmri.jmrit.symbolicprog.configurexml.ProgrammerConfigPaneXml" />
+  <roster class="jmri.jmrit.roster.configurexml.RosterConfigPaneXml" ownerDefault="Paul Morris" />
+  <managerdefaults class="jmri.managers.configurexml.ManagerDefaultSelectorXml">
+    <setting>
+      <key>jmri.ThrottleManager</key>
+      <value>NCE</value>
+    </setting>
+    <setting>
+      <key>jmri.ConsistManager</key>
+      <value>NCE</value>
+    </setting>
+    <setting>
+      <key>jmri.CommandStation</key>
+      <value>NCE</value>
+    </setting>
+    <setting>
+      <key>jmri.GlobalProgrammerManager</key>
+      <value>NCE</value>
+    </setting>
+    <setting>
+      <key>jmri.PowerManager</key>
+      <value>NCE</value>
+    </setting>
+    <setting>
+      <key>jmri.AddressedProgrammerManager</key>
+      <value>NCE</value>
+    </setting>
+  </managerdefaults>
+  <perform name="jmri.jmrit.withrottle.WiThrottleCreationAction" type="Action" class="apps.configurexml.PerformActionModelXml" />
+  <perform name="jmri.web.server.WebServerAction" type="Action" class="apps.configurexml.PerformActionModelXml" />
+  <perform name="apps.RestartAction" type="Button" class="apps.configurexml.CreateButtonModelXml" />
+  <!-- perform name="preference:panels/BeaverBendCombinedDepartureBoard.xml" type="XmlFile" class="apps.configurexml.PerformFileModelXml" / $-->
+  <perform name="preference:scripts/initBeaverBend.py" type="ScriptFile" class="apps.configurexml.PerformScriptModelXml" />
+  <perform name="preference:scripts/BeaverBendInitLights.py" type="ScriptFile" class="apps.configurexml.PerformScriptModelXml" />
+  <perform name="preference:scripts/TowerLight.py" type="ScriptFile" class="apps.configurexml.PerformScriptModelXml" />
+  <!--Written by JMRI version 4.0-r29647 on Tue Dec 15 22:03:08 CST 2015 $Id: XmlFile.java 28771 2015-02-22 16:58:13Z rhwood $-->
+</layout-config>

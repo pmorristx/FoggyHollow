@@ -1,0 +1,2659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/xml/XSLT/panelfile-2-9-6.xsl" type="text/xsl"?>
+<layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-2-9-6.xsd">
+  <jmriversion>
+    <major>3</major>
+    <minor>11</minor>
+    <test>5</test>
+    <modifier>.5</modifier>
+  </jmriversion>
+  <sensors class="jmri.managers.configurexml.InternalSensorManagerXml">
+    <defaultInitialState>unknown</defaultInitialState>
+    <globalDebounceTimers>
+      <goingActive>300</goingActive>
+      <goingInActive>300</goingInActive>
+    </globalDebounceTimers>
+    <sensor systemName="IS16:CCK" inverted="false">
+      <systemName>IS16:CCK</systemName>
+    </sensor>
+    <sensor systemName="IS17:ICK" inverted="false">
+      <systemName>IS17:ICK</systemName>
+    </sensor>
+    <sensor systemName="IS21:L" inverted="false" userName="Turnout 21 Lever">
+      <systemName>IS21:L</systemName>
+      <userName>Turnout 21 Lever</userName>
+    </sensor>
+    <sensor systemName="IS21:NK" inverted="false" userName="Turnout 21 Normal LED">
+      <systemName>IS21:NK</systemName>
+      <userName>Turnout 21 Normal LED</userName>
+    </sensor>
+    <sensor systemName="IS21:RK" inverted="false" userName="Turnout 21 Reverse LED">
+      <systemName>IS21:RK</systemName>
+      <userName>Turnout 21 Reverse LED</userName>
+    </sensor>
+    <sensor systemName="IS22:BF" inverted="false" userName="Order Board Button Off">
+      <systemName>IS22:BF</systemName>
+      <userName>Order Board Button Off</userName>
+    </sensor>
+    <sensor systemName="IS22:BO" inverted="false" userName="Order Board Button On">
+      <systemName>IS22:BO</systemName>
+      <userName>Order Board Button On</userName>
+      <comment />
+    </sensor>
+    <sensor systemName="IS22:K" inverted="false" userName="Order Board Indicator">
+      <systemName>IS22:K</systemName>
+      <userName>Order Board Indicator</userName>
+    </sensor>
+    <sensor systemName="IS22:TOBG" inverted="false">
+      <systemName>IS22:TOBG</systemName>
+    </sensor>
+    <sensor systemName="IS22:TOBR" inverted="false">
+      <systemName>IS22:TOBR</systemName>
+    </sensor>
+    <sensor systemName="IS22:TOG" inverted="false">
+      <systemName>IS22:TOG</systemName>
+    </sensor>
+    <sensor systemName="IS23:L" inverted="false">
+      <systemName>IS23:L</systemName>
+    </sensor>
+    <sensor systemName="IS24:BF" inverted="false" userName="Water Fill Up Button">
+      <systemName>IS24:BF</systemName>
+      <userName>Water Fill Up Button</userName>
+      <comment />
+    </sensor>
+    <sensor systemName="IS24:BO" inverted="false" userName="Water Fill Down Button">
+      <systemName>IS24:BO</systemName>
+      <userName>Water Fill Down Button</userName>
+    </sensor>
+    <sensor systemName="IS24:K" inverted="false" userName="Water Fill Indicator">
+      <systemName>IS24:K</systemName>
+      <userName>Water Fill Indicator</userName>
+    </sensor>
+    <sensor systemName="IS25:L" inverted="false" userName="Turnout 23 Lever">
+      <systemName>IS25:L</systemName>
+      <userName>Turnout 23 Lever</userName>
+    </sensor>
+    <sensor systemName="IS25:NK" inverted="false" userName="Turnout 23 Normal LED">
+      <systemName>IS25:NK</systemName>
+      <userName>Turnout 23 Normal LED</userName>
+    </sensor>
+    <sensor systemName="IS25:RK" inverted="false" userName="Turnout 23 Reverse LED">
+      <systemName>IS25:RK</systemName>
+      <userName>Turnout 23 Reverse LED</userName>
+    </sensor>
+    <sensor systemName="IS:200" inverted="true" userName="Station Master Light">
+      <systemName>IS:200</systemName>
+      <userName>Station Master Light</userName>
+    </sensor>
+    <sensor systemName="IS:201" inverted="false" userName="Tower Light">
+      <systemName>IS:201</systemName>
+      <userName>Tower Light</userName>
+    </sensor>
+    <sensor systemName="IS:202" inverted="false" userName="Order Board Light">
+      <systemName>IS:202</systemName>
+      <userName>Order Board Light</userName>
+    </sensor>
+    <sensor systemName="IS:DEMOSW" inverted="false" userName="Demo Switch">
+      <systemName>IS:DEMOSW</systemName>
+      <userName>Demo Switch</userName>
+    </sensor>
+    <sensor systemName="IS:DF0" inverted="false">
+      <systemName>IS:DF0</systemName>
+    </sensor>
+    <sensor systemName="IS:DF1" inverted="false">
+      <systemName>IS:DF1</systemName>
+    </sensor>
+    <sensor systemName="IS:DF2" inverted="false">
+      <systemName>IS:DF2</systemName>
+    </sensor>
+    <sensor systemName="IS:DF3" inverted="false">
+      <systemName>IS:DF3</systemName>
+    </sensor>
+    <sensor systemName="IS:DF4" inverted="false">
+      <systemName>IS:DF4</systemName>
+    </sensor>
+    <sensor systemName="IS:DF5" inverted="false">
+      <systemName>IS:DF5</systemName>
+    </sensor>
+    <sensor systemName="IS:DF6" inverted="false">
+      <systemName>IS:DF6</systemName>
+    </sensor>
+    <sensor systemName="IS:DIR" inverted="false" userName="Direction">
+      <systemName>IS:DIR</systemName>
+      <userName>Direction</userName>
+    </sensor>
+    <sensor systemName="IS:DR1" inverted="false">
+      <systemName>IS:DR1</systemName>
+    </sensor>
+    <sensor systemName="IS:DR2" inverted="false">
+      <systemName>IS:DR2</systemName>
+    </sensor>
+    <sensor systemName="IS:DR3" inverted="false">
+      <systemName>IS:DR3</systemName>
+    </sensor>
+    <sensor systemName="IS:DR4" inverted="false">
+      <systemName>IS:DR4</systemName>
+    </sensor>
+    <sensor systemName="IS:DR5" inverted="false">
+      <systemName>IS:DR5</systemName>
+    </sensor>
+    <sensor systemName="IS:DR6" inverted="false">
+      <systemName>IS:DR6</systemName>
+    </sensor>
+    <sensor systemName="IS:EOT" inverted="false" userName="End of Track Light">
+      <systemName>IS:EOT</systemName>
+      <userName>End of Track Light</userName>
+    </sensor>
+    <sensor systemName="IS:MBL" inverted="false" userName="Mine Building Light">
+      <systemName>IS:MBL</systemName>
+      <userName>Mine Building Light</userName>
+    </sensor>
+    <sensor systemName="IS:MINESTOP" inverted="false">
+      <systemName>IS:MINESTOP</systemName>
+    </sensor>
+    <sensor systemName="IS:MTS" inverted="false" userName="Mine Track Switch">
+      <systemName>IS:MTS</systemName>
+      <userName>Mine Track Switch</userName>
+    </sensor>
+    <sensor systemName="IS:RTE:BYPASS" inverted="false">
+      <systemName>IS:RTE:BYPASS</systemName>
+    </sensor>
+    <sensor systemName="IS:RTE:ORDER" inverted="false" userName="Order Board State - Red">
+      <systemName>IS:RTE:ORDER</systemName>
+      <userName>Order Board State - Red</userName>
+      <comment />
+    </sensor>
+    <sensor systemName="IS:RTE:STATION" inverted="false">
+      <systemName>IS:RTE:STATION</systemName>
+    </sensor>
+    <sensor systemName="IS:RTE:WATER" inverted="false" userName="Water Tower Down State">
+      <systemName>IS:RTE:WATER</systemName>
+      <userName>Water Tower Down State</userName>
+      <comment />
+    </sensor>
+    <sensor systemName="IS:SERVICELIGHT" inverted="false">
+      <systemName>IS:SERVICELIGHT</systemName>
+    </sensor>
+    <sensor systemName="IS:STA1:K" inverted="false">
+      <systemName>IS:STA1:K</systemName>
+    </sensor>
+    <sensor systemName="IS:STA1:OFF" inverted="false">
+      <systemName>IS:STA1:OFF</systemName>
+    </sensor>
+    <sensor systemName="IS:STA1:ON" inverted="false">
+      <systemName>IS:STA1:ON</systemName>
+    </sensor>
+    <sensor systemName="IS:STA2:K" inverted="false">
+      <systemName>IS:STA2:K</systemName>
+    </sensor>
+    <sensor systemName="IS:STA2:OFF" inverted="false">
+      <systemName>IS:STA2:OFF</systemName>
+    </sensor>
+    <sensor systemName="IS:STA2:ON" inverted="false">
+      <systemName>IS:STA2:ON</systemName>
+    </sensor>
+    <sensor systemName="IS:STA3:K" inverted="false">
+      <systemName>IS:STA3:K</systemName>
+    </sensor>
+    <sensor systemName="IS:STA3:OFF" inverted="false">
+      <systemName>IS:STA3:OFF</systemName>
+    </sensor>
+    <sensor systemName="IS:STA3:ON" inverted="false">
+      <systemName>IS:STA3:ON</systemName>
+    </sensor>
+    <sensor systemName="IS:STA4:K" inverted="false">
+      <systemName>IS:STA4:K</systemName>
+    </sensor>
+    <sensor systemName="IS:STA4:OFF" inverted="false">
+      <systemName>IS:STA4:OFF</systemName>
+    </sensor>
+    <sensor systemName="IS:STA4:ON" inverted="false">
+      <systemName>IS:STA4:ON</systemName>
+    </sensor>
+    <sensor systemName="ISCLOCKRUNNING" inverted="false">
+      <systemName>ISCLOCKRUNNING</systemName>
+    </sensor>
+    <sensor systemName="ISIS:RTE:WATEROFF" inverted="false" userName="Water Tower Up State">
+      <systemName>ISIS:RTE:WATEROFF</systemName>
+      <userName>Water Tower Up State</userName>
+      <comment />
+    </sensor>
+    <sensor systemName="ISRTE:ORDERBOARDWHITE" inverted="false" userName="Order Board State - White">
+      <systemName>ISRTE:ORDERBOARDWHITE</systemName>
+      <userName>Order Board State - White</userName>
+    </sensor>
+    <sensor systemName="ISSOUNDSTREAMING" inverted="false">
+      <systemName>ISSOUNDSTREAMING</systemName>
+    </sensor>
+  </sensors>
+  <sensors class="jmri.jmrix.loconet.configurexml.LnSensorManagerXml">
+    <globalDebounceTimers>
+      <goingActive>300</goingActive>
+      <goingInActive>300</goingInActive>
+    </globalDebounceTimers>
+    <sensor systemName="LS1" inverted="false" userName="Bridge-1">
+      <systemName>LS1</systemName>
+      <useGlobalDebounceTimer>yes</useGlobalDebounceTimer>
+      <userName>Bridge-1</userName>
+      <comment />
+    </sensor>
+    <sensor systemName="LS10" inverted="false">
+      <systemName>LS10</systemName>
+      <comment>Plug-Orange/White</comment>
+    </sensor>
+    <sensor systemName="LS11" inverted="false" userName="Mine North Light">
+      <systemName>LS11</systemName>
+      <userName>Mine North Light</userName>
+      <comment>Brown</comment>
+    </sensor>
+    <sensor systemName="LS12" inverted="false">
+      <systemName>LS12</systemName>
+      <comment>Brown/White</comment>
+    </sensor>
+    <sensor systemName="LS13" inverted="false" userName="Mine Building Lights">
+      <systemName>LS13</systemName>
+      <userName>Mine Building Lights</userName>
+      <comment>Green</comment>
+    </sensor>
+    <sensor systemName="LS14" inverted="false" userName="White EOT Lantern">
+      <systemName>LS14</systemName>
+      <userName>White EOT Lantern</userName>
+      <comment>Green/White</comment>
+    </sensor>
+    <sensor systemName="LS15" inverted="false" userName="Mine South Light">
+      <systemName>LS15</systemName>
+      <userName>Mine South Light</userName>
+      <comment>Orange</comment>
+    </sensor>
+    <sensor systemName="LS16" inverted="false" userName="Red EOT Lantern">
+      <systemName>LS16</systemName>
+      <userName>Red EOT Lantern</userName>
+      <comment>Orange/White</comment>
+    </sensor>
+    <sensor systemName="LS2" inverted="false" userName="Bridge-2">
+      <systemName>LS2</systemName>
+      <useGlobalDebounceTimer>yes</useGlobalDebounceTimer>
+      <userName>Bridge-2</userName>
+      <comment />
+    </sensor>
+    <sensor systemName="LS3" inverted="false" userName="Mine Building">
+      <systemName>LS3</systemName>
+      <useGlobalDebounceTimer>yes</useGlobalDebounceTimer>
+      <userName>Mine Building</userName>
+      <comment>Brown Sensor</comment>
+    </sensor>
+    <sensor systemName="LS4" inverted="false" userName="EOT">
+      <systemName>LS4</systemName>
+      <useGlobalDebounceTimer>yes</useGlobalDebounceTimer>
+      <userName>EOT</userName>
+      <comment />
+    </sensor>
+    <sensor systemName="LS5" inverted="false" userName="Tunnel">
+      <systemName>LS5</systemName>
+      <useGlobalDebounceTimer>yes</useGlobalDebounceTimer>
+      <userName>Tunnel</userName>
+    </sensor>
+    <sensor systemName="LS6" inverted="false" userName="BOT">
+      <systemName>LS6</systemName>
+      <debounceTimers>
+        <goingActive>200</goingActive>
+        <goingInActive>200</goingInActive>
+      </debounceTimers>
+      <userName>BOT</userName>
+    </sensor>
+    <sensor systemName="LS7" inverted="false" userName="Mystic Springs Tunnel">
+      <systemName>LS7</systemName>
+      <userName>Mystic Springs Tunnel</userName>
+    </sensor>
+    <sensor systemName="LS8" inverted="false">
+      <systemName>LS8</systemName>
+    </sensor>
+    <sensor systemName="LS9" inverted="false">
+      <systemName>LS9</systemName>
+      <comment>Plug-Orange</comment>
+    </sensor>
+  </sensors>
+  <turnouts class="jmri.managers.configurexml.InternalTurnoutManagerXml">
+    <operations automate="false">
+      <operation name="NoFeedback" class="jmri.configurexml.turnoutoperations.NoFeedbackTurnoutOperationXml" interval="300" maxtries="2" />
+      <operation name="Raw" class="jmri.configurexml.turnoutoperations.RawTurnoutOperationXml" interval="300" maxtries="1" />
+      <operation name="Sensor" class="jmri.configurexml.turnoutoperations.SensorTurnoutOperationXml" interval="300" maxtries="3" />
+    </operations>
+    <defaultclosedspeed>Normal</defaultclosedspeed>
+    <defaultthrownspeed>Restricted</defaultthrownspeed>
+    <turnout systemName="IT" feedback="DIRECT" inverted="false" automate="Default">
+      <systemName>IT</systemName>
+      <comment>SignalHead:IH7:Green</comment>
+    </turnout>
+  </turnouts>
+  <turnouts class="jmri.jmrix.nce.configurexml.NceTurnoutManagerXml">
+    <operations automate="false">
+      <operation name="NoFeedback" class="jmri.configurexml.turnoutoperations.NoFeedbackTurnoutOperationXml" interval="300" maxtries="2" />
+      <operation name="Raw" class="jmri.configurexml.turnoutoperations.RawTurnoutOperationXml" interval="300" maxtries="1" />
+      <operation name="Sensor" class="jmri.configurexml.turnoutoperations.SensorTurnoutOperationXml" interval="300" maxtries="3" />
+    </operations>
+    <defaultclosedspeed>Normal</defaultclosedspeed>
+    <defaultthrownspeed>Restricted</defaultthrownspeed>
+    <turnout systemName="NT1" userName="Order Board" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT1</systemName>
+      <userName>Order Board</userName>
+      <comment />
+    </turnout>
+    <turnout systemName="NT21" userName="Mystic Springs Turnout" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT21</systemName>
+      <userName>Mystic Springs Turnout</userName>
+      <comment />
+    </turnout>
+    <turnout systemName="NT22" feedback="DIRECT" inverted="false" automate="Default">
+      <systemName>NT22</systemName>
+    </turnout>
+    <turnout systemName="NT23" userName="Beaver Rock Turnout" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT23</systemName>
+      <userName>Beaver Rock Turnout</userName>
+      <comment />
+    </turnout>
+    <turnout systemName="NT24" userName="Water Tower" feedback="DIRECT" inverted="false" automate="Default">
+      <systemName>NT24</systemName>
+      <userName>Water Tower</userName>
+    </turnout>
+    <turnout systemName="NT25" feedback="DIRECT" inverted="false" automate="Default">
+      <systemName>NT25</systemName>
+    </turnout>
+  </turnouts>
+  <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
+    <memory systemName="IM">
+      <systemName>IM</systemName>
+    </memory>
+    <memory systemName="IM20:H1" value="0">
+      <systemName>IM20:H1</systemName>
+    </memory>
+    <memory systemName="IM20:H2" value="4">
+      <systemName>IM20:H2</systemName>
+    </memory>
+    <memory systemName="IM20:H3" value=":">
+      <systemName>IM20:H3</systemName>
+    </memory>
+    <memory systemName="IM20:M1" value="0">
+      <systemName>IM20:M1</systemName>
+    </memory>
+    <memory systemName="IM20:M2" value="6">
+      <systemName>IM20:M2</systemName>
+    </memory>
+    <memory systemName="IM21:TV" value="N">
+      <systemName>IM21:TV</systemName>
+    </memory>
+    <memory systemName="IM25:TV" value="N">
+      <systemName>IM25:TV</systemName>
+    </memory>
+    <memory systemName="IM:1:DIR" value="North">
+      <systemName>IM:1:DIR</systemName>
+    </memory>
+    <memory systemName="IM:1:DPRT" value="">
+      <systemName>IM:1:DPRT</systemName>
+    </memory>
+    <memory systemName="IM:1:DST" value="Lost Creek">
+      <systemName>IM:1:DST</systemName>
+    </memory>
+    <memory systemName="IM:1:RMK" value="">
+      <systemName>IM:1:RMK</systemName>
+    </memory>
+    <memory systemName="IM:1:TNM" value="Wilderness Special">
+      <systemName>IM:1:TNM</systemName>
+    </memory>
+    <memory systemName="IM:1:TNO" value="18">
+      <systemName>IM:1:TNO</systemName>
+    </memory>
+    <memory systemName="IM:2:DIR" value="North">
+      <systemName>IM:2:DIR</systemName>
+    </memory>
+    <memory systemName="IM:2:DPRT" value="07:45">
+      <systemName>IM:2:DPRT</systemName>
+    </memory>
+    <memory systemName="IM:2:DST" value="Excelsior Springs">
+      <systemName>IM:2:DST</systemName>
+    </memory>
+    <memory systemName="IM:2:RMK" value="">
+      <systemName>IM:2:RMK</systemName>
+    </memory>
+    <memory systemName="IM:2:TNM" value="Daily Freight">
+      <systemName>IM:2:TNM</systemName>
+    </memory>
+    <memory systemName="IM:2:TNO" value="42">
+      <systemName>IM:2:TNO</systemName>
+    </memory>
+    <memory systemName="IM:3:DIR" value="South">
+      <systemName>IM:3:DIR</systemName>
+    </memory>
+    <memory systemName="IM:3:DPRT" value="08:30">
+      <systemName>IM:3:DPRT</systemName>
+    </memory>
+    <memory systemName="IM:3:DST" value="Ace of Spades Mine">
+      <systemName>IM:3:DST</systemName>
+    </memory>
+    <memory systemName="IM:3:RMK" value="">
+      <systemName>IM:3:RMK</systemName>
+    </memory>
+    <memory systemName="IM:3:TNM" value="AoS Mine">
+      <systemName>IM:3:TNM</systemName>
+    </memory>
+    <memory systemName="IM:3:TNO" value="6">
+      <systemName>IM:3:TNO</systemName>
+    </memory>
+    <memory systemName="IM:4:DIR" value="North">
+      <systemName>IM:4:DIR</systemName>
+    </memory>
+    <memory systemName="IM:4:DPRT" value="09:00">
+      <systemName>IM:4:DPRT</systemName>
+    </memory>
+    <memory systemName="IM:4:DST" value="Excelsior Springs">
+      <systemName>IM:4:DST</systemName>
+    </memory>
+    <memory systemName="IM:4:RMK" value="Delay 10 Min">
+      <systemName>IM:4:RMK</systemName>
+    </memory>
+    <memory systemName="IM:4:TNM" value="Mtn Excursion">
+      <systemName>IM:4:TNM</systemName>
+    </memory>
+    <memory systemName="IM:4:TNO" value="32">
+      <systemName>IM:4:TNO</systemName>
+    </memory>
+    <memory systemName="IM:5:DIR" value="South">
+      <systemName>IM:5:DIR</systemName>
+    </memory>
+    <memory systemName="IM:5:DPRT" value="10:15">
+      <systemName>IM:5:DPRT</systemName>
+    </memory>
+    <memory systemName="IM:5:DST" value="Foggy Hollow">
+      <systemName>IM:5:DST</systemName>
+    </memory>
+    <memory systemName="IM:5:RMK" value="See Agnt">
+      <systemName>IM:5:RMK</systemName>
+    </memory>
+    <memory systemName="IM:5:TNM" value="Faun Glen">
+      <systemName>IM:5:TNM</systemName>
+    </memory>
+    <memory systemName="IM:5:TNO" value="41">
+      <systemName>IM:5:TNO</systemName>
+    </memory>
+    <memory systemName="IM:6:DIR" value="">
+      <systemName>IM:6:DIR</systemName>
+    </memory>
+    <memory systemName="IM:6:DPRT" value="">
+      <systemName>IM:6:DPRT</systemName>
+    </memory>
+    <memory systemName="IM:6:DST" value="">
+      <systemName>IM:6:DST</systemName>
+    </memory>
+    <memory systemName="IM:6:RMK" value="">
+      <systemName>IM:6:RMK</systemName>
+    </memory>
+    <memory systemName="IM:6:TNM" value="">
+      <systemName>IM:6:TNM</systemName>
+    </memory>
+    <memory systemName="IM:6:TNO" value="">
+      <systemName>IM:6:TNO</systemName>
+    </memory>
+    <memory systemName="IM:BLK:1" userName="Block Label:1" value="Block 1">
+      <systemName>IM:BLK:1</systemName>
+      <userName>Block Label:1</userName>
+    </memory>
+    <memory systemName="IM:BLK:2" userName="Block Label:2" value="Block 2">
+      <systemName>IM:BLK:2</systemName>
+      <userName>Block Label:2</userName>
+    </memory>
+    <memory systemName="IM:BLK:3" userName="Block Label:3" value="Block 3">
+      <systemName>IM:BLK:3</systemName>
+      <userName>Block Label:3</userName>
+    </memory>
+    <memory systemName="IM:BLK:4" userName="Block Label:4" value="Block 4">
+      <systemName>IM:BLK:4</systemName>
+      <userName>Block Label:4</userName>
+    </memory>
+    <memory systemName="IM:BLK:5" userName="Block Label:5" value="Block 5">
+      <systemName>IM:BLK:5</systemName>
+      <userName>Block Label:5</userName>
+    </memory>
+    <memory systemName="IM:DELAY1" userName="EOT DELAY M-MSB" value=" ">
+      <systemName>IM:DELAY1</systemName>
+      <userName>EOT DELAY M-MSB</userName>
+    </memory>
+    <memory systemName="IM:DELAY2" userName="EOT DELAY M-LSB" value=" ">
+      <systemName>IM:DELAY2</systemName>
+      <userName>EOT DELAY M-LSB</userName>
+    </memory>
+    <memory systemName="IM:DELAY3" userName="EOT DELAY COLON" value=" ">
+      <systemName>IM:DELAY3</systemName>
+      <userName>EOT DELAY COLON</userName>
+    </memory>
+    <memory systemName="IM:DELAY4" userName="EOT DELAY S-MSB" value=" ">
+      <systemName>IM:DELAY4</systemName>
+      <userName>EOT DELAY S-MSB</userName>
+    </memory>
+    <memory systemName="IM:DELAY5" userName="EOT DELAY S-LSB" value=" ">
+      <systemName>IM:DELAY5</systemName>
+      <userName>EOT DELAY S-LSB</userName>
+    </memory>
+    <memory systemName="IM:MINE:LOCO" userName="Mine Locomotive" value="6">
+      <systemName>IM:MINE:LOCO</systemName>
+      <userName>Mine Locomotive</userName>
+    </memory>
+    <memory systemName="IM:NULL" userName="Flip Board Spacer" value=" ">
+      <systemName>IM:NULL</systemName>
+      <userName>Flip Board Spacer</userName>
+    </memory>
+    <memory systemName="IM:ROSTERDESCRIPTION" userName="Roster Description" value="Shay - 10Ton T-Boiler 2Truck">
+      <systemName>IM:ROSTERDESCRIPTION</systemName>
+      <userName>Roster Description</userName>
+    </memory>
+    <memory systemName="IM:ROSTERICON" userName="Roster Icon" value="file:/home/pi/MyJMRI/resources/FH&amp;W%206%20Icon.jpg">
+      <systemName>IM:ROSTERICON</systemName>
+      <userName>Roster Icon</userName>
+    </memory>
+    <memory systemName="IM:ROSTERID" userName="Roster ID" value="Foggy Hollow &amp; Western #6">
+      <systemName>IM:ROSTERID</systemName>
+      <userName>Roster ID</userName>
+      <comment>Selected loco ID on mine track panel</comment>
+    </memory>
+    <memory systemName="IMCURRENTTIME" value="5:57 PM">
+      <systemName>IMCURRENTTIME</systemName>
+    </memory>
+    <memory systemName="IMRATEFACTOR" value="1.0">
+      <systemName>IMRATEFACTOR</systemName>
+    </memory>
+  </memories>
+  <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH0" userName="Signal 0 South">
+      <systemName>IH0</systemName>
+      <userName>Signal 0 South</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH1" userName="Signal 1 South">
+      <systemName>IH1</systemName>
+      <userName>Signal 1 South</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH10" userName="Signal 4 North">
+      <systemName>IH10</systemName>
+      <userName>Signal 4 North</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH11" userName="Signal 5 North">
+      <systemName>IH11</systemName>
+      <userName>Signal 5 North</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH12" userName="Signal 6 North">
+      <systemName>IH12</systemName>
+      <userName>Signal 6 North</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH13" userName="Signal 0 North">
+      <systemName>IH13</systemName>
+      <userName>Signal 0 North</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH2" userName="Signal 2 South">
+      <systemName>IH2</systemName>
+      <userName>Signal 2 South</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH3" userName="Signal 3 South">
+      <systemName>IH3</systemName>
+      <userName>Signal 3 South</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH4" userName="Signal 4 South">
+      <systemName>IH4</systemName>
+      <userName>Signal 4 South</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH5" userName="Signal 5 South">
+      <systemName>IH5</systemName>
+      <userName>Signal 5 South</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH6" userName="Signal 6 South">
+      <systemName>IH6</systemName>
+      <userName>Signal 6 South</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH7" userName="Signal 1 North">
+      <systemName>IH7</systemName>
+      <userName>Signal 1 North</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH8" userName="Signal 2 North">
+      <systemName>IH8</systemName>
+      <userName>Signal 2 North</userName>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.VirtualSignalHeadXml" systemName="IH9" userName="Signal 3 North">
+      <systemName>IH9</systemName>
+      <userName>Signal 3 North</userName>
+    </signalhead>
+  </signalheads>
+  <signalmasts class="jmri.managers.configurexml.DefaultSignalMastManagerXml">
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-0-South">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0002)</systemName>
+      <userName>SM-0-South</userName>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-1-South">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0003)</systemName>
+      <userName>SM-1-South</userName>
+      <properties>
+        <property>
+          <key class="java.lang.String">intermediateSignal</key>
+          <value class="java.lang.Boolean">true</value>
+        </property>
+      </properties>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-2-South">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0004)</systemName>
+      <userName>SM-2-South</userName>
+      <properties>
+        <property>
+          <key class="java.lang.String">intermediateSignal</key>
+          <value class="java.lang.Boolean">true</value>
+        </property>
+      </properties>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-3-South">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0005)</systemName>
+      <userName>SM-3-South</userName>
+      <properties>
+        <property>
+          <key class="java.lang.String">intermediateSignal</key>
+          <value class="java.lang.Boolean">true</value>
+        </property>
+      </properties>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-4-South">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0006)</systemName>
+      <userName>SM-4-South</userName>
+      <properties>
+        <property>
+          <key class="java.lang.String">intermediateSignal</key>
+          <value class="java.lang.Boolean">true</value>
+        </property>
+      </properties>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-5-South">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0007)</systemName>
+      <userName>SM-5-South</userName>
+      <properties>
+        <property>
+          <key class="java.lang.String">intermediateSignal</key>
+          <value class="java.lang.Boolean">true</value>
+        </property>
+      </properties>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-6-South">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0008)</systemName>
+      <userName>SM-6-South</userName>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-0-North">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0009)</systemName>
+      <userName>SM-0-North</userName>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-1-North">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0010)</systemName>
+      <userName>SM-1-North</userName>
+      <properties>
+        <property>
+          <key class="java.lang.String">intermediateSignal</key>
+          <value class="java.lang.Boolean">true</value>
+        </property>
+      </properties>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-2-North">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0011)</systemName>
+      <userName>SM-2-North</userName>
+      <properties>
+        <property>
+          <key class="java.lang.String">intermediateSignal</key>
+          <value class="java.lang.Boolean">true</value>
+        </property>
+      </properties>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-3-North">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0012)</systemName>
+      <userName>SM-3-North</userName>
+      <properties>
+        <property>
+          <key class="java.lang.String">intermediateSignal</key>
+          <value class="java.lang.Boolean">true</value>
+        </property>
+      </properties>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-4-North">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0013)</systemName>
+      <userName>SM-4-North</userName>
+      <properties>
+        <property>
+          <key class="java.lang.String">intermediateSignal</key>
+          <value class="java.lang.Boolean">true</value>
+        </property>
+      </properties>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-5-North">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0014)</systemName>
+      <userName>SM-5-North</userName>
+      <properties>
+        <property>
+          <key class="java.lang.String">intermediateSignal</key>
+          <value class="java.lang.Boolean">true</value>
+        </property>
+      </properties>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="SM-6-North">
+      <systemName>IF$vsm:Train Order Semaphore:one-board($0015)</systemName>
+      <userName>SM-6-North</userName>
+      <unlit allowed="yes" />
+    </virtualsignalmast>
+  </signalmasts>
+  <signalgroups class="jmri.managers.configurexml.DefaultSignalGroupManagerXml" />
+  <blocks class="jmri.configurexml.BlockManagerXml">
+    <defaultspeed>Normal</defaultspeed>
+    <block systemName="IB11">
+      <systemName>IB11</systemName>
+      <userName>BOT</userName>
+    </block>
+    <block systemName="IB12">
+      <systemName>IB12</systemName>
+      <userName>Tunnel</userName>
+    </block>
+    <block systemName="IB13">
+      <systemName>IB13</systemName>
+      <userName>Bridge-1</userName>
+    </block>
+    <block systemName="IB14">
+      <systemName>IB14</systemName>
+      <userName>Bridge-2</userName>
+    </block>
+    <block systemName="IB15">
+      <systemName>IB15</systemName>
+      <userName>Mine Building</userName>
+    </block>
+    <block systemName="IB16">
+      <systemName>IB16</systemName>
+      <userName>EOT</userName>
+    </block>
+    <block systemName="IB11" length="76.2" curve="0" userName="BOT">
+      <systemName>IB11</systemName>
+      <userName>BOT</userName>
+      <comment>Beginning of Track</comment>
+      <speed>Slow</speed>
+      <permissive>no</permissive>
+      <occupancysensor>BOT</occupancysensor>
+      <path todir="64" fromdir="128" block="IB12" />
+    </block>
+    <block systemName="IB12" length="304.8" curve="1" userName="Tunnel">
+      <systemName>IB12</systemName>
+      <userName>Tunnel</userName>
+      <comment />
+      <speed>Limited</speed>
+      <permissive>no</permissive>
+      <occupancysensor>Tunnel</occupancysensor>
+      <path todir="128" fromdir="64" block="IB11" />
+      <path todir="64" fromdir="128" block="IB13" />
+    </block>
+    <block systemName="IB13" length="508.0" curve="2" userName="Bridge-1">
+      <systemName>IB13</systemName>
+      <userName>Bridge-1</userName>
+      <comment />
+      <speed>Medium</speed>
+      <permissive>no</permissive>
+      <occupancysensor>Bridge-1</occupancysensor>
+      <path todir="128" fromdir="64" block="IB12" />
+      <path todir="64" fromdir="128" block="IB14" />
+    </block>
+    <block systemName="IB14" length="0.0" curve="0" userName="Bridge-2">
+      <systemName>IB14</systemName>
+      <userName>Bridge-2</userName>
+      <speed>Slow</speed>
+      <permissive>no</permissive>
+      <occupancysensor>Bridge-2</occupancysensor>
+      <path todir="128" fromdir="64" block="IB13" />
+      <path todir="64" fromdir="128" block="IB15" />
+    </block>
+    <block systemName="IB15" length="0.0" curve="0" userName="Mine Building">
+      <systemName>IB15</systemName>
+      <userName>Mine Building</userName>
+      <speed>Restricted</speed>
+      <permissive>no</permissive>
+      <occupancysensor>Mine Building</occupancysensor>
+      <path todir="128" fromdir="64" block="IB14" />
+      <path todir="64" fromdir="128" block="IB16" />
+    </block>
+    <block systemName="IB16" length="0.0" curve="0" userName="EOT">
+      <systemName>IB16</systemName>
+      <userName>EOT</userName>
+      <speed>Stop</speed>
+      <permissive>no</permissive>
+      <occupancysensor>EOT</occupancysensor>
+      <path todir="128" fromdir="64" block="IB15" />
+    </block>
+  </blocks>
+  <oblocks class="jmri.jmrit.logix.configurexml.OBlockManagerXml" />
+  <layoutblocks class="jmri.jmrit.display.configurexml.LayoutBlockManagerXml" blockrouting="yes">
+    <layoutblock systemName="ILB1" userName="BOT" occupancysensor="BOT" occupiedsense="2" trackcolor="white" occupiedcolor="red" extracolor="blue">
+      <systemName>ILB1</systemName>
+      <userName>BOT</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB2" userName="Tunnel" occupancysensor="Tunnel" occupiedsense="2" trackcolor="white" occupiedcolor="red" extracolor="blue">
+      <systemName>ILB2</systemName>
+      <userName>Tunnel</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB3" userName="Bridge-1" occupancysensor="Bridge-1" occupiedsense="2" trackcolor="white" occupiedcolor="red" extracolor="blue">
+      <systemName>ILB3</systemName>
+      <userName>Bridge-1</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB4" userName="Bridge-2" occupancysensor="Bridge-2" occupiedsense="2" trackcolor="white" occupiedcolor="red" extracolor="blue">
+      <systemName>ILB4</systemName>
+      <userName>Bridge-2</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB5" userName="Mine Building" occupancysensor="Mine Building" occupiedsense="2" trackcolor="white" occupiedcolor="red" extracolor="blue">
+      <systemName>ILB5</systemName>
+      <userName>Mine Building</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB6" userName="EOT" occupancysensor="EOT" occupiedsense="2" trackcolor="white" occupiedcolor="red" extracolor="blue">
+      <systemName>ILB6</systemName>
+      <userName>EOT</userName>
+    </layoutblock>
+  </layoutblocks>
+  <sections class="jmri.configurexml.SectionManagerXml">
+    <section systemName="IY:AUTO:0007" userName="BOT Section" creationtype="userdefined" fsensorname="IS:DF1" rsensorname="IS:DR1">
+      <userName>BOT Section</userName>
+      <blockentry sName="IB11" order="0" />
+      <entrypoint fromblock="IB12" toblock="IB11" direction="8" fixed="no" fromblockdirection="North" />
+    </section>
+    <section systemName="IY:AUTO:0008" userName="Tunnel Section" creationtype="userdefined" fsensorname="IS:DF2" rsensorname="IS:DR2">
+      <userName>Tunnel Section</userName>
+      <blockentry sName="IB12" order="0" />
+      <entrypoint fromblock="IB11" toblock="IB12" direction="4" fixed="no" fromblockdirection="South" />
+      <entrypoint fromblock="IB13" toblock="IB12" direction="8" fixed="no" fromblockdirection="North" />
+    </section>
+    <section systemName="IY:AUTO:0009" userName="Bridge-1 Section" creationtype="userdefined" fsensorname="IS:DF3" rsensorname="IS:DR3">
+      <userName>Bridge-1 Section</userName>
+      <blockentry sName="IB13" order="0" />
+      <entrypoint fromblock="IB12" toblock="IB13" direction="4" fixed="no" fromblockdirection="South" />
+      <entrypoint fromblock="IB14" toblock="IB13" direction="8" fixed="no" fromblockdirection="North" />
+    </section>
+    <section systemName="IY:AUTO:0010" userName="Mine Approach Section" creationtype="userdefined" fsensorname="IS:DF4" rsensorname="IS:DR4">
+      <userName>Mine Approach Section</userName>
+      <blockentry sName="IB14" order="0" />
+      <entrypoint fromblock="IB13" toblock="IB14" direction="4" fixed="no" fromblockdirection="South" />
+      <entrypoint fromblock="IB15" toblock="IB14" direction="8" fixed="no" fromblockdirection="North" />
+    </section>
+    <section systemName="IY:AUTO:0011" userName="Mine Building Section" creationtype="userdefined" fsensorname="IS:DF5" rsensorname="IS:DR5">
+      <userName>Mine Building Section</userName>
+      <blockentry sName="IB15" order="0" />
+      <entrypoint fromblock="IB14" toblock="IB15" direction="4" fixed="no" fromblockdirection="South" />
+      <entrypoint fromblock="IB16" toblock="IB15" direction="8" fixed="no" fromblockdirection="North" />
+    </section>
+    <section systemName="IY:AUTO:0012" userName="EOT Section" creationtype="userdefined" fsensorname="IS:DF6" rsensorname="IS:DR6">
+      <userName>EOT Section</userName>
+      <blockentry sName="IB16" order="0" />
+      <entrypoint fromblock="IB15" toblock="IB16" direction="4" fixed="no" fromblockdirection="South" />
+    </section>
+  </sections>
+  <transits class="jmri.configurexml.TransitManagerXml">
+    <transit systemName="IZ1" userName="Southbound Mine Train">
+      <userName>Southbound Mine Train</userName>
+      <transitsection sectionname="IY:AUTO:0007" sequence="1" direction="4" alternate="no" />
+      <transitsection sectionname="IY:AUTO:0008" sequence="2" direction="4" alternate="no" />
+      <transitsection sectionname="IY:AUTO:0009" sequence="3" direction="4" alternate="no" />
+      <transitsection sectionname="IY:AUTO:0010" sequence="4" direction="4" alternate="no" />
+      <transitsection sectionname="IY:AUTO:0011" sequence="5" direction="4" alternate="no" />
+      <transitsection sectionname="IY:AUTO:0012" sequence="6" direction="4" alternate="no" />
+    </transit>
+    <transit systemName="IZ2" userName="Northbound Mine Train">
+      <userName>Northbound Mine Train</userName>
+      <transitsection sectionname="IY:AUTO:0012" sequence="1" direction="8" alternate="no" />
+      <transitsection sectionname="IY:AUTO:0011" sequence="2" direction="8" alternate="no" />
+      <transitsection sectionname="IY:AUTO:0010" sequence="3" direction="8" alternate="no" />
+      <transitsection sectionname="IY:AUTO:0009" sequence="4" direction="8" alternate="no" />
+      <transitsection sectionname="IY:AUTO:0008" sequence="5" direction="8" alternate="no" />
+      <transitsection sectionname="IY:AUTO:0007" sequence="6" direction="8" alternate="no" />
+    </transit>
+  </transits>
+  <signalelements class="jmri.jmrit.blockboss.configurexml.BlockBossLogicXml">
+    <signalelement signal="Signal 1 North" mode="1" limitspeed1="false" limitspeed2="false" useflashyellow="false" distantsignal="false">
+      <sensorname>LS6</sensorname>
+      <sensorname>IS:DR1</sensorname>
+    </signalelement>
+    <signalelement signal="Signal 1 South" mode="1" watchedsignal1="IH2" limitspeed1="false" limitspeed2="false" useflashyellow="false" distantsignal="false">
+      <sensorname>LS5</sensorname>
+      <sensorname>IS:DF2</sensorname>
+    </signalelement>
+    <signalelement signal="Signal 2 North" mode="1" watchedsignal1="IH7" limitspeed1="false" limitspeed2="false" useflashyellow="false" distantsignal="false">
+      <sensorname>LS5</sensorname>
+      <sensorname>IS:DR2</sensorname>
+    </signalelement>
+    <signalelement signal="Signal 2 South" mode="1" watchedsignal1="IH3" limitspeed1="false" limitspeed2="false" useflashyellow="false" distantsignal="false">
+      <sensorname>LS1</sensorname>
+      <sensorname>IS:DF3</sensorname>
+    </signalelement>
+    <signalelement signal="Signal 3 North" mode="1" watchedsignal1="IH8" limitspeed1="false" limitspeed2="false" useflashyellow="false" distantsignal="false">
+      <sensorname>LS1</sensorname>
+      <sensorname>IS:DR3</sensorname>
+    </signalelement>
+    <signalelement signal="Signal 3 South" mode="1" watchedsignal1="IH4" limitspeed1="false" limitspeed2="false" useflashyellow="false" distantsignal="false">
+      <sensorname>LS2</sensorname>
+      <sensorname>IS:DF4</sensorname>
+    </signalelement>
+    <signalelement signal="Signal 4 North" mode="1" watchedsignal1="IH9" limitspeed1="false" limitspeed2="false" useflashyellow="false" distantsignal="false">
+      <sensorname>LS2</sensorname>
+      <sensorname>IS:DR4</sensorname>
+    </signalelement>
+    <signalelement signal="Signal 4 South" mode="1" watchedsignal1="IH5" limitspeed1="false" limitspeed2="false" useflashyellow="false" distantsignal="false">
+      <sensorname>LS3</sensorname>
+      <sensorname>IS:DF5</sensorname>
+    </signalelement>
+    <signalelement signal="Signal 5 North" mode="1" watchedsignal1="IH10" limitspeed1="false" limitspeed2="false" useflashyellow="false" distantsignal="false">
+      <sensorname>LS3</sensorname>
+      <sensorname>IS:DR5</sensorname>
+    </signalelement>
+    <signalelement signal="Signal 5 South" mode="1" limitspeed1="false" limitspeed2="false" useflashyellow="false" distantsignal="false">
+      <sensorname>LS4</sensorname>
+      <sensorname>IS:DF6</sensorname>
+      <sensorname>IS:DR6</sensorname>
+    </signalelement>
+  </signalelements>
+  <routes class="jmri.managers.configurexml.DefaultRouteManagerXml">
+    <route systemName="IR:AUTO:0001" userName="Beaver Bend Station">
+      <systemName>IR:AUTO:0001</systemName>
+      <userName>Beaver Bend Station</userName>
+      <routeOutputTurnout systemName="NT21" state="THROWN" />
+      <routeOutputTurnout systemName="NT23" state="THROWN" />
+      <routeOutputSensor systemName="Order Board Light" state="ACTIVE" />
+      <routeOutputSensor systemName="Turnout 21 Lever" state="INACTIVE" />
+      <routeOutputSensor systemName="Turnout 23 Lever" state="INACTIVE" />
+      <routeScriptFile name="preference:scripts/SendReceiveRelay.py" />
+      <turnoutsAlignedSensor name="IS:RTE:STATION" />
+    </route>
+    <route systemName="IR:AUTO:0002" userName="Beaver Bend Mainline">
+      <systemName>IR:AUTO:0002</systemName>
+      <userName>Beaver Bend Mainline</userName>
+      <routeOutputTurnout systemName="NT21" state="CLOSED" />
+      <routeOutputTurnout systemName="NT23" state="CLOSED" />
+      <routeOutputSensor systemName="Turnout 21 Lever" state="ACTIVE" />
+      <routeOutputSensor systemName="Turnout 23 Lever" state="ACTIVE" />
+      <turnoutsAlignedSensor name="IS:RTE:BYPASS" />
+    </route>
+  </routes>
+  <warrants class="jmri.jmrit.logix.configurexml.WarrantManagerXml" />
+  <signalmastlogics class="jmri.managers.configurexml.DefaultSignalMastLogicManagerXml">
+    <logicDelay>500</logicDelay>
+    <signalmastlogic source="SM-0-South">
+      <sourceSignalMast>SM-0-South</sourceSignalMast>
+      <destinationMast destination="SM-1-South">
+        <destinationSignalMast>SM-1-South</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>yes</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>no</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-1-South">
+      <sourceSignalMast>SM-1-South</sourceSignalMast>
+      <destinationMast destination="SM-2-South">
+        <destinationSignalMast>SM-2-South</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-2-South">
+      <sourceSignalMast>SM-2-South</sourceSignalMast>
+      <destinationMast destination="SM-3-South">
+        <destinationSignalMast>SM-3-South</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-3-South">
+      <sourceSignalMast>SM-3-South</sourceSignalMast>
+      <destinationMast destination="SM-4-South">
+        <destinationSignalMast>SM-4-South</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-4-South">
+      <sourceSignalMast>SM-4-South</sourceSignalMast>
+      <destinationMast destination="SM-5-South">
+        <destinationSignalMast>SM-5-South</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-5-South">
+      <sourceSignalMast>SM-5-South</sourceSignalMast>
+      <destinationMast destination="SM-6-South">
+        <destinationSignalMast>SM-6-South</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>no</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-1-North">
+      <sourceSignalMast>SM-1-North</sourceSignalMast>
+      <destinationMast destination="SM-0-North">
+        <destinationSignalMast>SM-0-North</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-2-North">
+      <sourceSignalMast>SM-2-North</sourceSignalMast>
+      <destinationMast destination="SM-1-North">
+        <destinationSignalMast>SM-1-North</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-3-North">
+      <sourceSignalMast>SM-3-North</sourceSignalMast>
+      <destinationMast destination="SM-2-North">
+        <destinationSignalMast>SM-2-North</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-4-North">
+      <sourceSignalMast>SM-4-North</sourceSignalMast>
+      <destinationMast destination="SM-3-North">
+        <destinationSignalMast>SM-3-North</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-5-North">
+      <sourceSignalMast>SM-5-North</sourceSignalMast>
+      <destinationMast destination="SM-4-North">
+        <destinationSignalMast>SM-4-North</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>yes</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+      <destinationMast destination="SM-6-North">
+        <destinationSignalMast>SM-6-North</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>no</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>yes</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+    <signalmastlogic source="SM-6-North">
+      <sourceSignalMast>SM-6-North</sourceSignalMast>
+      <destinationMast destination="SM-5-North">
+        <destinationSignalMast>SM-5-North</destinationSignalMast>
+        <comment />
+        <enabled>yes</enabled>
+        <allowAutoMaticSignalMastGeneration>no</allowAutoMaticSignalMastGeneration>
+        <useLayoutEditor>yes</useLayoutEditor>
+        <useLayoutEditorTurnouts>no</useLayoutEditorTurnouts>
+        <useLayoutEditorBlocks>no</useLayoutEditorBlocks>
+        <lockTurnouts>no</lockTurnouts>
+      </destinationMast>
+    </signalmastlogic>
+  </signalmastlogics>
+  <logixs class="jmri.managers.configurexml.DefaultLogixManagerXml">
+    <logix systemName="IS22" userName="Train Order Control" enabled="yes">
+      <systemName>IS22</systemName>
+      <userName>Train Order Control</userName>
+      <logixConditional systemName="IS22C1" order="0" />
+    </logix>
+    <logix systemName="IX:AUTO:0001" userName="Load Mine Script" enabled="no">
+      <systemName>IX:AUTO:0001</systemName>
+      <userName>Load Mine Script</userName>
+      <logixConditional systemName="IX:AUTO:0001C1" order="0" />
+    </logix>
+    <logix systemName="IX:AUTO:0002" userName="North Mine Light" enabled="yes">
+      <systemName>IX:AUTO:0002</systemName>
+      <userName>North Mine Light</userName>
+      <logixConditional systemName="IX:AUTO:0002C1" order="0" />
+    </logix>
+    <logix systemName="IX:AUTO:0003" userName="Mine Building Light" enabled="yes">
+      <systemName>IX:AUTO:0003</systemName>
+      <userName>Mine Building Light</userName>
+      <logixConditional systemName="IX:AUTO:0003C1" order="0" />
+      <logixConditional systemName="IX:AUTO:0003C2" order="1" />
+    </logix>
+    <logix systemName="IX:AUTO:0004" userName="South Mine Light" enabled="yes">
+      <systemName>IX:AUTO:0004</systemName>
+      <userName>South Mine Light</userName>
+      <logixConditional systemName="IX:AUTO:0004C1" order="0" />
+    </logix>
+    <logix systemName="IX:AUTO:0005" userName="EOT Lantern" enabled="yes">
+      <systemName>IX:AUTO:0005</systemName>
+      <userName>EOT Lantern</userName>
+      <logixConditional systemName="IX:AUTO:0005C2" order="0" />
+      <logixConditional systemName="IX:AUTO:0005C1" order="1" />
+    </logix>
+    <logix systemName="IX:AUTO:0007" userName="Mystic Springs Tunnel" enabled="yes">
+      <systemName>IX:AUTO:0007</systemName>
+      <userName>Mystic Springs Tunnel</userName>
+      <logixConditional systemName="IX:AUTO:0007C1" order="0" />
+    </logix>
+    <logix systemName="IX:AUTO:0008" userName="Mast 2 Dark" enabled="no">
+      <systemName>IX:AUTO:0008</systemName>
+      <userName>Mast 2 Dark</userName>
+      <logixConditional systemName="IX:AUTO:0008C1" order="0" />
+    </logix>
+    <logix systemName="IX:AUTO:0009" userName="Toggle Switch Click" enabled="yes">
+      <systemName>IX:AUTO:0009</systemName>
+      <userName>Toggle Switch Click</userName>
+      <logixConditional systemName="IX:AUTO:0009C1" order="0" />
+    </logix>
+    <logix systemName="IXIS22R" userName="Train Order Control RED" enabled="no">
+      <systemName>IXIS22R</systemName>
+      <userName>Train Order Control RED</userName>
+      <logixConditional systemName="IXIS22RC1" order="0" />
+    </logix>
+    <logix systemName="IXLX21:T" userName="Turnout 21 Monitor" enabled="yes">
+      <systemName>IXLX21:T</systemName>
+      <userName>Turnout 21 Monitor</userName>
+      <logixConditional systemName="IXLX21:TC1" order="0" />
+    </logix>
+    <logix systemName="IXLX22:T" userName="Order Board Turnout  Monitor" enabled="yes">
+      <systemName>IXLX22:T</systemName>
+      <userName>Order Board Turnout  Monitor</userName>
+      <logixConditional systemName="IXLX22:TC1" order="0" />
+    </logix>
+    <logix systemName="IXLX23:L" userName="Switch 23 Lever" enabled="yes">
+      <systemName>IXLX23:L</systemName>
+      <userName>Switch 23 Lever</userName>
+      <logixConditional systemName="IXLX23:LC1" order="0" />
+    </logix>
+    <logix systemName="IXLX23:T" userName="Turnout 23 Monitor" enabled="yes">
+      <systemName>IXLX23:T</systemName>
+      <userName>Turnout 23 Monitor</userName>
+      <logixConditional systemName="IXLX23:TC1" order="0" />
+    </logix>
+    <logix systemName="IXLX24:T" userName="Water Tower Turnout  Monitor" enabled="yes">
+      <systemName>IXLX24:T</systemName>
+      <userName>Water Tower Turnout  Monitor</userName>
+      <logixConditional systemName="IXLX24:TC1" order="0" />
+    </logix>
+    <logix systemName="IXLX:24" userName="Water Tower" enabled="yes">
+      <systemName>IXLX:24</systemName>
+      <userName>Water Tower</userName>
+      <logixConditional systemName="IXLX:24C1" order="0" />
+    </logix>
+    <logix systemName="IXLX:3" userName="Tower Light" enabled="yes">
+      <systemName>IXLX:3</systemName>
+      <userName>Tower Light</userName>
+      <logixConditional systemName="IXLX:3C1" order="0" />
+    </logix>
+    <logix systemName="LX21:L" userName="Switch 21 Lever" enabled="yes">
+      <systemName>LX21:L</systemName>
+      <userName>Switch 21 Lever</userName>
+      <logixConditional systemName="LX21:LC1" order="0" />
+    </logix>
+    <logix systemName="LX:2" userName="Order Board Light" enabled="yes">
+      <systemName>LX:2</systemName>
+      <userName>Order Board Light</userName>
+      <logixConditional systemName="LX:2C1" order="0" />
+    </logix>
+    <logix systemName="LX:STA1" userName="Office Lights" enabled="yes">
+      <systemName>LX:STA1</systemName>
+      <userName>Office Lights</userName>
+      <logixConditional systemName="LX:STA1C1" order="0" />
+      <logixConditional systemName="LX:STA1C2" order="1" />
+    </logix>
+  </logixs>
+  <conditionals class="jmri.managers.configurexml.DefaultConditionalManagerXml">
+    <conditional systemName="IS22C1" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IS22C1</systemName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS22:BO" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/gear turning.wav" />
+      <conditionalAction option="1" type="9" systemName="IS22:K" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="2" systemName="NT1" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS22:K" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="2" systemName="NT1" data="4" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0001C1" userName="Active Mine Track" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0001C1</systemName>
+      <userName>Active Mine Track</userName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="Mine Track Switch" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/MineTrack.py" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0002C1" userName="North Light" antecedent="R1 and R2 and R3" logicType="2" triggerOnChange="no">
+      <systemName>IX:AUTO:0002C1</systemName>
+      <userName>North Light</userName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="Bridge-2" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="5" negated="no" type="1" systemName="Mine Building" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="5" negated="no" type="1" systemName="EOT" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="10" systemName="Mine North Light" data="2" delay="5" string="5" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0003C1" userName="Mine Building Light On" antecedent="R1 or R2" logicType="2" triggerOnChange="no">
+      <systemName>IX:AUTO:0003C1</systemName>
+      <userName>Mine Building Light On</userName>
+      <conditionalStateVariable operator="5" negated="no" type="1" systemName="LS3" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="5" negated="no" type="1" systemName="LS4" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="10" systemName="Mine Building Lights" data="2" delay="2" string="2" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0003C2" userName="Mine Building Light Off" antecedent="R1 and R2" logicType="1" triggerOnChange="no">
+      <systemName>IX:AUTO:0003C2</systemName>
+      <userName>Mine Building Light Off</userName>
+      <conditionalStateVariable operator="4" negated="no" type="2" systemName="LS3" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="1" negated="no" type="2" systemName="LS4" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="10" systemName="Mine Building Lights" data="4" delay="5" string="5" />
+      <conditionalAction option="1" type="10" systemName="Mine North Light" data="4" delay="8" string="8" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0004C1" userName="South Mine Light" antecedent="R1 or R2" logicType="2" triggerOnChange="yes">
+      <systemName>IX:AUTO:0004C1</systemName>
+      <userName>South Mine Light</userName>
+      <conditionalStateVariable operator="5" negated="no" type="1" systemName="Mine Building" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="5" negated="no" type="1" systemName="EOT" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="10" systemName="Mine South Light" data="2" delay="8" string="8" />
+      <conditionalAction option="2" type="10" systemName="Mine South Light" data="4" delay="2" string="2" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0005C1" userName="White EOT Lantern" antecedent="(R1 and notR2) and notR3 and R4" logicType="1" triggerOnChange="no">
+      <systemName>IX:AUTO:0005C1</systemName>
+      <userName>White EOT Lantern</userName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="Mine Building" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="3" negated="yes" type="1" systemName="EOT" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="3" negated="yes" type="1" systemName="Red EOT Lantern" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="1" negated="no" type="1" systemName="Direction" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="10" systemName="White EOT Lantern" data="2" delay="24" string="24" />
+      <conditionalAction option="2" type="9" systemName="White EOT Lantern" data="4" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0005C2" userName="Red EOT Lantern" antecedent="R1" logicType="1" triggerOnChange="no">
+      <systemName>IX:AUTO:0005C2</systemName>
+      <userName>Red EOT Lantern</userName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="EOT" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="9" systemName="White EOT Lantern" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="9" systemName="Red EOT Lantern" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="Red EOT Lantern" data="4" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0007C1" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0007C1</systemName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="Mystic Springs Tunnel" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="9" systemName="IS:STA3:ON" data="4" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS:STA3:ON" data="2" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0008C1" userName="Direction = South" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0008C1</systemName>
+      <userName>Direction = South</userName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="Direction" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="41" systemName="SM-1-North" data="-1" delay="0" string="" />
+      <conditionalAction option="1" type="3" systemName="Signal 2 North" data="0" delay="0" string="Dark" />
+      <conditionalAction option="1" type="41" systemName="SM-3-North" data="-1" delay="0" string="" />
+      <conditionalAction option="1" type="41" systemName="SM-4-North" data="-1" delay="0" string="" />
+      <conditionalAction option="1" type="41" systemName="SM-5-North" data="-1" delay="0" string="" />
+      <conditionalAction option="1" type="42" systemName="SM-1-South" data="-1" delay="0" string="" />
+      <conditionalAction option="2" type="42" systemName="SM-1-North" data="-1" delay="0" string="" />
+      <conditionalAction option="1" type="6" systemName="Signal 1 North" data="-1" delay="0" string="" />
+      <conditionalAction option="1" type="37" systemName="SM-1-North" data="-1" delay="0" string="Not Lit" />
+      <conditionalAction option="1" type="3" systemName="Signal 3 North" data="0" delay="0" string="Dark" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0009C1" antecedent="R1 and R2" logicType="2" triggerOnChange="no">
+      <systemName>IX:AUTO:0009C1</systemName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="Demo Switch" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalStateVariable operator="5" negated="no" type="1" systemName="Mine Track Switch" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="15" systemName=" " data="-1" delay="0" string="program:resources/sounds/toggle-on.wav" />
+      <conditionalAction option="2" type="15" systemName=" " data="-1" delay="0" string="program:resources/sounds/toggle-off.wav" />
+    </conditional>
+    <conditional systemName="IXIS22RC1" userName="Train Order Control Red" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IXIS22RC1</systemName>
+      <userName>Train Order Control Red</userName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS22:TOBR" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="9" systemName="IS22:TOBG" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="9" systemName="IS22:TOG" data="4" delay="0" string="" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+      <conditionalAction option="1" type="2" systemName="NT1" data="4" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IXLX21:TC1" userName="LX21:T:Normal" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IXLX21:TC1</systemName>
+      <userName>LX21:T:Normal</userName>
+      <conditionalStateVariable operator="4" negated="no" type="4" systemName="Mystic Springs Turnout" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/SendReceiveRelay.py" />
+      <conditionalAction option="1" type="10" systemName="IS21:NK" data="2" delay="18" string="18" />
+      <conditionalAction option="1" type="10" systemName="IS21:RK" data="4" delay="1" string="1" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\EnhancedCTCRelayTrimmed.wav" />
+      <conditionalAction option="1" type="9" systemName="IS21:L" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="10" systemName="IS21:NK" data="4" delay="1" string="1" />
+      <conditionalAction option="2" type="10" systemName="IS21:RK" data="2" delay="18" string="18" />
+      <conditionalAction option="2" type="9" systemName="IS21:L" data="4" delay="0" string="" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+    </conditional>
+    <conditional systemName="IXLX22:TC1" userName="Order Board Turnout C1" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IXLX22:TC1</systemName>
+      <userName>Order Board Turnout C1</userName>
+      <conditionalStateVariable operator="4" negated="no" type="4" systemName="NT1" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/gear turning.wav" />
+      <conditionalAction option="1" type="9" systemName="IS22:K" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="9" systemName="IS22:BO" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS22:K" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS22:BO" data="4" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IXLX23:LC1" userName="LX23:Normal" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IXLX23:LC1</systemName>
+      <userName>LX23:Normal</userName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="Turnout 23 Lever" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/SendReceiveRelay.py" />
+      <conditionalAction option="1" type="10" systemName="Turnout 23 Normal LED" data="2" delay="18" string="18" />
+      <conditionalAction option="1" type="10" systemName="Turnout 23 Reverse LED" data="4" delay="1" string="1" />
+      <conditionalAction option="1" type="2" systemName="NT23" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="10" systemName="Turnout 23 Normal LED" data="4" delay="1" string="1" />
+      <conditionalAction option="2" type="10" systemName="Turnout 23 Reverse LED" data="2" delay="18" string="18" />
+      <conditionalAction option="2" type="2" systemName="NT23" data="4" delay="0" string="" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds\EnhancedCTCRelayTrimmed.wav" />
+    </conditional>
+    <conditional systemName="IXLX23:TC1" userName="LX23:T:Normal" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IXLX23:TC1</systemName>
+      <userName>LX23:T:Normal</userName>
+      <conditionalStateVariable operator="4" negated="no" type="4" systemName="NT23" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/SendReceiveRelay.py" />
+      <conditionalAction option="1" type="10" systemName="Turnout 23 Normal LED" data="2" delay="18" string="18" />
+      <conditionalAction option="1" type="10" systemName="Turnout 23 Reverse LED" data="4" delay="1" string="1" />
+      <conditionalAction option="1" type="9" systemName="IS23:L" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="10" systemName="Turnout 23 Normal LED" data="4" delay="1" string="1" />
+      <conditionalAction option="2" type="10" systemName="Turnout 23 Reverse LED" data="2" delay="18" string="18" />
+      <conditionalAction option="2" type="9" systemName="IS23:L" data="4" delay="0" string="" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds\EnhancedCTCRelayTrimmed.wav" />
+    </conditional>
+    <conditional systemName="IXLX24:TC1" userName="IS24T1" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IXLX24:TC1</systemName>
+      <userName>IS24T1</userName>
+      <conditionalStateVariable operator="4" negated="no" type="3" systemName="NT24" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/ChainPulley.wav" />
+      <conditionalAction option="1" type="9" systemName="IS24:K" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="9" systemName="IS24:BO" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS24:K" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS24:BO" data="4" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IXLX:24C1" userName="IS24C1" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IXLX:24C1</systemName>
+      <userName>IS24C1</userName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS24:BO" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources/sounds/ChainPulley.wav" />
+      <conditionalAction option="1" type="9" systemName="IS24:K" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="2" systemName="NT24" data="4" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS24:K" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="2" systemName="NT24" data="2" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IXLX:3C1" userName="LX:3C1" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IXLX:3C1</systemName>
+      <userName>LX:3C1</userName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS:STA3:ON" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\toggle-on.wav" />
+      <conditionalAction option="1" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/RandomArc.py" />
+      <conditionalAction option="1" type="9" systemName="IS:STA3:K" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS:STA3:K" data="4" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS:STA3:OFF" data="2" delay="0" string="" />
+    </conditional>
+    <conditional systemName="LX21:LC1" userName="LX21:Normal" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>LX21:LC1</systemName>
+      <userName>LX21:Normal</userName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS21:L" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/SendReceiveRelay.py" />
+      <conditionalAction option="1" type="10" systemName="IS21:NK" data="2" delay="18" string="18" />
+      <conditionalAction option="1" type="10" systemName="IS21:RK" data="4" delay="1" string="1" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\EnhancedCTCRelayTrimmed.wav" />
+      <conditionalAction option="1" type="2" systemName="Mystic Springs Turnout" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="10" systemName="IS21:NK" data="4" delay="1" string="1" />
+      <conditionalAction option="2" type="10" systemName="IS21:RK" data="2" delay="18" string="18" />
+      <conditionalAction option="2" type="2" systemName="Mystic Springs Turnout" data="4" delay="0" string="" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+    </conditional>
+    <conditional systemName="LX:2C1" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>LX:2C1</systemName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS:STA2:ON" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\toggle-on.wav" />
+      <conditionalAction option="1" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/RandomArc.py" />
+      <conditionalAction option="1" type="9" systemName="IS:STA2:K" data="2" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS:STA2:K" data="4" delay="0" string="" />
+      <conditionalAction option="2" type="9" systemName="IS:STA2:OFF" data="2" delay="0" string="" />
+    </conditional>
+    <conditional systemName="LX:STA1C1" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>LX:STA1C1</systemName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS:STA1:ON" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+      <conditionalAction option="1" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/RandomArc.py" />
+      <conditionalAction option="1" type="9" systemName="IS:STA1:OFF" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="9" systemName="IS:STA1:K" data="2" delay="0" string="" />
+    </conditional>
+    <conditional systemName="LX:STA1C2" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>LX:STA1C2</systemName>
+      <conditionalStateVariable operator="4" negated="no" type="1" systemName="IS:STA1:OFF" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="15" systemName=" " data="-1" delay="0" string="preference:resources\sounds\Switch-lever.wav" />
+      <conditionalAction option="1" type="16" systemName=" " data="-1" delay="0" string="preference:scripts/RandomArc.py" />
+      <conditionalAction option="1" type="9" systemName="IS:STA1:ON" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="9" systemName="IS:STA1:K" data="4" delay="0" string="" />
+    </conditional>
+  </conditionals>
+  <audio class="jmri.jmrit.audio.configurexml.DefaultAudioManagerXml" distanceattenuated="yes">
+    <audiobuffer systemName="IAB1" userName="DepartureBoardClips">
+      <systemName>IAB1</systemName>
+      <userName>DepartureBoardClips</userName>
+      <url>program:resources/sounds/Crossing.wav</url>
+      <looppoint start="0" end="0" />
+      <streamed>no</streamed>
+    </audiobuffer>
+    <audiolistener systemName="IAL$" userName="Default Audio Listener">
+      <systemName>IAL$</systemName>
+      <userName>Default Audio Listener</userName>
+      <position x="0.0" y="0.0" z="0.0" />
+      <velocity x="0.0" y="0.0" z="0.0" />
+      <orientation atX="0.0" atY="1.0" atZ="0.0" upX="0.0" upY="0.0" upZ="1.0" />
+      <gain>1.0</gain>
+      <metersperunit>1.0</metersperunit>
+    </audiolistener>
+    <audiosource systemName="IAS1" userName="Departure Board">
+      <systemName>IAS1</systemName>
+      <userName>Departure Board</userName>
+      <position x="-20.0" y="10.0" z="0.0" />
+      <velocity x="0.0" y="0.0" z="0.0" />
+      <assignedbuffer>IAB1</assignedbuffer>
+      <gain>1.0</gain>
+      <pitch>1.0</pitch>
+      <distances ref="1.0" />
+      <loops min="-1" max="-1" />
+      <fadetimes in="1000" out="1000" />
+      <dopplerfactor>1.0</dopplerfactor>
+      <positionrelative>no</positionrelative>
+    </audiosource>
+    <audiosource systemName="IAS2">
+      <systemName>IAS2</systemName>
+      <position x="-1699.4436" y="0.0" z="0.0" />
+      <velocity x="-1.0" y="0.0" z="0.0" />
+      <assignedbuffer>IAB1</assignedbuffer>
+      <gain>1.0</gain>
+      <pitch>1.1</pitch>
+      <distances ref="1.0" />
+      <loops min="3" max="6" />
+      <fadetimes in="1000" out="1000" />
+      <dopplerfactor>1.0</dopplerfactor>
+      <positionrelative>no</positionrelative>
+    </audiosource>
+  </audio>
+  <timebase class="jmri.jmrit.simpleclock.configurexml.SimpleTimebaseXml" time="Wed Mar 19 19:54:25 CDT 2014" rate="1.0" run="yes" master="yes" sync="no" correct="no" display="no" startstopped="no" startsettime="no" startclockoption="0" />
+  <entryexitpairs class="jmri.jmrit.signalling.configurexml.EntryExitPairsXml" />
+  <paneleditor class="jmri.jmrit.display.panelEditor.configurexml.PanelEditorXml" name="Ace of Spades Mine" x="-3" y="480" height="536" width="1012" editable="no" positionable="no" showtooltips="no" controlling="yes" hide="yes" panelmenu="no" scrollable="none" redBackground="0" greenBackground="0" blueBackground="0">
+    <memoryicon memory="IM:MINE:LOCO" x="123" y="332" level="8" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="1" style="1" red="51" green="51" blue="51" fixedWidth="56" fixedHeight="44" justification="left" selectable="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Current Mine Locomotive</tooltip>
+    </memoryicon>
+    <positionablelabel x="90" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Train No." size="14" style="1" red="255" green="255" blue="255" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="33" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Track" size="14" style="1" red="255" green="255" blue="255" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="231" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Destination / Train Name" size="14" style="1" red="255" green="255" blue="255" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="501" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Departs" size="14" style="1" red="255" green="255" blue="255" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="608" y="300" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Status" size="14" style="1" red="255" green="255" blue="255" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="276" y="452" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Service" size="12" style="1" red="192" green="192" blue="192" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="375" y="452" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Locomotive" size="12" style="1" red="192" green="192" blue="192" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <sensoricon sensor="Mine Building Lights" x="734" y="406" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" text="" size="12" style="1" red="51" green="51" blue="51" justification="left" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Mine Building Lights (LS13)</tooltip>
+      <active url="preference:resources/icons/misc/Indicators/redIndicatorOn.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+      <activeText red="255" green="0" blue="0" />
+      <inactiveText red="255" green="255" blue="0" />
+      <unknownText red="0" green="0" blue="255" />
+      <inconsistentText red="0" green="0" blue="0" />
+    </sensoricon>
+    <sensoricon sensor="Mine North Light" x="734" y="370" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Mine North Light (LS15)</tooltip>
+      <active url="preference:resources/icons/misc/Indicators/redIndicatorOn.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Mine South Light" x="734" y="440" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" text="" size="12" style="0" red="51" green="51" blue="51" justification="left" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Mine South Light (LS11)</tooltip>
+      <active url="preference:resources/icons/misc/Indicators/redIndicatorOn.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Indicators/redIndicatorOff.gif" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+      <activeText red="255" green="0" blue="0" />
+      <inactiveText red="255" green="255" blue="0" />
+      <unknownText red="0" green="0" blue="255" />
+      <inconsistentText red="0" green="0" blue="0" />
+    </sensoricon>
+    <sensoricon sensor="Mine Track Switch" x="28" y="428" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Mine Track Switch (IS:MTS)</tooltip>
+      <active url="preference:resources/USS/switches/59/toggle-up.gif" degrees="0" scale="0.65">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/USS/switches/59/toggle-down.gif" degrees="0" scale="0.65">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/USS/switches/59/toggle-down.gif" degrees="0" scale="0.65">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/USS/switches/59/toggle-down.gif" degrees="0" scale="0.65">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <multisensoricon x="695" y="191" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" updown="false" class="jmri.jmrit.display.configurexml.MultiSensorIconXml">
+      <tooltip>White EOT Lantern,Red EOT Lantern</tooltip>
+      <active url="preference:resources/icons/misc/lantern-white-small.gif" degrees="0" scale="1.2" sensor="White EOT Lantern">
+        <rotation>0</rotation>
+      </active>
+      <active url="preference:resources/icons/misc/lantern-red-small.gif" degrees="0" scale="1.2" sensor="Red EOT Lantern">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/lantern-off-small.gif" degrees="0" scale="1.2">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/lantern-off-small.gif" degrees="0" scale="1.2">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/lantern-off-small.gif" degrees="0" scale="1.2">
+        <rotation>0</rotation>
+      </inconsistent>
+    </multisensoricon>
+    <signalmasticon signalmast="SM-1-South" x="186" y="201" level="9" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" clickmode="0" litmode="false" degrees="0" scale="1.5" imageset="default" class="jmri.jmrit.display.configurexml.SignalMastIconXml">
+      <tooltip>SM-1-South (IF$vsm:Train Order Semaphore:one-board($0003))</tooltip>
+    </signalmasticon>
+    <signalmasticon signalmast="SM-2-South" x="286" y="201" level="9" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" clickmode="0" litmode="false" degrees="0" scale="1.5" imageset="default" class="jmri.jmrit.display.configurexml.SignalMastIconXml">
+      <tooltip>SM-2-South (IF$vsm:Train Order Semaphore:one-board($0004))</tooltip>
+    </signalmasticon>
+    <signalmasticon signalmast="SM-3-South" x="386" y="201" level="9" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" clickmode="0" litmode="false" degrees="0" scale="1.5" imageset="default" class="jmri.jmrit.display.configurexml.SignalMastIconXml">
+      <tooltip>SM-3-South (IF$vsm:Train Order Semaphore:one-board($0005))</tooltip>
+    </signalmasticon>
+    <signalmasticon signalmast="SM-4-South" x="486" y="201" level="9" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" clickmode="0" litmode="false" degrees="0" scale="1.5" imageset="default" class="jmri.jmrit.display.configurexml.SignalMastIconXml">
+      <tooltip>SM-4-South (IF$vsm:Train Order Semaphore:one-board($0006))</tooltip>
+    </signalmasticon>
+    <signalmasticon signalmast="SM-5-South" x="586" y="201" level="9" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" clickmode="0" litmode="false" degrees="0" scale="1.5" imageset="default" class="jmri.jmrit.display.configurexml.SignalMastIconXml">
+      <tooltip>SM-5-South (IF$vsm:Train Order Semaphore:one-board($0007))</tooltip>
+    </signalmasticon>
+    <signalmasticon signalmast="SM-1-North" x="147" y="108" level="9" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" clickmode="0" litmode="false" degrees="0" scale="1.5" imageset="default" class="jmri.jmrit.display.configurexml.SignalMastIconXml">
+      <tooltip>SM-1-North (IF$vsm:Train Order Semaphore:one-board($0010))</tooltip>
+    </signalmasticon>
+    <signalmasticon signalmast="SM-2-North" x="247" y="110" level="9" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" clickmode="0" litmode="false" degrees="0" scale="1.5" imageset="default" class="jmri.jmrit.display.configurexml.SignalMastIconXml">
+      <tooltip>SM-2-North (IF$vsm:Train Order Semaphore:one-board($0011))</tooltip>
+    </signalmasticon>
+    <signalmasticon signalmast="SM-3-North" x="347" y="110" level="9" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" clickmode="0" litmode="false" degrees="0" scale="1.5" imageset="default" class="jmri.jmrit.display.configurexml.SignalMastIconXml">
+      <tooltip>SM-3-North (IF$vsm:Train Order Semaphore:one-board($0012))</tooltip>
+    </signalmasticon>
+    <signalmasticon signalmast="SM-4-North" x="447" y="110" level="9" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" clickmode="0" litmode="false" degrees="0" scale="1.5" imageset="default" class="jmri.jmrit.display.configurexml.SignalMastIconXml">
+      <tooltip>SM-4-North (IF$vsm:Train Order Semaphore:one-board($0013))</tooltip>
+    </signalmasticon>
+    <signalmasticon signalmast="SM-5-North" x="547" y="110" level="9" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" clickmode="0" litmode="false" degrees="0" scale="1.5" imageset="default" class="jmri.jmrit.display.configurexml.SignalMastIconXml">
+      <tooltip>SM-5-North (IF$vsm:Train Order Semaphore:one-board($0014))</tooltip>
+    </signalmasticon>
+    <sensoricon sensor="BOT" x="80" y="166" level="2" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>BOT (LS6)</tooltip>
+      <active url="preference:resources/icons/track/occupied.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Tunnel" x="180" y="166" level="2" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Tunnel (LS5)</tooltip>
+      <active url="preference:resources/icons/track/occupied.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Bridge-1" x="280" y="166" level="2" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Bridge-1 (LS1)</tooltip>
+      <active url="preference:resources/icons/track/occupied.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Bridge-2" x="380" y="166" level="2" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Bridge-2 (LS2)</tooltip>
+      <active url="preference:resources/icons/track/occupied.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Mine Building" x="480" y="166" level="2" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Mine Building (LS3)</tooltip>
+      <active url="preference:resources/icons/track/occupied.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="EOT" x="580" y="166" level="2" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>EOT (LS4)</tooltip>
+      <active url="preference:resources/icons/track/occupied.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/track/clear-white.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <positionablelabel x="81" y="184" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="BOT" size="11" style="1" red="255" green="255" blue="255" fixedWidth="100" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="181" y="184" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Tunnel" size="11" style="1" red="255" green="255" blue="255" fixedWidth="100" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="281" y="184" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Bridge #1" size="11" style="1" red="255" green="255" blue="255" fixedWidth="100" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="381" y="184" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Bridge #2" size="11" style="1" red="255" green="255" blue="255" fixedWidth="100" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="481" y="184" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Ace of Spades" size="11" style="1" red="255" green="255" blue="255" fixedWidth="100" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="578" y="187" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="EOT" size="11" style="1" red="255" green="255" blue="255" fixedWidth="100" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="0" y="0" level="1" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" icon="yes" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <icon url="preference:resources/icons/misc/Backgrounds/AceOfSpadesBrickClock.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </icon>
+    </positionablelabel>
+    <BlockContentsIcon blockcontents="BOT" x="81" y="157" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="3" red="255" green="255" blue="255" fixedWidth="100" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.BlockContentsIconXml">
+      <tooltip>BOT (IB11)</tooltip>
+    </BlockContentsIcon>
+    <BlockContentsIcon blockcontents="Tunnel" x="177" y="157" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="3" red="255" green="255" blue="255" fixedWidth="100" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.BlockContentsIconXml">
+      <tooltip>Tunnel (IB12)</tooltip>
+    </BlockContentsIcon>
+    <BlockContentsIcon blockcontents="Bridge-1" x="279" y="157" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="3" red="255" green="255" blue="255" fixedWidth="100" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.BlockContentsIconXml">
+      <tooltip>Bridge-1 (IB13)</tooltip>
+    </BlockContentsIcon>
+    <BlockContentsIcon blockcontents="Bridge-2" x="380" y="157" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="3" red="255" green="255" blue="255" fixedWidth="100" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.BlockContentsIconXml">
+      <tooltip>Bridge-2 (IB14)</tooltip>
+    </BlockContentsIcon>
+    <BlockContentsIcon blockcontents="Mine Building" x="479" y="157" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="3" red="255" green="255" blue="255" fixedWidth="100" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.BlockContentsIconXml">
+      <tooltip>Mine Building (IB15)</tooltip>
+    </BlockContentsIcon>
+    <BlockContentsIcon blockcontents="EOT" x="576" y="157" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="3" red="255" green="255" blue="255" fixedWidth="100" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.BlockContentsIconXml">
+      <tooltip>EOT (IB16)</tooltip>
+    </BlockContentsIcon>
+    <sensoricon sensor="Direction" x="44" y="219" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Direction (IS:DIR)</tooltip>
+      <active url="preference:resources/icons/misc/south.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/null.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/null.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/null.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Direction" x="41" y="122" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Direction (IS:DIR)</tooltip>
+      <active url="preference:resources/icons/misc/null.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/north.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/null.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/null.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <memoryicon memory="Roster ID" x="271" y="76" level="5" forcecontroloff="false" hidden="yes" positionable="false" showtooltip="false" editable="false" size="20" style="2" red="255" green="255" blue="255" fixedWidth="300" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Roster ID</tooltip>
+    </memoryicon>
+    <memoryicon memory="Roster Description" x="196" y="108" level="5" forcecontroloff="false" hidden="yes" positionable="false" showtooltip="false" editable="false" size="16" style="2" red="255" green="255" blue="255" fixedWidth="300" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Roster Description</tooltip>
+    </memoryicon>
+    <memoryicon memory="Roster Icon" x="758" y="249" level="0" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="1" red="51" green="51" blue="51" fixedWidth="200" fixedHeight="135" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>Roster Icon (IM:ROSTERICON)</tooltip>
+    </memoryicon>
+    <positionablelabel x="507" y="13" level="0" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" icon="yes" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Icon</tooltip>
+      <icon url="preference:resources/icons/misc/Electric Panels/Emerson644C-cropped2.gif" degrees="0" scale="0.55">
+        <rotation>0</rotation>
+      </icon>
+    </positionablelabel>
+    <sensoricon sensor="Demo Switch" x="636" y="428" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:DEMOSW</tooltip>
+      <active url="preference:resources/USS/switches/59/toggle-up.gif" degrees="0" scale="0.65">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/USS/switches/59/toggle-down.gif" degrees="0" scale="0.65">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/USS/switches/59/toggle-down.gif" degrees="0" scale="0.65">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/USS/switches/59/toggle-down.gif" degrees="0" scale="0.65">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <positionablelabel x="91" y="446" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Auto." size="16" style="1" red="192" green="192" blue="192" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <positionablelabel x="574" y="448" level="4" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" text="Demo" size="16" style="1" red="192" green="192" blue="192" justification="centre" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Text Label</tooltip>
+    </positionablelabel>
+    <sensoricon sensor="IS:SERVICELIGHT" x="330" y="437" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:SERVICELIGHT</tooltip>
+      <active url="preference:resources/Controls/service-track-small-3.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/Controls/blue-dark-small.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <fastclock x="788" y="41" scale="1.0" color="Black" class="jmri.jmrit.display.configurexml.AnalogClock2DisplayXml" />
+  </paneleditor>
+  <paneleditor class="jmri.jmrit.display.panelEditor.configurexml.PanelEditorXml" name="Beaver Bend" x="0" y="0" height="541" width="1023" editable="no" positionable="no" showtooltips="no" controlling="yes" hide="yes" panelmenu="no" scrollable="none">
+    <memoryicon memory="IM20:H1" x="182" y="423" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="11" style="0" red="51" green="51" blue="51" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM20:H1</tooltip>
+      <memorystate value="0" icon="preference:resources/icons/misc/Nixie/M0B.gif" />
+      <memorystate value="1" icon="preference:resources/icons/misc/Nixie/M1B.gif" />
+      <memorystate value="2" icon="preference:resources/icons/misc/Nixie/M2B.gif" />
+      <memorystate value="3" icon="preference:resources/icons/misc/Nixie/M3B.gif" />
+      <memorystate value="4" icon="preference:resources/icons/misc/Nixie/M4B.gif" />
+      <memorystate value="5" icon="preference:resources/icons/misc/Nixie/M5B.gif" />
+      <memorystate value="6" icon="preference:resources/icons/misc/Nixie/M6B.gif" />
+      <memorystate value="7" icon="preference:resources/icons/misc/Nixie/M7B.gif" />
+      <memorystate value="8" icon="preference:resources/icons/misc/Nixie/M8B.gif" />
+      <memorystate value="9" icon="preference:resources/icons/misc/Nixie/M9B.gif" />
+    </memoryicon>
+    <memoryicon memory="IM20:H2" x="211" y="423" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="11" style="0" red="51" green="51" blue="51" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM20:H2</tooltip>
+      <memorystate value="0" icon="preference:resources/icons/misc/Nixie/M0B.gif" />
+      <memorystate value="1" icon="preference:resources/icons/misc/Nixie/M1B.gif" />
+      <memorystate value="2" icon="preference:resources/icons/misc/Nixie/M2B.gif" />
+      <memorystate value="3" icon="preference:resources/icons/misc/Nixie/M3B.gif" />
+      <memorystate value="4" icon="preference:resources/icons/misc/Nixie/M4B.gif" />
+      <memorystate value="5" icon="preference:resources/icons/misc/Nixie/M5B.gif" />
+      <memorystate value="6" icon="preference:resources/icons/misc/Nixie/M6B.gif" />
+      <memorystate value="7" icon="preference:resources/icons/misc/Nixie/M7B.gif" />
+      <memorystate value="8" icon="preference:resources/icons/misc/Nixie/M8B.gif" />
+      <memorystate value="9" icon="preference:resources/icons/misc/Nixie/M9B.gif" />
+    </memoryicon>
+    <memoryicon memory="IM20:H3" x="241" y="423" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="11" style="0" red="51" green="51" blue="51" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM20:H3</tooltip>
+      <memorystate value=":" icon="preference:resources/icons/misc/Nixie/colonB.gif" />
+    </memoryicon>
+    <memoryicon memory="IM20:M1" x="262" y="423" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="11" style="0" red="51" green="51" blue="51" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM20:M1</tooltip>
+      <memorystate value="0" icon="preference:resources/icons/misc/Nixie/M0B.gif" />
+      <memorystate value="1" icon="preference:resources/icons/misc/Nixie/M1B.gif" />
+      <memorystate value="2" icon="preference:resources/icons/misc/Nixie/M2B.gif" />
+      <memorystate value="3" icon="preference:resources/icons/misc/Nixie/M3B.gif" />
+      <memorystate value="4" icon="preference:resources/icons/misc/Nixie/M4B.gif" />
+      <memorystate value="5" icon="preference:resources/icons/misc/Nixie/M5B.gif" />
+      <memorystate value="6" icon="preference:resources/icons/misc/Nixie/M6B.gif" />
+      <memorystate value="7" icon="preference:resources/icons/misc/Nixie/M7B.gif" />
+      <memorystate value="8" icon="preference:resources/icons/misc/Nixie/M8B.gif" />
+      <memorystate value="9" icon="preference:resources/icons/misc/Nixie/M9B.gif" />
+    </memoryicon>
+    <memoryicon memory="IM20:M2" x="294" y="423" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="11" style="0" red="51" green="51" blue="51" fixedWidth="28" fixedHeight="38" justification="left" selectable="yes" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM20:M2</tooltip>
+      <memorystate value="0" icon="preference:resources/icons/misc/Nixie/M0B.gif" />
+      <memorystate value="1" icon="preference:resources/icons/misc/Nixie/M1B.gif" />
+      <memorystate value="2" icon="preference:resources/icons/misc/Nixie/M2B.gif" />
+      <memorystate value="3" icon="preference:resources/icons/misc/Nixie/M3B.gif" />
+      <memorystate value="4" icon="preference:resources/icons/misc/Nixie/M4B.gif" />
+      <memorystate value="5" icon="preference:resources/icons/misc/Nixie/M5B.gif" />
+      <memorystate value="6" icon="preference:resources/icons/misc/Nixie/M6B.gif" />
+      <memorystate value="7" icon="preference:resources/icons/misc/Nixie/M7B.gif" />
+      <memorystate value="8" icon="preference:resources/icons/misc/Nixie/M8B.gif" />
+      <memorystate value="9" icon="preference:resources/icons/misc/Nixie/M9B.gif" />
+    </memoryicon>
+    <positionablelabel x="0" y="0" level="1" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" icon="yes" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <icon url="preference:resources/icons/misc/Backgrounds/BeaverBendPanel.png" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </icon>
+    </positionablelabel>
+    <sensoricon sensor="IS21:NK" x="29" y="313" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS21:NK</tooltip>
+      <active url="preference:resources/Controls/greenbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/Controls/green-off.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Turnout 23 Normal LED" x="360" y="313" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS25:NK</tooltip>
+      <active url="preference:resources/Controls/greenbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/Controls/green-off.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Turnout 23 Reverse LED" x="441" y="313" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS25:RK</tooltip>
+      <active url="preference:resources/Controls/yellowbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/Controls/yellow-off-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS21:RK" x="110" y="313" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS21:RK</tooltip>
+      <active url="preference:resources/Controls/yellowbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/Controls/yellow-off-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.8">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Turnout 23 Lever" x="370" y="393" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS25:L</tooltip>
+      <active url="preference:resources/USS/switches/lever-left-wide2.gif" degrees="0" scale="2.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/USS/switches/lever-right-wide.gif" degrees="0" scale="2.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/USS/switches/lever-vertical-wide.gif" degrees="0" scale="2.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/USS/switches/lever-vertical-wide.gif" degrees="0" scale="2.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Turnout 21 Lever" x="40" y="393" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Turnout 21 Lever (IS21:L)</tooltip>
+      <active url="preference:resources/USS/switches/lever-left-wide2.gif" degrees="0" scale="2.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/USS/switches/lever-right-wide.gif" degrees="0" scale="2.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/USS/switches/lever-vertical-wide.gif" degrees="0" scale="2.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/USS/switches/lever-vertical-wide.gif" degrees="0" scale="2.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Water Fill Down Button" x="901" y="315" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS24:BO</tooltip>
+      <active url="preference:resources/icons/misc/Switches/RotaryKnobDown.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Switches/RotaryKnobUp.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Switches/RotaryKnobUp.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Switches/RotaryKnobUp.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Water Fill Indicator" x="124" y="616" level="0" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS24:K</tooltip>
+      <active url="preference:resources/icons/misc/Indicators/DirtyBlueOn.jpg" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Indicators/DirtyBlueOff.jpg" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Indicators/DirtyBlueOff.jpg" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Indicators/DirtyBlueOff.jpg" degrees="0" scale="0.2">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="Order Board Button On" x="899" y="176" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>Order Board Button On (IS22:BO)</tooltip>
+      <active url="preference:resources/icons/misc/Switches/RotaryKnobLeft.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Switches/RotaryKnobRight.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Switches/RotaryKnobRight.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Switches/RotaryKnobRight.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA1:ON" x="560" y="258" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA1:ON</tooltip>
+      <active url="preference:resources/icons/misc/Switches/BlackButtonOn.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA2:ON" x="680" y="316" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA2:ON</tooltip>
+      <active url="preference:resources/icons/misc/Switches/MetalButtonOn.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA4:ON" x="789" y="256" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA4:ON</tooltip>
+      <active url="preference:resources/icons/misc/Switches/BlackButtonOn.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA1:OFF" x="560" y="312" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA1:OFF</tooltip>
+      <active url="preference:resources/icons/misc/Switches/BlackButtonOn.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA4:OFF" x="789" y="303" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA4:OFF</tooltip>
+      <active url="preference:resources/icons/misc/Switches/BlackButtonOn.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Switches/BlackButtonOff.gif" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA1:K" x="561" y="209" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA1:K</tooltip>
+      <active url="preference:resources/icons/misc/Indicators/DirtyRedOn.jpg" degrees="0" scale="0.25">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Indicators/DirtyRedOff.jpg" degrees="0" scale="0.25">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Indicators/DirtyRedOff.jpg" degrees="0" scale="0.25">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Indicators/DirtyRedOff.jpg" degrees="0" scale="0.25">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA2:K" x="663" y="156" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA2:K</tooltip>
+      <active url="preference:resources/icons/misc/Indicators/redOn.GIF" degrees="0" scale="0.15">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Indicators/redOff2.gif" degrees="0" scale="0.15">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Indicators/redOff2.gif" degrees="0" scale="0.15">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Indicators/redOff2.gif" degrees="0" scale="0.15">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA4:K" x="785" y="202" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA4:K</tooltip>
+      <active url="preference:resources/icons/misc/Indicators/MissingCoverOn.jpg" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Indicators/MissingCoverOff.JPG" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Indicators/MissingCoverOff.JPG" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Indicators/MissingCoverOff.JPG" degrees="0" scale="0.7">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA2:OFF" x="204" y="696" level="0" forcecontroloff="false" hidden="yes" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA2:OFF</tooltip>
+      <active url="preference:resources/icons/misc/Switches/MetalButtonOn.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA3:ON" x="682" y="211" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA3:ON</tooltip>
+      <active url="preference:resources/icons/misc/Switches/MetalButtonOn.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.1">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA3:OFF" x="185" y="778" level="0" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA3:OFF</tooltip>
+      <active url="preference:resources/icons/misc/Switches/MetalButtonOn.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Switches/MetalButtonOff.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:STA3:K" x="704" y="156" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:STA3:K</tooltip>
+      <active url="preference:resources/icons/misc/Indicators/redOn.GIF" degrees="0" scale="0.15">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/icons/misc/Indicators/redOff2.gif" degrees="0" scale="0.15">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/icons/misc/Indicators/redOff2.gif" degrees="0" scale="0.15">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/icons/misc/Indicators/redOff2.gif" degrees="0" scale="0.15">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <positionablelabel x="173" y="291" level="3" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" icon="yes" class="jmri.jmrit.display.configurexml.PositionableLabelXml">
+      <tooltip>Icon</tooltip>
+      <icon url="preference:resources/USS/plates/Control - Indication Code.GIF" degrees="0" scale="0.6">
+        <rotation>0</rotation>
+      </icon>
+    </positionablelabel>
+    <sensoricon sensor="IS16:CCK" x="201" y="336" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS16:CCK</tooltip>
+      <active url="preference:resources/Controls/redbutton-small.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/Controls/red-off-small.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS17:ICK" x="269" y="336" level="10" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS17:ICK</tooltip>
+      <active url="preference:resources/Controls/redbutton-small.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="preference:resources/Controls/red-off-small.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="preference:resources/Controls/darkbutton-small.gif" degrees="0" scale="0.75">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:RTE:BYPASS" x="89" y="472" level="10" forcecontroloff="false" hidden="yes" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:RTE:BYPASS</tooltip>
+      <active url="program:resources/icons/smallschematics/tracksegments/circuit-occupied.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="program:resources/icons/smallschematics/tracksegments/circuit-empty.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="program:resources/icons/smallschematics/tracksegments/circuit-error.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="program:resources/icons/smallschematics/tracksegments/circuit-error.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <sensoricon sensor="IS:RTE:STATION" x="417" y="470" level="10" forcecontroloff="false" hidden="yes" positionable="false" showtooltip="false" editable="false" momentary="false" icon="yes" class="jmri.jmrit.display.configurexml.SensorIconXml">
+      <tooltip>IS:RTE:STATION</tooltip>
+      <active url="program:resources/icons/smallschematics/tracksegments/circuit-occupied.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </active>
+      <inactive url="program:resources/icons/smallschematics/tracksegments/circuit-empty.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inactive>
+      <unknown url="program:resources/icons/smallschematics/tracksegments/circuit-error.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </unknown>
+      <inconsistent url="program:resources/icons/smallschematics/tracksegments/circuit-error.gif" degrees="0" scale="1.0">
+        <rotation>0</rotation>
+      </inconsistent>
+      <iconmaps />
+    </sensoricon>
+    <memoryicon memory="IM:1:DIR" x="32" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:1:DIR</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:1:TNO" x="90" y="113" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:1:TNO</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:1:TNM" x="127" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:1:TNM</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:1:DST" x="239" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:1:DST</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:1:DPRT" x="358" y="113" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:1:DPRT</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:1:RMK" x="465" y="114" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:1:RMK</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:2:DIR" x="32" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:2:DIR</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:2:TNO" x="89" y="142" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:2:TNO</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:2:TNM" x="127" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:2:TNM</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:2:DST" x="241" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:2:DST</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:2:DPRT" x="360" y="142" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:2:DPRT</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:2:RMK" x="465" y="143" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:2:RMK</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:3:DIR" x="32" y="169" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:3:DIR</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:3:TNO" x="93" y="168" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:3:TNO</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:3:TNM" x="127" y="169" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:3:TNM</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:3:DST" x="239" y="169" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:3:DST</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:3:DPRT" x="359" y="168" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:3:DPRT</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:3:RMK" x="401" y="168" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:3:RMK</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:4:DIR" x="32" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:4:DIR</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:4:TNO" x="89" y="196" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:4:TNO</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:4:TNM" x="127" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:4:TNM</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:4:DST" x="239" y="197" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:4:DST</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:4:DPRT" x="358" y="196" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:4:DPRT</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:4:RMK" x="403" y="196" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:4:RMK</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:5:DIR" x="32" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:5:DIR</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:5:TNO" x="90" y="223" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:5:TNO</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:5:TNM" x="127" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:5:TNM</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:5:DST" x="242" y="224" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:5:DST</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:5:DPRT" x="359" y="223" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:5:DPRT</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:5:RMK" x="421" y="223" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:5:RMK</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:6:DIR" x="32" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="50" fixedHeight="16" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:6:DIR</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:6:TNO" x="93" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:6:TNO</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:6:TNM" x="127" y="253" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:6:TNM</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:6:DST" x="291" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" fixedWidth="110" fixedHeight="16" justification="centre" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:6:DST</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:6:DPRT" x="291" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:6:DPRT</tooltip>
+    </memoryicon>
+    <memoryicon memory="IM:6:RMK" x="465" y="252" level="5" forcecontroloff="false" hidden="no" positionable="false" showtooltip="false" editable="false" size="12" style="2" red="255" green="255" blue="255" justification="left" selectable="no" class="jmri.jmrit.display.configurexml.MemoryIconXml" defaulticon="program:resources/icons/misc/X-red.gif">
+      <tooltip>IM:6:RMK</tooltip>
+    </memoryicon>
+  </paneleditor>
+  <LayoutEditor class="jmri.jmrit.display.layoutEditor.configurexml.LayoutEditorXml" name="Ace of Spades Mine Track" x="0" y="0" height="60" width="100" windowheight="60" windowwidth="100" panelheight="60" panelwidth="100" sliders="no" scrollable="none" editable="no" positionable="yes" controlling="yes" animating="yes" showhelpbar="yes" drawgrid="no" snaponadd="no" snaponmove="no" antialiasing="no" turnoutcircles="no" tooltipsnotedit="yes" tooltipsinedit="yes" mainlinetrackwidth="3" xscale="1.0" yscale="1.0" sidetrackwidth="2" defaulttrackcolor="white" defaultoccupiedtrackcolor="red" defaultalternativetrackcolor="blue" defaulttextcolor="black" turnoutcirclecolor="black" turnoutcirclesize="2" turnoutdrawunselectedleg="yes" turnoutbx="20.0" turnoutcx="20.0" turnoutwid="10.0" xoverlong="30.0" xoverhwid="10.0" xovershort="10.0" autoblkgenerate="no" redBackground="192" greenBackground="192" blueBackground="192" openDispatcher="no" useDirectTurnoutControl="no">
+    <tracksegment ident="T1" blockname="BOT" connect1name="EB1" type1="1" connect2name="A1" type2="1" dashed="yes" mainline="yes" hidden="no" arc="no" class="jmri.jmrit.display.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T2" blockname="Tunnel" connect1name="A1" type1="1" connect2name="A2" type2="1" dashed="yes" mainline="yes" hidden="no" arc="no" class="jmri.jmrit.display.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T3" blockname="Bridge-1" connect1name="A2" type1="1" connect2name="A3" type2="1" dashed="no" mainline="yes" hidden="no" arc="no" class="jmri.jmrit.display.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T5" blockname="Mine Building" connect1name="A4" type1="1" connect2name="A5" type2="1" dashed="yes" mainline="yes" hidden="no" arc="no" class="jmri.jmrit.display.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T6" blockname="EOT" connect1name="A5" type1="1" connect2name="EB2" type2="1" dashed="no" mainline="yes" hidden="no" arc="no" class="jmri.jmrit.display.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T7" blockname="Bridge-2" connect1name="A3" type1="1" connect2name="A4" type2="1" dashed="no" mainline="yes" hidden="no" arc="no" class="jmri.jmrit.display.configurexml.TrackSegmentXml" />
+    <positionablepoint ident="A1" type="1" x="200.0" y="120.0" connect1name="T1" connect2name="T2" eastboundsignal="Signal 1 South" westboundsignal="Signal 1 North" eastboundsignalmast="SM-1-South" westboundsignalmast="SM-1-North" eastboundsensor="IS:DF1" westboundsensor="IS:DR1" class="jmri.jmrit.display.configurexml.PositionablePointXml" />
+    <positionablepoint ident="EB1" type="2" x="140.0" y="120.0" connect1name="T1" westboundsignalmast="SM-0-North" westboundsensor="IS:DF0" class="jmri.jmrit.display.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A2" type="1" x="390.0" y="120.0" connect1name="T2" connect2name="T3" eastboundsignal="Signal 2 South" westboundsignal="Signal 2 North" eastboundsignalmast="SM-2-South" westboundsignalmast="SM-2-North" eastboundsensor="IS:DF2" westboundsensor="IS:DR2" class="jmri.jmrit.display.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A3" type="1" x="600.0" y="120.0" connect1name="T3" connect2name="T7" eastboundsignal="Signal 3 South" westboundsignal="Signal 3 North" eastboundsignalmast="SM-3-South" westboundsignalmast="SM-3-North" eastboundsensor="IS:DF3" westboundsensor="IS:DR3" class="jmri.jmrit.display.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A4" type="1" x="800.0" y="120.0" connect1name="T7" connect2name="T5" eastboundsignal="Signal 4 South" westboundsignal="Signal 4 North" eastboundsignalmast="SM-4-South" westboundsignalmast="SM-4-North" eastboundsensor="IS:DF4" westboundsensor="IS:DR4" class="jmri.jmrit.display.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A5" type="1" x="1000.0" y="120.0" connect1name="T5" connect2name="T6" eastboundsignal="Signal 5 South" westboundsignal="Signal 5 North" eastboundsignalmast="SM-5-South" westboundsignalmast="SM-5-North" eastboundsensor="IS:DF5" westboundsensor="IS:DR5" class="jmri.jmrit.display.configurexml.PositionablePointXml" />
+    <positionablepoint ident="EB2" type="2" x="1100.0" y="120.0" connect1name="T6" eastboundsignalmast="SM-6-South" eastboundsensor="IS:DF6" class="jmri.jmrit.display.configurexml.PositionablePointXml" />
+  </LayoutEditor>
+  <filehistory>
+    <operation>
+      <type>app</type>
+      <date>Sun Apr 19 17:52:21 CDT 2015</date>
+      <filename>JMRI program</filename>
+    </operation>
+    <operation>
+      <type>Load OK</type>
+      <date>Sun Apr 19 17:52:21 CDT 2015</date>
+      <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/UserPrefsProfileConfig.xml</filename>
+    </operation>
+    <operation>
+      <type>Load OK</type>
+      <date>Sun Apr 19 17:52:27 CDT 2015</date>
+      <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/ProfileConfig.xml</filename>
+    </operation>
+    <operation>
+      <type>Load OK</type>
+      <date>Sun Apr 19 17:52:45 CDT 2015</date>
+      <filename>/C:/Users/Paul%20Morris/Dropbox/JMRI/panels/BeaverBendTrainBoardClock.xml</filename>
+      <filehistory>
+        <operation>
+          <type>app</type>
+          <date>Sun Apr 19 17:35:14 CDT 2015</date>
+          <filename>JMRI program</filename>
+        </operation>
+        <operation>
+          <type>Load OK</type>
+          <date>Sun Apr 19 17:35:15 CDT 2015</date>
+          <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/UserPrefsProfileConfig.xml</filename>
+        </operation>
+        <operation>
+          <type>Load OK</type>
+          <date>Sun Apr 19 17:35:32 CDT 2015</date>
+          <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/ProfileConfig.xml</filename>
+        </operation>
+        <operation>
+          <type>Load OK</type>
+          <date>Sun Apr 19 17:36:19 CDT 2015</date>
+          <filename>/C:/Users/Paul%20Morris/Dropbox/JMRI/panels/BeaverBendTrainBoardClock.xml</filename>
+          <filehistory>
+            <operation>
+              <type>app</type>
+              <date>Sun Apr 19 13:39:04 CDT 2015</date>
+              <filename>JMRI program</filename>
+            </operation>
+            <operation>
+              <type>Load OK</type>
+              <date>Sun Apr 19 13:39:04 CDT 2015</date>
+              <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/UserPrefsProfileConfig.xml</filename>
+            </operation>
+            <operation>
+              <type>Load OK</type>
+              <date>Sun Apr 19 13:39:11 CDT 2015</date>
+              <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/ProfileConfig.xml</filename>
+            </operation>
+            <operation>
+              <type>Load OK</type>
+              <date>Sun Apr 19 13:54:07 CDT 2015</date>
+              <filename>/C:/Users/Paul%20Morris/Dropbox/JMRI/panels/BeaverBendTrainBoardClock.xml</filename>
+              <filehistory>
+                <operation>
+                  <type>app</type>
+                  <date>Sat Apr 18 20:15:05 CDT 2015</date>
+                  <filename>JMRI program</filename>
+                </operation>
+                <operation>
+                  <type>Load OK</type>
+                  <date>Sat Apr 18 20:15:05 CDT 2015</date>
+                  <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/UserPrefsProfileConfig.xml</filename>
+                </operation>
+                <operation>
+                  <type>Load OK</type>
+                  <date>Sat Apr 18 20:15:12 CDT 2015</date>
+                  <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/ProfileConfig.xml</filename>
+                </operation>
+                <operation>
+                  <type>Load OK</type>
+                  <date>Sat Apr 18 20:15:33 CDT 2015</date>
+                  <filename>/C:/Users/Paul%20Morris/Dropbox/JMRI/panels/BeaverBendTrainBoardClock.xml</filename>
+                  <filehistory>
+                    <operation>
+                      <type>app</type>
+                      <date>Sat Apr 18 20:01:46 CDT 2015</date>
+                      <filename>JMRI program</filename>
+                    </operation>
+                    <operation>
+                      <type>Load OK</type>
+                      <date>Sat Apr 18 20:01:46 CDT 2015</date>
+                      <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/UserPrefsProfileConfig.xml</filename>
+                    </operation>
+                    <operation>
+                      <type>Load OK</type>
+                      <date>Sat Apr 18 20:02:36 CDT 2015</date>
+                      <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/ProfileConfig.xml</filename>
+                    </operation>
+                    <operation>
+                      <type>Load OK</type>
+                      <date>Sat Apr 18 20:06:30 CDT 2015</date>
+                      <filename>/C:/Users/Paul%20Morris/Dropbox/JMRI/panels/BeaverBendTrainBoardClock.xml</filename>
+                      <filehistory>
+                        <operation>
+                          <type>app</type>
+                          <date>Sat Apr 18 19:27:58 CDT 2015</date>
+                          <filename>JMRI program</filename>
+                        </operation>
+                        <operation>
+                          <type>Load OK</type>
+                          <date>Sat Apr 18 19:27:58 CDT 2015</date>
+                          <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/UserPrefsProfileConfig.xml</filename>
+                        </operation>
+                        <operation>
+                          <type>Load OK</type>
+                          <date>Sat Apr 18 19:28:07 CDT 2015</date>
+                          <filename>/C:/Users/Paul%20Morris/JMRI/My_JMRI_Railroad/ProfileConfig.xml</filename>
+                        </operation>
+                        <operation>
+                          <type>Load OK</type>
+                          <date>Sat Apr 18 19:29:35 CDT 2015</date>
+                          <filename>/C:/Users/Paul%20Morris/Dropbox/JMRI/panels/BeaverBendTrainBoardClock.xml</filename>
+                        </operation>
+                        <operation>
+                          <type>Store</type>
+                          <date>Sat Apr 18 19:36:01 CDT 2015</date>
+                          <filename />
+                        </operation>
+                      </filehistory>
+                    </operation>
+                    <operation>
+                      <type>Store</type>
+                      <date>Sat Apr 18 20:08:07 CDT 2015</date>
+                      <filename />
+                    </operation>
+                  </filehistory>
+                </operation>
+                <operation>
+                  <type>Store</type>
+                  <date>Sat Apr 18 20:17:25 CDT 2015</date>
+                  <filename />
+                </operation>
+              </filehistory>
+            </operation>
+            <operation>
+              <type>Store</type>
+              <date>Sun Apr 19 14:03:20 CDT 2015</date>
+              <filename />
+            </operation>
+          </filehistory>
+        </operation>
+        <operation>
+          <type>Store</type>
+          <date>Sun Apr 19 17:47:01 CDT 2015</date>
+          <filename />
+        </operation>
+      </filehistory>
+    </operation>
+    <operation>
+      <type>Store</type>
+      <date>Sun Apr 19 17:57:42 CDT 2015</date>
+      <filename />
+    </operation>
+  </filehistory>
+  <!--Written by JMRI version 3.11.5-r29074 on Sun Apr 19 17:57:42 CDT 2015 $Id: XmlFile.java 28771 2015-02-22 16:58:13Z rhwood $-->
+</layout-config>

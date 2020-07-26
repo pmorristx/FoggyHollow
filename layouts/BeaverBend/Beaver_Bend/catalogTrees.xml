@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xml/XSLT/panelfile.xsl"?>
+<!DOCTYPE catalogTrees SYSTEM "/xml/DTD/catalogTree.dtd">
+
+<catalogTrees class="jmri.jmrit.catalog.DefaultCatalogTreeManagerConfigXML">
+  <!--Written by JMRI version 3.9.2-r26958 on Wed Oct 22 20:55:08 CDT 2014 $Id: XmlFile.java 26884 2014-08-07 02:51:53Z jacobsen $-->
+  <catalogTree systemName="NXDI" userName="Default Icons">
+    <node nodeName="Default Icons">
+      <node nodeName="Sensor">
+        <leaf name="SensorStateActive" path="preference:resources/icons/misc/lantern-red-small.gif" />
+        <leaf name="SensorStateInactive" path="preference:resources/icons/misc/lantern-off-small.gif" />
+        <leaf name="BeanStateUnknown" path="preference:resources/icons/misc/lantern-off-small.gif" />
+        <leaf name="BeanStateInconsistent" path="preference:resources/icons/misc/lantern-off-small.gif" />
+      </node>
+      <node nodeName="MultiSensor">
+        <leaf name="MultiSensorPosition 0" path="preference:resources/icons/misc/lantern-white-small.gif" />
+        <leaf name="MultiSensorPosition 1" path="preference:resources/icons/misc/lantern-red-small.gif" />
+        <leaf name="BeanStateInconsistent" path="preference:resources/icons/misc/lantern-off-small.gif" />
+        <leaf name="BeanStateUnknown" path="preference:resources/icons/misc/lantern-off-small.gif" />
+        <leaf name="SensorStateInactive" path="preference:resources/icons/misc/lantern-off-small.gif" />
+      </node>
+    </node>
+  </catalogTree>
+</catalogTrees>
+

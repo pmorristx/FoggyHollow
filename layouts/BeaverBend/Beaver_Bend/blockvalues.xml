@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/xml/XSLT/blockValues.xsl" type="text/xsl"?>
+<!DOCTYPE block_values SYSTEM "/xml/DTD/block-values.dtd">
+
+<block_values>
+  <!--Written by JMRI version 3.10.1ish-20150417-2226-Paul Morris on Wed Jul 15 16:16:34 CDT 2015 $Id: XmlFile.java 27564 2014-11-01 05:08:01Z jacobsen $-->
+  <blockvalues>
+    <block systemname="IB11" value="" />
+    <block systemname="IB12" value="" />
+    <block systemname="IB13" value="" />
+    <block systemname="IB14" value="FH&amp;W 6" />
+    <block systemname="IB15" value="FH&amp;W 6" dir="64" />
+    <block systemname="IB16" value="" />
+  </blockvalues>
+</block_values>
+

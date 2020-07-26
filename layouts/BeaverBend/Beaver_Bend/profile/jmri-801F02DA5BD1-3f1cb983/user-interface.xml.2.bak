@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auxiliary-configuration xmlns="http://www.netbeans.org/ns/auxiliary-configuration/1">
+    <classPreferences xmlns="http://jmri.org/xml/schema/auxiliary-configuration/class-preferences-4-3-5.xsd">
+        <preferences xmlns="" class="jmri.jmrit.beantable.SignalMastTableAction"/>
+        <preferences xmlns="" class="jmri.jmrit.beantable.LogixTableAction"/>
+        <preferences xmlns="" class="jmri.jmrit.beantable.LRouteTableAction"/>
+        <preferences xmlns="" class="jmri.managers.JmriUserPreferencesManager">
+            <reminderPrompts>
+                <reminder>reminder</reminder>
+            </reminderPrompts>
+        </preferences>
+        <preferences xmlns="" class="jmri.jmrit.beantable.SensorTableAction"/>
+        <preferences xmlns="" class="jmri.jmrit.beantable.SignalHeadTableAction"/>
+        <preferences xmlns="" class="jmri.jmrit.beantable.BlockTableAction"/>
+        <preferences xmlns="" class="jmri.jmrit.beantable.AudioTableAction">
+            <reminderPrompts>
+                <reminder>nullAudio</reminder>
+            </reminderPrompts>
+        </preferences>
+        <preferences xmlns="" class="jmri.jmrit.beantable.SignalGroupTableAction"/>
+        <preferences xmlns="" class="jmri.jmrit.beantable.LightTableAction"/>
+        <preferences xmlns="" class="jmri.jmrit.beantable.TransitTableAction"/>
+        <preferences xmlns="" class="jmri.jmrit.beantable.ReporterTableAction"/>
+        <preferences xmlns="" class="jmri.jmrit.beantable.RouteTableAction"/>
+        <preferences xmlns="" class="jmri.jmrit.beantable.MemoryTableAction"/>
+    </classPreferences>
+    <comboBoxLastValue xmlns="http://jmri.org/xml/schema/auxiliary-configuration/combobox-4-3-5.xsd">
+        <comboBox xmlns="" lastSelected="NCE USB" name="NCE"/>
+        <comboBox xmlns="" lastSelected="All Entries" name="jmri.jmrit.withrottle.UserInterface.rosterGroupSelector"/>
+    </comboBoxLastValue>
+    <settings xmlns="http://jmri.org/xml/schema/auxiliary-configuration/settings-4-3-5.xsd">
+        <setting xmlns="">jmri.jmrit.display.layoutEditor.LayoutEditor:AoS Layout.toolBarThin</setting>
+    </settings>
+    <tableDetails xmlns="http://jmri.org/xml/schema/auxiliary-configuration/table-details-4-3-5.xsd">
+        <table xmlns="" name="jmri.jmrit.roster.swing.RosterFrame:Roster:roster">
+            <columns>
+                <column hidden="false" name="Owner" order="8" width="85"/>
+                <column hidden="false" name="Manufacturer" order="6" width="179"/>
+                <column hidden="false" name="Model" order="7" width="165"/>
+                <column hidden="false" name="ID" order="0" width="349"/>
+                <column hidden="false" name="Icon" order="2" width="60"/>
+                <column hidden="false" name="Road Number" order="5" width="115"/>
+                <column hidden="false" name="Date Modified" order="9" width="119"/>
+                <column hidden="false" name="Decoder Model" order="3" width="221"/>
+                <column hidden="false" name="Road Name" order="4" width="259"/>
+                <column hidden="false" name="DCC Address" order="1" width="110"/>
+            </columns>
+            <sortOrder>
+                <sortKey column="1" sortOrder="ASCENDING"/>
+            </sortOrder>
+        </table>
+    </tableDetails>
+    <windowDetails xmlns="http://jmri.org/xml/schema/auxiliary-configuration/window-details-4-3-5.xsd">
+        <window xmlns="" class="JMRI System console" height="698.0" locX="970.0" locY="189.0" width="852.0"/>
+        <window xmlns="" class="jmri.jmrit.operations.trains.TrainsTableFrame" height="586.0" locX="193.0" locY="158.0" width="1249.0"/>
+        <window xmlns="" class="Beaver Bend:1" height="533.0" locX="0.0" locY="28.0" width="1005.0"/>
+        <window xmlns="" class="jmri.jmrit.symbolicprog.tabbedframe.PaneServiceProgFrame:Program &lt;new loco&gt; in Service Mode (Programming Track)" height="952.0" locX="671.0" locY="22.0" width="1097.0"/>
+        <window xmlns="" class="jmri.jmrit.roster.swing.RosterFrame$5:AoS 5" height="938.0" locX="623.0" locY="28.0" width="1097.0"/>
+        <window xmlns="" class="jmri.jmrit.display.layoutEditor.LayoutEditor:AoS Layout" locX="0.0" locY="15.0">
+            <properties>
+                <property>
+                    <key>DropDownListsDisplayOrder.Enter name of Block for new turnout, level crossing, or track segment.</key>
+                    <value class="java.lang.String">DISPLAYNAME</value>
+                </property>
+                <property>
+                    <key>DropDownListsDisplayOrder.Enter name of occupancy sensor for this block; no entry means don't change.</key>
+                    <value class="java.lang.String">DISPLAYNAME</value>
+                </property>
+                <property>
+                    <key>DropDownListsDisplayOrder</key>
+                    <value class="java.lang.String">DISPLAYNAME</value>
+                </property>
+                <property>
+                    <key>DropDownListsDisplayOrder.Enter name of physical turnout.</key>
+                    <value class="java.lang.String">DISPLAYNAME</value>
+                </property>
+                <property>
+                    <key>DropDownListsDisplayOrder.Enter name of second physical turnout.</key>
+                    <value class="java.lang.String">DISPLAYNAME</value>
+                </property>
+                <property>
+                    <key>DropDownListsDisplayOrder.Enter name of memory variable to be displayed in a new memory label.</key>
+                    <value class="java.lang.String">DISPLAYNAME</value>
+                </property>
+                <property>
+                    <key>DropDownListsDisplayOrder.Enter name of Sensor represented by a new Sensor icon.</key>
+                    <value class="java.lang.String">DISPLAYNAME</value>
+                </property>
+                <property>
+                    <key>toolBarFontSize</key>
+                    <value class="java.lang.Float">12.0</value>
+                </property>
+                <property>
+                    <key>DropDownListsDisplayOrder.Select to add a Block label when next clicking with shift down.</key>
+                    <value class="java.lang.String">DISPLAYNAME</value>
+                </property>
+                <property>
+                    <key>DropDownListsDisplayOrder.Enter name of Signal Head represented by a new signal head icon.</key>
+                    <value class="java.lang.String">DISPLAYNAME</value>
+                </property>
+            </properties>
+        </window>
+        <window xmlns="" class="jmri.jmrit.operations.locations.schedules.SchedulesTableFrame:Schedules" height="524.0" locX="0.0" locY="28.0" width="1029.0"/>
+        <window xmlns="" class="jmri.jmrit.throttle.ThrottleWindow" height="545.0" locX="813.0" locY="96.0" width="780.0"/>
+        <window xmlns="" class="jmri.jmrit.roster.swing.RosterFrame:Roster" height="731.0" locX="720.0" locY="71.0" width="1028.0"/>
+        <window xmlns="" class="Create New Loco" height="550.0" locX="60.0" locY="88.0" width="716.0"/>
+        <window xmlns="" class="apps.gui3.TabbedPreferencesFrame:Preferences" height="458.0" locX="0.0" locY="28.0" width="987.0"/>
+        <window xmlns="" class="Ace of Spades Mine:1" height="536.0" locX="5.0" locY="496.0" width="1012.0"/>
+        <window xmlns="" class="jmri.jmrit.symbolicprog.tabbedframe.PaneOpsProgFrame:FH&amp;W 16 Heisler" height="952.0" locX="0.0" locY="28.0" width="1820.0"/>
+        <window xmlns="" class="jmri.jmrit.roster.swing.RosterFrame$5:AOS 4" height="952.0" locX="60.0" locY="0.0" width="1097.0"/>
+        <window xmlns="" class="Ace of Spades Mine" height="536.0" locX="5.0" locY="496.0" width="1012.0"/>
+        <window xmlns="" class="jmri.jmrit.roster.Roster"/>
+        <window xmlns="" class="PanelPro" height="484.0" locX="415.0" locY="250.0" width="994.0"/>
+        <window xmlns="" class="Local JMRI throttles" height="230.0" locX="30.0" locY="58.0" width="330.0"/>
+        <window xmlns="" class="jmri.jmrit.operations.locations.LocationsTableFrame:Locations" height="526.0" locX="748.0" locY="59.0" width="704.0"/>
+        <window xmlns="" class="jmri.jmrit.operations.routes.RoutesTableFrame:Routes" height="526.0" locX="0.0" locY="28.0" width="1175.0"/>
+        <window xmlns="" class="Beaver Bend" height="535.0" locX="0.0" locY="28.0" width="1005.0"/>
+        <window xmlns="" class="jmri.jmrit.display.controlPanelEditor.ControlPanelEditor:Multi Station Departures" height="665.0" locX="1200.0" locY="70.0" width="533.0"/>
+        <window xmlns="" class="jmri.jmrit.display.panelEditor.PanelEditor:Beaver Bend" locX="1241.0" locY="89.0"/>
+        <window xmlns="" class="jmri.jmrit.beantable.ListedTableAction$1$1:Turnouts" height="959.0" locX="30.0" locY="0.0" width="1748.0"/>
+    </windowDetails>
+</auxiliary-configuration>

@@ -1,0 +1,4 @@
+#JMRI Preferences version 4.18+R37ad3d0
+#Sat Jul 25 09:44:39 CDT 2020
+jmri-implementation.scripts=preference\:BeaverBend/scripts
+jmri-implementation.user-files=home\:MyJMRI/

@@ -1,0 +1,4 @@
+#JMRI Preferences version 4.10ish+pmorr+20180210T2118Z+R419243e
+#Mon Feb 12 07:46:49 CST 2018
+jmri-implementation.scripts=preference\:scripts/
+jmri-implementation.user-files=home\:MyJMRI/

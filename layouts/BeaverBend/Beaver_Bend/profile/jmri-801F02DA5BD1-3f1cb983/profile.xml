@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auxiliary-configuration xmlns="http://www.netbeans.org/ns/auxiliary-configuration/1">
+    <connections xmlns="http://jmri.org/xml/schema/auxiliary-configuration/connections-2-9-6.xsd">
+        <connection xmlns="" class="jmri.jmrix.loconet.locobufferusb.configurexml.ConnectionConfigXml" disabled="no" manufacturer="Digitrax" port="ttyUSB1" speed="57,600 baud" systemPrefix="L" userName="LocoNet">
+            <options>
+                <option>
+                    <name>CommandStation</name>
+                    <value>DCS100 (Chief)</value>
+                </option>
+                <option>
+                    <name>TurnoutHandle</name>
+                    <value>Normal</value>
+                </option>
+            </options>
+        </connection>
+        <connection xmlns="" class="jmri.jmrix.nce.usbdriver.configurexml.ConnectionConfigXml" disabled="no" manufacturer="NCE" port="ttyUSB0" speed="9,600 baud" systemPrefix="N" userName="NCE">
+            <options>
+                <option>
+                    <name>System</name>
+                    <value>PowerCab</value>
+                </option>
+                <option>
+                    <name>USB Version</name>
+                    <value>V7.x.x</value>
+                </option>
+            </options>
+        </connection>
+    </connections>
+</auxiliary-configuration>
