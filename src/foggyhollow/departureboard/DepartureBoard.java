@@ -15,6 +15,8 @@ import jmri.Memory;
 import jmri.jmrit.catalog.NamedIcon;
 import jmri.jmrit.display.Editor;
 import jmri.jmrit.display.MemoryIcon;
+import jmri.jmrit.display.Positionable;
+import jmri.jmrit.display.PositionableLabel;
 import jmri.jmrit.operations.trains.Train;
 import jmri.jmrit.operations.trains.TrainManager;
 import jmri.ConfigureManager;
@@ -144,13 +146,16 @@ public class DepartureBoard
         
         String path = iconPath + "/flip-space.png"; 
         this.defaultIcon = new NamedIcon(path, "space");
+        this.defaultIcon.setURL(path);
+        this.defaultIcon.setName(path);
         
         //
-        //  Put a black as the first letter in the set
+        //  Put a blank as the first letter in the set
         iconMap.put(" ", this.defaultIcon);
         
         this.iconWidth = this.defaultIcon.getIconWidth();
         this.iconHeight = this.defaultIcon.getIconHeight(); 
+        System.out.println ("DepartureBoard.java[initIcons]: iconWidth = " + this.iconWidth + " iconHeight = " + this.iconHeight);
         
         for (char c : numbers)
         {
@@ -162,7 +167,10 @@ public class DepartureBoard
             }
 
             path = iconPath + columnIconImage.toLowerCase();
-            iconMap.put(ltr, new NamedIcon(path, ltr));                   
+            NamedIcon newIcon = new NamedIcon(path, ltr);
+            newIcon.setURL(path);
+            newIcon.setName(path);
+            iconMap.put(ltr, newIcon);                                           
         }            
         
         for (char c : letters)
@@ -170,7 +178,10 @@ public class DepartureBoard
             String ltr = Character.toString(c);
             String columnIconImage = "/flip-" + ltr + ".png";
             path = iconPath + columnIconImage.toLowerCase();
-            iconMap.put(ltr, new NamedIcon(path, ltr));                   
+            NamedIcon newIcon = new NamedIcon(path, ltr);
+            newIcon.setURL(path);
+            newIcon.setName(path);
+            iconMap.put(ltr, newIcon);                               
         }  
         
         for (char c : misc)
@@ -201,7 +212,10 @@ public class DepartureBoard
                 
             String columnIconImage = "/flip-" + file + ".png";
             path = iconPath + columnIconImage.toLowerCase();
-            iconMap.put(ltr, new NamedIcon(path, ltr));                   
+            NamedIcon newIcon = new NamedIcon(path, ltr);
+            newIcon.setURL(path);
+            newIcon.setName(path);
+            iconMap.put(ltr, newIcon);                   
         }         
         
         return iconMap;
@@ -215,7 +229,7 @@ public class DepartureBoard
      */
     private String getMemoryName(int row, int col)
     {
-        return this.boardName + ":R" + Integer.toString(row) + "C" +Integer.toString(col);        
+        return this.boardName.toUpperCase() + ":R" + Integer.toString(row) + "C" +Integer.toString(col);        
     }
     
     /**
@@ -223,6 +237,28 @@ public class DepartureBoard
      */
     public void createCols()
     {
+	//
+	// Check if the MemoryIcon already exists...we check one and assume if it exists, the rest
+	// are there too.
+	/*
+	List<Positionable> contents = editor.getContents();
+        boolean iconsExists = false;
+        String tempName = "IM" + getMemoryName(1, 1);       
+        for (Positionable icon : contents) 
+        {
+            String lbl = icon.getNameString();
+            if (icon instanceof MemoryIcon) 
+            {
+        	MemoryIcon mi = (MemoryIcon)icon;
+        	lbl = mi.getMemory().getSystemName();
+            }
+            System.out.println(lbl + " " + tempName);
+            if (lbl.equals(tempName))
+            {
+        	iconsExists = true;
+            }
+        }	
+	*/
         for (int row=0; row<this.numRows; row++)
         {
             for (int col=0; col<this.numCols; col++)
@@ -231,6 +267,7 @@ public class DepartureBoard
                 String sysName = "IM:" + memName;
                 if (InstanceManager.memoryManagerInstance().getBySystemName(sysName) == null)
                 {
+                    System.out.println ("Creating departure board icons - sysName = " + sysName + " memName = " + memName);
                     createMemory(sysName, memName);
                     MemoryIcon icon = new MemoryIcon(sysName, editor);
                     
@@ -244,7 +281,7 @@ public class DepartureBoard
         
                     for (String ltr : this.iconMap.keySet())
                     {
-                        icon.addKeyAndIcon(this.iconMap.get(ltr), ltr);                    
+                        icon.addKeyAndIcon(this.iconMap.get(ltr), ltr);
                     }           
     
                     icon.setControlling(true);
@@ -253,11 +290,19 @@ public class DepartureBoard
                     icon.setEnabled(true);
                     icon.setHidden(false);
                     icon.setMemory(memName);
+                    icon.setSize(new Dimension(this.iconWidth, this.iconHeight));                    
                     icon.setMinimumSize(new Dimension(this.iconWidth, this.iconHeight));
                     icon.setPreferredSize(new Dimension(this.iconWidth, this.iconHeight));
                     icon.setMaximumSize(new Dimension(this.iconWidth, this.iconHeight));            
                     icon.setText(" ");
+                    icon.updateSize();
+                    
+                    editor.putItem(icon);                    
                 }
+                //else
+                //{
+                //    System.out.println ("DepartureBoard.java[createCols]: Found existing memory icon " + sysName + " is null");
+                //}
             }
         }
     }    
@@ -461,6 +506,7 @@ public class DepartureBoard
             {
                 InstanceManager.memoryManagerInstance().newMemory(sysName, usrName);
                 memory = InstanceManager.memoryManagerInstance().provideMemory(sysName);
+                memory.setUserName(usrName);
             }
         }
         return memory;
@@ -497,18 +543,20 @@ public class DepartureBoard
             // its object hierarchy until the widgets themselves are reached    
             for (Editor e : editorList)
             {
-        	System.out.println("Editor name = " + e.getName());
+
                 if (e.getName().equals(panelName))
                 {
+            	    System.out.println("DepartureBoard[findPanelEditor] (DepartureBoard.java) : Found editor name = " + e.getName());                    
                     return e;
                 }
             }
         }
         catch (ClassNotFoundException err)
         {
+            System.out.println("DepartureBoard[findPanelEditor] (DepartureBoard.java) : ClassNotFound exception");            
             err.printStackTrace();
         }
-        
+        System.out.println("DepartureBoard[findPanelEditor] (DepartureBoard.java) : No Panel Editor Found!!!");                    
         return null;
     }
     
@@ -639,7 +687,7 @@ public class DepartureBoard
     {
         try
         {
-            Thread.sleep(1500);  //  Wait for any rows to settle down
+            Thread.sleep(2000);  //  Wait for any rows to settle down ! was 1500
         }
         catch (InterruptedException e)
         {
@@ -663,7 +711,8 @@ public class DepartureBoard
         
         try
         {
-            List<Train> trains = TrainManager.instance().getTrainsByTimeList();
+            List<Train> trains =jmri.InstanceManager.getDefault(jmri.jmrit.operations.trains.TrainManager.class).getTrainsByTimeList();
+            //List<Train> trains = TrainManager.instance().getTrainsByTimeList();
             for (Train train : trains)
             {
                 DepartureBoardTrain dbt = new DepartureBoardTrain();
