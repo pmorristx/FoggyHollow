@@ -60,6 +60,7 @@
 	{
 		uint8_t turnoutAddr;			// LocoNet turnout address
 		uint8_t servoPin;				// Arduino servo control pin
+		SoftwareServo servo;
 		bool moving = false;			// Indicates that the servo is currently moving
 		int8_t currentPosition;			// Current position of servo (angle)
 		int8_t direction;				// Direction servo is moving
@@ -87,6 +88,18 @@
 		uint16_t ctcReceiveCount = 0;		// Counter used to keep CTC lights on
 	};
 
+	struct fh_ctc_turnout_control
+	{
+		fh_turnout *turnout;					// Pointer to turnout controlled by this ctcControl
+		uint8_t thrownIndicatorPin 		= -1;	// Arduino pin powering THROWN indicator LED
+		uint8_t thrownSwitchPin			= -1;	// Arduino pin monitoring CTC panel THROWN switch
+		uint16_t thownIndicatorAddr		= -1;	// JMRI address of THROWN indicator sensor
+
+		uint8_t closedIndicatorPin		= -1;	// Arduino pin powering CLOSED indicator LED
+		uint8_t closedSwitchPin			= -1;	// Arduino pin monitoring CTC panel CLOSED switch
+		uint16_t closedIndicatorAddr	= -1;	// JMRI address of CLOSED indicator sensor
+	};
+
 	class FoggyHollowClass
 	{
 		public:
@@ -105,6 +118,10 @@
 			fh_turnout createTurnout(uint8_t servoPin, uint8_t turnoutAddr,
 					uint8_t thrownIndicatorAddr, uint8_t thrownIndicatorPin,
 					uint8_t closedIndicatorAddr, uint8_t closedIndicatorPin);
+
+			fh_ctc_turnout_control createCtcControl(fh_turnout *turnout, uint8_t thrownSwitchPin, uint8_t closedSwitchPin,
+											uint8_t thrownIndicatorPin, uint16_t thrownIndicatorAddr,
+											uint8_t closedIndicatorPin, uint16_t closedIndicatorAddr);
 
 			void changeTurnout(fh_turnout *turnout, uint8_t direction, SoftwareServo *turnoutServo);
 			void setCtcIndicators(fh_turnout *turnout, uint8_t sendAddr, uint8_t receiveAddr);

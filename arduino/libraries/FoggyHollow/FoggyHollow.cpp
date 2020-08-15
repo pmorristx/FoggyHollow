@@ -70,6 +70,42 @@ fh_turnout FoggyHollowClass::createTurnout(uint8_t servoPin,  uint8_t turnoutAdd
 	return turnout;
 }
 
+fh_ctc_turnout_control FoggyHollowClass::createCtcControl(fh_turnout *turnout,
+								uint8_t thrownSwitchPin, uint8_t closedSwitchPin,
+								uint8_t thrownIndicatorPin, uint16_t thrownIndicatorAddr,
+								uint8_t closedIndicatorPin, uint16_t closedIndicatorAddr)
+{
+	fh_ctc_turnout_control ctcControl;
+
+	ctcControl.turnout = turnout;
+
+	ctcControl.thrownSwitchPin = thrownSwitchPin;
+	ctcControl.closedSwitchPin = closedSwitchPin;
+
+	ctcControl.thrownIndicatorPin = thrownIndicatorPin;
+	ctcControl.closedIndicatorPin = closedIndicatorPin;
+
+	ctcControl.thrownIndicatorAddr = thrownIndicatorAddr;
+	ctcControl.closedIndicatorAddr = closedIndicatorAddr;
+
+	pinMode(ctcControl.thownSwitchPin, INPUT_PULLUP);
+	pinMode(ctcControl.closedSwitchPin, INPUT_PULLUP);
+	pinMode(ctcControl.thownIndicatorPin, OUTPUT);
+	pinMode(ctcControl.closedIndicatorPin, OUTPUT);
+}
+
+void FoggyHollowClass::monitorCtcControl(fh_ctc_turnout_control ctcControl)
+{
+	if (digitalRead(ctcControl.thrownSwitchPin) == LOW)
+	{
+		FoggyHollow.changeTurnout(ctcControl.turnout, THROWN, ctcControl.turnout->servo);
+	}
+	else if (digitalRead(ctcControl.closedSwitchPin) == LOW)
+	{
+		FoggyHollow.changeTurnout(ctcControl.turnout, CLOSED, ctcControl.turnout->servo);
+	}
+}
+
 /**
  * Add addresses of CTC relay send/receive indicators to a turnout.
  */
