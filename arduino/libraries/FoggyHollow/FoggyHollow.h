@@ -7,6 +7,11 @@ const uint8_t INACTIVE = 0;
 const uint8_t SWITCH_ON = 32; // Light ON
 const uint8_t SWITCH_OFF = 0; // Light OFF
 
+const int ON_OFF = 0;
+const int DIMMABLE = 1;
+const int BLINKING = 2;
+const int FLICKERING = 3;
+
 	struct MY_SERVO_DEF
 	{
 	//	String servoName;		// Name of the servo so we can identify the function
@@ -24,29 +29,28 @@ const uint8_t SWITCH_OFF = 0; // Light OFF
 	struct LIGHT_DEF
 	{
 		int pin = -1;
+
 		uint8_t currentIntensity = 0;
 		uint8_t maxIntensity = 255;
 		uint8_t dimIntensity = 70;
 		uint8_t targetIntensity = 0;
+
 		bool isDimmed = false;
 		bool isOn = false;
 		bool isDimming = false;
 		bool isBrightening = false;
 		bool isPWM = false;
-		int rate = 2;
+		bool isFunctionOn = false;
+
+		bool isInverted = false;
+
+		int rate1 = 2;
+		int rate2 = 2;
 		int counter = 0;
-		int dimCmd = -1;
+		int functionCmd = -1;
 		int onCmd = -1;
-
-		bool isBlinking = false;
-		int blinkCount = 0;
-		int blinkRate1 = 128;
-		int blinkRate2 = 128;
-		boolean blinkPhase = false;
-
-		int flickerCount = 0;
-		int flickerRate = 500;
-		bool isFlickering = false;
+		int phase = LOW;
+		int function = 0; // 0->onOff;
 	};
 
 class FoggyHollowClass
@@ -57,6 +61,15 @@ class FoggyHollowClass
 		void fadeLED(LIGHT_DEF *light, uint8_t requestedState);
 		void blinkLED(LIGHT_DEF *light);
 		void flickerLED(LIGHT_DEF *light);
+		void loop (LIGHT_DEF *light);
+		void fadeOn (LIGHT_DEF *light);
+		void setState(LIGHT_DEF *light, bool state);
+		void setFunctionState(LIGHT_DEF *light, bool state);
+
+		LIGHT_DEF* createLight(int pin, int onCmd);
+		LIGHT_DEF* createBlinkingLight(int pin, int onCmd, int blinkCmd);
+		LIGHT_DEF* createDimmableLight(int pin, int onCmd, int dimCmd);
+		LIGHT_DEF* createFlickeringLight(int pin, int onCmd, int rate);
 
 };
 extern  FoggyHollowClass FoggyHollow;

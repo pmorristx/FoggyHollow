@@ -3,7 +3,7 @@
 #include <LocoNet.h>
 #include <FoggyHollow.h>
 
-const int baseAddr = 212;
+const int baseAddr = 224;
 
 const int LN_TX_PIN = 7; // LocoNet
 const int LN_RX_PIN = 8; // LocoNet

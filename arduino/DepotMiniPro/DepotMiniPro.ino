@@ -1,3 +1,5 @@
+#include <NmraDcc.h>
+
 // ******** UNLESS YOU WANT ALL CV'S RESET UPON EVERY POWER UP
 // ******** AFTER THE INITIAL DECODER LOAD REMOVE THE "//" IN THE FOOLOWING LINE!!
 //#define DECODER_LOADED
@@ -16,6 +18,7 @@
 #define DEBUG
 
 #include <NmraDcc.h>
+
 
 // Analog pins = 3, 5, 6, 9, 10, 11
 byte signPins [] = {8,16};
@@ -44,6 +47,16 @@ boolean platformDim = false;
 
 boolean waitingRoomOn = false;
 boolean waitingRoomDim = false;
+
+boolean gh1Blink = false;
+boolean gh2Blink = false;
+boolean ghrBlink = false;
+uint16_t gh1Timer = 0;
+uint16_t gh2Timer = 0;
+uint16_t ghrTimer = 0;
+boolean gh1BlinkState = false;
+boolean gh2BlinkState = false;
+boolean ghrBlinkState = false;
 
 int flickerState = HIGH; // On/Off flag for stove flicker set by function 0
 
@@ -233,6 +246,57 @@ void loop()   //****************************************************************
   if (indicatorsOn)
   {
 	  doIndicators();
+  }
+
+  if (gh1Blink)
+  {
+	  if (gh1Timer++ % 128 == 0) // Blink the LED.  Every 8 times through the loop turn the LED on or off
+	  {
+		  if (!gh1BlinkState)
+		  {
+			  digitalWrite(bluePin1, HIGH);
+		  }
+		  else
+		  {
+			  digitalWrite(bluePin1, LOW);
+		  }
+		  gh1BlinkState = !gh1BlinkState;
+		  gh1Timer = 0;
+	  }
+  }
+
+  if (gh2Blink)
+  {
+	  if (gh2Timer++ % 128 == 0) // Blink the LED.  Every 8 times through the loop turn the LED on or off
+	  {
+		  gh2Timer = 0;
+		  if (!gh2BlinkState)
+		  {
+			  digitalWrite(bluePin2, HIGH);
+		  }
+		  else
+		  {
+			  digitalWrite(bluePin2, LOW);
+		  }
+		  gh2BlinkState = !gh2BlinkState;
+	  }
+  }
+
+  if (ghrBlink)
+  {
+	  if (ghrTimer++ % 128 == 0) // Blink the LED.  Every 8 times through the loop turn the LED on or off
+	  {
+		  ghrTimer = 0;
+		  if (!ghrBlinkState)
+		  {
+			  digitalWrite(redPin, HIGH);
+		  }
+		  else
+		  {
+			  digitalWrite(redPin, LOW);
+		  }
+		  ghrBlinkState = !ghrBlinkState;
+	  }
   }
 }
 
@@ -464,7 +528,44 @@ void executeDccFunction(int function, boolean isFunctionOn)
 
   case 10: // GH2 Indicator
     digitalWrite(bluePin2, state);
-    break;    
+    break;
+  case 11: // GH1 Blink
+	  gh1Blink = isFunctionOn;
+	  if (isFunctionOn)
+	  {
+		  gh1Timer = 0;
+		  gh1BlinkState = false;
+	  }
+	  else
+	  {
+		  digitalWrite(bluePin1, HIGH);
+	  }
+	  break;
+  case 12: // GHR Blink
+	  ghrBlink = isFunctionOn;
+	  if (isFunctionOn)
+	  {
+		  ghrTimer = 0;
+		  ghrBlinkState = false;
+	  }
+	  else
+	  {
+		  digitalWrite(redPin, HIGH);
+	  }
+	  break;
+  case 13: // GH2 Blink
+	  gh2Blink = isFunctionOn;
+	  if (isFunctionOn)
+	  {
+		  gh2Timer = 0;
+		  gh2BlinkState = false;
+	  }
+	  else
+	  {
+		  digitalWrite(bluePin2, HIGH);
+	  }
+
+	  break;
 	default:
     #ifdef DEBUG
       Serial.print ("Unhandled function in Depot...function = ");
